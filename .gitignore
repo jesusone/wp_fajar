@@ -1,0 +1,7 @@
+.htaccess
+.idea
+/nbproject/private/
+nbproject
+wp-content/themes/fajar/assets/css/static.css
+wp-content/themes/fajar/assets/scss/options.scss
+wp-config.php
