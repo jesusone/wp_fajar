@@ -36,7 +36,7 @@ if (! class_exists('YeahWooDeals')) {
         private function yeah_install_table(){
             global $wpdb;
             global $yeah_db_name;
-
+            var_dump($yeah_db_name);die;
             // create the ECPT metabox database table
             if($wpdb->get_var("show tables like '$yeah_db_name'") != $yeah_db_name)
             {
