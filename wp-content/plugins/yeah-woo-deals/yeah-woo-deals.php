@@ -18,13 +18,38 @@ if (! class_exists('YeahWooDeals')) {
                  $_instance = new YeahWooDeals();
                  // Install Deal.
                  $_instance->yeah_install();
+                 /*Include class*/
+                 $_instance->yeah_includes();
                  // Install Deal.
                  $_instance->yeah_globalSetting();
              }
              return $_instance;
         }
-        public  function yeah_globalSetting(){
+        public function  yeah_includes(){
+            /*Include class admin*/
+            require_once $this->plugin_dir . 'admin/class.admin-page.php';
+        }
+        public function yeah_globalSetting(){
+            $this->file = __FILE__;
 
+            /* base name. */
+            $this->basename = plugin_basename($this->file);
+
+            /* base plugin. */
+            $this->plugin_dir = plugin_dir_path($this->file);
+            $this->plugin_url = plugin_dir_url($this->file);
+
+            /* base assets. */
+            $this->acess_dir = trailingslashit($this->plugin_dir . 'assets');
+            $this->acess_url = trailingslashit($this->plugin_url . 'assets');
+
+            /* base template. */
+            $this->template_dir = trailingslashit($this->plugin_dir . 'templates');
+            $this->template_url = trailingslashit($this->plugin_url . 'templates');
+
+            /* custom template. */
+            $this->theme_dir = trailingslashit(get_template_directory () . '/yeah-woo-deals');
+            $this->theme_url = trailingslashit(get_template_directory_uri() . '/yeah-woo-deals');
         }
         /*@author: OyeahThemes
         @function: Install tables
