@@ -15,11 +15,9 @@ if (! class_exists('YeahWooDeals')) {
          public static function  instance(){
              static $_instance = null;
              if (is_null($_instance)) {
-
                  $_instance = new YeahWooDeals();
                  // Install Deal.
                  $_instance->yeah_install();
-
              }
              return $_instance;
         }
@@ -27,17 +25,21 @@ if (! class_exists('YeahWooDeals')) {
         @function: Install tables
         */
         private  function yeah_install(){
-            register_activation_hook(__FILE__,array($this,'yeah_install_table'));
+            global $yeah_db_name;
             $yeah_db_name = 'yeah_woo_deals';
+            register_activation_hook(__FILE__,array($this,'yeah_install_table'));
+
+
         }
         /*@author: OyeahThemes
         @function: Install tables
         */
         private function yeah_install_table(){
+            var_dump("ssss");die;
             global $wpdb;
             global $yeah_db_name;
             var_dump($yeah_db_name);die;
-            // create the ECPT metabox database table
+            // create the  database table
             if($wpdb->get_var("show tables like '$yeah_db_name'") != $yeah_db_name)
             {
                 $sql = "CREATE TABLE " . $yeah_db_name . "(
