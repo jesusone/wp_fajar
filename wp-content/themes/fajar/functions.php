@@ -1,6 +1,6 @@
 <?php
 /**
- * Zo Theme functions and definitions
+ * OhyeahThemes functions and definitions
  *
  * Sets up the theme and provides some helper functions, which are used
  * in the theme as custom template tags. Others are attached to action and
@@ -17,8 +17,8 @@
  *
  * For more information on hooks, actions, and filters, @link http://codex.wordpress.org/Plugin_API
  *
- * @package ZoTheme
- * @subpackage Zo Theme
+ * @package OhyeahThemes
+ * @subpackage OhyeahThemes
  * @since 1.0.0
  */
 
@@ -194,7 +194,7 @@ add_filter( 'image_size_names_choose', 'zo_media_image_sizes' );
 
 /**
  * Get meta data.
- * @author ZoTheme
+ * @author OhyeahThemes
  * @return mixed|NULL
  */
 function zo_meta_data(){
@@ -214,7 +214,7 @@ add_action('wp', 'zo_meta_data');
 
 /**
  * Get post meta data.
- * @author ZoTheme
+ * @author OhyeahThemes
  * @return mixed|NULL
  */
 function zo_post_meta_data(){
@@ -235,7 +235,7 @@ function zo_post_meta_data(){
 
 /**
  * Enqueue scripts and styles for front-end.
- * @author ZoTheme
+ * @author OhyeahThemes
  * @since ZO SuperHeroes 1.0
  */
 function zo_scripts_styles() {
@@ -258,31 +258,31 @@ function zo_scripts_styles() {
 	/** --------------------------libs--------------------------------- */
 
 	/* Adds JavaScript Bootstrap. */
-	wp_enqueue_script('zotheme-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.2');
+	wp_enqueue_script('OhyeahThemes-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.2');
 	
 	/* Add parallax plugin. */
 	if($smof_data['paralax']){
-	   wp_enqueue_script('zotheme-parallax', get_template_directory_uri() . '/assets/js/jquery.parallax-1.1.3.js', array( 'jquery' ), '1.1.3', true);
+	   wp_enqueue_script('OhyeahThemes-parallax', get_template_directory_uri() . '/assets/js/jquery.parallax-1.1.3.js', array( 'jquery' ), '1.1.3', true);
 	}
 	/* Add smoothscroll plugin */
 	if($smof_data['smoothscroll']){
-	   wp_enqueue_script('zotheme-smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.min.js', array( 'jquery' ), '1.0.0', true);
+	   wp_enqueue_script('OhyeahThemes-smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.min.js', array( 'jquery' ), '1.0.0', true);
 	}
 
     /* Fancy box */
-    wp_register_script('zotheme-fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true);
-    wp_register_style('zotheme-fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.css');
+    wp_register_script('OhyeahThemes-fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true);
+    wp_register_style('OhyeahThemes-fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.css');
     /* Slick Slider */
     wp_register_script('zo-slick-js', get_template_directory_uri(). '/assets/js/slick.min.js', array('jquery'), '1.5.7', true);
     wp_register_style('zo-slick-css', get_template_directory_uri(). '/assets/css/slick.css');
 	/** --------------------------custom------------------------------- */
 	
 	/* Add main.js */
-	wp_register_script('zotheme-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery'), '1.0.0', true);
-	wp_localize_script('zotheme-main', 'ZOOptions', $script_options);
-	wp_enqueue_script('zotheme-main');
+	wp_register_script('OhyeahThemes-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery'), '1.0.0', true);
+	wp_localize_script('OhyeahThemes-main', 'ZOOptions', $script_options);
+	wp_enqueue_script('OhyeahThemes-main');
 	/* Add menu.js */
-    wp_enqueue_script('zotheme-menu', get_template_directory_uri() . '/assets/js/menu.js', array( 'jquery' ), '1.0.0', true);
+    wp_enqueue_script('OhyeahThemes-menu', get_template_directory_uri() . '/assets/js/menu.js', array( 'jquery' ), '1.0.0', true);
     /* VC Pie Custom JS */
     wp_register_script('progressCircle', get_template_directory_uri() . '/assets/js/process_cycle.js', array( 'jquery' ), '1.0.0', true);
     wp_register_script('vc_pie_custom', get_template_directory_uri() . '/assets/js/vc_pie_custom.js', array( 'jquery' ), '1.0.0', true);
@@ -301,30 +301,30 @@ function zo_scripts_styles() {
 	wp_enqueue_style('animation', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.3.0');
 	
 	/* Loads Bootstrap stylesheet. */
-	wp_enqueue_style('zotheme-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.3.2');
+	wp_enqueue_style('OhyeahThemes-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.3.2');
 	
 	/* Loads Bootstrap stylesheet. */
-	wp_enqueue_style('zotheme-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5.0');
+	wp_enqueue_style('OhyeahThemes-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5.0');
 
 	/* Loads Font Ionicons. */
-	wp_enqueue_style('zotheme-font-ionicons', get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), '2.0.1');
+	wp_enqueue_style('OhyeahThemes-font-ionicons', get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), '2.0.1');
 
 	/* Loads Pe Icon. */
-	wp_enqueue_style('zotheme-pe-icon', get_template_directory_uri() . '/assets/css/pe-icon-7-stroke.css', array(), '1.0.1');
+	wp_enqueue_style('OhyeahThemes-pe-icon', get_template_directory_uri() . '/assets/css/pe-icon-7-stroke.css', array(), '1.0.1');
 	
 	/** --------------------------custom------------------------------- */
 	
 	/* Loads our main stylesheet. */
-	wp_enqueue_style( 'zotheme-style', get_stylesheet_uri(), array( 'zotheme-bootstrap' ));
+	wp_enqueue_style( 'OhyeahThemes-style', get_stylesheet_uri(), array( 'OhyeahThemes-bootstrap' ));
 
 	/* Loads the Internet Explorer specific stylesheet. */
-	wp_enqueue_style( 'zo_zap-ie', get_template_directory_uri() . '/assets/css/ie.css', array( 'zotheme-style' ), '20121010' );
+	wp_enqueue_style( 'zo_zap-ie', get_template_directory_uri() . '/assets/css/ie.css', array( 'OhyeahThemes-style' ), '20121010' );
 	$wp_styles->add_data( 'zo_zap-ie', 'conditional', 'lt IE 9' );
 	/* Load widgets scripts*/		
 	wp_enqueue_script('zo_widget_scripts', get_template_directory_uri() . '/inc/widgets/widgets.js');
 	wp_enqueue_style('zo_widget_scripts', get_template_directory_uri() . '/inc/widgets/widgets.css');
 	/* Load static css*/
-	wp_enqueue_style('zotheme-static', get_template_directory_uri() . '/assets/css/static.css', array( 'zotheme-style' ), '1.0.0');
+	wp_enqueue_style('OhyeahThemes-static', get_template_directory_uri() . '/assets/css/static.css', array( 'OhyeahThemes-style' ), '1.0.0');
 
     /**
      * IE Fallbacks
@@ -345,7 +345,7 @@ add_action( 'wp_enqueue_scripts', 'zo_scripts_styles' );
  *
  * Registers our main widget area and the front page widget areas.
  *
- * @since ZoTheme
+ * @since OhyeahThemes
  */
 function zo_widgets_init() {
 	register_sidebar( array(
@@ -822,8 +822,8 @@ function zo_list_post_types() {
  */
  function zo_add_fancybox() {
      if( is_singular('portfolio') ) {
-        wp_enqueue_script('zotheme-fancybox');
-        wp_enqueue_style('zotheme-fancybox');
+        wp_enqueue_script('OhyeahThemes-fancybox');
+        wp_enqueue_style('OhyeahThemes-fancybox');
         wp_enqueue_script('zo-slick-js');
         wp_enqueue_style('zo-slick-css');
      }
