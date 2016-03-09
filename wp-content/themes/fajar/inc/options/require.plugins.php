@@ -23,7 +23,7 @@ function zo_theme_register_required_plugins() {
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
      */
-	$root = 'http://demo.drupalexp.com/wordpress/plugins/';
+	$root = 'http://ohyeahthemes.com/plugins/';
     $plugins = array(
         array(
             'name'               => 'CMS Theme',
