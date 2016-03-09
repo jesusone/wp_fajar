@@ -18,7 +18,6 @@ add_action( 'tgmpa_register', 'zo_theme_register_required_plugins' );
  * TGM_Plugin_Activation class constructor.
 */
 function zo_theme_register_required_plugins() {
-
     /**
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
@@ -26,9 +25,9 @@ function zo_theme_register_required_plugins() {
 	$root = 'http://ohyeahthemes.com/plugins/';
     $plugins = array(
         array(
-            'name'               => 'CMS Theme',
-            'slug'               => 'cmstheme',
-            'source'             => $root .'cmstheme.zip',
+            'name'               => 'OhyeahThemes',
+            'slug'               => 'ohyeahthemes',
+            'source'             => $root .'ohyeahthemes.zip',
             'required'           => true,
         ),
         array(
@@ -45,23 +44,23 @@ function zo_theme_register_required_plugins() {
         array(
             'name'               => 'Revolution Slider',
             'slug'               => 'revslider',
-            'source'             => $root .'revslider5.zip',
-            'required'           => false,
+            'source'             => $root .'revslider.zip',
+            'required'           => true,
         ),
         array(
             'name'               => 'WooCommerce - excelling eCommerce',
             'slug'               => 'woocommerce',
-            'required'           => false,
+            'required'           => true,
         ),
         array(
             'name'               => 'Contact Form 7',
             'slug'               => 'contact-form-7',
-            'required'           => false,
+            'required'           => true,
         ),
         array(
             'name'               => 'Newsletter',
             'slug'               => 'newsletter',
-            'required'           => false,
+            'required'           => true,
         ),
     );
 
