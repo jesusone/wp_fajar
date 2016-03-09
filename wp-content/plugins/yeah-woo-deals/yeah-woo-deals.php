@@ -16,7 +16,7 @@ if (! class_exists('YeahWooDeals')) {
              static $_instance = null;
              if (is_null($_instance)) {
 
-                 $_instance = new Pro_Car_Dealer();
+                 $_instance = new YeahWooDeals();
                  // Install Deal.
                  $_instance->yeah_install();
 
@@ -70,3 +70,4 @@ if (defined('YEAH_LATE_LOAD')) {
 
     yeah_woo_deals();
 }
+?>
