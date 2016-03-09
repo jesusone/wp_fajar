@@ -12,21 +12,40 @@ if (! defined('ABSPATH')) {
 }
 if (! class_exists('YeahWooDeals')) {
     final  class  YeahWooDeals{
+        public $file = null;
+        public $basename = null;
+
+        /* base plugin_dir. */
+        public $plugin_dir = null;
+
+        public $plugin_url = null;
+
+        /* base acess folder. */
+        public $acess_dir = null;
+
+        public $acess_url = null;
+
+        public $template_dir = null;
+        public $template_url = null;
+
+        public $theme_dir = null;
+        public $theme_url = null;
          public static function  instance(){
              static $_instance = null;
              if (is_null($_instance)) {
                  $_instance = new YeahWooDeals();
                  // Install Deal.
                  $_instance->yeah_install();
-                 /*Include class*/
-                 $_instance->yeah_includes();
-                 // Install Deal.
+                 /*Include Setting*/
                  $_instance->yeah_globalSetting();
+                 //Include
+                 $_instance->yeah_includes();
+
              }
              return $_instance;
         }
 
-        public function yeah_globalSetting(){
+        private function yeah_globalSetting(){
             $this->file = __FILE__;
 
             /* base name. */
@@ -48,7 +67,7 @@ if (! class_exists('YeahWooDeals')) {
             $this->theme_dir = trailingslashit(get_template_directory () . '/yeah-woo-deals');
             $this->theme_url = trailingslashit(get_template_directory_uri() . '/yeah-woo-deals');
         }
-        public function  yeah_includes(){
+        private function  yeah_includes(){
             /*Include class admin*/
             require_once $this->plugin_dir . 'admin/class.admin-page.php';
         }
