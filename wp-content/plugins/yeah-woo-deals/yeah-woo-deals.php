@@ -24,7 +24,7 @@ if (! class_exists('YeahWooDeals')) {
         /*@author: OyeahThemes
         @function: Install tables
         */
-        private  function yeah_install(){
+        public  function yeah_install(){
             global $yeah_db_name;
             $yeah_db_name = 'yeah_woo_deals';
             register_activation_hook(__FILE__,array($this,'yeah_install_table'));
@@ -34,8 +34,8 @@ if (! class_exists('YeahWooDeals')) {
         /*@author: OyeahThemes
         @function: Install tables
         */
-        private function yeah_install_table(){
-            var_dump("ssss");die;
+        public function yeah_install_table(){
+
             global $wpdb;
             global $yeah_db_name;
             var_dump($yeah_db_name);die;
