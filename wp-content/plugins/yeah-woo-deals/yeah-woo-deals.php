@@ -18,8 +18,13 @@ if (! class_exists('YeahWooDeals')) {
                  $_instance = new YeahWooDeals();
                  // Install Deal.
                  $_instance->yeah_install();
+                 // Install Deal.
+                 $_instance->yeah_globalSetting();
              }
              return $_instance;
+        }
+        public  function yeah_globalSetting(){
+
         }
         /*@author: OyeahThemes
         @function: Install tables
@@ -38,7 +43,6 @@ if (! class_exists('YeahWooDeals')) {
 
             global $wpdb;
             global $yeah_db_name;
-            var_dump($yeah_db_name);die;
             // create the  database table
             if($wpdb->get_var("show tables like '$yeah_db_name'") != $yeah_db_name)
             {
