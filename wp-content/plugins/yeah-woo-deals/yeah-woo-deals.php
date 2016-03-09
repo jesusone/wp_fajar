@@ -69,7 +69,7 @@ if (! class_exists('YeahWooDeals')) {
         }
         private function  yeah_includes(){
             /*Include class admin*/
-            require_once $this->plugin_dir . 'admin/class.admin-page.php';
+            require_once $this->plugin_dir . 'admin/admin.class.php';
         }
         /*@author: OyeahThemes
         @function: Install tables
