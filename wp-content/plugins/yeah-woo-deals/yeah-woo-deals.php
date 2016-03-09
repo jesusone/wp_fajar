@@ -25,10 +25,7 @@ if (! class_exists('YeahWooDeals')) {
              }
              return $_instance;
         }
-        public function  yeah_includes(){
-            /*Include class admin*/
-            require_once $this->plugin_dir . 'admin/class.admin-page.php';
-        }
+
         public function yeah_globalSetting(){
             $this->file = __FILE__;
 
@@ -50,6 +47,10 @@ if (! class_exists('YeahWooDeals')) {
             /* custom template. */
             $this->theme_dir = trailingslashit(get_template_directory () . '/yeah-woo-deals');
             $this->theme_url = trailingslashit(get_template_directory_uri() . '/yeah-woo-deals');
+        }
+        public function  yeah_includes(){
+            /*Include class admin*/
+            require_once $this->plugin_dir . 'admin/class.admin-page.php';
         }
         /*@author: OyeahThemes
         @function: Install tables
