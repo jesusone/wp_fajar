@@ -2,11 +2,11 @@
 /**
 *
 * Plugin Name: OhyeahThemes
-* Plugin URI: http://ohyeahthemes.com/plugins/ohyeahthemes.zip
+* Plugin URI: http://ohyeahthemes.com/
 * Description: This plugin is package compilation some addons, which is developed by OhyeahThemes Team for Visual Comporser plugin.
 * Version: 1.0.0
 * Author: OhyeahThemes
-* Author URI: http://ohyeahthemes.com
+* Author URI: http://themeforest.net/user/ohyeahtheme
 * Copyright 2016 Ohyeahthemes. All rights reserved.
 */
 
