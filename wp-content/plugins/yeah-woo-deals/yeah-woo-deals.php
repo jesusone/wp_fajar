@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Yeah Woo Deals
- * Description: Start listing vehicles online with this easy-to-use and fully featured WordPress Plugin.
+ * Description: Deals WordPress Plugin.
  * Version: 1.0.0
  * Author: OyeahThemes
  * License: GPLv2 or later
@@ -13,8 +13,47 @@ if (! defined('ABSPATH')) {
 if (! class_exists('YeahWooDeals')) {
     final  class  YeahWooDeals{
          public static function  instance(){
-            var_dump("test");
+             static $_instance = null;
+             if (is_null($_instance)) {
+
+                 $_instance = new Pro_Car_Dealer();
+                 // Install Deal.
+                 $_instance->yeah_install();
+
+             }
+             return $_instance;
         }
+        /*@author: OyeahThemes
+        @function: Install tables
+        */
+        private  function yeah_install(){
+            register_activation_hook(__FILE__,array($this,'yeah_install_table'));
+            $yeah_db_name = 'yeah_woo_deals';
+        }
+        /*@author: OyeahThemes
+        @function: Install tables
+        */
+        private function yeah_install_table(){
+            global $wpdb;
+            global $yeah_db_name;
+
+            // create the ECPT metabox database table
+            if($wpdb->get_var("show tables like '$yeah_db_name'") != $yeah_db_name)
+            {
+                $sql = "CREATE TABLE " . $yeah_db_name . "(
+                `id` INT(11) NOT NULL AUTO_INCREMENT ,
+                `product_id` INT(11) NOT NULL ,
+                `dealsstart` DATETIME NOT NULL ,
+                `dealsend` DATETIME NOT NULL ,
+                `dealssale` INT NOT NULL ,
+                `dealsprice` INT NOT NULL ,
+                 PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+
+                require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+                dbDelta($sql);
+            }
+        }
+
     }
 }
 if (! function_exists('yeah_woo_deals')) {
