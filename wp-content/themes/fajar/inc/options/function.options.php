@@ -1687,7 +1687,7 @@ $this->sections[] = array(
             'id' => 'dev_mode',
             'type' => 'switch',
             'title' => __('Dev Mode (not recommended)', 'creativ'),
-            'default' => false
+            'default' => true
         )
     )
 );
