@@ -131,7 +131,7 @@ class ZoTheme_StaticCss
         if(!$smof_data['menu_transparent'] && $smof_data['menu_sticky_height']['height']){
             echo "body.fixed-margin-top {  margin-top: \$menu_sticky_height; }";
         }
-        if(!empty($smof_data['bg_sticky_header'])){
+        if(!empty($smof_data['bg_sticky_header']['rgba'])){
             echo "#zo-header.zo-main-header.header-fixed { background-color:".esc_attr($smof_data['bg_sticky_header']['rgba'])."; }";
         }
         if($smof_data['sticky_logo_height']){
