@@ -37,43 +37,38 @@
 			<div id="zo-header-logo" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="" src="<?php echo esc_url(zo_page_header_logo()); ?>"></a>
 			</div>
-			<?php if (is_active_sidebar('header-right')): ?>
-			<div id="zo-header-navigation" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-				<?php else : ?>
-				<div id="zo-header-navigation" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-					<?php endif; ?>
-					<nav id="site-navigation" class="main-navigation">
-						<?php
+			<div id="zo-header-navigation" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+				<nav id="site-navigation" class="main-navigation">
+					<?php
 
-						$attr = array(
-							'menu' => zo_menu_location(),
-							'menu_class' => 'nav-menu menu-main-menu',
-						);
+					$attr = array(
+						'menu' => zo_menu_location(),
+						'menu_class' => 'nav-menu menu-main-menu',
+					);
 
-						$menu_locations = get_nav_menu_locations();
+					$menu_locations = get_nav_menu_locations();
 
-						if (!empty($menu_locations['primary'])) {
-							$attr['theme_location'] = 'primary';
-						}
+					if (!empty($menu_locations['primary'])) {
+						$attr['theme_location'] = 'primary';
+					}
 
-						/* enable mega menu. */
-						if (class_exists('HeroMenuWalker')) {
-							$attr['walker'] = new HeroMenuWalker();
-						}
+					/* enable mega menu. */
+					if (class_exists('HeroMenuWalker')) {
+						$attr['walker'] = new HeroMenuWalker();
+					}
 
-						/* main nav. */
-						wp_nav_menu($attr); ?>
-					</nav>
-				</div>
-				<?php if (is_active_sidebar('header-right')): ?>
-					<div id="zo-header-right" class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-						<?php dynamic_sidebar('header-right'); ?>
-					</div>
-				<?php endif; ?>
-				<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="pe-7s-menu"></i></div>
+					/* main nav. */
+					wp_nav_menu($attr); ?>
+				</nav>
 			</div>
+			<?php if(is_active_sidebar(''header-right''))?>
+			<div id="zo-header-right" class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+				<?php dynamic_sidebar('header-right'); ?>
+			</div>
+			<?php }?>
+			<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="pe-7s-menu"></i></div>
 		</div>
-		<!-- #site-navigation -->
 	</div>
-	<!--#zo-header-->
+	<!-- #site-navigation -->
 </div>
+<!--#zo-header-->
