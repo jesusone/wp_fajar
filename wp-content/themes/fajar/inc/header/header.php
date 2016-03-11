@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<!-- Header Logo, Icon, Cart-->
+<!-- Header Logo, Icon, Cart -->
 <div id="yeah-header-brand">
 	<div class="container">
 		<div class="row">
@@ -38,6 +38,7 @@
 	</div>
 </div>
 
+<!-- Header Navigation -->
 <div id="zo-header" class="zo-main-header header-default <?php if (!$smof_data['menu_sticky']) {
 	echo 'no-sticky';
 } ?> <?php if ($smof_data['menu_sticky_tablets']) {
@@ -51,7 +52,6 @@
 } ?>">
 	<div class="container">
 		<div class="row">
-			
 			<div id="zo-header-navigation" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
 				<nav id="site-navigation" class="main-navigation">
 					<?php

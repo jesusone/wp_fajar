@@ -1051,7 +1051,7 @@ $this->sections[] = array(
             'output'   => array('.btn.btn-primary, .vc_general.vc_btn3.btn.btn-primary'),
             'default'  => array(
                 'border-style'  => 'solid',
-                'border-color'  => '#fcc403',
+                'border-color'  => '#ee3b24',
                 'border-top'    => '1px',
                 'border-right'  => '1px',
                 'border-bottom' => '1px',
@@ -1065,7 +1065,7 @@ $this->sections[] = array(
             'output'   => array('.btn.btn-primary, .vc_general.vc_btn3.btn.btn-primary:hover, .vc_general.vc_btn3.btn.btn-primary:focus'),
             'default'  => array(
                 'border-style'  => 'solid',
-                'border-color'  => '#fcc403',
+                'border-color'  => '#ee3b24',
                 'border-top'    => '1px',
                 'border-right'  => '1px',
                 'border-bottom' => '1px',
@@ -1099,13 +1099,7 @@ $this->sections[] = array(
             'id' => 'primary_color',
             'type' => 'color',
             'title' => __('Primary Color', 'creativ'),
-            'default' => '#fcc403'
-        ),
-        array(
-            'id' => 'secondary_color',
-            'type' => 'color',
-            'title' => __('Secondary Color', 'creativ'),
-            'default' => '#ffdd00'
+            'default' => '#ee3b24'
         ),
         array(
             'subtitle' => __('set color for tags <a></a>.', 'creativ'),
@@ -1114,8 +1108,8 @@ $this->sections[] = array(
             'title' => __('Link Color', 'creativ'),
             'output'  => array('a'),
             'default' => array(
-				'regular'  => '#333333',
-				'hover'    => '#fcc403',
+				'regular'  => '#333',
+				'hover'    => '#ee3b24',
 			)
         ),
     )
@@ -1197,35 +1191,35 @@ $this->sections[] = array(
             'id' => 'menu_color_first_level',
             'type' => 'color',
             'title' => __('Menu Font Color - First Level', 'creativ'),
-            'default' => '#fff'
+            'default' => '#333'
         ),
         array(
             'subtitle' => __('Controls the text hover color of first level menu items.', 'creativ'),
             'id' => 'menu_color_hover_first_level',
             'type' => 'color',
             'title' => __('Menu Font Color Hover - First Level', 'creativ'),
-            'default' => '#fff'
+            'default' => '#333'
         ),
         array(
             'subtitle' => __('Controls the text hover color of first level menu items.', 'creativ'),
             'id' => 'menu_color_active_first_level',
             'type' => 'color',
             'title' => __('Menu Font Color Active - First Level', 'creativ'),
-            'default' => '#fff'
+            'default' => '#333'
         ),
         array(
             'subtitle' => __('Controls the text color of sub level menu items.', 'creativ'),
             'id' => 'menu_color_sub_level',
             'type' => 'color',
             'title' => __('Menu Font Color - Sub Level', 'creativ'),
-            'default' => '#909090'
+            'default' => '#333'
         ),
         array(
             'subtitle' => __('Controls the text hover color of sub level menu items.', 'creativ'),
             'id' => 'menu_color_hover_sub_level',
             'type' => 'color',
             'title' => __('Menu Font Color Hover - Sub Level', 'creativ'),
-            'default' => '#eeb013'
+            'default' => '#333'
         ),
         array(
             'subtitle' => __('Controls the border color of sub level menu items.', 'creativ'),
@@ -1285,14 +1279,14 @@ $this->sections[] = array(
             'id' => 'btn_primary_color_hover',
             'type' => 'color',
             'title' => __('Button Primary - Font Color Hover', 'creativ'),
-            'default' => '#fcc403'
+            'default' => '#ee3b24'
         ),
         array(
             'subtitle' => __('Controls the button background color.', 'creativ'),
             'id' => 'btn_primary_bg_color',
             'type' => 'color',
             'title' => __('Button Primary - Background Color', 'creativ'),
-            'default' => '#fcc403'
+            'default' => '#ee3b24'
         ),
         array(
             'subtitle' => __('Controls the button background color.', 'creativ'),
@@ -1335,7 +1329,7 @@ $this->sections[] = array(
             'default' => '#636363',
             'default' => array(
 				'regular'  => '#636363',
-				'hover'    => '#fcc403',
+				'hover'    => '#ee3b24',
 			)
         ),
     )
