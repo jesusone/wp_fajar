@@ -56,8 +56,15 @@
 	}
 }
 #yeah-header-brand{
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	#yeah-header-logo {
+		padding-bottom: 34px;
+		padding-top: 40px;
+	}
 	.header-banners {
-		display: inline-block;
 		width: 100%;
 		padding: 0;
 		margin: 0;
@@ -75,6 +82,7 @@
 				font-size: 16px;
 				padding-left: 45px;
 				text-transform: uppercase;
+				margin: 0;
 				span {
 					display: block;
 					font-size: 14px;
@@ -139,6 +147,7 @@
 ==========================================================*/
 .widget_cart_search_wrap {
     text-align: right;
+	display: inline-block;
     .widget_cart_search_wrap_item {
         display: inline-block;
 		position: relative;
