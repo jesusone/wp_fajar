@@ -1483,15 +1483,15 @@ $this->sections[] = array(
             'type'     => 'select',
             'title'    => __( 'Fonts 2', 'creativ' ),
             'options'  => $local_fonts,
-            'default'  => '',
+            'default'  => 'museo_slab_300',
         ),
         array(
             'id' => 'local-fonts-selector-2',
             'type' => 'textarea',
             'title' => __('Selector 2', 'creativ'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id)', 'creativ'),
+            'subtitle' => __('add html tags ID or class (body,a,.class,#id), or extend ".museo_slab_300" to use font', 'creativ'),
             'validate' => 'no_html',
-            'default' => '',
+            'default' => '.museo_slab_300',
             'required' => array(
                 0 => 'local-fonts-2',
                 1 => '!=',
