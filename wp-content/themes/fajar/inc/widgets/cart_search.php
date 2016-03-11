@@ -27,7 +27,7 @@ class WC_Widget_Cart_Search extends WP_Widget {
 
                 <?php if($woocommerce && $show_cart):?>
                     <a href="javascript:void(0)" class="icon icon_cart_wrap" data-display=".shopping_cart_dropdown" data-no_display=".widget_searchform_content">
-                        <i class="fa fa-shopping-cart cart-icon"></i>
+                        <i class="icon-caddieshoppingstreamline cart-icon"></i>
                         <span class="cart_total"><?php echo do_shortcode($woocommerce?' '.$woocommerce->cart->get_cart_contents_count():'');?></span>
                     </a>
                 <?php endif; ?>
