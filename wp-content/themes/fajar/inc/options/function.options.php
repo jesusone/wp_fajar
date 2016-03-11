@@ -1388,126 +1388,6 @@ $this->sections[] = array(
             ),
             'subtitle' => __('Typography option with each property can be called individually.', 'creativ'),
         ),
-        array(
-            'id' => 'font_h1',
-            'type' => 'typography',
-            'title' => __('H1', 'creativ'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('body h1'),
-            'units' => 'px',
-            'default' => array(
-                'color' => '#141414',
-                'font-style' => 'normal',
-                'font-weight' => 'bold',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '36px',
-                'line-height' => '60px',
-                'text-align' => ''
-            )
-        ),
-        array(
-            'id' => 'font_h2',
-            'type' => 'typography',
-            'title' => __('H2', 'creativ'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('body h2'),
-            'units' => 'px',
-            'default' => array(
-                'color' => '#141414',
-                'font-style' => 'normal',
-                'font-weight' => 'bold',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '30px',
-                'line-height' => '60px',
-                'text-align' => ''
-            )
-        ),
-        array(
-            'id' => 'font_h3',
-            'type' => 'typography',
-            'title' => __('H3', 'creativ'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('body h3'),
-            'units' => 'px',
-            'default' => array(
-                'color' => '#141414',
-                'font-style' => 'normal',
-                'font-weight' => 'bold',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '24px',
-                'line-height' => '60px',
-                'text-align' => ''
-            )
-        ),
-        array(
-            'id' => 'font_h4',
-            'type' => 'typography',
-            'title' => __('H4', 'creativ'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('body h4'),
-            'units' => 'px',
-            'default' => array(
-                'color' => '#141414',
-                'font-style' => 'normal',
-                'font-weight' => 'bold',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '20px',
-                'line-height' => '60px',
-                'text-align' => ''
-            )
-        ),
-        array(
-            'id' => 'font_h5',
-            'type' => 'typography',
-            'title' => __('H5', 'creativ'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('body h5'),
-            'units' => 'px',
-            'default' => array(
-                'color' => '#141414',
-                'font-style' => 'normal',
-                'font-weight' => 'bold',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '18px',
-                'line-height' => '60px',
-                'text-align' => ''
-            )
-        ),
-        array(
-            'id' => 'font_h6',
-            'type' => 'typography',
-            'title' => __('H6', 'creativ'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('body h6'),
-            'units' => 'px',
-            'default' => array(
-                'color' => '#141414',
-                'font-style' => 'normal',
-                'font-weight' => 'bold',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '14px',
-                'line-height' => '60px',
-                'text-align' => ''
-            )
-        )
     )
 );
 
@@ -1588,7 +1468,7 @@ $this->sections[] = array(
             'type'     => 'select',
             'title'    => __( 'Fonts 1', 'creativ' ),
             'options'  => $local_fonts,
-            'default'  => '',
+            'default'  => 'museo_slab_100',
         ),
         array(
             'id' => 'local-fonts-selector-1',
@@ -1596,7 +1476,7 @@ $this->sections[] = array(
             'title' => __('Selector 1', 'creativ'),
             'subtitle' => __('add html tags ID or class (body,a,.class,#id)', 'creativ'),
             'validate' => 'no_html',
-            'default' => '',
+            'default' => 'h1, h2, h3, h4, h5, h6',
             'required' => array(
                 0 => 'local-fonts-1',
                 1 => '!=',
