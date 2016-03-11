@@ -369,16 +369,6 @@ function zo_widgets_init() {
 		'before_title' => '<h3 class="wg-title">',
 		'after_title' => '</h3>',
 	) );
-	
-	register_sidebar( array(
-		'name' => __( 'Header Banners', 'creativ' ),
-		'id' => 'header-baners',
-		'description' => __( 'Appears when using the optional Header with a page set as Header Banners', 'creativ' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="wg-title">',
-		'after_title' => '</h3>',
-	) );
 
 	register_sidebar( array(
 		'name' => __( 'Header Top Right', 'creativ' ),
@@ -391,7 +381,17 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Menu Right', 'creativ' ),
+		'name' => __( 'Header Banners', 'creativ' ),
+		'id' => 'header-baners',
+		'description' => __( 'Appears when using the optional Header with a page set as Header Banners', 'creativ' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="wg-title">',
+		'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Header Cart', 'creativ' ),
     	'id' => 'sidebar-4',
     	'description' => __( 'Appears when using the optional Menu with a page set as Menu right', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
