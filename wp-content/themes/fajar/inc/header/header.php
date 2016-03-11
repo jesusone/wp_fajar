@@ -31,8 +31,8 @@
 			<div id="yeah-header-banners" class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
 				<?php if(is_active_sidebar('header-baners')){ dynamic_sidebar('header-baners'); } ?>
 			</div>
-			<div id="zo-header-right" class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-				<?php if(is_active_sidebar('header-right')){ dynamic_sidebar('header-right'); } ?>
+			<div id="yeah-header-cart" class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+				<?php if(is_active_sidebar('sidebar-4')){ dynamic_sidebar('sidebar-4'); } ?>
 			</div>
 		</div>
 	</div>
