@@ -40,6 +40,15 @@
 					color: $primary_color;
 				}
 			}
+			&.login-btn a {
+				background: #6dced7;
+				color: #fff;
+				padding: 12px 17px 13px;
+				i {
+					font-size: 20px;
+					margin-right: 8px;
+				}
+			}
 		}
 	}
 }
