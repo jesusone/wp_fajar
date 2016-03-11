@@ -49,7 +49,7 @@
 } ?> <?php if (!empty($zo_meta->_zo_enable_header_menu)) {
 	echo 'header-menu-custom';
 } ?>">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			
 			<div id="zo-header-navigation" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
