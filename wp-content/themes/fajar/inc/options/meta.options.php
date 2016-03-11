@@ -73,8 +73,7 @@ class ZOMetaOptions
 							'label' => __('Layout','creativ'),
 							'type' => 'imegesselect',
 							'options' => array(
-								'' => get_template_directory_uri().'/inc/options/images/header/h-default.png',
-								'2' => get_template_directory_uri().'/inc/options/images/header/h-default.png',
+								'' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
 							)
 						));
 						zo_options(array(

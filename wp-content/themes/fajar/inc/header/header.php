@@ -1,11 +1,22 @@
 <?php
 /**
  * @name : Default
- * @package : ZoTheme
- * @author : ZoTheme
+ * @package : OhyeahThemes
+ * @author : OhyeahThemes
  */
 ?>
 <?php global $smof_data, $zo_meta; ?>
+
+<!-- Header Top -->
+<div id="yeah-header-top">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+		<?php if(is_active_sidebar('sidebar-2')){ dynamic_sidebar('sidebar-2'); } ?>
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<?php if(is_active_sidebar('sidebar-3')){ dynamic_sidebar('sidebar-3'); } ?>
+	</div>
+</div>
+
 <div id="zo-header" class="zo-main-header header-default <?php if (!$smof_data['menu_sticky']) {
 	echo 'no-sticky';
 } ?> <?php if ($smof_data['menu_sticky_tablets']) {
@@ -61,3 +72,4 @@
 		<!-- #site-navigation -->
 	</div>
 	<!--#zo-header-->
+</div>
