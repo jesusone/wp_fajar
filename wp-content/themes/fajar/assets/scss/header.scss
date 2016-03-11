@@ -13,13 +13,13 @@
 	}
 }
 #yeah-header-top {
-	line-height: 46px; 
 	border-bottom: 1px solid #e0e0e0;
 	p.contact-number {
 		@extend .museo_slab_300;
 		margin: 0;
 		font-size: 13px; 
 		font-weight: 100;
+		line-height: 46px;
 	}
 	ul{
 		list-style: none; 
@@ -30,6 +30,16 @@
 			display: inline-block;
 			border-left: 1px solid #e0e0e0;
 			padding: 9px 17px 10px;
+			select {
+				padding: 0;
+			}
+			a {
+				color: #393939;
+				font-size: 15px;
+				&:hover {
+					$primary_color;
+				}
+			}
 		}
 	}
 }
