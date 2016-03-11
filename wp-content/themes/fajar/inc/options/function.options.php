@@ -1110,6 +1110,7 @@ $this->sections[] = array(
             'default' => array(
 				'regular'  => '#333',
 				'hover'    => '#ee3b24',
+				'active'    => '#ee3b24',
 			)
         ),
     )
