@@ -50,7 +50,7 @@ get_header(); ?>
 					/**
 					 * Filter the author bio avatar size.
 					 *
-					 * @since Zo ZAP 1.0
+					 * @since Fajar - Ohyeahthemes 1.0
 					 *
 					 * @param int $size The height and width of the avatar in pixels.
 					 */

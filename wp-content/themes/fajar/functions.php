@@ -120,10 +120,10 @@ if (!function_exists('zo_limit_words')) {
     }
 }
 /**
- * Zo ZAP setup.
+ * Fajar - Ohyeahthemes setup.
  *
  * Sets up theme defaults and registers the various WordPress features that
- * Zo ZAP supports.
+ * Fajar - Ohyeahthemes supports.
  *
  * @uses load_theme_textdomain() For translation/localization support.
  * @uses add_theme_support() To add support for post thumbnails, automatic feed links,
@@ -131,14 +131,14 @@ if (!function_exists('zo_limit_words')) {
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since Zo ZAP 1.0
+ * @since Fajar - Ohyeahthemes 1.0
  */
-function zo_setup() {
+function fajar_setup() {
 	/*
-	 * Makes Zo ZAP available for translation.
+	 * Makes Fajar - Ohyeahthemes available for translation.
 	 *
 	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on Zo ZAP, use a find and replace
+	 * If you're building a theme based on Fajar - Ohyeahthemes, use a find and replace
 	 * to change 'zo-zap' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'creativ', get_template_directory() . '/languages' );
@@ -174,7 +174,7 @@ function zo_setup() {
 	add_image_size('zo-blog-medium', 480, 330, true);
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 }
-add_action( 'after_setup_theme', 'zo_setup' );
+add_action( 'after_setup_theme', 'fajar_setup' );
 
 /**
  * Add Image Size to Media
@@ -236,9 +236,9 @@ function zo_post_meta_data(){
 /**
  * Enqueue scripts and styles for front-end.
  * @author OhyeahThemes
- * @since ZO SuperHeroes 1.0
+ * @since OhyeahThemes 1.0
  */
-function zo_scripts_styles() {
+function fajar_scripts_styles() {
     
 	global $smof_data, $wp_styles, $wp_scripts;
 	
@@ -251,38 +251,37 @@ function zo_scripts_styles() {
 	    'back_to_top'=> $smof_data['footer_botton_back_to_top'],
 	    'page_title_parallax'=> $smof_data['page_title_parallax'],
 	);
-
 	/*------------------------------------- JavaScript ---------------------------------------*/
 	
 	
 	/** --------------------------libs--------------------------------- */
 
 	/* Adds JavaScript Bootstrap. */
-	wp_enqueue_script('OhyeahThemes-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.2');
+	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.2');
 	
 	/* Add parallax plugin. */
 	if($smof_data['paralax']){
-	   wp_enqueue_script('OhyeahThemes-parallax', get_template_directory_uri() . '/assets/js/jquery.parallax-1.1.3.js', array( 'jquery' ), '1.1.3', true);
+	   wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/jquery.parallax-1.1.3.js', array( 'jquery' ), '1.1.3', true);
 	}
 	/* Add smoothscroll plugin */
 	if($smof_data['smoothscroll']){
-	   wp_enqueue_script('OhyeahThemes-smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.min.js', array( 'jquery' ), '1.0.0', true);
+	   wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/assets/js/smoothscroll.min.js', array( 'jquery' ), '1.0.0', true);
 	}
 
     /* Fancy box */
-    wp_register_script('OhyeahThemes-fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true);
-    wp_register_style('OhyeahThemes-fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.css');
+    wp_register_script('fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true);
+    wp_register_style('fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.css');
     /* Slick Slider */
-    wp_register_script('zo-slick-js', get_template_directory_uri(). '/assets/js/slick.min.js', array('jquery'), '1.5.7', true);
-    wp_register_style('zo-slick-css', get_template_directory_uri(). '/assets/css/slick.css');
+    wp_register_script('slick-js', get_template_directory_uri(). '/assets/js/slick.min.js', array('jquery'), '1.5.7', true);
+    wp_register_style('slick-css', get_template_directory_uri(). '/assets/css/slick.css');
 	/** --------------------------custom------------------------------- */
 	
 	/* Add main.js */
-	wp_register_script('OhyeahThemes-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery'), '1.0.0', true);
-	wp_localize_script('OhyeahThemes-main', 'ZOOptions', $script_options);
-	wp_enqueue_script('OhyeahThemes-main');
+	wp_register_script('fajar-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery'), '1.0.0', true);
+	wp_localize_script('fajar-main', 'ZOOptions', $script_options);
+	wp_enqueue_script('fajar-main');
 	/* Add menu.js */
-    wp_enqueue_script('OhyeahThemes-menu', get_template_directory_uri() . '/assets/js/menu.js', array( 'jquery' ), '1.0.0', true);
+    wp_enqueue_script('fajar-menu', get_template_directory_uri() . '/assets/js/menu.js', array( 'jquery' ), '1.0.0', true);
     /* VC Pie Custom JS */
     wp_register_script('progressCircle', get_template_directory_uri() . '/assets/js/process_cycle.js', array( 'jquery' ), '1.0.0', true);
     wp_register_script('vc_pie_custom', get_template_directory_uri() . '/assets/js/vc_pie_custom.js', array( 'jquery' ), '1.0.0', true);
@@ -301,30 +300,33 @@ function zo_scripts_styles() {
 	wp_enqueue_style('animation', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.3.0');
 	
 	/* Loads Bootstrap stylesheet. */
-	wp_enqueue_style('OhyeahThemes-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.3.2');
+	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.3.2');
 	
-	/* Loads Bootstrap stylesheet. */
-	wp_enqueue_style('OhyeahThemes-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5.0');
+	/* Loads Fajar Icon. */
+	wp_enqueue_style('fajar-icon', get_template_directory_uri() . '/assets/css/fajar-icons.css', array(), '1.0.0');
+	
+	/* Loads Font Awesome. */
+	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5.0');
 
 	/* Loads Font Ionicons. */
-	wp_enqueue_style('OhyeahThemes-font-ionicons', get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), '2.0.1');
+	wp_enqueue_style('font-ionicons', get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), '2.0.1');
 
 	/* Loads Pe Icon. */
-	wp_enqueue_style('OhyeahThemes-pe-icon', get_template_directory_uri() . '/assets/css/pe-icon-7-stroke.css', array(), '1.0.1');
+	wp_enqueue_style('pe-icon', get_template_directory_uri() . '/assets/css/pe-icon-7-stroke.css', array(), '1.0.1');
 	
 	/** --------------------------custom------------------------------- */
 	
 	/* Loads our main stylesheet. */
-	wp_enqueue_style( 'OhyeahThemes-style', get_stylesheet_uri(), array( 'OhyeahThemes-bootstrap' ));
+	wp_enqueue_style( 'fajar-style', get_stylesheet_uri(), array( 'bootstrap' ));
 
 	/* Loads the Internet Explorer specific stylesheet. */
-	wp_enqueue_style( 'zo_zap-ie', get_template_directory_uri() . '/assets/css/ie.css', array( 'OhyeahThemes-style' ), '20121010' );
-	$wp_styles->add_data( 'zo_zap-ie', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'ie-9', get_template_directory_uri() . '/assets/css/ie.css', array( 'fajar-style' ), '20121010' );
+	$wp_styles->add_data( 'ie-9', 'conditional', 'lt IE 9' );
 	/* Load widgets scripts*/		
-	wp_enqueue_script('zo_widget_scripts', get_template_directory_uri() . '/inc/widgets/widgets.js');
-	wp_enqueue_style('zo_widget_scripts', get_template_directory_uri() . '/inc/widgets/widgets.css');
+	wp_enqueue_script('fajar_widget_scripts', get_template_directory_uri() . '/inc/widgets/widgets.js');
+	wp_enqueue_style('fajar_widget_scripts', get_template_directory_uri() . '/inc/widgets/widgets.css');
 	/* Load static css*/
-	wp_enqueue_style('OhyeahThemes-static', get_template_directory_uri() . '/assets/css/static.css', array( 'OhyeahThemes-style' ), '1.0.0');
+	wp_enqueue_style('fajar-static', get_template_directory_uri() . '/assets/css/static.css', array( 'fajar-style' ), '1.0.0');
 
     /**
      * IE Fallbacks
@@ -338,7 +340,7 @@ function zo_scripts_styles() {
     $wp_scripts->add_data( 'ie_respond', 'conditional', 'lt IE 9' );
 
 }
-add_action( 'wp_enqueue_scripts', 'zo_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'fajar_scripts_styles' );
 
 /**
  * Register sidebars.
@@ -362,6 +364,16 @@ function zo_widgets_init() {
 		'name' => __( 'Header Top Left', 'creativ' ),
 		'id' => 'sidebar-2',
 		'description' => __( 'Appears when using the optional Header with a page set as Header top left', 'creativ' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="wg-title">',
+		'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Header Banners', 'creativ' ),
+		'id' => 'header-baners',
+		'description' => __( 'Appears when using the optional Header with a page set as Header Banners', 'creativ' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title">',
@@ -822,10 +834,10 @@ function zo_list_post_types() {
  */
  function zo_add_fancybox() {
      if( is_singular('portfolio') ) {
-        wp_enqueue_script('OhyeahThemes-fancybox');
-        wp_enqueue_style('OhyeahThemes-fancybox');
-        wp_enqueue_script('zo-slick-js');
-        wp_enqueue_style('zo-slick-css');
+        wp_enqueue_script('fancybox');
+        wp_enqueue_style('fancybox');
+        wp_enqueue_script('slick-js');
+        wp_enqueue_style('slick-css');
      }
  }
 add_action( 'wp_enqueue_scripts', 'zo_add_fancybox' );
@@ -849,7 +861,7 @@ add_filter('pre_get_posts','zo_searchfilter');
 /* Filter style loader tag, add attribute property */
 add_filter('style_loader_tag', 'zo_slick_style_loader_tag');
 function zo_slick_style_loader_tag($tag){  
-  return preg_replace("/id='zo-slick-css-css'/", "property='stylesheet' id='zo-slick-css-css'", $tag);
+  return preg_replace("/id='slick-css-css'/", "property='stylesheet' id='slick-css-css'", $tag);
 }
 
 add_filter('style_loader_tag', 'zo_wp_mediaelement_style_loader_tag');

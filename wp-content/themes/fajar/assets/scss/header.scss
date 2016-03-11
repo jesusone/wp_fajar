@@ -67,21 +67,9 @@
     }
 }
 /*** End Admin Bar ***/
-
-/*** Logo ***/
-#zo-header-logo a {
-    display: block;
-    @include transition(all 300ms linear 0ms);
-}
-/*** End Logo ***/
-
 /* ==========================================================================
   End All Style Header
 ========================================================================== */
-#zo-header-right {
-    padding: 0;
-    position: static;
-}
 
 /* Cart and Search
 ==========================================================*/

@@ -21,6 +21,23 @@
 	</div>
 </div>
 
+<!-- Header Logo, Icon, Cart-->
+<div id="yeah-header-brand">
+	<div class="container">
+		<div class="row">
+			<div id="yeah-header-logo" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="" src="<?php echo esc_url(zo_page_header_logo()); ?>"></a>
+			</div>
+			<div id="yeah-header-banners" class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+				<?php if(is_active_sidebar('header-baners')){ dynamic_sidebar('header-baners'); } ?>
+			</div>
+			<div id="zo-header-right" class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+				<?php if(is_active_sidebar('header-right')){ dynamic_sidebar('header-right'); } ?>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div id="zo-header" class="zo-main-header header-default <?php if (!$smof_data['menu_sticky']) {
 	echo 'no-sticky';
 } ?> <?php if ($smof_data['menu_sticky_tablets']) {
@@ -34,9 +51,7 @@
 } ?>">
 	<div class="container-fluid">
 		<div class="row">
-			<div id="zo-header-logo" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="" src="<?php echo esc_url(zo_page_header_logo()); ?>"></a>
-			</div>
+			
 			<div id="zo-header-navigation" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
@@ -61,11 +76,6 @@
 					wp_nav_menu($attr); ?>
 				</nav>
 			</div>
-			<?php if(is_active_sidebar('header-right')){ ?>
-			<div id="zo-header-right" class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-				<?php dynamic_sidebar('header-right'); ?>
-			</div>
-			<?php }?>
 			<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="pe-7s-menu"></i></div>
 		</div>
 	</div>
