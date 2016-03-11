@@ -61,7 +61,7 @@
 					wp_nav_menu($attr); ?>
 				</nav>
 			</div>
-			<?php if(is_active_sidebar('header-right'))?>
+			<?php if(is_active_sidebar('header-right')){ ?>
 			<div id="zo-header-right" class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
 				<?php dynamic_sidebar('header-right'); ?>
 			</div>
