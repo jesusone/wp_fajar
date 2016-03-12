@@ -1334,7 +1334,7 @@ $this->sections[] = array(
             'all_styles' => true,
 			'line-height' => false,
 			'subsets' => false,
-            'output'  => array('body, #yeah-header-menu .submenu'),
+            'output'  => array('body'),
             'units' => 'px',
             'default' => array(
                 'color' => '#404040',
@@ -1361,7 +1361,7 @@ $this->sections[] = array(
             'title' => __('Font 1', 'creativ'),
             'subtitle' => __('extend class "extra_font1" to using this font', 'creativ'),
             'google' => true,
-            'font-backup' => false,
+            'font-backup' => true,
             'font-style' => false,
             'color' => false,
             'text-align'=> false,
@@ -1370,8 +1370,9 @@ $this->sections[] = array(
             'subsets'=> false,
             'output' => array('.extra_font1'),
             'default' => array(
-                'font-weight' => '',
-                'font-family' => ''
+                'font-weight' => '400',
+                'font-family' => 'Source Sans Pro',
+				'font-backup' => 'Arial, Helvetica, sans-serif',
             )
         ),
         array(
