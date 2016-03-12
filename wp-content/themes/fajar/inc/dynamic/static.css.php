@@ -93,11 +93,11 @@ class ZoTheme_StaticCss
     {
         global $smof_data, $zo_base;
         ob_start();
-		/* Google Font Selecter */
-		$zo_base->setGoogleFont($smof_data['font_body'], wp_filter_nohtml_kses($smof_data['font-body-selector']));
         /* local fonts */
         $zo_base->setTypographyLocal($smof_data['local-fonts-1'], $smof_data['local-fonts-selector-1']);
         $zo_base->setTypographyLocal($smof_data['local-fonts-2'], $smof_data['local-fonts-selector-2']);
+		/* Google Font Selecter */
+		$zo_base->setGoogleFont($smof_data['font_body'], wp_filter_nohtml_kses($smof_data['font-body-selector']));
 		zo_setvariablescss($smof_data['primary_color'],'$primary_color','#ee3b24');
 		zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
 		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
