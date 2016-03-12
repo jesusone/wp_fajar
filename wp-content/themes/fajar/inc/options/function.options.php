@@ -1334,6 +1334,7 @@ $this->sections[] = array(
             'all_styles' => true,
 			'line-height' => false,
 			'subsets' => false,
+			'output' => array('body'),
             'units' => 'px',
             'default' => array(
                 'color' => '#404040',
@@ -1351,7 +1352,7 @@ $this->sections[] = array(
             'title' => __('Selector of Font Body', 'creativ'),
             'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...)', 'creativ'),
             'validate' => 'no_html',
-            'default' => 'body, #yeah-header-menu .submenu',
+            'default' => '#yeah-header-menu .submenu',
         ),
     )
 );
