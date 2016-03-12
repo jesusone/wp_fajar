@@ -243,7 +243,7 @@ class ZO_Base
             $font_size =  !empty($googlefont['font-size']) ? "font-size:".esc_attr($googlefont['font-size']).";" : '';
                 
             if($selecter){
-                echo esc_attr($selecter)."{font-family:'".esc_attr($googlefont['font-family'])."'".$font_backup.";".esc_attr($font_weight)."".esc_attr($color)."".esc_attr($font_size)."}";
+                echo esc_attr($selecter)."{font-family:'".esc_attr($googlefont['font-family'])."', ".$font_backup.";".esc_attr($font_weight)."".esc_attr($color)."".esc_attr($font_size)."}";
             }
         }
     }   
