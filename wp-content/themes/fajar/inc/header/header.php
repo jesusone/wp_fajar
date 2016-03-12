@@ -58,8 +58,7 @@
 
 					$attr = array(
 						'menu' => zo_menu_location(),
-						'menu_class' => 'nav-menu menu-main-menu',
-						'items_wrap'     => '<ul><li id="item-id">' . __( 'Menu:', 'textdomain' ) . '</li>%3$s</ul>'
+						'menu_class' => 'nav-menu menu-main-menu'
 					);
 
 					$menu_locations = get_nav_menu_locations();
