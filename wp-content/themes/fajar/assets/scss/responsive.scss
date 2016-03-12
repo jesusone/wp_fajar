@@ -53,9 +53,6 @@
 	body .container {
 		width: 100%;
 	}
-	#zo-header > .container {
-		padding: 0 15px;
-	}
 	.wpb_column.padding-30 {
 		padding: 0 30px !important;
 	}
@@ -80,15 +77,10 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	/* Header Sticky */
-	body #zo-header {
-		position: absolute;
-	}
-	/* End Header Sticky */
 	/* ==========================================================================
 			Header Mobile
 	========================================================================== */
-	#zo-header, #zo-header.header-fixed {
+	#yeah-header-menu, #yeah-header-menu.header-fixed {
 		height: 80px;
 		> .container {
 			position: relative;
@@ -113,7 +105,7 @@
 		text-transform: none;
 		line-height: 50px;
 	}
-	body.fixed-margin-top #zo-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li {
+	body.fixed-margin-top #yeah-header-menu.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li {
 		line-height: normal;
 	}
 	/* ==========================================================================
@@ -141,7 +133,7 @@
 		}
 	}
 
-	body #zo-header.sticky-tablets {
+	body #yeah-header-menu.sticky-tablets {
 		position: fixed;
 	}
 	/* Footer Top */
@@ -169,7 +161,7 @@
 
 @media screen and (max-width: 767px) {
 	/* Header Sticky */
-	body #zo-header.sticky-mobile {
+	body #yeah-header-menu.sticky-mobile {
 		position: fixed;
 	}
 

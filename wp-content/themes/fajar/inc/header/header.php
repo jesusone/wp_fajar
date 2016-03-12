@@ -39,7 +39,7 @@
 </div>
 
 <!-- Header Navigation -->
-<div id="zo-header" class="zo-main-header header-default <?php if (!$smof_data['menu_sticky']) {
+<div id="yeah-header-menu" class="zo-main-header header-default <?php if (!$smof_data['menu_sticky']) {
 	echo 'no-sticky';
 } ?> <?php if ($smof_data['menu_sticky_tablets']) {
 	echo 'sticky-tablets';
@@ -58,7 +58,7 @@
 
 					$attr = array(
 						'menu' => zo_menu_location(),
-						'items_wrap'     => '<ul class="nav-menu menu-main-menu">%3$s<li>' . get_search_form (false) . '</li></ul>'
+						'items_wrap'     => '<ul class="nav-menu menu-main-menu">%3$s<li class="menu-sreach">' . get_search_form (false) . '</li></ul>'
 					);
 
 					$menu_locations = get_nav_menu_locations();
@@ -82,4 +82,3 @@
 	</div>
 	<!-- #site-navigation -->
 </div>
-<!--#zo-header-->

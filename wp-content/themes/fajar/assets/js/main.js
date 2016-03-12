@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	var adminbar_height = 0;
 	
 	/* header menu */
-	var header = $('#zo-header');
+	var header = $('#yeah-header-menu');
 	var header_top = 0;
 	
 	/* scroll status */

@@ -23,7 +23,7 @@
         });
         /* Page Fixed Menu */
         $('.header-fixed-page').parents('body').addClass('remove-margin-top');
-        $('#zo-header.no-sticky').parents('body').addClass('remove-margin-top');
+        $('#yeah-header.no-sticky').parents('body').addClass('remove-margin-top');
     });
 
 })(jQuery);

@@ -1,17 +1,6 @@
 /* ==========================================================================
    All Style Header
 ========================================================================== */
-@include breakpoint-max(768px){
-	body div#zo-header{
-		margin-top: 10px;
-	}
-	body.admin-bar div#zo-header{
-		margin-top: 45px;
-	}
-	body div#zo-header.zo-header-2, body.admin-bar div#zo-header.zo-header-2{
-		margin-top: 0;
-	}
-}
 #yeah-header-top {
 	border-bottom: 1px solid #e0e0e0;
 	p.contact-number {
@@ -63,6 +52,9 @@
 	#yeah-header-logo {
 		padding-bottom: 34px;
 		padding-top: 40px;
+		a img {
+			@include transition(all 420ms linear 0ms);
+		}
 	}
 	.header-banners {
 		width: 100%;
@@ -95,7 +87,7 @@
 		}
 	}
 }
-#zo-header {
+#yeah-header-menu {
 	width: 100%;
 	z-index: 999;
 	top: 0;
@@ -120,9 +112,6 @@
 			position: fixed;
 		}
 	}
-	#zo-header-logo a img {
-		@include transition(all 420ms linear 0ms);
-	}
 	> .container {
 		position: relative;
 		z-index: 99;
@@ -130,7 +119,7 @@
 }
 /*** Admin Bar ***/
 .admin-bar {
-    #zo-header {
+    #yeah-header-menu {
         top: 32px;
         &.no-sticky {
             top: 0;
