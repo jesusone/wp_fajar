@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
 		adminbar_height = adminbar.length > 0 ? adminbar.outerHeight(true) : 0 ;
 		
 		/* get top header menu */
-        if(header_top.lenght){
+        if(header_top.length){
 			header_top = header.offset().top;
 			header_height = header.height();
 		}
@@ -141,15 +141,15 @@ jQuery(document).ready(function($) {
 			switch (true) {
 				case (window_width > 992):
 					header.addClass('header-fixed');
-					$('body').css('margin-top', header_height);
+					$('body').css('margin-top', header_height + 'px');
 					break;
 				case ((window_width <= 992 && window_width >= 768) && (ZOOptions.menu_sticky_tablets == '1')):
 					header.addClass('header-fixed');
-					$('body').css('margin-top', header_height);
+					$('body').css('margin-top', header_height + 'px');
 					break;
 				case ((window_width <= 768) && (ZOOptions.menu_sticky_mobile == '1')):
 					header.addClass('header-fixed');
-					$('body').css('margin-top', header_height);
+					$('body').css('margin-top', header_height + 'px');
 					break;
 			}
 		} else {
