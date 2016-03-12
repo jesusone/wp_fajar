@@ -58,7 +58,7 @@
 
 					$attr = array(
 						'menu' => zo_menu_location(),
-						'items_wrap'     => '<ul class="nav-menu menu-main-menu">%3$s<li>' . get_search_form () . '</li></ul>'
+						'items_wrap'     => '<ul class="nav-menu menu-main-menu">%3$s<li>' . get_search_form (false) . '</li></ul>'
 					);
 
 					$menu_locations = get_nav_menu_locations();
