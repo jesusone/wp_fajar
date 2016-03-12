@@ -52,7 +52,7 @@
 } ?>">
 	<div class="container">
 		<div class="row">
-			<div id="zo-header-navigation" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+			<div id="zo-header-navigation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
 
@@ -73,7 +73,11 @@
 					}
 
 					/* main nav. */
-					wp_nav_menu($attr); ?>
+					echo "<ul>";
+						wp_nav_menu($attr); 
+						echo "<li>SEARCH</li>";
+					echo "<ul>";
+					?>
 				</nav>
 			</div>
 			<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="pe-7s-menu"></i></div>
