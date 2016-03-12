@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
 		adminbar_height = adminbar.length > 0 ? adminbar.outerHeight(true) : 0 ;
 		
 		/* get top header menu */
-        if(header_top.length){
+        if(header.length){
 			header_top = header.offset().top;
 			header_height = header.height();
 		}
