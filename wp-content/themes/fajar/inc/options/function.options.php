@@ -249,9 +249,9 @@ $this->sections[] = array(
                 '#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
             'default' => array(
                 'margin-top'     => '0',
-                'margin-right'   => '9px',
-                'margin-bottom'  => '30px',
-                'margin-left'    => '9px',
+                'margin-right'   => '0',
+                'margin-bottom'  => '0',
+                'margin-left'    => '0',
                 'units'          => 'px',
             )
         ),
@@ -266,7 +266,7 @@ $this->sections[] = array(
             'default' => array(
                 'padding-top'     => '0',
                 'padding-right'   => '0',
-                'padding-bottom'  => '30px',
+                'padding-bottom'  => '0',
                 'padding-left'    => '0',
                 'units'          => 'px',
             )
