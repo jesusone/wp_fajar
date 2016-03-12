@@ -224,6 +224,28 @@ class ZO_Base
                 echo esc_attr($selecter)."{font-family:'".esc_attr($name)."';}\n";
             }
         }
+    }
+    
+    /**
+     * set google font for selecter.
+     * 
+     * @param array $googlefont
+     * @param string $selecter
+     */
+    public static function setGoogleFont($googlefont = array(), $selecter = ''){
+        
+        if(!empty($googlefont['font-family'])){
+            /* add font selecter. */
+            
+            $font_backup =  !empty($googlefont['font-backup']) ? esc_attr($googlefont['font-backup']) : '';
+            $font_weight =  !empty($googlefont['font-weight']) ? "font-weight:".esc_attr($googlefont['font-weight']).";" : '';
+            $color =  !empty($googlefont['color']) ? "color:".esc_attr($googlefont['color']).";" : '';
+            $font_size =  !empty($googlefont['font-size']) ? "font-size:".esc_attr($googlefont['font-size']).";" : '';
+                
+            if($selecter){
+                echo esc_attr($selecter)."{font-family:'".esc_attr($googlefont['font-family']).",".$font_backup."';".esc_attr($font_weight)."".esc_attr($color)."".esc_attr($font_size)."}";
+            }
+        }
     }   
     
     /**
