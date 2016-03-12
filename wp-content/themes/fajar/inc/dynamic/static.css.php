@@ -159,11 +159,6 @@ class ZoTheme_StaticCss
 					text-transform: uppercase;
 				}";
 			}
-			if($smof_data['sub_menu_uppercase']){
-				echo "#zo-header-navigation .main-navigation .menu-main-menu li ul a {
-					text-transform: uppercase;
-				}";
-			}
         echo '}';
         /* End Main Menu */
 
