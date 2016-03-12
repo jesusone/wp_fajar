@@ -1462,7 +1462,7 @@ $this->sections[] = array(
             'title' => __('Selector 2', 'creativ'),
             'subtitle' => __('add html tags ID or class (body,a,.class,#id), or extend ".museo_slab_300" to use font', 'creativ'),
             'validate' => 'no_html',
-            'default' => '.museo_slab_300',
+            'default' => '.museo_slab_300, #yeah-header-menu',
             'required' => array(
                 0 => 'local-fonts-2',
                 1 => '!=',
