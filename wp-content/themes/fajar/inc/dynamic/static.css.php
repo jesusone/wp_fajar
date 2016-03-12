@@ -96,10 +96,9 @@ class ZoTheme_StaticCss
         /* local fonts */
         $zo_base->setTypographyLocal($smof_data['local-fonts-1'], $smof_data['local-fonts-selector-1']);
         $zo_base->setTypographyLocal($smof_data['local-fonts-2'], $smof_data['local-fonts-selector-2']);
-		zo_setvariablescss($smof_data['primary_color'],'$primary_color','#fcc403');
+		zo_setvariablescss($smof_data['primary_color'],'$primary_color','#ee3b24');
 		zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
-		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#fcc403');
-		zo_setvariablescss($smof_data['header_height']['height'],'$header_height','');
+		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
 		zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
 		zo_setvariablescss($smof_data['sticky_logo_height']['height'],'$sticky_logo_height','');
         /* ==========================================================================
@@ -112,9 +111,6 @@ class ZoTheme_StaticCss
         /* End Header Top */
 
         /* Header Main */
-        if($smof_data['header_height']){
-            echo "#zo-header-logo a { line-height: \$header_height; }";
-        };
         if($smof_data['main_logo_height']){
             echo "#zo-header-logo a img { max-height: \$main_logo_height; }";
         }
@@ -140,21 +136,8 @@ class ZoTheme_StaticCss
 				}";
 			}
 			if($smof_data['menu_color_first_level']){
-				echo "#zo-header-navigation .main-navigation .menu-main-menu > li > a,
-				#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a {
-					color:".esc_attr($smof_data['menu_color_first_level']).";
-					line-height: \$header_height;
-				}";
-			}
-			if($smof_data['menu_color_first_level']){
 				echo "#zo-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children > .zo-menu-toggle {
 				color:".esc_attr($smof_data['menu_color_first_level']).";
-				}";
-			}
-			if($smof_data['header_height']){
-				echo "#zo-header-navigation .main-navigation .menu-main-menu > li, 
-				#zo-header-navigation .main-navigation .menu-main-menu > ul > li {
-					line-height: \$header_height;
 				}";
 			}
 			if($smof_data['menu_color_hover_first_level']){

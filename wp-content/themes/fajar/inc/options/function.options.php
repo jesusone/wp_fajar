@@ -38,17 +38,6 @@ $this->sections[] = array(
             )
         ),
         array(
-            'id'       => 'header_height',
-            'type'     => 'dimensions',
-            'units'    => array('px'),
-            'title'    => __('Header Height', 'creativ'),
-            'output' => array('#zo-header'),
-            'width' => false,
-            'default'  => array(
-                'height'  => '100px'
-            ),
-        ),
-        array(
             'id' => 'header_margin',
             'title' => __('Margin', 'creativ'),
             'type' => 'spacing',
