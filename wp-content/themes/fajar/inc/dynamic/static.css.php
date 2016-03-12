@@ -101,7 +101,6 @@ class ZoTheme_StaticCss
 		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#fcc403');
 		zo_setvariablescss($smof_data['header_height']['height'],'$header_height','');
 		zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
-		zo_setvariablescss($smof_data['menu_sticky_height']['height'],'$menu_sticky_height','');
 		zo_setvariablescss($smof_data['sticky_logo_height']['height'],'$sticky_logo_height','');
         /* ==========================================================================
            Start Header
@@ -125,21 +124,11 @@ class ZoTheme_StaticCss
         /* End Header Main */
 
         /* Sticky Header */
-        if($smof_data['menu_sticky_height']['height']){
-            echo "#zo-header.header-fixed { height: \$menu_sticky_height; }";
-        }
-        if(!$smof_data['menu_transparent'] && $smof_data['menu_sticky_height']['height']){
-            echo "body.fixed-margin-top {  margin-top: \$menu_sticky_height; }";
-        }
         if(!empty($smof_data['bg_sticky_header']['rgba'])){
             echo "#zo-header.zo-main-header.header-fixed { background-color:".esc_attr($smof_data['bg_sticky_header']['rgba'])."; }";
         }
         if($smof_data['sticky_logo_height']){
             echo "#zo-header.header-fixed #zo-header-logo a img { max-height: \$sticky_logo_height; }";
-        }
-        if($smof_data['menu_sticky_height']['height']){
-            echo "#zo-header.header-fixed #zo-header-logo a,
-			#zo-header.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li { line-height: \$menu_sticky_height; }";
         }
         /* End Sticky Header */
         /* Main Menu */

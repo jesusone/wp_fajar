@@ -93,17 +93,6 @@ $this->sections[] = array(
             'default' => false,
         ),
         array(
-            'id'       => 'menu_sticky_height',
-            'type'     => 'dimensions',
-            'units'    => array('px'),
-            'title'    => __('Sticky Header Height', 'creativ'),
-            'width' => false,
-            'default'  => array(
-                'height'  => '100px'
-            ),
-            'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
-        ),
-        array(
             'id' => 'menu_sticky_header_margin',
             'title' => __('Sticky Header Margin', 'creativ'),
             'type' => 'spacing',
