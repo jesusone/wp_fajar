@@ -159,6 +159,11 @@ class ZoTheme_StaticCss
 					text-transform: uppercase;
 				}";
 			}
+			if($smof_data['sub_menu_uppercase']){
+				echo "#zo-header-navigation .main-navigation .menu-main-menu li ul a {
+					text-transform: uppercase;
+				}";
+			}
         echo '}';
         /* End Main Menu */
 
@@ -202,11 +207,6 @@ class ZoTheme_StaticCss
 			#zo-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-ancestor > a,
 			#zo-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-ancestor > .zo-menu-toggle {
 				color:".esc_attr($smof_data['menu_color_hover_sub_level']).";
-			}";
-        }
-        if(!empty($smof_data['menu_border_color_bottom'])){
-            echo "#zo-header-navigation .main-navigation li ul li a {
-				border-bottom: 1px solid ".esc_attr($smof_data['menu_item_border_color']).";
 			}";
         }
         /* End Sub Menu */

@@ -134,14 +134,12 @@ Menu Default
             > li, > li a, > ul > li, > ul > li > a {
                 display: inline-block;
                 text-decoration: none;
-                text-transform: uppercase;
                 letter-spacing: 1px;
             }
             > li ul li, > li ul li a, > ul > li ul li, > ul > li ul li a {
                 display: block;
                 text-decoration: none;
                 text-align: left;
-                text-transform: uppercase;
                 letter-spacing: 1px;
             }
             > li ul ul, > ul > li ul ul {

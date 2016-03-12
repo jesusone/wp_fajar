@@ -230,7 +230,7 @@ $this->sections[] = array(
             ),
             'type' => 'select',
             'title' => __('Menu Position', 'creativ'),
-            'default' => '2'
+            'default' => 'left'
         ),
         array(
             'id' => 'menu_margin_first_level',
@@ -281,7 +281,7 @@ $this->sections[] = array(
                 '#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
             'units' => 'px',
             'default' => array(
-                'font-size' => '14px',
+                'font-size' => '15px',
             )
         ),
         array(
@@ -301,15 +301,8 @@ $this->sections[] = array(
                 '#zo-header-navigation .main-navigation .menu-main-menu > ul > li ul a'),
             'units' => 'px',
             'default' => array(
-                'font-size' => '11px',
+                'font-size' => '16px',
             )
-        ),
-        array(
-            'subtitle' => __('enable sub menu border bottom.', 'creativ'),
-            'id' => 'menu_border_color_bottom',
-            'type' => 'switch',
-            'title' => __('Border Bottom Menu Item Sub Level', 'creativ'),
-            'default' => false,
         ),
         array(
             'subtitle' => __('Enable mega menu.', 'creativ'),
@@ -323,6 +316,13 @@ $this->sections[] = array(
             'id' => 'menu_first_level_uppercase',
             'type' => 'switch',
             'title' => __('Menu First Level Uppercase', 'creativ'),
+            'default' => true,
+        ),
+        array(
+            'subtitle' => __('Enable sub menu uppercase.', 'creativ'),
+            'id' => 'sub_menu_uppercase',
+            'type' => 'switch',
+            'title' => __('Sub menu Uppercase', 'creativ'),
             'default' => false,
         ),
         array(
@@ -1192,14 +1192,6 @@ $this->sections[] = array(
             'type' => 'color',
             'title' => __('Menu Font Color Hover - Sub Level', 'creativ'),
             'default' => '#333'
-        ),
-        array(
-            'subtitle' => __('Controls the border color of sub level menu items.', 'creativ'),
-            'id' => 'menu_item_border_color',
-            'type' => 'color',
-            'title' => __('Border Color - Sub Level', 'creativ'),
-            'default' => '',
-            'required' => array( 0 => 'menu_border_color_bottom', 1 => '=', 2 => 1 )
         )
     )
 );
