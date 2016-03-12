@@ -141,6 +141,7 @@ Menu Default
                 text-decoration: none;
                 text-align: left;
                 letter-spacing: 1px;
+				@extend .extra_font1;
             }
             > li ul ul, > ul > li ul ul {
                 width: 215px;
