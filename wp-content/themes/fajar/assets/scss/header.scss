@@ -108,6 +108,7 @@
 	}
 	&.header-default {
 		position: static;
+		border-top : 5px solid #6dced7;
 		&.header-fixed, &.header-fixed-page {
 			position: fixed;
 		}

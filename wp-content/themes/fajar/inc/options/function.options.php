@@ -68,13 +68,6 @@ $this->sections[] = array(
             )
         ),
         array(
-            'subtitle' => __('enable transparent mode for header.', 'creativ'),
-            'id' => 'menu_transparent',
-            'type' => 'switch',
-            'title' => __('Transparent Header', 'creativ'),
-            'default' => true,
-        ),
-        array(
             'subtitle' => __('enable sticky mode for menu.', 'creativ'),
             'id' => 'menu_sticky',
             'type' => 'switch',
