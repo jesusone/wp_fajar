@@ -1334,6 +1334,7 @@ $this->sections[] = array(
             'all_styles' => true,
 			'line-height' => false,
 			'subsets' => false,
+            'output'  => array('body'),
             'units' => 'px',
             'default' => array(
                 'color' => '#404040',
@@ -1344,19 +1345,6 @@ $this->sections[] = array(
                 'font-size' => '18px',
             ),
             'subtitle' => __('Typography option with each property can be called individually.', 'creativ'),
-        ),
-        array(
-            'id' => 'font-body-selector',
-            'type' => 'textarea',
-            'title' => __('Selector 1', 'creativ'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".font-body" to use font', 'creativ'),
-            'validate' => 'no_html',
-            'default' => 'body, .font-body, #yeah-header-menu .submenu',
-            'required' => array(
-                0 => 'font_body',
-                1 => '!=',
-                2 => ''
-            )
         ),
     )
 );
@@ -1380,6 +1368,7 @@ $this->sections[] = array(
             'line-height'=>false,
             'font-size'=> false,
             'subsets'=> false,
+            'output' => array('.extra_font1'),
             'default' => array(
                 'font-weight' => '400',
                 'font-family' => 'Source Sans Pro',
