@@ -59,6 +59,7 @@
 					$attr = array(
 						'menu' => zo_menu_location(),
 						'menu_class' => 'nav-menu menu-main-menu',
+						'after' => '<li>SEARCH</li>'
 					);
 
 					$menu_locations = get_nav_menu_locations();
@@ -73,10 +74,7 @@
 					}
 
 					/* main nav. */
-					echo "<ul>";
-						wp_nav_menu($attr); 
-						echo "<li>SEARCH</li>";
-					echo "<ul>";
+					wp_nav_menu($attr); 
 					?>
 				</nav>
 			</div>
