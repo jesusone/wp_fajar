@@ -1348,10 +1348,10 @@ $this->sections[] = array(
         array(
             'id' => 'font-body-selector',
             'type' => 'textarea',
-            'title' => __('Selector of Font Body', 'creativ'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...)', 'creativ'),
+            'title' => __('Selector of Body Font', 'creativ'),
+            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".body_font" to using this font', 'creativ'),
             'validate' => 'no_html',
-            'default' => 'body',
+            'default' => 'body, .body_font',
         ),
     )
 );
