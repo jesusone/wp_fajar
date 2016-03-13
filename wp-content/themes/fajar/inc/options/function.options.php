@@ -1375,12 +1375,19 @@ $this->sections[] = array(
             'line-height'=>false,
             'font-size'=> false,
             'subsets'=> false,
-            'output' => array('.extra_font1'),
             'default' => array(
                 'font-weight' => '400',
                 'font-family' => 'Source Sans Pro',
 				'font-backup' => 'Arial, Helvetica, sans-serif',
             )
+        ),
+        array(
+            'id' => 'google-font-selector-1',
+            'type' => 'textarea',
+            'title' => __('Selector of Body Font', 'creativ'),
+            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-1" to using this font', 'creativ'),
+            'validate' => 'no_html',
+            'default' => '.google-font-1',
         ),
         array(
             'id' => 'google-font-2',
@@ -1400,6 +1407,14 @@ $this->sections[] = array(
                 'font-weight' => '',
                 'font-family' => ''
             )
+        ),
+        array(
+            'id' => 'google-font-selector-2',
+            'type' => 'textarea',
+            'title' => __('Selector of Body Font', 'creativ'),
+            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-2" to using this font', 'creativ'),
+            'validate' => 'no_html',
+            'default' => '.google-font-2',
         ),
     )
 );
