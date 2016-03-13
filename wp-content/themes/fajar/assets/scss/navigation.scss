@@ -103,17 +103,6 @@ Menu Default
                                 }
                             }	
                         }
-						.zo-menu-toggle {
-							bottom: 3px;
-							color: #393939;
-							display: inline-block;
-							font-size: 14px;
-							left: 50%;
-							line-height: 1;
-							opacity: 0.5;
-							position: absolute;
-							@include transform(translateX(-50%));
-						}
                     }
                     &:hover {
                         > ul.sub-menu {
@@ -121,6 +110,17 @@ Menu Default
                             margin-top: 0;
                         }
                     }
+					.zo-menu-toggle {
+						bottom: 3px;
+						color: #393939;
+						display: inline-block;
+						font-size: 14px;
+						left: 50%;
+						line-height: 1;
+						opacity: 0.5;
+						position: absolute;
+						@include transform(translateX(-50%));
+					}
                 }
             }
             > li, > li a, > ul > li, > ul > li > a {
