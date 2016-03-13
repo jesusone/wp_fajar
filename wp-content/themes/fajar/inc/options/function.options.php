@@ -338,10 +338,10 @@ $this->sections[] = array(
             'font-family' => false,
             'line-height' => false,
             'text-align' => false,
-            'output'  => array('#yeah-header-menu.zo-main-header .menu-main-menu > li > a i'),
+            'output'  => array('#zo-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children .zo-menu-toggle'),
             'units' => 'px',
             'default' => array(
-                'font-size' => '12px',
+                'font-size' => '14px',
             )
         ),
     )
