@@ -49,25 +49,19 @@ Menu Default
                 position: relative;
                 a {
                     display: inline-block;
-                    border-bottom: 0;
                     white-space: nowrap;
                     @include transition(all 420ms linear 0ms);
                 }
             }
         }
         .menu-main-menu {
+			margin-top: -5px;
             > li {
                 vertical-align: top;
                 @include transition(all 420ms linear 0ms);
-                &:hover, &.current-menu-item, &.current-menu-parent, &.current-menu-ancestor{
-                    > a {
-                        border-bottom-color: $primary_color;
-                    }
-                }
                 > a {
                     position: relative;
                     text-align: center;
-                    border-bottom: 2px solid transparent;
                     line-height: normal;
                     @include transition(all 420ms linear 0ms);
                     i {
@@ -201,9 +195,6 @@ Menu Default
                 padding: 10px 18px;
                 line-height: 1.8em;
                 white-space: normal;
-            }
-            &:last-child a {
-                border-bottom: none;
             }
         }
     }
@@ -388,7 +379,6 @@ Menu Default
         }
         a {
             display: block;
-            border-bottom: none;
             color: #999 !important;
             margin: 0 0 4px!important;
             padding: 0!important;

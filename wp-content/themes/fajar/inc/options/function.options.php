@@ -257,10 +257,10 @@ $this->sections[] = array(
             'output' => array('#zo-header-navigation .main-navigation .menu-main-menu > li > a',
                 '#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
             'default' => array(
-                'padding-top'     => '0',
-                'padding-right'   => '0',
-                'padding-bottom'  => '0',
-                'padding-left'    => '0',
+                'padding-top'     => '15px',
+                'padding-right'   => '28px',
+                'padding-bottom'  => '16px',
+                'padding-left'    => '28px',
                 'units'          => 'px',
             )
         ),
