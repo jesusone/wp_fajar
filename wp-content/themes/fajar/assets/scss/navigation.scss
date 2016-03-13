@@ -101,16 +101,17 @@ Menu Default
                                 .zo-menu-toggle {
                                     display: none;
                                 }
-                            }
+                            }	
                             .zo-menu-toggle {
-                                position: absolute;
-                                right: 20px;
-                                top: 50%;
-                                line-height: normal;
-                                @include transform(translateY(-50%));
-                                .fa:before {
-                                    content: "\f105";
-                                }
+                                bottom: 3px;
+								color: #393939;
+								display: inline-block;
+								font-size: 14px;
+								left: 50%;
+								line-height: 1;
+								opacity: 0.5;
+								position: absolute;
+								@include transform(translateX(-50%));
                             }
                         }
                     }
@@ -118,9 +119,6 @@ Menu Default
                         > ul.sub-menu {
                             @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
                             margin-top: 0;
-                        }
-                        > .zo-menu-toggle {
-                            opacity: 1;
                         }
                     }
                 }
@@ -293,9 +291,6 @@ Menu Default
         }
     }
     /* End Start Mega Menu */
-    #yeah-header-menu.header-fixed #zo-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children > .zo-menu-toggle {
-        display: none;
-    }
 }
 
 /*
@@ -406,17 +401,6 @@ Menu Default
             overflow: hidden;
             padding-left: 10px;
             @include transition(max-height 600ms linear 0ms);
-            &.submenu-open {
-                max-height: 1000px;
-                + .zo-menu-toggle i {
-                    &:before {
-                        content: "\f106";
-                    }
-                }
-            }
-            .zo-menu-toggle {
-                right: 12px;
-            }
         }
     }
 }
