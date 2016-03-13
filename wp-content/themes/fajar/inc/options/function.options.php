@@ -1087,33 +1087,6 @@ $this->sections[] = array(
     )
 );
 
-/** Header Top Color **/
-$this->sections[] = array(
-    'title' => __('Header Top Color', 'creativ'),
-    'icon' => 'el-icon-minus',
-    'subsection' => true,
-    'fields' => array(
-        array(
-            'subtitle' => __('Set background color header top.', 'creativ'),
-            'id' => 'bg_header_top_color',
-            'type' => 'background',
-            'output'  => array('body #yeah-header-top'),
-            'title' => __('Background Color', 'creativ'),
-            'default' => array(
-				'background-color' => '#ececec',
-			)
-        ),
-        array(
-            'subtitle' => __('Set color header top.', 'creativ'),
-            'id' => 'header_top_color',
-            'type' => 'color',
-            'output'  => array('body #yeah-header-top'),
-            'title' => __('Font Color', 'creativ'),
-            'default' => ''
-        )
-    )
-);
-
 /** Header Main Color **/
 $this->sections[] = array(
     'title' => __('Header Main Color', 'creativ'),
