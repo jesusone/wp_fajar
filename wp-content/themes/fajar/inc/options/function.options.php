@@ -1030,7 +1030,9 @@ $this->sections[] = array(
             'type' => 'color_rgba',
             'title' => __('Header Background Color', 'creativ'),
             'default'   => array(
-                'alpha'     => 0
+                'alpha'     => 1,
+				'color'		=> '#fff',
+				'rgba'		=> 'rgba(255,255,255,1)'
             )
         )
     )
