@@ -14,6 +14,9 @@
         }
 		.menu-main-menu { 
 			> li {
+				background: #fff;
+				outline: 0 none;
+				text-decoration: none;
 				&:nth-child(1){
 					border-top: 5px solid #f16250;
 				}
@@ -151,15 +154,14 @@ Menu Default
                 }
             }
             > li, > li a, > ul > li, > ul > li > a {
-                display: inline-block;
+                display: block;
                 text-decoration: none;
-                letter-spacing: 1px;
+				float: left;
             }
             > li ul li, > li ul li a, > ul > li ul li, > ul > li ul li a {
                 display: block;
                 text-decoration: none;
                 text-align: left;
-                letter-spacing: 1px;
 				@extend .google-font-1;
             }
             > li ul ul, > ul > li ul ul {
