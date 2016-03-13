@@ -72,7 +72,7 @@ $this->sections[] = array(
             'id' => 'menu_sticky',
             'type' => 'switch',
             'title' => __('Sticky Header', 'creativ'),
-            'default' => false,
+            'default' => true,
         ),
         array(
             'id' => 'menu_sticky_header_margin',
