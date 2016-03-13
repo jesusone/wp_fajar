@@ -12,6 +12,34 @@
             left: 100%;
             right: auto;
         }
+		.menu-main-menu { 
+			> li {
+				&:nth-child(1){
+					border-top: 5px solid #f16250;
+				}
+				&:nth-child(2){
+					border-top: 5px solid #f6c815;
+				}
+				&:nth-child(3){
+					border-top: 5px solid #768492;
+				}
+				&:nth-child(4){
+					border-top: 5px solid #98d070;
+				}
+				&:nth-child(5){
+					border-top: 5px solid #fbaf70;
+				}
+				&:nth-child(6){
+					border-top: 5px solid #f58790;
+				}
+				&:nth-child(7){
+					border-top: 5px solid #0abfd9;
+				}
+				&:nth-child(8){
+					border-top: 5px solid #ecc26f;
+				}
+			}
+		}
     }
 	.menu-sreach{
 		form {
