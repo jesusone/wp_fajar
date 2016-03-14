@@ -51,6 +51,19 @@
 	.menu-sreach{
 		form {
 			margin: 0;
+			&:before {
+				color: #fff;
+			}
+			input[type="text"] {
+				@extend .google-font-1;
+				font-size: 14px;
+				font-style: italic;
+				color: #404040;
+			}
+			input[type="submit"] {
+				width: 47px;
+				background: #6dced7;
+			}
 		}
 	}
 }
