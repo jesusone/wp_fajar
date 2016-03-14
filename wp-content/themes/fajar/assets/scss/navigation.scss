@@ -49,8 +49,8 @@
 		}
     }
 	.menu-sreach{
-		float: right;
-		max-width: 210px;
+		float: right !important;
+		min-width: 210px;
 		form {
 			margin: 0;
 			&:before {
@@ -60,6 +60,8 @@
 				height: 50px;
 				line-height: 50px;
 				text-align: center;
+				top: 0;
+				right: 0;
 			}
 			input[type="text"] {
 				@extend .google-font-1;
