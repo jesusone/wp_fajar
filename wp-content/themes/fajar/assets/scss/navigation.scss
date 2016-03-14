@@ -53,6 +53,9 @@
 			margin: 0;
 			&:before {
 				color: #fff;
+				background: #6dced7;
+				width: 47px;
+				height: 51px;
 			}
 			input[type="text"] {
 				@extend .google-font-1;
@@ -62,7 +65,6 @@
 			}
 			input[type="submit"] {
 				width: 47px;
-				background: #6dced7;
 			}
 		}
 	}
