@@ -90,6 +90,7 @@ Menu Default
             > li {
                 vertical-align: top;
                 @include transition(all 420ms linear 0ms);
+				border-left: 1px solid #c2c2c2;
                 > a {
                     position: relative;
                     text-align: center;
@@ -108,6 +109,7 @@ Menu Default
                     }
                 }
                 &:last-child {
+					border-right: 1px solid #c2c2c2;
                     > a {
                         padding-right: 0;
                     }
