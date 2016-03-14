@@ -49,13 +49,17 @@
 		}
     }
 	.menu-sreach{
+		float: right;
+		max-width: 210px;
 		form {
 			margin: 0;
 			&:before {
 				color: #fff;
 				background: #6dced7;
 				width: 47px;
-				height: 51px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
 			}
 			input[type="text"] {
 				@extend .google-font-1;
@@ -109,7 +113,7 @@ Menu Default
             > li {
                 vertical-align: top;
                 @include transition(all 420ms linear 0ms);
-				border-left: 1px solid #c2c2c2;
+				border-right: 1px solid #c2c2c2;
                 > a {
                     position: relative;
                     text-align: center;
@@ -127,11 +131,8 @@ Menu Default
                         }
                     }
                 }
-                &:last-child {
-					border-right: 1px solid #c2c2c2;
-                    > a {
-                        padding-right: 0;
-                    }
+                &:first-child {
+					border-left: 1px solid #c2c2c2;
                 }
                 &.menu-item-has-children {
                     position: relative;
