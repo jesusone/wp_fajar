@@ -104,8 +104,10 @@ Menu Default
             padding: 0;
             list-style: none;
             text-indent: 0;
+            @include transition(all 420ms linear 0ms);
             li {
                 position: relative;
+                @include transition(all 420ms linear 0ms);
                 a {
                     display: inline-block;
                     white-space: nowrap;
@@ -117,13 +119,11 @@ Menu Default
 			margin-top: -5px;
             > li {
                 vertical-align: top;
-                @include transition(all 420ms linear 0ms);
 				border-right: 1px solid #c2c2c2;
                 > a {
                     position: relative;
                     text-align: center;
                     line-height: normal;
-                    @include transition(all 420ms linear 0ms);
                     i {
                         display: block;
                         width: 100%;
