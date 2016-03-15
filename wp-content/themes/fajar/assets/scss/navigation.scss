@@ -142,6 +142,7 @@ Menu Default
                 &.menu-item-has-children {
                     position: relative;
                     > ul.sub-menu {
+						opacity: 0;
                         background-color: #fff;
                         @include transition(all 0.4s ease 0s);
 						&.current-menu-parent, &.current-menu-ancestor{
@@ -220,7 +221,6 @@ Menu Default
 		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 		-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 		border: 1px solid #c2c2c2;
-		opacity: 0;
     }
     /* Menu Stick Wall */
     #zo-header-navigation .main-navigation li ul ul {
@@ -254,7 +254,6 @@ Menu Default
             clip: inherit;
             overflow: inherit;
             height: inherit;
-			opacity: 1;
         }
         li ul li {
             a {
