@@ -111,6 +111,10 @@ Menu Default
                     white-space: nowrap;
                     @include transition(all 420ms linear 0ms);
                 }
+				ul{
+					box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+					-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				}
             }
         }
         .menu-main-menu {
@@ -142,17 +146,13 @@ Menu Default
                 &.menu-item-has-children {
                     position: relative;
                     > ul.sub-menu {
-                        margin-top: 24px;
-                        background-color: #141414;
+                        background-color: #fff;
                         @include transition(all 0.4s ease 0s);
 						&.current-menu-parent, &.current-menu-ancestor{
 							> a{
 								color: $primary_color;
 							}
 						}
-                        .sub-menu {
-                            background-color: #2e2e2e;
-                        }
                         li.menu-item-has-children {
                             position: relative;
                             &.group {
@@ -162,6 +162,16 @@ Menu Default
                             }	
                         }
                     }
+					li {
+						a {
+							position: relative;
+							&:before {
+								content:"\f105";
+								position: absolute;
+								left: 20px;
+							}
+						}
+					}
                     &:hover {
                         > ul.sub-menu {
                             @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
@@ -190,9 +200,10 @@ Menu Default
                 text-decoration: none;
                 text-align: left;
 				@extend .google-font-1;
+				font-weight: 300;
             }
             > li ul ul, > ul > li ul ul {
-                width: 215px;
+                width: 203px;
             }
         }
     }
@@ -284,12 +295,11 @@ Menu Default
             position: inherit;
         }
 		.menu-main-menu > li.menu-item-has-children ul.sub-menu:not(.multicolumn){
-			padding-top: 30px;
-			padding-bottom: 50px;
-			min-width: 275px;
+			min-width: 203px;
 			> li > a{
-				padding-left: 40px;
-				padding-right: 30px;
+				float: none;
+				padding: 12px 40px;
+				border-bottom: 1px solid #c2c2c2
 			}
 		}
         .menu-main-menu li:not(.group) > ul.drop_full_width.sub-menu {
