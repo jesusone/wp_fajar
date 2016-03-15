@@ -104,14 +104,14 @@ Menu Default
             padding: 0;
             list-style: none;
             text-indent: 0;
-            @include transition(all 420ms linear 0ms);
+            @include transition(all 250ms linear 0ms);
             li {
                 position: relative;
-                @include transition(all 420ms linear 0ms);
+                @include transition(all 250ms linear 0ms);
                 a {
                     display: inline-block;
                     white-space: nowrap;
-                    @include transition(all 420ms linear 0ms);
+                    @include transition(all 250ms linear 0ms);
                 }
             }
         }
@@ -129,7 +129,7 @@ Menu Default
                         width: 100%;
                         line-height: 0;
                         margin-bottom: 6px;
-                        @include transition(all 420ms linear 0ms);
+                        @include transition(all 250ms linear 0ms);
                         + .menu-title {
                             @include transform(translateY(25px));
                             display: block;
@@ -209,7 +209,7 @@ Menu Default
         margin: 0;
     }
     #zo-header-navigation .main-navigation li ul {
-        margin: 15px 0 0;
+        margin: 10px 0 0;
         padding: 0;
         position: absolute;
         z-index: 1;
