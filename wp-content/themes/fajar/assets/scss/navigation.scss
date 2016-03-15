@@ -172,6 +172,7 @@ Menu Default
                     &:hover {
                         > ul.sub-menu {
                             margin-top: 0;
+							opacity: 1;
                         }
                     }
 					.zo-menu-toggle {
@@ -207,7 +208,7 @@ Menu Default
         margin: 0;
     }
     #zo-header-navigation .main-navigation li ul {
-        margin: 0;
+        margin: 15px 0 0;
         padding: 0;
         position: absolute;
         z-index: 1;
@@ -253,7 +254,6 @@ Menu Default
             clip: inherit;
             overflow: inherit;
             height: inherit;
-			opacity: 1;
         }
         li ul li {
             a {
