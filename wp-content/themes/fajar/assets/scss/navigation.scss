@@ -303,9 +303,9 @@ Menu Default
 			}
 		}
         .menu-main-menu li:not(.group) > ul.drop_full_width.sub-menu {
-            width: calc(100% - 32px) !important;
+            width: calc(100% - 30px) !important;
             background: #fff;
-            padding: 0 32px;
+            padding: 0 30px;
 			left: 15px;
 			right: 15px;
 			ul.sub-menu:not(.multicolumn){
