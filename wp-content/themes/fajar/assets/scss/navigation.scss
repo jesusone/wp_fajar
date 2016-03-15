@@ -329,7 +329,7 @@ Menu Default
                 }
             }
 			li.group {
-				a{
+				> a{
 					@extend .museo_slab_300;
 					font-size: 24px;
 					color: #222222;
