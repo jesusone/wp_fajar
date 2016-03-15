@@ -223,7 +223,6 @@ Menu Default
     }
     /* Menu Stick Wall */
     #zo-header-navigation .main-navigation li ul ul {
-        top: 15px;
         left: 100%;
         width: 275px;
         &.back {
@@ -303,7 +302,6 @@ Menu Default
 			}
 		}
         .menu-main-menu li:not(.group) > ul.drop_full_width.sub-menu {
-            left: 0 !important;
             width: calc(100% - 32px) !important;
             background: #fff;
             padding: 0 32px;
