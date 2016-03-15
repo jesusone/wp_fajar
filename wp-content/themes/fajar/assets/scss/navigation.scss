@@ -87,7 +87,7 @@
 Menu Default
 ======================================================
 */
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 992px) {
     #menu-mobile {
         display: none;
     }
@@ -171,7 +171,6 @@ Menu Default
 					}
                     &:hover {
                         > ul.sub-menu {
-                            @include box-shadow(0 3px 5px rgba(0, 0, 0, 0.15));
                             margin-top: 0;
                         }
                     }
@@ -220,6 +219,7 @@ Menu Default
 		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 		-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 		border: 1px solid #c2c2c2;
+		opacity: 0;
     }
     /* Menu Stick Wall */
     #zo-header-navigation .main-navigation li ul ul {
@@ -253,6 +253,7 @@ Menu Default
             clip: inherit;
             overflow: inherit;
             height: inherit;
+			opacity: 1;
         }
         li ul li {
             a {
