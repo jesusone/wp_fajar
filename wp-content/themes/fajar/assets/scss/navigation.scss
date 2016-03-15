@@ -304,9 +304,11 @@ Menu Default
 		}
         .menu-main-menu li:not(.group) > ul.drop_full_width.sub-menu {
             left: 0 !important;
-            width: 100% !important;
-            background: #141414;
-            padding: 60px 100px 80px;
+            width: calc(100% - 32px) !important;
+            background: #fff;
+            padding: 0 32px;
+			left: 15px;
+			right: 15px;
 			ul.sub-menu:not(.multicolumn){
 				padding-top: 0;
 				padding-bottom: 0;
@@ -320,36 +322,33 @@ Menu Default
                 }
                 > a {
                     color: #FFF;
-                    padding-bottom: 20px;
-                    margin-bottom: 16px;
                     position: relative;
                     font-weight: bold;
                     font-size: 12px;
                     line-height: normal;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        width: 23px;
-                        height: 3px;
-                        background-color: $primary_color;
-                        bottom: 0;
-                        left: 0;
-                    }
                 }
             }
             .sub-menu {
                 background-color: transparent;
             }
         }
-        li.group > ul.sub-menu {
-            display: block;
-            float: left;
-            left: 0;
-            position: relative;
-            width: 100%;
-            height: inherit;
-            padding: 0;
-        }
+        li.group {
+			a{
+				@extend .museo_slab_300;
+				font-size: 24px;
+				color: #222222;
+				padding: 23px 30px 10px;
+			}
+			> ul.sub-menu {
+				display: block;
+				float: left;
+				left: 0;
+				position: relative;
+				width: 100%;
+				height: inherit;
+				padding: 0;
+			}
+		}
         li.title-hide .menu-title { display: none; }
         .widget {
             line-height: 30px;
