@@ -328,28 +328,32 @@ Menu Default
                     line-height: normal;
                 }
             }
-            .sub-menu {
-                background-color: transparent;
-            }
+			li.group {
+				a{
+					@extend .museo_slab_300;
+					font-size: 24px;
+					color: #222222;
+					padding: 23px 30px 10px;
+				}
+				> ul.sub-menu {
+					display: block;
+					float: left;
+					left: 0;
+					position: relative;
+					width: 100%;
+					height: inherit;
+					padding: 0;
+					border: 0;
+					li {
+						a{
+							padding: 10px 30px;
+							border: 0;
+							margin: 0;
+						}
+					}
+				}
+			}
         }
-        li.group {
-			a{
-				@extend .museo_slab_300;
-				font-size: 24px;
-				color: #222222;
-				padding: 23px 30px 10px;
-			}
-			> ul.sub-menu {
-				display: block;
-				float: left;
-				left: 0;
-				position: relative;
-				width: 100%;
-				height: inherit;
-				padding: 0;
-			}
-		}
-        li.title-hide .menu-title { display: none; }
         .widget {
             line-height: 30px;
             text-transform: initial;
