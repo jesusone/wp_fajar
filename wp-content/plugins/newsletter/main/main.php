@@ -51,8 +51,20 @@ if (!$controls->is_action()) {
             $module->merge_options($controls->data);
             $controls->messages .= __('Saved.', 'newsletter');
         }
+        $module->hook_newsletter_extension_versions(true);
     }
 }
+
+if (!empty($controls->data['contract_key'])) {
+    $response = wp_remote_get('http://www.thenewsletterplugin.com/wp-content/plugins/file-commerce-pro/check.php?k=' . $controls->data['contract_key']);
+    //var_dump($response);
+    if (is_wp_error($response) || $response['response']['code'] != 200) {
+        $controls->errors .= 'The license seems expired or not valid, please check your account on www.thenewsletterplugin.com';
+    }
+    
+}
+
+//echo $module->get_extension_version(64);
 ?>
 
 <div class="wrap" id="tnp-wrap">
@@ -228,7 +240,7 @@ if (!$controls->is_action()) {
                     <tr valign="top">
                         <th>Email body content encoding</th>
                         <td>
-                            <?php $controls->select('content_transfer_encoding', array('' => 'Default', '8bit' => '8 bit', 'base64' => 'Base 64')); ?>
+                            <?php $controls->select('content_transfer_encoding', array('' => 'Default', '8bit' => '8 bit', 'base64' => 'Base 64', 'binary'=>'Binary', 'quoted-printable'=>'Quoted printable', '7bit'=>'7 bit')); ?>
                             <p class="description">
                                 Sometimes setting it to Base 64 solves problem with old mail servers (for example truncated or unformatted emails.
                                 <a href="http://www.thenewsletterplugin.com/plugins/newsletter/newsletter-configuration#enconding" target="_blank">Read more here</a>.

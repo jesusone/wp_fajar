@@ -261,13 +261,13 @@ $labels = array_reverse($labels);
                                                     echo "<small>".$emails_module->format_date($email->send_on)."</small>";
                                                 } else { ?>
                                             <div id="canvas-nl-<?php echo $email->id ?>" style="width:100px; height:5px; background-color: lightcoral;">
-                                                <div class="canvas-inner" style="background-color: green; width: <?php echo intval($email->sent / $email->total)*100 ?>%; height: 100%;">&nbsp;</div>
+                                                <div class="canvas-inner" style="background-color: green; width: <?php echo intval($email->sent / $email->total * 100) ?>%; height: 100%;">&nbsp;</div>
                                             </div>
                                              <?php }} ?>
                                         </td>
                                         <td style="white-space:nowrap">
                                             <a class="button" title="<?php _e('Edit', 'newsletter') ?>" href="<?php echo $emails_module->get_admin_page_url('edit'); ?>&amp;id=<?php echo $email->id; ?>"><i class="fa fa-pencil"></i></a>
-                                            <a class="button" title="<?php _e('Statistics', 'newsletter') ?>" href="<?php echo NewsletterStatistics::instance()->get_admin_page_url('view'); ?>&amp;id=<?php echo $email->id; ?>"><i class="fa fa-bar-chart"></i></a>
+                                            <a class="button" title="<?php _e('Statistics', 'newsletter') ?>" href="<?php echo NewsletterStatistics::instance()->get_statistics_url($email->id); ?>"><i class="fa fa-bar-chart"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -275,6 +275,7 @@ $labels = array_reverse($labels);
                             </div>
                         </div>
                         <!-- END Newsletters -->
+                        <?php if (empty(Newsletter::instance()->options['contract_key'])) { ?>
                         <!-- START Premium -->
                         <div id="tnp-dash-premium" class="postbox">
                             <h3><?php _e('Premium', 'newsletter') ?>
@@ -308,6 +309,7 @@ $labels = array_reverse($labels);
                             </div>
                         </div>
                         <!-- END Premium -->
+                        <?php } ?>
                     </div>
                 </div>
                 <div id="postbox-container-3" class="postbox-container">

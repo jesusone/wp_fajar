@@ -94,9 +94,9 @@ $options_profile = get_option('newsletter_profile');
                         <th>First name</th>
                         <td>
                             <?php $controls->text('name', 50); ?>
-                            <div class="hints">
+                            <p class="description">
                                 If you collect only the name of the subscriber without distinction of first and last name this field is used.
-                            </div>
+                            </p>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -121,10 +121,10 @@ $options_profile = get_option('newsletter_profile');
                         <th>Test subscriber?</th>
                         <td>
                             <?php $controls->yesno('test'); ?>
-                            <div class="hints">
+                            <p class="description">
                                 A test subscriber is a regular subscriber that is even used as recipint when sending test newsletter are sent
                                 (for example to check the layout).
-                            </div>
+                            </p>
                         </td>
                     </tr>
 
@@ -134,10 +134,10 @@ $options_profile = get_option('newsletter_profile');
                         <th>Feed by mail</th>
                         <td>
                             <?php $controls->yesno('feed'); ?>
-                            <div class="hints">
+                            <p class="description">
                                 "Yes" when this subscriber has the feed by mail service active. The 
                                 <a href="http://www.thenewsletterplugin.com/feed-by-mail-extension?utm_source=plugin&utm_medium=link&utm_campaign=newsletter-feed" target="_blank">feed by mail is an extension of this plugin</a>.
-                            </div>
+                            </p>
                         </td>
                     </tr>
                 </table>
@@ -212,27 +212,27 @@ $options_profile = get_option('newsletter_profile');
                         <th>From IP address</th>
                         <td>
                             <?php $controls->value('ip'); ?>
-                            <div class="hints">
+                            <p class="description">
                                 Internet address from which the subscription started. Required by many providers.
-                            </div>
+                            </p>
                         </td>
                     </tr>
                     <tr valign="top">
                         <th>Secret token</th>
                         <td>
                             <?php $controls->text('token', 50); ?>
-                            <div class="hints">
+                            <p class="description">
                                 This secret token is used to access the profile page and edit profile data, to confirm and cancel the subscription.
-                            </div>
+                            </p>
                         </td>
                     </tr>
                     <tr valign="top">
                         <th>Profile URL</th>
                         <td>
                             <?php echo plugins_url('newsletter/do/profile.php') . '?nk=' . $id . '-' . $controls->data['token']; ?>
-                            <div class="hints">
+                            <p class="description">
                                 The URL which lands on the user profile editing page. It can be added on newsletters using the {profile_url} tag.
-                            </div>
+                            </p>
                         </td>
                     </tr>
 

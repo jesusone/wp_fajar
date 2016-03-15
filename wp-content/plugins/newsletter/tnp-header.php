@@ -40,7 +40,7 @@ function newsletter_print_entries($group) {
                         <small><?php _e('Import from external sources', 'newsletter') ?></small></a></li>
                 <li><a href="?page=newsletter_users_export"><i class="fa fa-download"></i> <?php _e('Export', 'newsletter') ?>
                         <small><?php _e('Export your subscribers list', 'newsletter') ?></small></a></li>
-                <li><a href="?page=newsletter_users_massive"><i class="fa fa-wrench"></i> <?php _e('Mainteinance', 'newsletter') ?>
+                <li><a href="?page=newsletter_users_massive"><i class="fa fa-wrench"></i> <?php _e('Maintenance', 'newsletter') ?>
                         <small><?php _e('Massive actions: change list, clean up, ...', 'newsletter') ?></small></a></li>
                 <li><a href="?page=newsletter_users_stats"><i class="fa fa-bar-chart"></i> <?php _e('Statistics', 'newsletter') ?>
                         <small><?php _e('All about your subscribers', 'newsletter') ?></small></a></li>
@@ -53,7 +53,7 @@ function newsletter_print_entries($group) {
             <ul>
                 <li><a href="?page=newsletter_subscription_options"><i class="fa fa-sign-in"></i> <?php _e('Subscription', 'newsletter') ?>
                         <small><?php _e('The subscription process in detail', 'newsletter') ?></small></a></li>
-                <li><a href="?page=newsletter_subscription_wpusers"><i class="fa fa-wordpress"></i> <?php _e('WP Registration', 'newsletter') ?>
+                <li><a href="?page=newsletter_wp_index"><i class="fa fa-wordpress"></i> <?php _e('WP Registration', 'newsletter') ?>
                         <small><?php _e('Subscribe on WP registration', 'newsletter') ?></small></a></li>
                 <li><a href="?page=newsletter_subscription_profile"><i class="fa fa-check-square-o"></i> <?php _e('Subscription Form Fields', 'newsletter') ?>
                         <small><?php _e('When and what data to collect', 'newsletter') ?></small></a></li>
@@ -61,7 +61,7 @@ function newsletter_print_entries($group) {
                         <small><?php _e('Profile the subscribers for a better targeting', 'newsletter') ?></small></a></li>
                 <li><a href="?page=newsletter_subscription_unsubscription"><i class="fa fa-sign-out"></i> <?php _e('Unsubscription', 'newsletter') ?>
                         <small><?php _e('How to give the last goodbye (or avoid it!)', 'newsletter') ?></small></a></li>
-                <li><a href="?page=newsletter_subscription_lock"><i class="fa fa-lock"></i> <?php _e('Locked Content', 'newsletter') ?>
+                <li><a href="?page=newsletter_lock_index"><i class="fa fa-lock"></i> <?php _e('Locked Content', 'newsletter') ?>
                         <small><?php _e('Make your best content available only upon subscription', 'newsletter') ?></small></a></li>
                 <li><a href="?page=newsletter_subscription_forms"><i class="fa fa-pencil"></i> <?php _e('Custom Forms', 'newsletter') ?>
                         <small><?php _e('Hand coded form storage', 'newsletter') ?></small></a></li>
@@ -100,8 +100,14 @@ function newsletter_print_entries($group) {
                 ?>
             </ul>
         </li>
+        <?php 
+        if (empty(Newsletter::instance()->options['contract_key'])) {
+        ?>
         <li class="tnp-professional-extensions-button"><a href="http://www.thenewsletterplugin.com/extensions" target="_blank">
                 <i class="fa fa-trophy"></i> <?php _e('Professional Extensions', 'newsletter') ?></a></li>
+        <?php
+        }
+        ?>        
     </ul>
 </div>
 

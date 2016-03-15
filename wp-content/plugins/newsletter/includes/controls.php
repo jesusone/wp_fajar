@@ -5,6 +5,8 @@ class NewsletterControls {
     var $data;
     var $action = false;
     var $button_data = '';
+    var $errors = '';
+    var $messages = '';
 
     function __construct($options = null) {
         if ($options == null) {
@@ -98,14 +100,14 @@ class NewsletterControls {
         $shown = true;
         
         if (!empty($this->errors)) {
-            echo '<div class="error"><p>';
+            echo '<div class="tnp-error">';
             echo $this->errors;
-            echo '</p></div>';
+            echo '</div>';
         }
         if (!empty($this->messages)) {
-            echo '<div class="updated"><p>';
+            echo '<div class="tnp-message">';
             echo $this->messages;
-            echo '</p></div>';
+            echo '</div>';
         }
     }
     
@@ -428,31 +430,35 @@ class NewsletterControls {
     }
 
     function wp_editor($name, $settings = array()) {
-        wp_editor($this->data[$name], $name, array_merge(array('textarea_name' => 'options[' . $name . ']', 'wpautop' => false), $settings));
+        $value = $this->get_value($name);
+                wp_editor($value, $name, array_merge(array('textarea_name' => 'options[' . $name . ']', 'wpautop' => false), $settings));
         if (!is_plugin_active('mce_table_buttons/mce_table_buttons.php')) {
             echo '<p class="description">You can install <a href="https://wordpress.org/plugins/mce-table-buttons/" target="_blank">MCE Table Button</a> for a table management toolbar add on.</p>';
         }
     }
 
     function textarea($name, $width = '100%', $height = '50') {
+        $value = $this->get_value($name);
         echo '<textarea class="dynamic" name="options[' . $name . ']" wrap="off" style="width:' . $width . ';height:' . $height . '">';
-        echo htmlspecialchars($this->data[$name]);
+        echo htmlspecialchars($value);
         echo '</textarea>';
     }
 
     function textarea_fixed($name, $width = '100%', $height = '200') {
+        $value = $this->get_value($name);
         echo '<textarea id="options-' . $name . '" name="options[' . $name . ']" wrap="off" style="width:' . $width . ';height:' . $height . 'px">';
-        echo htmlspecialchars($this->data[$name]);
+        echo htmlspecialchars($value);
         echo '</textarea>';
     }
     
     function textarea_preview($name, $width = '100%', $height = '200', $header = '', $footer = '') {
+         $value = $this->get_value($name);
         //do_action('newsletter_controls_textarea_preview', $name);
         echo '<input class="button" type="button" onclick="newsletter_textarea_preview(\'options-' . $name . '\', \'\', \'\')" value="Switch editor/preview">';
         echo '<br><br>';
         echo '<div style="position: relative">';
         echo '<textarea id="options-' . $name . '" name="options[' . $name . ']" wrap="off" style="width:' . $width . ';height:' . $height . 'px">';
-        echo htmlspecialchars($this->data[$name]);
+        echo htmlspecialchars($value);
         echo '</textarea>';
         echo '<iframe id="options-' . $name . '-iframe" class="newsletter-textarea-preview" style="background-color: #fff; width: ' . $width . '; height: ' . $height . 'px; position: absolute; top: 0; left: 0; z-index: 10000; display: none"></iframe>';
         echo '</div>';
@@ -485,6 +491,21 @@ class NewsletterControls {
         if ($label != '')
             echo '&nbsp;' . $label . '</label>';
     }
+    
+    function checkbox2($name, $label = '') {
+        if ($label != '')
+            echo '<label>';
+        echo '<input type="checkbox" id="' . $name . '" onchange="document.getElementById(\'' . $name . '_hidden\').value=this.checked?\'1\':\'0\'"';
+        if (!empty($this->data[$name]))
+            echo ' checked="checked"';
+        echo '/>';
+        if ($label != '')
+            echo '&nbsp;' . $label . '</label>';
+        echo '<input type="hidden" id="' . $name . '_hidden" name="options[' . $name . ']" value="';
+
+        echo empty($this->data[$name])?'0':'1';
+        echo '"/>';
+    }    
     
     function radio($name, $value, $label = '') {
         if ($label != '') {
@@ -565,7 +586,7 @@ class NewsletterControls {
             if (empty($options_profile['list_' . $i]))
                 continue;
             echo '<div class="newsletter-preferences-item">';
-            $this->checkbox($name . '_' . $i, esc_html($options_profile['list_' . $i]));
+            $this->checkbox2($name . '_' . $i, esc_html($options_profile['list_' . $i]));
             echo '</div>';
         }
         echo '<div style="clear: both"></div>';

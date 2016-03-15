@@ -1,7 +1,7 @@
 === Newsletter ===
 Tags: newsletter,email,subscription,mass mail,list build,email marketing,direct mailing
 Requires at least: 3.4.0
-Tested up to: 4.4.1
+Tested up to: 4.4.2
 Stable tag: trunk
 Contributors: satollo,webagile,michael-travan
 
@@ -75,6 +75,10 @@ Thank you, The Newsletter Team
 No screenshots are available at this time.
 
 == Changelog ==
+
+= 4.1.0 =
+
+* Fix statistics link in the dashboard newsletter list
 
 = 4.0.9 =
 
