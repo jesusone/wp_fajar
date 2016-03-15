@@ -419,15 +419,6 @@ function zo_widgets_init() {
     	'before_title' => '<h3 class="wg-title">',
     	'after_title' => '</h3>',
 	) );
-	register_sidebar( array(
-    	'name' => __( 'Content', 'creativ' ),
-    	'id' => 'sidebar-content',
-    	'description' => __( 'Appears when using the optional Content with a page set as Content', 'creativ' ),
-    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</aside>',
-    	'before_title' => '<h3 class="wg-title">',
-    	'after_title' => '</h3>',
-	) );
 	
 	register_sidebar( array(
     	'name' => __( 'Footer Top 1', 'creativ' ),
