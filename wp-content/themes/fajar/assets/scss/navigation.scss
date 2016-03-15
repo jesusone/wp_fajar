@@ -111,10 +111,6 @@ Menu Default
                     white-space: nowrap;
                     @include transition(all 420ms linear 0ms);
                 }
-				ul{
-					box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-					-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-				}
             }
         }
         .menu-main-menu {
@@ -220,7 +216,10 @@ Menu Default
         width: 275px;
         top: 100%;
         overflow: hidden;
-        clip: rect(1px, 1px, 1px, 1px);
+        clip: rect(1px, 1px, 1px, 1px);		
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		border: 1px solid #c2c2c2;
     }
     /* Menu Stick Wall */
     #zo-header-navigation .main-navigation li ul ul {
