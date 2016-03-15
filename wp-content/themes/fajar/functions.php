@@ -470,6 +470,46 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
+    	'name' => __( 'Footer Top 5', 'creativ' ),
+    	'id' => 'footer-top-5',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 5', 'creativ' ),
+    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</aside>',
+    	'before_title' => '<h3 class="wg-title">',
+    	'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer Top 6', 'creativ' ),
+    	'id' => 'footer-top-6',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 6', 'creativ' ),
+    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</aside>',
+    	'before_title' => '<h3 class="wg-title">',
+    	'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer Top 7', 'creativ' ),
+    	'id' => 'footer-top-7',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 7', 'creativ' ),
+    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</aside>',
+    	'before_title' => '<h3 class="wg-title">',
+    	'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer Banners', 'creativ' ),
+    	'id' => 'footer-banners',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Banners', 'creativ' ),
+    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</aside>',
+    	'before_title' => '<h3 class="wg-title">',
+    	'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
     	'name' => __( 'Footer Bottom Left', 'creativ' ),
     	'id' => 'sidebar-9',
     	'description' => __( 'Appears when using the optional Footer Bottom with a page set as Footer Bottom left', 'creativ' ),
