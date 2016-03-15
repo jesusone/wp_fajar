@@ -357,7 +357,9 @@ Menu Default
 						}
 					}
 				}
-				a.menu-collection {
+			}			
+			li.menu-collection {
+				a{
 					padding: 70px 0 0;
 					width: 100%;
 					&:before { content: ""; }
