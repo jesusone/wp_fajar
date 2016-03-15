@@ -17,13 +17,10 @@
             }
         });
         /* Menu drop down*/
-        $('.nav-menu li.menu-item-has-children').append('<span class="zo-menu-toggle"><i class="fa fa-angle-down"></i></span>');
+        $('.nav-menu li.menu-item-has-children > a').append('<span class="zo-menu-toggle"><i class="fa fa-angle-down"></i></span>');
         $('.zo-menu-toggle').click(function(){
             $(this).prev().toggleClass('submenu-open');
         });
-        /* Page Fixed Menu */
-        $('.header-fixed-page').parents('body').addClass('remove-margin-top');
-        $('#yeah-header.no-sticky').parents('body').addClass('remove-margin-top');
     });
 
 })(jQuery);
