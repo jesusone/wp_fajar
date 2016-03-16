@@ -17,7 +17,7 @@ get_header(); ?>
 <div id="page-default" class="<?php zo_main_class(); ?>">
 	<div id="primary" class="row">
 		<div id="content" role="main">
-			<h1>Webhook len</h1>
+			<h1>Deploy ok</h1>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'single-templates/content', 'page' ); ?>
 				<?php comments_template( '', true ); ?>
