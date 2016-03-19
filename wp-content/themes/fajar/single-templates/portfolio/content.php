@@ -42,11 +42,11 @@ $image_ids = explode(',', $images);
                 <div class="zo-portfolio-content">
                     <?php the_content();
                     wp_link_pages( array(
-                        'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'creativ' ) . '</span>',
+                        'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fajar' ) . '</span>',
                         'after'       => '</p>',
                         'link_before' => '<span>',
                         'link_after'  => '</span>',
-                        'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'creativ' ) . ' </span>%',
+                        'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'fajar' ) . ' </span>%',
                         'separator'   => '<span class="screen-reader-text">, </span>',
                     ) );
                     ?>
@@ -55,18 +55,18 @@ $image_ids = explode(',', $images);
 
             <div class="zo-portfolio-info">
                 <div class="portfolio-item">
-                    <label><?php _e('Client', 'creativ'); ?></label>
+                    <label><?php _e('Client', 'fajar'); ?></label>
                     <span><?php echo esc_attr($meta_data->_zo_portfolio_client) ?></span>
                 </div>
                 <div class="portfolio-item">
-                    <label><?php _e('Date', 'creativ'); ?></label>
+                    <label><?php _e('Date', 'fajar'); ?></label>
                     <span><?php echo mysql2date('M d Y', $meta_data->_zo_portfolio_date) ?></span>
                 </div>
                 <div class="portfolio-item">
-                    <label><?php _e('Skills', 'creativ'); ?></label>
+                    <label><?php _e('Skills', 'fajar'); ?></label>
                     <span><?php echo esc_attr($meta_data->_zo_portfolio_skills) ?></span>
                 </div>
-                <a href="<?php echo !empty($meta_data->_zo_portfolio_url) ? $meta_data->_zo_portfolio_url : '#'; ?>" class="btn btn-primary"><?php _e('View Project', 'creativ'); ?></a>
+                <a href="<?php echo !empty($meta_data->_zo_portfolio_url) ? $meta_data->_zo_portfolio_url : '#'; ?>" class="btn btn-primary"><?php _e('View Project', 'fajar'); ?></a>
             </div>
         </div>
     </div>

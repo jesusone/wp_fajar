@@ -4,8 +4,8 @@ class ZO_Instagram_Widget extends WP_Widget {
     function __construct() {
         parent::__construct(
             'zo_instagram_widget', // Base ID
-            __('ZO Instagram', 'creativ'), // Name
-            array('description' => __('ZO Instagram Widget', 'creativ'),) // Args
+            __('ZO Instagram', 'fajar'), // Name
+            array('description' => __('ZO Instagram Widget', 'fajar'),) // Args
         );
     }
 
@@ -83,7 +83,7 @@ class ZO_Instagram_Widget extends WP_Widget {
     }
 
     function form( $instance ) {
-        $instance = wp_parse_args( (array) $instance, array( 'title' => __('Instagram', 'creativ'), 'username' => '', 'api' => '', 'link' => __('Follow Us', 'creativ'), 'number' => 9,'columns' => 3, 'size' => 'thumbnail', 'target' => '_self') );
+        $instance = wp_parse_args( (array) $instance, array( 'title' => __('Instagram', 'fajar'), 'username' => '', 'api' => '', 'link' => __('Follow Us', 'fajar'), 'number' => 9,'columns' => 3, 'size' => 'thumbnail', 'target' => '_self') );
         $title = esc_attr($instance['title']);
         $username = esc_attr($instance['username']);
         $api = esc_attr($instance['api']);
@@ -94,24 +94,24 @@ class ZO_Instagram_Widget extends WP_Widget {
         $link = esc_attr($instance['link']);
         $extra_class = isset($instance['extra_class']) ? esc_attr($instance['extra_class']) : '';
         ?>
-        <p><label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title', 'creativ'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('username')); ?>"><?php _e('User ID', 'creativ'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('username')); ?>" name="<?php echo esc_attr($this->get_field_name('username')); ?>" type="text" value="<?php echo esc_attr($username); ?>" /></label></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('api')); ?>"><?php _e('Client ID', 'creativ'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('api')); ?>" name="<?php echo esc_attr($this->get_field_name('api')); ?>" type="text" value="<?php echo esc_attr($api); ?>" /></label></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('number')); ?>"><?php _e('Number of photos', 'creativ'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('number')); ?>" name="<?php echo esc_attr($this->get_field_name('number')); ?>" type="text" value="<?php echo esc_attr($number); ?>" /></label></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('columns')); ?>"><?php _e('Columns', 'creativ'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('columns')); ?>" name="<?php echo esc_attr($this->get_field_name('columns')); ?>" type="text" value="<?php echo esc_attr($columns); ?>" /></label></p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('size')); ?>"><?php _e('Photo size', 'creativ'); ?>:</label>
+        <p><label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title', 'fajar'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('username')); ?>"><?php _e('User ID', 'fajar'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('username')); ?>" name="<?php echo esc_attr($this->get_field_name('username')); ?>" type="text" value="<?php echo esc_attr($username); ?>" /></label></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('api')); ?>"><?php _e('Client ID', 'fajar'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('api')); ?>" name="<?php echo esc_attr($this->get_field_name('api')); ?>" type="text" value="<?php echo esc_attr($api); ?>" /></label></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('number')); ?>"><?php _e('Number of photos', 'fajar'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('number')); ?>" name="<?php echo esc_attr($this->get_field_name('number')); ?>" type="text" value="<?php echo esc_attr($number); ?>" /></label></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('columns')); ?>"><?php _e('Columns', 'fajar'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('columns')); ?>" name="<?php echo esc_attr($this->get_field_name('columns')); ?>" type="text" value="<?php echo esc_attr($columns); ?>" /></label></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('size')); ?>"><?php _e('Photo size', 'fajar'); ?>:</label>
             <select id="<?php echo esc_attr($this->get_field_id('size')); ?>" name="<?php echo esc_attr($this->get_field_name('size')); ?>" class="widefat">
-                <option value="thumbnail" <?php selected('thumbnail', $size) ?>><?php _e('Thumbnail', 'creativ'); ?></option>
-                <option value="large" <?php selected('large', $size) ?>><?php _e('Large', 'creativ'); ?></option>
+                <option value="thumbnail" <?php selected('thumbnail', $size) ?>><?php _e('Thumbnail', 'fajar'); ?></option>
+                <option value="large" <?php selected('large', $size) ?>><?php _e('Large', 'fajar'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('target')); ?>"><?php _e('Open links in', 'creativ'); ?>:</label>
+        <p><label for="<?php echo esc_attr($this->get_field_id('target')); ?>"><?php _e('Open links in', 'fajar'); ?>:</label>
             <select id="<?php echo esc_attr($this->get_field_id('target')); ?>" name="<?php echo esc_attr($this->get_field_name('target')); ?>" class="widefat">
-                <option value="_self" <?php selected('_self', $target) ?>><?php _e('Current window (_self)', 'creativ'); ?></option>
-                <option value="_blank" <?php selected('_blank', $target) ?>><?php _e('New window (_blank)', 'creativ'); ?></option>
+                <option value="_self" <?php selected('_self', $target) ?>><?php _e('Current window (_self)', 'fajar'); ?></option>
+                <option value="_blank" <?php selected('_blank', $target) ?>><?php _e('New window (_blank)', 'fajar'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo esc_attr($this->get_field_id('link')); ?>"><?php _e('Link text', 'creativ'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('link')); ?>" name="<?php echo esc_attr($this->get_field_name('link')); ?>" type="text" value="<?php echo esc_url($link); ?>" /></label></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('link')); ?>"><?php _e('Link text', 'fajar'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('link')); ?>" name="<?php echo esc_attr($this->get_field_name('link')); ?>" type="text" value="<?php echo esc_url($link); ?>" /></label></p>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('extra_class')); ?>">Extra Class:</label>
             <input class="widefat" type="text" id="<?php echo esc_attr($this->get_field_id('extra_class')); ?>" name="<?php echo esc_attr($this->get_field_name('extra_class')); ?>" value="<?php echo esc_attr($extra_class); ?>" />
@@ -127,14 +127,14 @@ class ZO_Instagram_Widget extends WP_Widget {
             }
             $remote = wp_remote_get("https://api.instagram.com/v1/users/".trim($id)."/media/recent/?client_id=".$api."&count=".$slice, true);
             if (is_wp_error($remote))
-                return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'creativ'));
+                return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'fajar'));
 
             if ( 200 != wp_remote_retrieve_response_code( $remote ) )
-                return new WP_Error('invalid_response', __('Instagram did not return a 200.', 'creativ'));
+                return new WP_Error('invalid_response', __('Instagram did not return a 200.', 'fajar'));
             $insta_array = json_decode($remote['body'], TRUE);
 
             if (!$insta_array)
-                return new WP_Error('bad_json', __('Instagram has returned invalid data.', 'creativ'));
+                return new WP_Error('bad_json', __('Instagram has returned invalid data.', 'fajar'));
 
             $images = $insta_array['data'];
 
@@ -181,10 +181,10 @@ class ZO_Instagram_Widget extends WP_Widget {
         $url = "https://api.instagram.com/v1/users/search?q=".$username."&client_id=".$client_id;
         $get = wp_remote_get($url);
         if (is_wp_error($get))
-            return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'creativ'));
+            return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'fajar'));
 
         if ( 200 != wp_remote_retrieve_response_code( $get ) )
-            return new WP_Error('invalid_response', __('Instagram did not return a 200.', 'creativ'));
+            return new WP_Error('invalid_response', __('Instagram did not return a 200.', 'fajar'));
         $json = json_decode($get['body']);
 
         foreach($json->data as $user)

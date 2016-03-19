@@ -20,7 +20,7 @@ if ( is_array( $icons_params ) && ! empty( $icons_params ) ) {
         if ( is_array( $param ) && ! empty( $param ) ) {
             if ( $param['param_name'] == 'i_type' ) {
                 // append pixelicons to dropdown
-                $icons_params[ $key ]['value'][ __( 'Pixel', 'creativ' ) ] = 'pixelicons';
+                $icons_params[ $key ]['value'][ __( 'Pixel', 'fajar' ) ] = 'pixelicons';
             }
             if ( isset( $param['admin_label'] ) ) {
                 // remove admin label
@@ -37,7 +37,7 @@ if ( is_array( $icons_params ) && ! empty( $icons_params ) ) {
         if ( is_array( $param ) && ! empty( $param ) ) {
             if ( $param['param_name'] == 'i_type' ) {
                 // append pixelicons to dropdown
-                $icons_params[ $key ]['value'][ __( 'Linearicons', 'creativ' ) ] = 'linearicons';
+                $icons_params[ $key ]['value'][ __( 'Linearicons', 'fajar' ) ] = 'linearicons';
             }
             if ( isset( $param['admin_label'] ) ) {
                 // remove admin label
@@ -52,17 +52,17 @@ $params = array_merge(
     array(
         array(
             'type' => 'textfield',
-            'heading' => __( 'Text Button', 'creativ' ),
+            'heading' => __( 'Text Button', 'fajar' ),
             'save_always' => true,
             'param_name' => 'title',
             // fully compatible to btn1 and btn2
-            'value' => __( 'Text on the button', 'creativ' ),
+            'value' => __( 'Text on the button', 'fajar' ),
         ),
         array(
             'type' => 'vc_link',
-            'heading' => __( 'URL (Link)', 'creativ' ),
+            'heading' => __( 'URL (Link)', 'fajar' ),
             'param_name' => 'link',
-            'description' => __( 'Add link to button.', 'creativ' ),
+            'description' => __( 'Add link to button.', 'fajar' ),
             // compatible with btn2 and converted from href{btn1}
         ),
 		
@@ -70,7 +70,7 @@ $params = array_merge(
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Button Type", 'creativ'),
+            "heading" => __("Button Type", 'fajar'),
             "param_name" => "button_type",
             "value" => array(
                 'Button Default' => 'btn btn-default',
@@ -82,54 +82,54 @@ $params = array_merge(
         ),
 		array(
             'type' => 'textfield',
-            'heading' => __( 'Padding', 'creativ' ),
+            'heading' => __( 'Padding', 'fajar' ),
             'param_name' => 'padding',
-            'description' => __( 'Ex: 15px 35px 15px 35px.', 'creativ' ),
+            'description' => __( 'Ex: 15px 35px 15px 35px.', 'fajar' ),
         ),
 		array(
             'type' => 'dropdown',
-            'heading' => __( 'Letter Spacing', 'creativ' ),
+            'heading' => __( 'Letter Spacing', 'fajar' ),
             'param_name' => 'letter_spacing',
             'value' => array(
-                __( 'Default', 'creativ' ) => '',
-                __( 'Letter Spacing: 50', 'creativ' ) => '0.05em',
-                __( 'Letter Spacing: 100', 'creativ' ) => '0.1em',
-                __( 'Letter Spacing: 200', 'creativ' ) => '0.2em',
-                __( 'Letter Spacing: 300', 'creativ' ) => '0.3em',
-                __( 'Letter Spacing: 400', 'creativ' ) => '0.4em',
-                __( 'Letter Spacing: 500', 'creativ' ) => '0.5em'
+                __( 'Default', 'fajar' ) => '',
+                __( 'Letter Spacing: 50', 'fajar' ) => '0.05em',
+                __( 'Letter Spacing: 100', 'fajar' ) => '0.1em',
+                __( 'Letter Spacing: 200', 'fajar' ) => '0.2em',
+                __( 'Letter Spacing: 300', 'fajar' ) => '0.3em',
+                __( 'Letter Spacing: 400', 'fajar' ) => '0.4em',
+                __( 'Letter Spacing: 500', 'fajar' ) => '0.5em'
             )
         ),
 		array(
             'type' => 'textfield',
-            'heading' => __( 'Font Size', 'creativ' ),
+            'heading' => __( 'Font Size', 'fajar' ),
             'param_name' => 'font_size',
-            'description' => __( 'Ex: 15px', 'creativ' ),
+            'description' => __( 'Ex: 15px', 'fajar' ),
         ),
 		array(
             'type' => 'textfield',
-            'heading' => __( 'Radius', 'creativ' ),
+            'heading' => __( 'Radius', 'fajar' ),
             'param_name' => 'radius',
-            'description' => __( 'Ex: 15px 35px 15px 35px.', 'creativ' ),
+            'description' => __( 'Ex: 15px 35px 15px 35px.', 'fajar' ),
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Alignment', 'creativ' ),
+            'heading' => __( 'Alignment', 'fajar' ),
             'param_name' => 'align',
             'description' => __( 'Select button alignment.', 'js_comopser' ),
             // compatible with btn2, default left to be compatible with btn1
             'value' => array(
-                __( 'Inline', 'creativ' ) => 'inline',
+                __( 'Inline', 'fajar' ) => 'inline',
                 // default as well
-                __( 'Left', 'creativ' ) => 'left',
+                __( 'Left', 'fajar' ) => 'left',
                 // default as well
-                __( 'Right', 'creativ' ) => 'right',
-                __( 'Center', 'creativ' ) => 'center'
+                __( 'Right', 'fajar' ) => 'right',
+                __( 'Center', 'fajar' ) => 'center'
             ),
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Set full width button?', 'creativ' ),
+            'heading' => __( 'Set full width button?', 'fajar' ),
             'param_name' => 'button_block',
             'dependency' => array(
                 'element' => 'align',
@@ -138,18 +138,18 @@ $params = array_merge(
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Add icon?', 'creativ' ),
+            'heading' => __( 'Add icon?', 'fajar' ),
             'param_name' => 'add_icon',
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Icon Alignment', 'creativ' ),
-            'description' => __( 'Select icon alignment.', 'creativ' ),
+            'heading' => __( 'Icon Alignment', 'fajar' ),
+            'description' => __( 'Select icon alignment.', 'fajar' ),
             'param_name' => 'i_align',
             'value' => array(
-                __( 'Left', 'creativ' ) => 'left',
+                __( 'Left', 'fajar' ) => 'left',
                 // default as well
-                __( 'Right', 'creativ' ) => 'right',
+                __( 'Right', 'fajar' ) => 'right',
             ),
             'dependency' => array(
                 'element' => 'add_icon',
@@ -161,7 +161,7 @@ $params = array_merge(
     array(
         array(
             'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'creativ' ),
+            'heading' => __( 'Icon', 'fajar' ),
             'param_name' => 'i_icon_pixelicons',
             'settings' => array(
                 'emptyIcon' => false,
@@ -173,13 +173,13 @@ $params = array_merge(
                 'element' => 'i_type',
                 'value' => 'pixelicons',
             ),
-            'description' => __( 'Select icon from library.', 'creativ' ),
+            'description' => __( 'Select icon from library.', 'fajar' ),
         ),
     ),
     array(
         array(
             'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'creativ' ),
+            'heading' => __( 'Icon', 'fajar' ),
             'param_name' => 'i_icon_linearicons',
             'settings' => array(
                 'emptyIcon' => false,
@@ -190,16 +190,16 @@ $params = array_merge(
                 'element' => 'i_type',
                 'value' => 'linearicons',
             ),
-            'description' => __( 'Select icon from library.', 'creativ' ),
+            'description' => __( 'Select icon from library.', 'fajar' ),
         ),
     ),
     array(
         vc_map_add_css_animation( true ),
         array(
             'type' => 'textfield',
-            'heading' => __( 'Extra class name', 'creativ' ),
+            'heading' => __( 'Extra class name', 'fajar' ),
             'param_name' => 'el_class',
-            'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'creativ' ),
+            'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'fajar' ),
         ),
     )
 );
@@ -207,13 +207,13 @@ $params = array_merge(
  * @class WPBakeryShortCode_VC_Btn
  */
 vc_map( array(
-    'name' => __( 'Button', 'creativ' ),
+    'name' => __( 'Button', 'fajar' ),
     'base' => 'vc_btn',
     'icon' => 'icon-wpb-ui-button',
     'category' => array(
-        __( 'Content', 'creativ' ),
+        __( 'Content', 'fajar' ),
     ),
-    'description' => __( 'Eye catching button', 'creativ' ),
+    'description' => __( 'Eye catching button', 'fajar' ),
     'params' => $params,
     'js_view' => 'VcButton3View',
     'custom_markup' => '{{title}}<div class="vc_btn3-container"><button class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-{{ params.shape }} vc_btn3-style-{{ params.style }} vc_btn3-color-{{ params.color }}">{{{ params.title }}}</button></div>',

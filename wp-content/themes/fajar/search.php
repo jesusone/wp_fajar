@@ -26,11 +26,11 @@ get_header(); ?>
 
                 <article id="post-0" class="post no-results not-found">
                     <header class="entry-header">
-                        <h1 class="entry-title"><?php _e( 'Nothing Found', 'creativ' ); ?></h1>
+                        <h1 class="entry-title"><?php _e( 'Nothing Found', 'fajar' ); ?></h1>
                     </header>
 
                     <div class="entry-content">
-                        <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'creativ' ); ?></p>
+                        <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'fajar' ); ?></p>
                         <?php get_search_form(); ?>
                     </div><!-- .entry-content -->
                 </article><!-- #post-0 -->

@@ -8,7 +8,7 @@
 vc_add_param("vc_images_carousel", array(
 	"type" => "dropdown",
 	"class" => "",
-	"heading" => __("Image Hover Effect", 'creativ'),
+	"heading" => __("Image Hover Effect", 'fajar'),
 	"admin_label" => true,
 	"param_name" => "zo_carousel_hover_effect",
 	"value" => array(
@@ -20,7 +20,7 @@ vc_add_param("vc_images_carousel", array(
 vc_add_param("vc_images_carousel", array(
 	"type" => "dropdown",
 	"class" => "",
-	"heading" => __("Carousel Libraries", 'creativ'),
+	"heading" => __("Carousel Libraries", 'fajar'),
 	"admin_label" => true,
 	"param_name" => "zo_carousel_lib",
 	"value" => array(
@@ -33,7 +33,7 @@ vc_add_param("vc_images_carousel", array(
 vc_add_param("vc_images_carousel", array(
 	"type" => "checkbox",
 	"class" => "",
-	"heading" => __("Show Pagination With Image", 'creativ'),
+	"heading" => __("Show Pagination With Image", 'fajar'),
 	"admin_label" => true,
 	"param_name" => "zo_page_image",
 	"value" => array('Yes' => 'yes'),
@@ -46,7 +46,7 @@ vc_add_param("vc_images_carousel", array(
 vc_add_param("vc_images_carousel", array(
 	"type" => "textfield",
 	"class" => "",
-	"heading" => __("Number Image For Pagination", 'creativ'),
+	"heading" => __("Number Image For Pagination", 'fajar'),
 	"admin_label" => true,
 	"param_name" => "zo_page_image_count",
 	"value" => 3,

@@ -18,7 +18,7 @@ global $smof_data;
 	<?php if (isset($atts['filter']) && $atts['filter'] == 1 && $atts['layout'] == 'masonry'): ?>
         <div class="zo-grid-filter">
             <ul>
-                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'creativ');?></a></li>
+                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'fajar');?></a></li>
 				<?php
 					$posts = $atts['posts'];
 					$query = $posts->query;

@@ -10,11 +10,11 @@
 
 <article id="post-0" class="post no-results not-found">
 	<div class="entry-header">
-		<h2 class="entry-title"><?php _e( 'Nothing Found', 'creativ' ); ?></h2>
+		<h2 class="entry-title"><?php _e( 'Nothing Found', 'fajar' ); ?></h2>
 	</div>
 
 	<div class="entry-content">
-		<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'creativ' ); ?></p>
+		<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'fajar' ); ?></p>
 			<?php get_search_form(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-0 -->

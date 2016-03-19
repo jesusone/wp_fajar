@@ -3,8 +3,8 @@ class WC_Widget_Cart_Search extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'widget_cart_search', // Base ID
-            __('Cart & Search', 'creativ'), // Name
-            array('description' => __("Display the user's Cart and Search form in the sidebar.", 'creativ'),) // Args
+            __('Cart & Search', 'fajar'), // Name
+            array('description' => __("Display the user's Cart and Search form in the sidebar.", 'fajar'),) // Args
         );
     }
     function widget($args, $instance) {
@@ -82,8 +82,8 @@ class WC_Widget_Cart_Search extends WP_Widget {
                             <?php if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) : ?>
                                 <div class="cart-total">
                                     <span class="total"><?php _e( 'Sub Total', 'woocommerce' ); ?>:<span><?php echo do_shortcode($woocommerce->cart->get_cart_subtotal()); ?></span></span>
-                                    <a href="<?php echo esc_url($woocommerce->cart->get_checkout_url()); ?>" class="btn btn-primary btn-checkout"><?php _e( 'Process To Checkout', 'creativ'); ?></a>
-                                    <a href="<?php echo esc_url($woocommerce->cart->get_cart_url()); ?>" class="btn btn-cart"><?php _e( 'View Shopping Cart', 'creativ'); ?></a>
+                                    <a href="<?php echo esc_url($woocommerce->cart->get_checkout_url()); ?>" class="btn btn-primary btn-checkout"><?php _e( 'Process To Checkout', 'fajar'); ?></a>
+                                    <a href="<?php echo esc_url($woocommerce->cart->get_cart_url()); ?>" class="btn btn-cart"><?php _e( 'View Shopping Cart', 'fajar'); ?></a>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -128,21 +128,21 @@ class WC_Widget_Cart_Search extends WP_Widget {
         $show_search = isset($instance['show_search']) ? $instance['show_search'] : 1;
         ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e( 'Title:', 'creativ' ); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e( 'Title:', 'fajar' ); ?></label>
             <input id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
 		<p>
-            <label for="<?php echo esc_url($this->get_field_id('show_cart')); ?>"><?php _e( 'Show Cart:', 'creativ' ); ?></label>
+            <label for="<?php echo esc_url($this->get_field_id('show_cart')); ?>"><?php _e( 'Show Cart:', 'fajar' ); ?></label>
 			<select id="<?php echo esc_attr($this->get_field_id('show_cart')); ?>" class="widefat" name="<?php echo esc_attr($this->get_field_name('show_cart')); ?>">
-				<option value="0" <?php selected($show_cart,0); ?>><?php echo __('No','creativ'); ?></option>
-				<option value="1" <?php selected($show_cart,1); ?>><?php echo __('Yes','creativ'); ?></option>
+				<option value="0" <?php selected($show_cart,0); ?>><?php echo __('No','fajar'); ?></option>
+				<option value="1" <?php selected($show_cart,1); ?>><?php echo __('Yes','fajar'); ?></option>
 			</select>
         </p>
 		<p>
-            <label for="<?php echo esc_attr($this->get_field_id('show_search')); ?>"><?php _e( 'Show Search:', 'creativ' ); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('show_search')); ?>"><?php _e( 'Show Search:', 'fajar' ); ?></label>
 			<select id="<?php echo esc_attr($this->get_field_id('show_search')); ?>" class="widefat" name="<?php echo esc_attr($this->get_field_name('show_search')); ?>">
-				<option value="0" <?php selected($show_search,0); ?>><?php echo __('No','creativ'); ?></option>
-				<option value="1" <?php selected($show_search,1); ?>><?php echo __('Yes','creativ'); ?></option>
+				<option value="0" <?php selected($show_search,0); ?>><?php echo __('No','fajar'); ?></option>
+				<option value="1" <?php selected($show_search,1); ?>><?php echo __('Yes','fajar'); ?></option>
 			</select>
         </p>
     <?php
@@ -222,8 +222,8 @@ if(!function_exists('woocommerce_header_add_to_cart_content')){
             <?php if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) : ?>
                 <div class="cart-total">
                     <span class="total"><?php _e( 'Sub Total', 'woocommerce' ); ?>:<span><?php echo do_shortcode($woocommerce->cart->get_cart_subtotal()); ?></span></span>
-                    <a href="<?php echo esc_url($woocommerce->cart->get_checkout_url()); ?>" class="btn btn-primary btn-checkout"><?php _e( 'Process To Checkout', 'creativ'); ?></a>
-                    <a href="<?php echo esc_url($woocommerce->cart->get_cart_url()); ?>" class="btn btn-cart"><?php _e( 'View Shopping Cart', 'creativ'); ?></a>
+                    <a href="<?php echo esc_url($woocommerce->cart->get_checkout_url()); ?>" class="btn btn-primary btn-checkout"><?php _e( 'Process To Checkout', 'fajar'); ?></a>
+                    <a href="<?php echo esc_url($woocommerce->cart->get_cart_url()); ?>" class="btn btn-cart"><?php _e( 'View Shopping Cart', 'fajar'); ?></a>
                 </div>
             <?php endif; ?>
         </div>

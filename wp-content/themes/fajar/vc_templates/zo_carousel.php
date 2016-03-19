@@ -18,7 +18,7 @@ $atts['categories'] = $_category;
 	<?php if ( $atts['filter'] == "true" && !$atts['loop'] ):?>
         <div class="zo-carousel-filter">
             <ul>
-                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'creativ');?></a></li>
+                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'fajar');?></a></li>
 				<?php
 					$posts = $atts['posts'];
 					$query = $posts->query;

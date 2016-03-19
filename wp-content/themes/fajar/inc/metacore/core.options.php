@@ -57,7 +57,7 @@ function zo_options($params = array())
             $core_options->metabox($params);
         }
     } else {
-        _e('Error', 'creativ');
+        _e('Error', 'fajar');
     }
     wp_enqueue_script('core-options');
 }
@@ -360,14 +360,14 @@ class ZoCoreControl
                 $attachment_image = wp_get_attachment_image_src($value,'thumbnail');
                 if (count($attachment_image) > 0):?>
                 <li class="items" data-id="<?php echo esc_attr($value); ?>" style="background-image:url(<?php echo esc_url($attachment_image[0]);?>);background-size:cover;">
-                    <i class="edit dashicons dashicons-plus-alt" title="<?php _e('Replace Image', 'creativ'); ?>"></i>
-                    <i class="remove dashicons dashicons-dismiss" title="<?php _e('Remove Image', 'creativ'); ?>"></i>
+                    <i class="edit dashicons dashicons-plus-alt" title="<?php _e('Replace Image', 'fajar'); ?>"></i>
+                    <i class="remove dashicons dashicons-dismiss" title="<?php _e('Remove Image', 'fajar'); ?>"></i>
                 </li>
             <?php endif; endforeach; ?>
             <?php if($params['field'] != 'single'): ?>
-                <li class="items" data-id=""><i class="add dashicons dashicons-plus-alt" title="<?php _e('Add Image', 'creativ'); ?>"></i></li>
+                <li class="items" data-id=""><i class="add dashicons dashicons-plus-alt" title="<?php _e('Add Image', 'fajar'); ?>"></i></li>
             <?php elseif(count($selected) == 0): ?>
-                <li class="items" data-id=""><i class="add dashicons dashicons-plus-alt" title="<?php _e('Add Image', 'creativ'); ?>"></i></li>
+                <li class="items" data-id=""><i class="add dashicons dashicons-plus-alt" title="<?php _e('Add Image', 'fajar'); ?>"></i></li>
             <?php endif; ?>
             </ul>
             <input type="hidden" name="<?php echo esc_attr($params['id']); ?>" id="<?php echo esc_attr($params['id']); ?>" value="<?php echo  implode(",", $selected); ?>"/>
@@ -455,10 +455,10 @@ class ZoCoreControl
 		<table class="wp-list-table widefat fixed pages zo_social_team">
 			<thead>
 				<tr>
-					<th><?php _e('Title', 'creativ');?></th>
-					<th><?php _e('Link', 'creativ');?></th>
-					<th><?php _e('Icon class', 'creativ');?></th>
-					<th><?php _e('Actions', 'creativ');?></th>
+					<th><?php _e('Title', 'fajar');?></th>
+					<th><?php _e('Link', 'fajar');?></th>
+					<th><?php _e('Icon class', 'fajar');?></th>
+					<th><?php _e('Actions', 'fajar');?></th>
 				</tr>
 			</thead>
 			<tfoot>
@@ -476,7 +476,7 @@ class ZoCoreControl
 				</tr>
 				<tr>
 					<td colspan="3">
-						<a class="button-primary" id="btn_add_social" href="javascript:void(0);"><?php _e('Add new', 'creativ');?></a>
+						<a class="button-primary" id="btn_add_social" href="javascript:void(0);"><?php _e('Add new', 'fajar');?></a>
 					</td>
 				</tr>
 			</tfoot>
@@ -488,12 +488,12 @@ class ZoCoreControl
 							<td class="title"><?php echo do_shortcode($v->title); ?></td>
 							<td class="link"><?php echo do_shortcode($v->link); ?></td>
 							<td class="icon"><?php echo do_shortcode($v->icon); ?></td>
-							<td><a title="Click to edit this item" href="javascript:void(0)" class="zo_social"><?php _e('Edit', 'creativ')?></a>|<a class="zo_social_remove" href="javascript:void(0)"><?php _e('Remove', 'creativ')?></a></td>
+							<td><a title="Click to edit this item" href="javascript:void(0)" class="zo_social"><?php _e('Edit', 'fajar')?></a>|<a class="zo_social_remove" href="javascript:void(0)"><?php _e('Remove', 'fajar')?></a></td>
 						</tr>
 						<?php endforeach;
 					else: ?>
 						<tr>
-							<td class="zo_no_item" colspan="3"><?php _e('No item!', 'creativ');?></td>
+							<td class="zo_no_item" colspan="3"><?php _e('No item!', 'fajar');?></td>
 						</tr>
 					<?php endif;
 				?>
@@ -504,9 +504,9 @@ class ZoCoreControl
 				<table class="widefat fixed pages tb_woo_countries">
 					<thead>
 						<tr>
-							<th><?php _e('Title', 'creativ');?></th>
-							<th><?php _e('Link', 'creativ');?></th>
-							<th><?php _e('Icon', 'creativ');?></th>
+							<th><?php _e('Title', 'fajar');?></th>
+							<th><?php _e('Link', 'fajar');?></th>
+							<th><?php _e('Icon', 'fajar');?></th>
 						</tr>
 					</thead>
 					<tbody>

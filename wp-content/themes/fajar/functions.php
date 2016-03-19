@@ -141,7 +141,7 @@ function fajar_setup() {
 	 * If you're building a theme based on Fajar - Ohyeahthemes, use a find and replace
 	 * to change 'zo-zap' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'creativ', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'fajar', get_template_directory() . '/languages' );
 
 	// Adds title tag
 	add_theme_support( "title-tag" );
@@ -159,7 +159,7 @@ function fajar_setup() {
 	add_theme_support( 'post-formats', array( 'video', 'audio' , 'gallery', 'link', 'quote',) );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'creativ' ) );
+	register_nav_menu( 'primary', __( 'Primary Menu', 'fajar' ) );
 
 	/*
 	 * This theme supports custom background color and image,
@@ -351,9 +351,9 @@ add_action( 'wp_enqueue_scripts', 'fajar_scripts_styles' );
  */
 function zo_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'creativ' ),
+		'name' => __( 'Main Sidebar', 'fajar' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'creativ' ),
+		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'fajar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title"><span>',
@@ -361,9 +361,9 @@ function zo_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Header Top Left', 'creativ' ),
+		'name' => __( 'Header Top Left', 'fajar' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Header with a page set as Header top left', 'creativ' ),
+		'description' => __( 'Appears when using the optional Header with a page set as Header top left', 'fajar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title">',
@@ -371,9 +371,9 @@ function zo_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Header Top Right', 'creativ' ),
+		'name' => __( 'Header Top Right', 'fajar' ),
 		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Header with a page set as Header top right', 'creativ' ),
+		'description' => __( 'Appears when using the optional Header with a page set as Header top right', 'fajar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title">',
@@ -381,9 +381,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Header Banners', 'creativ' ),
+		'name' => __( 'Header Banners', 'fajar' ),
 		'id' => 'header-baners',
-		'description' => __( 'Appears when using the optional Header with a page set as Header Banners', 'creativ' ),
+		'description' => __( 'Appears when using the optional Header with a page set as Header Banners', 'fajar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title">',
@@ -391,9 +391,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Header Cart', 'creativ' ),
+    	'name' => __( 'Header Cart', 'fajar' ),
     	'id' => 'sidebar-4',
-    	'description' => __( 'Appears when using the optional Menu with a page set as Menu right', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Menu with a page set as Menu right', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -401,9 +401,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'On Mega Menu', 'creativ' ),
+    	'name' => __( 'On Mega Menu', 'fajar' ),
     	'id' => 'on-mega-menu',
-    	'description' => __( 'Appears when using the optional On Mega Menu with a page set as On Mega Menu', 'creativ' ),
+    	'description' => __( 'Appears when using the optional On Mega Menu with a page set as On Mega Menu', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -411,9 +411,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 1 left', 'creativ' ),
+    	'name' => __( 'Footer 1 left', 'fajar' ),
     	'id' => 'footer-1-left',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 1 left', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 1 left', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -421,9 +421,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 1 Right', 'creativ' ),
+    	'name' => __( 'Footer 1 Right', 'fajar' ),
     	'id' => 'footer-1-right',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 1 Right', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 1 Right', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -431,9 +431,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 2 Item 1', 'creativ' ),
+    	'name' => __( 'Footer 2 Item 1', 'fajar' ),
     	'id' => 'footer-2-item-1',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 1', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 1', 'fajar' ),
     	'before_widget' => '<aside class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -441,9 +441,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 2 Item 2', 'creativ' ),
+    	'name' => __( 'Footer 2 Item 2', 'fajar' ),
     	'id' => 'footer-2-item-2',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 2', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 2', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -451,9 +451,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 2 Item 3', 'creativ' ),
+    	'name' => __( 'Footer 2 Item 3', 'fajar' ),
     	'id' => 'footer-2-item-3',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 3', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 3', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -461,9 +461,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 3 Item 1', 'creativ' ),
+    	'name' => __( 'Footer 3 Item 1', 'fajar' ),
     	'id' => 'footer-3-item-1',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 1', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 1', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -471,9 +471,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 3 Item 2', 'creativ' ),
+    	'name' => __( 'Footer 3 Item 2', 'fajar' ),
     	'id' => 'footer-3-item-2',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 2', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 2', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -481,9 +481,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 3 Item 3', 'creativ' ),
+    	'name' => __( 'Footer 3 Item 3', 'fajar' ),
     	'id' => 'footer-3-item-3',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 3', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 3', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -491,9 +491,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer 3 Item 4', 'creativ' ),
+    	'name' => __( 'Footer 3 Item 4', 'fajar' ),
     	'id' => 'footer-3-item-4',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 4', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 4', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -501,9 +501,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Banners', 'creativ' ),
+    	'name' => __( 'Footer Banners', 'fajar' ),
     	'id' => 'footer-banners',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Banners', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Banners', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -511,9 +511,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Bottom Text', 'creativ' ),
+    	'name' => __( 'Footer Bottom Text', 'fajar' ),
     	'id' => 'footer-bottom-text',
-    	'description' => __( 'Appears when using the optional Footer Bottom with a page set as Footer Bottom Text', 'creativ' ),
+    	'description' => __( 'Appears when using the optional Footer Bottom with a page set as Footer Bottom Text', 'fajar' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -521,9 +521,9 @@ function zo_widgets_init() {
 	) );
 
     register_sidebar( array(
-        'name' => __( 'Shop Menu Sidebar', 'creativ' ),
+        'name' => __( 'Shop Menu Sidebar', 'fajar' ),
         'id' => 'sidebar-11',
-        'description' => __( 'Appears when using the optional Shop with Menu attach Widget', 'creativ' ),
+        'description' => __( 'Appears when using the optional Shop with Menu attach Widget', 'fajar' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="wg-title"><span>',
@@ -531,9 +531,9 @@ function zo_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Shop Sidebar', 'creativ' ),
+        'name' => __( 'Shop Sidebar', 'fajar' ),
         'id' => 'sidebar-12',
-        'description' => __( 'Appears when using the optional Shop with a page set as Shop page', 'creativ' ),
+        'description' => __( 'Appears when using the optional Shop with a page set as Shop page', 'fajar' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="wg-title"><span>',
@@ -541,9 +541,9 @@ function zo_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Header Right', 'creativ' ),
+        'name' => __( 'Header Right', 'fajar' ),
         'id' => 'header-right',
-        'description' => __( 'Appears when using the optional Cart & Search', 'creativ' ),
+        'description' => __( 'Appears when using the optional Cart & Search', 'fajar' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="wg-title"><span>',
@@ -551,9 +551,9 @@ function zo_widgets_init() {
     ) );
 	
 	register_sidebar( array(
-        'name' => __( 'Header Top Sliders', 'creativ' ),
+        'name' => __( 'Header Top Sliders', 'fajar' ),
         'id' => 'header-top-sliders',
-        'description' => __( 'Appears when using the optional Revolution Sliders', 'creativ' ),
+        'description' => __( 'Appears when using the optional Revolution Sliders', 'fajar' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="wg-title"><span>',
@@ -594,7 +594,7 @@ function zo_add_subtitle_field(){
         $value = get_post_meta($post->ID, 'post_subtitle', true);
         
         /* html. */
-        echo '<div class="subtitle"><input type="text" name="post_subtitle" value="'.esc_attr($value).'" id="subtitle" placeholder = "'.__('Subtitle', 'creativ').'" style="width: 100%;margin-top: 4px;"></div>';
+        echo '<div class="subtitle"><input type="text" name="post_subtitle" value="'.esc_attr($value).'" id="subtitle" placeholder = "'.__('Subtitle', 'fajar').'" style="width: 100%;margin-top: 4px;"></div>';
     }
 }
 
@@ -657,8 +657,8 @@ function zo_paging_nav($query = null) {
 			'current'  => $paged,
 			'mid_size' => 1,
 			'add_args' => array_map( 'urlencode', $query_args ),
-			'prev_text' => __( '<i class="fa fa-angle-double-left"></i>', 'creativ' ),
-			'next_text' => __( '<i class="fa fa-angle-double-right"></i>', 'creativ' ),
+			'prev_text' => __( '<i class="fa fa-angle-double-left"></i>', 'fajar' ),
+			'next_text' => __( '<i class="fa fa-angle-double-right"></i>', 'fajar' ),
 	) );
 
 	if ( $links ) :
@@ -727,12 +727,12 @@ function zo_comment($comment, $args, $depth) {
 </div>
 <div class="comment-main">
     <div class="comment-header">
-        <?php printf( __( '<span class="comment-author">%s</span>', 'creativ' ), get_comment_author_link() ); ?>
+        <?php printf( __( '<span class="comment-author">%s</span>', 'fajar' ), get_comment_author_link() ); ?>
         <span class="comment-date">
-            <?php echo get_comment_time('d.m.Y') .' '. __('at', 'creativ') .' ' . get_comment_time('H:i'); ?>
+            <?php echo get_comment_time('d.m.Y') .' '. __('at', 'fajar') .' ' . get_comment_time('H:i'); ?>
         </span>
         <?php if ( $comment->comment_approved == '0' ) : ?>
-            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' , 'creativ'); ?></em>
+            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' , 'fajar'); ?></em>
         <?php endif; ?>
     </div>
 	<div class="comment-content">
@@ -857,7 +857,7 @@ function zo_list_post_types() {
      * Add Product Post Type of WooCommerce
      */
     if( class_exists( 'WooCommerce' ) ) {
-        $types['product'] = __('Products', 'creativ');
+        $types['product'] = __('Products', 'fajar');
     }
     /*
      * Get list custom post type CPT

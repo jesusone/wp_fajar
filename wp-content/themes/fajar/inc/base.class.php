@@ -21,13 +21,13 @@ class ZO_Base
                 endif;
             /* blog */
             elseif (is_front_page() || is_home()):
-                _e( 'Blog', 'creativ' );
+                _e( 'Blog', 'fajar' );
             /* search */
             elseif (is_search()):
-                printf( __( 'Search Results for: %s', 'creativ' ), '<span>' . get_search_query() . '</span>' );
+                printf( __( 'Search Results for: %s', 'fajar' ), '<span>' . get_search_query() . '</span>' );
             /* 404 */ 
             elseif (is_404()):
-                _e( '404', 'creativ');
+                _e( '404', 'fajar');
             /* other */
             else :
                 the_title();
@@ -41,33 +41,33 @@ class ZO_Base
                 single_tag_title();
             /* author. */
             elseif ( is_author() ) :
-                printf( __( 'Author: %s', 'creativ' ), '<span class="vcard">' . get_the_author() . '</span>' );
+                printf( __( 'Author: %s', 'fajar' ), '<span class="vcard">' . get_the_author() . '</span>' );
             /* date */
             elseif ( is_day() ) :
-                printf( __( 'Day: %s', 'creativ' ), '<span>' . get_the_date() . '</span>' );
+                printf( __( 'Day: %s', 'fajar' ), '<span>' . get_the_date() . '</span>' );
             elseif ( is_month() ) :
-                printf( __( 'Month: %s', 'creativ' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'creativ' ) ) . '</span>' );
+                printf( __( 'Month: %s', 'fajar' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'fajar' ) ) . '</span>' );
             elseif ( is_year() ) :
-                printf( __( 'Year: %s', 'creativ' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'creativ' ) ) . '</span>' );
+                printf( __( 'Year: %s', 'fajar' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'fajar' ) ) . '</span>' );
             /* post format */
             elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-                _e( 'Asides', 'creativ' );
+                _e( 'Asides', 'fajar' );
             elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-                _e( 'Galleries', 'creativ');
+                _e( 'Galleries', 'fajar');
             elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-                _e( 'Images', 'creativ');
+                _e( 'Images', 'fajar');
             elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-                _e( 'Videos', 'creativ' );
+                _e( 'Videos', 'fajar' );
             elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-                _e( 'Quotes', 'creativ' );
+                _e( 'Quotes', 'fajar' );
             elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-                _e( 'Links', 'creativ' );
+                _e( 'Links', 'fajar' );
             elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-                _e( 'Statuses', 'creativ' );
+                _e( 'Statuses', 'fajar' );
             elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-                _e( 'Audios', 'creativ' );
+                _e( 'Audios', 'fajar' );
             elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-                _e( 'Chats', 'creativ' );
+                _e( 'Chats', 'fajar' );
             /* woocommerce */
             elseif (class_exists('Woocommerce') && is_woocommerce()):
                 woocommerce_page_title();
@@ -156,12 +156,12 @@ class ZO_Base
         /* tag */
         if( is_tag() ){ echo '<li>'."Tag: ".single_tag_title('',FALSE).'</li>'; }
         /* search */
-        if( is_search() ){ echo '<li>'.__("Search", 'creativ').'</li>'; }
+        if( is_search() ){ echo '<li>'.__("Search", 'fajar').'</li>'; }
         /* date */
         if( is_year() ){ echo '<li>'.get_the_time('Y').'</li>'; }
         /* 404 */
         if( is_404() ) {
-            echo '<li>'.__("404 - Page not Found", 'creativ').'</li>';
+            echo '<li>'.__("404 - Page not Found", 'fajar').'</li>';
         }
         /* archive */
   		if( is_archive() && is_post_type_archive() ) {

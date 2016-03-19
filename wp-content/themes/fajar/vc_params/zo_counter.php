@@ -3,7 +3,7 @@
 $params = array(
     array(
         "type" => "dropdown",
-        "heading" => __("Title Size",'creativ'),
+        "heading" => __("Title Size",'fajar'),
         "param_name" => "zo_title_size",
         "value" => array(
             "H2" => "h2",
@@ -15,19 +15,19 @@ $params = array(
     ),
     array(
         "type" => "colorpicker",
-        "heading" => __("Text Color",'creativ'),
+        "heading" => __("Text Color",'fajar'),
         "param_name" => "zo_counter_text_color",
         "value" => "",
     ),
     array(
         "type" => "colorpicker",
-        "heading" => __("Title Color",'creativ'),
+        "heading" => __("Title Color",'fajar'),
         "param_name" => "zo_counter_title_color",
         "value" => "",
     ),
     array(
         "type" => "colorpicker",
-        "heading" => __("Content Color",'creativ'),
+        "heading" => __("Content Color",'fajar'),
         "param_name" => "zo_counter_content_color",
         "value" => "",
     ),

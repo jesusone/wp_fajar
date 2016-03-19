@@ -8,20 +8,20 @@
 vc_add_param("vc_accordion_tab", array(
 	"type" => "colorpicker",
 	"class" => "",
-	"heading" => __("Accordion Background Color", 'creativ'),
+	"heading" => __("Accordion Background Color", 'fajar'),
 	"param_name" => "zo_accordion_bg_color",
 	"value" => "",
 ));
 vc_add_param("vc_accordion_tab", array(
 	"type" => "colorpicker",
 	"class" => "",
-	"heading" => __("Accordion Border Color", 'creativ'),
+	"heading" => __("Accordion Border Color", 'fajar'),
 	"param_name" => "zo_accordion_border_color",
 	"value" => "",
 ));
 vc_add_param("vc_accordion_tab", array(
 	"type" => "textfield",
-	"heading" => __("Accordion Icon", 'creativ'),
+	"heading" => __("Accordion Icon", 'fajar'),
 	"param_name" => "zo_accordion_icon",
-	"description" => __("Select icon website(http://fortawesome.github.io/Font-Awesome/icons;https://icomoon.io/app/)",'creativ')
+	"description" => __("Select icon website(http://fortawesome.github.io/Font-Awesome/icons;https://icomoon.io/app/)",'fajar')
 ));

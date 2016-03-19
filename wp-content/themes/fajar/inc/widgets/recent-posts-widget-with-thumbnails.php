@@ -12,8 +12,8 @@ class Zo_Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		$this->plugin_slug  = 'zo-recent-posts-widget-with-thumbnails';
         parent::__construct(
             $this->plugin_slug, // Base ID
-            __('Recent Posts With Thumbnails', 'creativ'), // Name
-            array('description' => __('List of your site&#8217;s most recent posts, with clickable title and thumbnails.', 'creativ'),) // Args
+            __('Recent Posts With Thumbnails', 'fajar'), // Name
+            array('description' => __('List of your site&#8217;s most recent posts, with clickable title and thumbnails.', 'fajar'),) // Args
         );
 		$this->plugin_version  = '2.3.1';
 		$this->number_posts  = 5;
@@ -168,7 +168,7 @@ class Zo_Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 				</div>
 				
 				<!-- Btn read mor -->
-				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-readmore-2"><?php _e('Read More', 'creativ');?></a>
+				<a href="<?php the_permalink(); ?>" class="btn btn-green btn-readmore-2"><?php _e('Read More', 'fajar');?></a>
 				</li>
 		<?php endwhile; ?>
 		</ul>
@@ -232,42 +232,42 @@ class Zo_Recent_Posts_Widget_With_Thumbnails extends WP_Widget {
 		if ( ! $default_url )	$default_url = $this->default_thumb_url;
 		
 		?>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'creativ' ); ?></label>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'fajar' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'number_posts' )); ?>"><?php _e( 'Number of posts to show:', 'creativ' ); ?></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'number_posts' )); ?>"><?php _e( 'Number of posts to show:', 'fajar' ); ?></label>
 		<input id="<?php echo esc_attr($this->get_field_id( 'number_posts' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'number_posts' )); ?>" type="text" value="<?php echo esc_attr($number_posts); ?>" size="3" /></p>
 
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_date' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_date' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'show_date' )); ?>"><?php _e( 'Display post date?', 'creativ' ); ?></label></p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'show_date' )); ?>"><?php _e( 'Display post date?', 'fajar' ); ?></label></p>
 
-		<h4><?php _e( 'Thumbnail Options', 'creativ' ); ?>:</h4>
+		<h4><?php _e( 'Thumbnail Options', 'fajar' ); ?>:</h4>
 
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_thumb ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_thumb' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_thumb' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'show_thumb' )); ?>"><?php _e( 'Display post featured image?', 'creativ' ); ?></label></p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'show_thumb' )); ?>"><?php _e( 'Display post featured image?', 'fajar' ); ?></label></p>
 		
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'thumb_width' )); ?>"><?php _e( 'Width of thumbnail', 'creativ' ); ?>:</label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'thumb_width' )); ?>"><?php _e( 'Width of thumbnail', 'fajar' ); ?>:</label>
 		<input id="<?php echo esc_attr($this->get_field_id( 'thumb_width' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'thumb_width' )); ?>" type="text" value="<?php echo esc_attr($thumb_width); ?>" size="3" /></p>
 
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'thumb_height' )); ?>"><?php _e( 'Height of thumbnail', 'creativ' ); ?>:</label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'thumb_height' )); ?>"><?php _e( 'Height of thumbnail', 'fajar' ); ?>:</label>
 		<input id="<?php echo esc_attr($this->get_field_id( 'thumb_height' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'thumb_height' )); ?>" type="text" value="<?php echo esc_attr($thumb_height); ?>" size="3" /></p>
 
 		<p><input class="checkbox" type="checkbox" <?php checked( $keep_aspect_ratio ); ?> id="<?php echo esc_attr($this->get_field_id( 'keep_aspect_ratio' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'keep_aspect_ratio' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'keep_aspect_ratio' )); ?>"><?php _e( 'Use aspect ratios of original images?', 'creativ' ); ?> <em><?php _e( 'If checked the given width is used to determine the height of the thumbnail automatically. This option also supports responsive web design.', 'creativ' ); ?></em></label></p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'keep_aspect_ratio' )); ?>"><?php _e( 'Use aspect ratios of original images?', 'fajar' ); ?> <em><?php _e( 'If checked the given width is used to determine the height of the thumbnail automatically. This option also supports responsive web design.', 'fajar' ); ?></em></label></p>
 		
 		<p><input class="checkbox" type="checkbox" <?php checked( $hide_title ); ?> id="<?php echo esc_attr($this->get_field_id( 'hide_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'hide_title' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'hide_title' )); ?>"><?php _e( 'Do not show title?', 'creativ' ); ?> <em><?php _e( 'Make sure you set a default thumbnail for posts without a thumbnail, otherwise there will be no link.', 'creativ' ); ?></em></label> </p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'hide_title' )); ?>"><?php _e( 'Do not show title?', 'fajar' ); ?> <em><?php _e( 'Make sure you set a default thumbnail for posts without a thumbnail, otherwise there will be no link.', 'fajar' ); ?></em></label> </p>
 		
 		<p><input class="checkbox" type="checkbox" <?php checked( $try_1st_img ); ?> id="<?php echo esc_attr($this->get_field_id( 'try_1st_img' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'try_1st_img' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'try_1st_img' )); ?>"><?php _e( "Try to use the post's first image if post has no featured image?", 'creativ' ); ?></label></p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'try_1st_img' )); ?>"><?php _e( "Try to use the post's first image if post has no featured image?", 'fajar' ); ?></label></p>
 		
 		<p><input class="checkbox" type="checkbox" <?php checked( $only_1st_img ); ?> id="<?php echo esc_attr($this->get_field_id( 'only_1st_img' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'only_1st_img' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'only_1st_img' )); ?>"><?php _e( 'Use first image only, ignore featured image?', 'creativ' ); ?></label></p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'only_1st_img' )); ?>"><?php _e( 'Use first image only, ignore featured image?', 'fajar' ); ?></label></p>
 		
 		<p><input class="checkbox" type="checkbox" <?php checked( $use_default ); ?> id="<?php echo esc_attr($this->get_field_id( 'use_default' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'use_default' )); ?>" />
-		<label for="<?php echo esc_attr($this->get_field_id( 'use_default' )); ?>"><?php _e( 'Use default thumbnail if no image could be determined?', 'creativ' ); ?></label></p>
+		<label for="<?php echo esc_attr($this->get_field_id( 'use_default' )); ?>"><?php _e( 'Use default thumbnail if no image could be determined?', 'fajar' ); ?></label></p>
 		
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'default_url' )); ?>"><?php _e( 'URL of default thumbnail (start with http://)', 'creativ' ); ?>:</label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'default_url' )); ?>"><?php _e( 'URL of default thumbnail (start with http://)', 'fajar' ); ?>:</label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'default_url' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'default_url' )); ?>" type="text" value="<?php echo esc_attr($default_url); ?>" /></p>
 	<?php
 	}

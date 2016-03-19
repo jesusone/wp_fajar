@@ -28,13 +28,13 @@ $atts['categories'] = $_category;
                 <div class="zo-pricing-inner">
                     <h2 class="zo-pricing-title" style="background-color: <?php echo esc_attr($pricing_meta->_zo_color); ?>"><?php the_title();?></h2>
                     <?php if ( $pricing_meta->_zo_is_feature == 1 ) : ?>
-                        <span class="featured"><?php esc_html_e('Popular', 'creativ'); ?></span>
+                        <span class="featured"><?php esc_html_e('Popular', 'fajar'); ?></span>
                     <?php endif; ?>
 
                     <div class="zo-pricing-price">
-                        <sup><?php esc_html_e('$', 'creativ'); ?></sup>
+                        <sup><?php esc_html_e('$', 'fajar'); ?></sup>
                         <span class="price"><?php echo esc_attr($pricing_meta->_zo_price); ?></span>
-                        <div class="time"><?php esc_html_e('per', 'creativ'); ?> <?php echo esc_attr($pricing_meta->_zo_value); ?></div>
+                        <div class="time"><?php esc_html_e('per', 'fajar'); ?> <?php echo esc_attr($pricing_meta->_zo_value); ?></div>
                     </div>
 
                     <div class="zo-pricing-meta">

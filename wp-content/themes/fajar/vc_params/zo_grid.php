@@ -2,7 +2,7 @@
 	$params = array(
 		array(
 			"type" => "dropdown",
-			"heading" => __("Title Size",'creativ'),
+			"heading" => __("Title Size",'fajar'),
 			"param_name" => "zo_title_size",
 			"value" => array(
 					"H2" => "h2",
@@ -14,7 +14,7 @@
 		),
         array(
             "type" => "dropdown",
-            "heading" => __("Full Width",'creativ'),
+            "heading" => __("Full Width",'fajar'),
             "param_name" => "zo_full_width",
             "value" => array(
                 "Default" => "",

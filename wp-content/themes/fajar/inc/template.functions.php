@@ -258,7 +258,7 @@ function zo_get_post_like(){
  */
 function zo_archive_detail(){
     ?>
-    <div class="author vcard"><?php _e('By', 'creativ'); ?> <?php the_author_posts_link(); ?></div>
+    <div class="author vcard"><?php _e('By', 'fajar'); ?> <?php the_author_posts_link(); ?></div>
     <ul>
         <li class="zo-blog-comment"><i class="fa fa-comments-o"></i><a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','%'); ?></a></li>
         <li class="zo-blog-views"><i class="fa fa-eye"></i> <?php echo zo_get_count_view(); ?></li>
@@ -283,7 +283,7 @@ function zo_archive_detail(){
  * @since 1.0.0
  */
 function zo_archive_readmore(){
-    echo '<a class="btn btn-default" href="'.get_the_permalink().'" title="'.get_the_title().'" >'.__('Continue Reading', 'creativ').'</a>';
+    echo '<a class="btn btn-default" href="'.get_the_permalink().'" title="'.get_the_title().'" >'.__('Continue Reading', 'fajar').'</a>';
 }
 
 /**
@@ -422,31 +422,31 @@ function zo_archive_link() {
  * @since 1.0.0
  */
 function zo_archive_post_icon() {
-    $post_icon = array('icon'=>'fa fa-file-text-o','text'=>__('STANDARD', 'creativ'));
+    $post_icon = array('icon'=>'fa fa-file-text-o','text'=>__('STANDARD', 'fajar'));
     switch (get_post_format()) {
         case 'gallery':
             $post_icon['icon'] = 'fa fa-camera-retro';
-            $post_icon['text'] = __('GALLERY', 'creativ');
+            $post_icon['text'] = __('GALLERY', 'fajar');
             break;
         case 'link':
             $post_icon['icon'] = 'fa fa-external-link';
-            $post_icon['text'] = __('LINK', 'creativ');
+            $post_icon['text'] = __('LINK', 'fajar');
             break;
         case 'quote':
             $post_icon['icon'] = 'fa fa-quote-left';
-            $post_icon['text'] = __('QUOTE', 'creativ');
+            $post_icon['text'] = __('QUOTE', 'fajar');
             break;
         case 'video':
             $post_icon['icon'] = 'fa fa-youtube-play';
-            $post_icon['text'] = __('VIDEO', 'creativ');
+            $post_icon['text'] = __('VIDEO', 'fajar');
             break;
         case 'audio':
             $post_icon['icon'] = 'fa fa-volume-up';
-            $post_icon['text'] = __('AUDIO', 'creativ');
+            $post_icon['text'] = __('AUDIO', 'fajar');
             break;
         default:
             $post_icon['icon'] = 'fa fa-image';
-            $post_icon['text'] = __('STANDARD', 'creativ');
+            $post_icon['text'] = __('STANDARD', 'fajar');
             break;
     }
     echo do_shortcode('<i class="'.$post_icon['icon'].'"></i>');
@@ -536,11 +536,11 @@ function zo_comment_nav() {
 	<nav class="navigation comment-navigation" role="navigation">
 		<div class="nav-links">
 			<?php
-				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'creativ' ) ) ) :
+				if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'fajar' ) ) ) :
 					printf( '<div class="nav-previous">%s</div>', $prev_link );
 				endif;
 
-				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'creativ' ) ) ) :
+				if ( $next_link = get_next_comments_link( __( 'Newer Comments', 'fajar' ) ) ) :
 					printf( '<div class="nav-next">%s</div>', $next_link );
 				endif;
 			?>

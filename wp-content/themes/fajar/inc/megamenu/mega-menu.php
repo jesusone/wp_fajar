@@ -116,11 +116,11 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
         if ( ! empty( $item->_invalid ) ) {
             $classes[] = 'menu-item-invalid';
             /* translators: %s: title of menu item which is invalid */
-            $title = sprintf( __( '%s (Invalid)', 'creativ'), $item->title );
+            $title = sprintf( __( '%s (Invalid)', 'fajar'), $item->title );
         } elseif ( isset( $item->post_status ) && 'draft' == $item->post_status ) {
             $classes[] = 'pending';
             /* translators: %s: title of menu item in draft status */
-            $title = sprintf( __('%s (Pending)', 'creativ'), $item->title );
+            $title = sprintf( __('%s (Pending)', 'fajar'), $item->title );
         }
 
         $title = empty( $item->label ) ? $title : $item->label;
@@ -144,7 +144,7 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                             ),
                             'move-menu_item'
                         );
-                        ?>" class="item-move-up"><abbr title="<?php esc_attr_e('Move up','creativ'); ?>">&#8593;</abbr></a>
+                        ?>" class="item-move-up"><abbr title="<?php esc_attr_e('Move up','fajar'); ?>">&#8593;</abbr></a>
                         |
                         <a href="<?php
                         echo wp_nonce_url(
@@ -157,11 +157,11 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                             ),
                             'move-menu_item'
                         );
-                        ?>" class="item-move-down"><abbr title="<?php esc_attr_e('Move down','creativ'); ?>">&#8595;</abbr></a>
+                        ?>" class="item-move-down"><abbr title="<?php esc_attr_e('Move down','fajar'); ?>">&#8595;</abbr></a>
                     </span>
-                    <a class="item-edit" id="edit-<?php echo esc_attr( $item_id ); ?>" title="<?php esc_attr_e('Edit Menu Item','creativ'); ?>" href="<?php
+                    <a class="item-edit" id="edit-<?php echo esc_attr( $item_id ); ?>" title="<?php esc_attr_e('Edit Menu Item','fajar'); ?>" href="<?php
                     echo ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? admin_url( 'nav-menus.php' ) : add_query_arg( 'edit-menu-item', $item_id, remove_query_arg( $removed_args, admin_url( 'nav-menus.php#menu-item-settings-' . do_shortcode($item_id) ) ) );
-                    ?>"><?php _e( 'Edit Menu Item' ,'creativ'); ?></a>
+                    ?>"><?php _e( 'Edit Menu Item' ,'fajar'); ?></a>
                 </span>
             </dt>
         </dl>
@@ -170,46 +170,46 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
             <?php if( 'custom' == $item->type ) : ?>
                 <p class="field-url description description-wide">
                     <label for="edit-menu-item-url-<?php echo esc_attr( $item_id ); ?>">
-                        <?php _e( 'URL' ,'creativ'); ?><br />
+                        <?php _e( 'URL' ,'fajar'); ?><br />
                         <input type="text" id="edit-menu-item-url-<?php echo esc_attr( $item_id ); ?>" class="widefat code edit-menu-item-url" name="menu-item-url[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( $item->url ); ?>" />
                     </label>
                 </p>
             <?php endif; ?>
             <p class="description description-thin">
                 <label for="edit-menu-item-title-<?php echo esc_attr( $item_id ); ?>">
-                    <?php _e( 'Navigation Label' ,'creativ'); ?><br />
+                    <?php _e( 'Navigation Label' ,'fajar'); ?><br />
                     <input type="text" id="edit-menu-item-title-<?php echo esc_attr( $item_id ); ?>" class="widefat edit-menu-item-title" name="menu-item-title[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( $item->title ); ?>" />
                 </label>
             </p>
             <p class="description description-thin">
                 <label for="edit-menu-item-attr-title-<?php echo esc_attr( $item_id ); ?>">
-                    <?php _e( 'Title Attribute','creativ' ); ?><br />
+                    <?php _e( 'Title Attribute','fajar' ); ?><br />
                     <input type="text" id="edit-menu-item-attr-title-<?php echo esc_attr( $item_id ); ?>" class="widefat edit-menu-item-attr-title" name="menu-item-attr-title[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( $item->post_excerpt ); ?>" />
                 </label>
             </p>
             <p class="field-link-target description">
                 <label for="edit-menu-item-target-<?php echo esc_attr( $item_id ); ?>">
                     <input type="checkbox" id="edit-menu-item-target-<?php echo esc_attr( $item_id ); ?>" value="_blank" name="menu-item-target[<?php echo esc_attr( $item_id ); ?>]"<?php checked( $item->target, '_blank' ); ?> />
-                    <?php _e( 'Open link in a new window/tab' ,'creativ'); ?>
+                    <?php _e( 'Open link in a new window/tab' ,'fajar'); ?>
                 </label>
             </p>
             <p class="field-css-classes description description-thin">
                 <label for="edit-menu-item-classes-<?php echo esc_attr( $item_id ); ?>">
-                    <?php _e( 'CSS Classes (optional)' ,'creativ'); ?><br />
+                    <?php _e( 'CSS Classes (optional)' ,'fajar'); ?><br />
                     <input type="text" id="edit-menu-item-classes-<?php echo esc_attr( $item_id ); ?>" class="widefat code edit-menu-item-classes" name="menu-item-classes[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( implode(' ', $item->classes ) ); ?>" />
                 </label>
             </p>
             <p class="field-xfn description description-thin">
                 <label for="edit-menu-item-xfn-<?php echo esc_attr( $item_id ); ?>">
-                    <?php _e( 'Link Relationship (XFN)' ,'creativ'); ?><br />
+                    <?php _e( 'Link Relationship (XFN)' ,'fajar'); ?><br />
                     <input type="text" id="edit-menu-item-xfn-<?php echo esc_attr( $item_id ); ?>" class="widefat code edit-menu-item-xfn" name="menu-item-xfn[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( $item->xfn ); ?>" />
                 </label>
             </p>
             <p class="field-description description description-wide">
                 <label for="edit-menu-item-description-<?php echo esc_attr( $item_id ); ?>">
-                    <?php _e( 'Description' ,'creativ'); ?><br />
+                    <?php _e( 'Description' ,'fajar'); ?><br />
                     <textarea id="edit-menu-item-description-<?php echo esc_attr( $item_id ); ?>" class="widefat edit-menu-item-description" rows="3" cols="20" name="menu-item-description[<?php echo esc_attr( $item_id ); ?>]"><?php echo esc_html( $item->description ); ?></textarea>
-                    <span class="description"><?php _e('The description will be displayed in the menu if the current theme supports it.','creativ'); ?></span>
+                    <span class="description"><?php _e('The description will be displayed in the menu if the current theme supports it.','fajar'); ?></span>
                 </label>
             </p>
             <?php
@@ -239,12 +239,12 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                     <?php echo do_shortcode( $title ); ?><br />
                     <label for="edit-<?php echo esc_attr( do_shortcode($key)  . '-' . do_shortcode($item_id) ); ?>">
                         <select id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) ) . "]"; ?>">
-                            <option value="standard" <?php echo esc_attr( ( $value == 'standard' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Standard Dropdown', 'creativ' ); ?></option>
-                            <option value="columns2" <?php echo esc_attr( ( $value == 'columns2' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '2 columns dropdown', 'creativ' ); ?></option>
-                            <option value="columns3" <?php echo esc_attr( ( $value == 'columns3' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '3 columns dropdown', 'creativ' ); ?>
+                            <option value="standard" <?php echo esc_attr( ( $value == 'standard' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Standard Dropdown', 'fajar' ); ?></option>
+                            <option value="columns2" <?php echo esc_attr( ( $value == 'columns2' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '2 columns dropdown', 'fajar' ); ?></option>
+                            <option value="columns3" <?php echo esc_attr( ( $value == 'columns3' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '3 columns dropdown', 'fajar' ); ?>
                             </option>
-                            <option value="columns4" <?php echo esc_attr( ( $value == 'columns4' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '4 columns dropdown', 'creativ' ); ?></option>
-                            <option value="columns5" <?php echo esc_attr( ( $value == 'columns5' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '5 columns dropdown', 'creativ' ); ?></option>
+                            <option value="columns4" <?php echo esc_attr( ( $value == 'columns4' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '4 columns dropdown', 'fajar' ); ?></option>
+                            <option value="columns5" <?php echo esc_attr( ( $value == 'columns5' ) ? ' selected="selected" ' : '' ); ?>><?php _e( '5 columns dropdown', 'fajar' ); ?></option>
                         </select>
                     </label>
                 </p>
@@ -268,11 +268,11 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                     <?php echo do_shortcode( $title ); ?><br />
                     <label for="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>">
                         <select id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) . "]" ); ?>">
-                            <option value="autodrop_submenu" <?php echo esc_attr( ( $value == 'autodrop_submenu' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Auto drop', 'creativ' ); ?></option>
-                            <option value="drop_to_left" <?php echo esc_attr( ( $value == 'drop_to_left' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Drop To Left Side', 'creativ' ); ?></option>
-                            <option value="drop_to_right" <?php echo esc_attr( ( $value == 'drop_to_right' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Drop To Right Side', 'creativ' ); ?></option>
-                            <option value="drop_to_center" <?php echo esc_attr( ( $value == 'drop_to_center' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Drop To Center', 'creativ' ); ?></option>
-                            <option value="drop_full_width" <?php echo esc_attr( ( $value == 'drop_full_width' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Full width', 'creativ' ); ?></option>
+                            <option value="autodrop_submenu" <?php echo esc_attr( ( $value == 'autodrop_submenu' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Auto drop', 'fajar' ); ?></option>
+                            <option value="drop_to_left" <?php echo esc_attr( ( $value == 'drop_to_left' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Drop To Left Side', 'fajar' ); ?></option>
+                            <option value="drop_to_right" <?php echo esc_attr( ( $value == 'drop_to_right' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Drop To Right Side', 'fajar' ); ?></option>
+                            <option value="drop_to_center" <?php echo esc_attr( ( $value == 'drop_to_center' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Drop To Center', 'fajar' ); ?></option>
+                            <option value="drop_full_width" <?php echo esc_attr( ( $value == 'drop_full_width' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Full width', 'fajar' ); ?></option>
                         </select>
                     </label>
                 </p>
@@ -288,7 +288,7 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                     <?php echo do_shortcode( $title ); ?><br />
                     <label for="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>">
                         <select id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) . "]" ); ?>">
-                            <option value="" <?php echo esc_attr( ( $value == '' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Select Widget Area', 'creativ' ); ?></option>
+                            <option value="" <?php echo esc_attr( ( $value == '' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Select Widget Area', 'fajar' ); ?></option>
                             <?php
                             foreach ( $sidebars as $sidebar ) {
                                 echo '<option value="' . esc_attr( $sidebar['id'] ) . '" ' . esc_attr( ( $value == $sidebar['id'] ) ? ' selected="selected" ' : '' ) . '>[' . esc_attr( $sidebar['id'] ) . '] - ' . esc_attr( $sidebar['name'] ) . '</option>';
@@ -306,8 +306,8 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                 <?php echo do_shortcode( $title ); ?><br />
                 <label for="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>">
                     <select id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) . "]" ); ?>">
-                        <option value="no_group" <?php echo esc_attr(  ( $value == 'no_group' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'No', 'creativ' ); ?></option>
-                        <option value="group" <?php echo esc_attr( ( $value == 'group' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Yes', 'creativ' ); ?></option>
+                        <option value="no_group" <?php echo esc_attr(  ( $value == 'no_group' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'No', 'fajar' ); ?></option>
+                        <option value="group" <?php echo esc_attr( ( $value == 'group' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Yes', 'fajar' ); ?></option>
                     </select>
                 </label>
             </p>
@@ -321,8 +321,8 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                     <?php echo do_shortcode( $title ); ?><br />
                     <label for="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>">
                         <select id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) . "]" ); ?>">
-                            <option value="0" <?php echo esc_attr( ( $value == '0' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'No', 'creativ' ); ?></option>
-                            <option value="1" <?php echo esc_attr( ( $value == '1' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Yes', 'creativ' ); ?></option>
+                            <option value="0" <?php echo esc_attr( ( $value == '0' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'No', 'fajar' ); ?></option>
+                            <option value="1" <?php echo esc_attr( ( $value == '1' ) ? ' selected="selected" ' : '' ); ?>><?php _e( 'Yes', 'fajar' ); ?></option>
                         </select>
                     </label>
                 </p>
@@ -354,7 +354,7 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                 <label for="edit-<?php echo esc_attr( ($key) . '-' . ($item_id) ); ?>">
                     <?php echo do_shortcode( $title ); ?><br />
                     <input type="text" value="<?php echo esc_attr( $value ); ?>" id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) . "]" ); ?>" />
-                    <input alt="#TB_inline?height=400&width=500&inlineId=<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) . '-popup' ); ?>" title="<?php _e( 'Click to browse icon', 'creativ' ) ?>" class="thickbox button-secondary submit-add-to-menu" type="button" value="<?php _e( 'Browse Icon', 'creativ' ) ?>" />
+                    <input alt="#TB_inline?height=400&width=500&inlineId=<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) . '-popup' ); ?>" title="<?php _e( 'Click to browse icon', 'fajar' ) ?>" class="thickbox button-secondary submit-add-to-menu" type="button" value="<?php _e( 'Browse Icon', 'fajar' ) ?>" />
                     <a class="button btn_clear button-primary" href="javascript: void(0);">Clear</a>
                     <span class="icon-preview  icon-preview<?php echo esc_attr( '-' . do_shortcode($item_id) ); ?>"><i class=" fa fa-<?php echo esc_attr( $value ); ?>"></i></span>
                 </label>
@@ -371,8 +371,8 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                     <label for="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>">
                         <span class='obtheme_long_desc'><?php echo do_shortcode( $title ); ?></span><br />
                         <input type="text" value="<?php echo esc_attr( $value ); ?>" id="edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class=" <?php echo esc_attr( $key ); ?>" name="<?php echo esc_attr( do_shortcode($key) . "[" . do_shortcode($item_id) . "]" ); ?>" />
-                        <button id="browse-edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class="set_custom_images button button-secondary submit-add-to-menu"><?php _e( 'Browse Image', 'creativ' ); ?></button>
-                        <a class="button btn_clear button-primary" href="javascript: void(0);"><?php _e( 'Clear', 'creativ' ); ?></a>
+                        <button id="browse-edit-<?php echo esc_attr( do_shortcode($key) . '-' . do_shortcode($item_id) ); ?>" class="set_custom_images button button-secondary submit-add-to-menu"><?php _e( 'Browse Image', 'fajar' ); ?></button>
+                        <a class="button btn_clear button-primary" href="javascript: void(0);"><?php _e( 'Clear', 'fajar' ); ?></a>
                     </label>
                 </p>
                 <p class="description description-wide description_width_25">
@@ -464,7 +464,7 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
             <div class="menu-item-actions description-wide submitbox">
                 <?php if( 'custom' != $item->type && $original_title !== false ) : ?>
                     <p class="link-to-original">
-                        <?php printf( __('Original: %s', 'creativ'), '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
+                        <?php printf( __('Original: %s', 'fajar'), '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
                     </p>
                 <?php endif; ?>
                 <a class="item-delete submitdelete deletion" id="delete-<?php echo esc_attr( $item_id ); ?>" href="<?php
@@ -477,8 +477,8 @@ class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu  {
                         remove_query_arg($removed_args, admin_url( 'nav-menus.php' ) )
                     ),
                     'delete-menu_item_' . do_shortcode($item_id)
-                ); ?>"><?php _e('Remove','creativ'); ?></a> <span class="meta-sep"> | </span> <a class="item-cancel submitcancel" id="cancel-<?php echo esc_attr( $item_id ); ?>" href="<?php echo esc_url( add_query_arg( array('edit-menu-item' => $item_id, 'cancel' => time()), remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) ) ) );
-                ?>#menu-item-settings-<?php echo esc_attr( $item_id ); ?>"><?php _e('Cancel','creativ'); ?></a>
+                ); ?>"><?php _e('Remove','fajar'); ?></a> <span class="meta-sep"> | </span> <a class="item-cancel submitcancel" id="cancel-<?php echo esc_attr( $item_id ); ?>" href="<?php echo esc_url( add_query_arg( array('edit-menu-item' => $item_id, 'cancel' => time()), remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) ) ) );
+                ?>#menu-item-settings-<?php echo esc_attr( $item_id ); ?>"><?php _e('Cancel','fajar'); ?></a>
             </div>
 
             <input class="menu-item-data-db-id" type="hidden" name="menu-item-db-id[<?php echo esc_attr( $item_id ); ?>]" value="<?php echo esc_attr( $item_id ); ?>" />

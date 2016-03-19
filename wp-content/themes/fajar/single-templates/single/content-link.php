@@ -30,11 +30,11 @@
                 the_content();
             }
             wp_link_pages( array(
-                'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'creativ' ) . '</span>',
+                'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fajar' ) . '</span>',
                 'after'       => '</p>',
                 'link_before' => '<span>',
                 'link_after'  => '</span>',
-                'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'creativ' ) . ' </span>%',
+                'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'fajar' ) . ' </span>%',
                 'separator'   => '<span class="screen-reader-text">, </span>',
             ) );
             ?>

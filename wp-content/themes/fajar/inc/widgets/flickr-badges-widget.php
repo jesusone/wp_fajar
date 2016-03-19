@@ -22,10 +22,10 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 		);
 		
 		// Add some informations to the widget
-		$widget_options = array('classname' => 'widget_flickr', 'description' => __( 'Displays a Flickr photo stream from an ID', 'creativ' ) );
+		$widget_options = array('classname' => 'widget_flickr', 'description' => __( 'Displays a Flickr photo stream from an ID', 'fajar' ) );
 		
 		// Create the widget
-        parent::__construct($this->prefix, __('ZO Flickr Badge', 'creativ'), $widget_options, $control_options );
+        parent::__construct($this->prefix, __('ZO Flickr Badge', 'fajar'), $widget_options, $control_options );
 		
 		// Load additional scripts and styles file to the widget admin area
 		add_action( 'load-widgets.php', array(&$this, 'widget_admin') );
@@ -130,7 +130,7 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 		if ( ! empty( $instance['flickr_id'] ) )
 			echo "<script type='text/javascript' src='$protocol://www.flickr.com/badge_code_v2.gne?count=$count&amp;display=$display&amp;size=$size&amp;layout=x&amp;source=$type&amp;$type=$flickr_id'></script>";
 		else
-			echo '<p>' . __('Please provide an Flickr ID', 'creativ') . '</p>';
+			echo '<p>' . __('Please provide an Flickr ID', 'fajar') . '</p>';
 		
 		echo '</div>';
 		
@@ -172,7 +172,7 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 	function form( $instance ) {
 		// Set up the default form values.
 		$defaults = array(
-			'title'			=> esc_attr__( 'Flickr Widget', 'creativ' ),
+			'title'			=> esc_attr__( 'Flickr Widget', 'fajar' ),
 			'type'			=> 'user',
 			'flickr_id'		=> '', // 71865026@N00
 			'count'			=> 9,
@@ -188,22 +188,22 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		
 		$types = array( 
-			'user'  => esc_attr__( 'user', 'creativ' ),
-			'group' => esc_attr__( 'group', 'creativ' )
+			'user'  => esc_attr__( 'user', 'fajar' ),
+			'group' => esc_attr__( 'group', 'fajar' )
 		);
 		$sizes = array(
-			's' => esc_attr__( 'Standard', 'creativ' ),
-			't' => esc_attr__( 'Thumbnail', 'creativ' ),
-			'm' => esc_attr__( 'Medium', 'creativ' )
+			's' => esc_attr__( 'Standard', 'fajar' ),
+			't' => esc_attr__( 'Thumbnail', 'fajar' ),
+			'm' => esc_attr__( 'Medium', 'fajar' )
 		);
 		$displays = array( 
-			'latest' => esc_attr__( 'latest', 'creativ' ),
-			'random' => esc_attr__( 'random', 'creativ' )
+			'latest' => esc_attr__( 'latest', 'fajar' ),
+			'random' => esc_attr__( 'random', 'fajar' )
 		);
 		
 		$tabs = array( 
-			__( 'General', 'creativ' ),
-			__( 'Customs', 'creativ' ),
+			__( 'General', 'fajar' ),
+			__( 'Customs', 'fajar' ),
 		);
 				
 		?>	
@@ -218,13 +218,13 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 				<li class="tab-pane <?php if ( $instance['tab'][0] ) : ?>active<?php endif; ?>">
 					<ul>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title', 'creativ'); ?></label>
-							<span class="controlDesc"><?php _e( 'Give the widget title, or leave it empty for no title.', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title', 'fajar'); ?></label>
+							<span class="controlDesc"><?php _e( 'Give the widget title, or leave it empty for no title.', 'fajar' ); ?></span>
 							<input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 						</li>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('type')); ?>"><?php _e( 'Type', 'creativ' ); ?></label>
-							<span class="controlDesc"><?php _e( 'The type of images from user or group.', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('type')); ?>"><?php _e( 'Type', 'fajar' ); ?></label>
+							<span class="controlDesc"><?php _e( 'The type of images from user or group.', 'fajar' ); ?></span>
 							<select id="<?php echo esc_attr($this->get_field_id( 'type' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'type' )); ?>">
 								<?php foreach ( $types as $k => $v ) { ?>
 									<option value="<?php echo esc_attr( $k ); ?>" <?php selected( $instance['type'], $k ); ?>><?php echo esc_html( $v ); ?></option>
@@ -232,18 +232,18 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 							</select>				
 						</li>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('flickr_id')); ?>"><?php _e('Flickr ID', 'creativ'); ?></label>
+							<label for="<?php echo esc_attr($this->get_field_id('flickr_id')); ?>"><?php _e('Flickr ID', 'fajar'); ?></label>
 							<input id="<?php echo esc_attr($this->get_field_id('flickr_id')); ?>" name="<?php echo esc_attr($this->get_field_name('flickr_id')); ?>" type="text" value="<?php echo esc_attr( $instance['flickr_id'] ); ?>" />
-							<span class="controlDesc"><?php printf( __( 'Put the flickr ID here, go to <a href="%s" target="_blank">Flickr NSID Lookup</a> if you don\'t know your ID. Example: 71865026@N00', 'creativ' ), esc_url('http://goo.gl/PM6rZ')); ?></span>
+							<span class="controlDesc"><?php printf( __( 'Put the flickr ID here, go to <a href="%s" target="_blank">Flickr NSID Lookup</a> if you don\'t know your ID. Example: 71865026@N00', 'fajar' ), esc_url('http://goo.gl/PM6rZ')); ?></span>
 						</li>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('count')); ?>"><?php _e('Number', 'creativ'); ?></label>
-							<span class="controlDesc"><?php _e( 'Number of images shown from 1 to 10', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('count')); ?>"><?php _e('Number', 'fajar'); ?></label>
+							<span class="controlDesc"><?php _e( 'Number of images shown from 1 to 10', 'fajar' ); ?></span>
 							<input class="column-last" id="<?php echo esc_attr($this->get_field_id('count')); ?>" name="<?php echo esc_attr($this->get_field_name('count')); ?>" type="text" value="<?php echo esc_attr( $instance['count'] ); ?>" size="3" />
 						</li>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('display')); ?>"><?php _e('Display Method', 'creativ'); ?></label>
-							<span class="controlDesc"><?php _e( 'Get the image from recent or use random function.', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('display')); ?>"><?php _e('Display Method', 'fajar'); ?></label>
+							<span class="controlDesc"><?php _e( 'Get the image from recent or use random function.', 'fajar' ); ?></span>
 							<select id="<?php echo esc_attr($this->get_field_id( 'display' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'display' )); ?>">
 								<?php foreach ( $displays as $k => $v ) { ?>
 									<option value="<?php echo esc_attr( $k ); ?>" <?php selected( $instance['display'], $k ); ?>><?php echo esc_html( $v ); ?></option>
@@ -251,8 +251,8 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 							</select>	
 						</li>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('sizes')); ?>"><?php _e( 'Sizes', 'creativ' ); ?></label>
-							<span class="controlDesc"><?php _e( 'Represents the size of the image', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('sizes')); ?>"><?php _e( 'Sizes', 'fajar' ); ?></label>
+							<span class="controlDesc"><?php _e( 'Represents the size of the image', 'fajar' ); ?></span>
 							<select id="<?php echo esc_attr($this->get_field_id( 'size' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'size' )); ?>">
 								<?php foreach ( $sizes as $k => $v ) { ?>
 									<option value="<?php echo esc_attr($k); ?>" <?php selected( $instance['size'], $k ); ?>><?php echo do_shortcode($v); ?></option>
@@ -265,19 +265,19 @@ class Zo_Flickr_Badges_Widget extends WP_Widget {
 				<li class="tab-pane <?php if ( $instance['tab'][1] ) : ?>active<?php endif; ?>">
 					<ul>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('intro_text')); ?>"><?php _e( 'Intro Text', 'creativ' ); ?></label>
-							<span class="controlDesc"><?php _e( 'This option will display addtional text before the widget content and HTML supports.', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('intro_text')); ?>"><?php _e( 'Intro Text', 'fajar' ); ?></label>
+							<span class="controlDesc"><?php _e( 'This option will display addtional text before the widget content and HTML supports.', 'fajar' ); ?></span>
 							<textarea name="<?php echo esc_attr($this->get_field_name( 'intro_text' )); ?>" id="<?php echo esc_attr($this->get_field_id( 'intro_text' )); ?>" rows="2" class="widefat"><?php echo esc_textarea($instance['intro_text']); ?></textarea>
 						</li>
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('outro_text')); ?>"><?php _e( 'Outro Text', 'creativ' ); ?></label>
-							<span class="controlDesc"><?php _e( 'This option will display addtional text after widget and HTML supports.', 'creativ' ); ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('outro_text')); ?>"><?php _e( 'Outro Text', 'fajar' ); ?></label>
+							<span class="controlDesc"><?php _e( 'This option will display addtional text after widget and HTML supports.', 'fajar' ); ?></span>
 							<textarea name="<?php echo esc_attr($this->get_field_name( 'outro_text' )); ?>" id="<?php echo esc_attr($this->get_field_id( 'outro_text' )); ?>" rows="2" class="widefat"><?php echo esc_textarea($instance['outro_text']); ?></textarea>
 							
 						</li>				
 						<li>
-							<label for="<?php echo esc_attr($this->get_field_id('custom')); ?>"><?php _e( 'Custom Script & Stylesheet', 'creativ' ) ; ?></label>
-							<span class="controlDesc"><?php _e( 'Use this box for additional widget CSS style of custom javascript. Current widget selector: ', 'creativ' ); ?><?php echo '<tt>#' . $this->id . '</tt>'; ?></span>
+							<label for="<?php echo esc_attr($this->get_field_id('custom')); ?>"><?php _e( 'Custom Script & Stylesheet', 'fajar' ) ; ?></label>
+							<span class="controlDesc"><?php _e( 'Use this box for additional widget CSS style of custom javascript. Current widget selector: ', 'fajar' ); ?><?php echo '<tt>#' . $this->id . '</tt>'; ?></span>
 							<textarea name="<?php echo esc_attr($this->get_field_name( 'custom' )); ?>" id="<?php echo esc_attr($this->get_field_id( 'custom' )); ?>" rows="5" class="widefat code"><?php echo htmlentities($instance['custom']); ?></textarea>
 						</li>
 					</ul>

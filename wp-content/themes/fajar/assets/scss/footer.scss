@@ -5,6 +5,7 @@ footer {
     position: relative;
 }
 .yeah-footer-row-1{
+	margin-bottom: 50px;
 	.available-widget{
 		border: 1px solid #e0e0e0;
 		padding: 26px 36px;
@@ -14,16 +15,48 @@ footer {
 			font-size: 80px;
 			margin: 2px 6px 0 0;
 		}
-		p{
-			padding-left: 70px;
-			font-size: 32px;
-			@extend .museo_slab_100;
-			span {
-				color: #ee3b24;
-				font-size: 22px;
-				display: block;
-				@extend .google-font-1;
+	}
+	.place-order-widget{
+		border: 1px solid #e0e0e0;
+		padding: 26px 36px;
+		min-height: 146px;
+		i {
+			float: left;
+			font-size: 70px;
+			margin: 14px 9px 0 0;
+		}
+		p span {
+			display: inline-block;
+		}
+		.tag{
+			background: $primary_color;
+			color: #fff;
+			font-size: 28px;
+			display: inline-block;
+			padding: 2.7px 48px;
+			position: relative;
+			font-weight: 300;
+			@extend .google-font-1;
+			&:after {
+				position: absolute;
+				right: -36px;
+				content: "";
+				top: 0;
+				background: url(../images/tag-arrow.png);
+				width: 36px;
+				height: 45px;
 			}
+		}
+	}
+	p{
+		padding-left: 70px;
+		font-size: 32px;
+		@extend .museo_slab_100;
+		span {
+			color: $primary_color;
+			font-size: 22px;
+			display: block;
+			@extend .google-font-1;
 		}
 	}
 }

@@ -48,7 +48,7 @@ class ZoTheme_StaticCss
             /* write options to scss file */
             
 			if ( ! $wp_filesystem->put_contents( get_template_directory() . '/assets/scss/options.scss', $this->css_render(), 0644 ) ) {
-				_e( 'Error saving file!', 'creativ' );
+				_e( 'Error saving file!', 'fajar' );
 			}
 
             /* minimize CSS styles */
@@ -67,7 +67,7 @@ class ZoTheme_StaticCss
 
             /* write static.css file */
 			if ( ! $wp_filesystem->put_contents( get_template_directory() . '/assets/css/' . $file, $css, 0644) ) {
-				_e( 'Error saving file!', 'creativ' );
+				_e( 'Error saving file!', 'fajar' );
 			}
         }
     }

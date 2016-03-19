@@ -96,7 +96,7 @@ if ($products->have_posts()) :
                                 <div class="zo-product-header">
                                     <div class="zo-product-image">
                                         <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-                                        <a href="<?php the_permalink(); ?>" title="<?php _e('View detail', 'creativ'); ?>">
+                                        <a href="<?php the_permalink(); ?>" title="<?php _e('View detail', 'fajar'); ?>">
                                             <?php
                                             /**
                                              * woocommerce_before_shop_loop_item_title hook

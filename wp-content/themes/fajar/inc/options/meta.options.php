@@ -26,11 +26,11 @@ class ZOMetaOptions
 	/* add meta boxs */
 	public function add_meta_boxes()
 	{
-		$this->add_meta_box('template_page_options', __('Setting', 'creativ'), 'page');
-		$this->add_meta_box('testimonial_options', __('Testimonial about', 'creativ'), 'testimonial');
-		$this->add_meta_box('pricing_options', __('Pricing Option', 'creativ'), 'pricing');
-		$this->add_meta_box('team_options', __('Team About', 'creativ'), 'team');
-		$this->add_meta_box('portfolio_options', __('Portfolio About', 'creativ'), 'portfolio');
+		$this->add_meta_box('template_page_options', __('Setting', 'fajar'), 'page');
+		$this->add_meta_box('testimonial_options', __('Testimonial about', 'fajar'), 'testimonial');
+		$this->add_meta_box('pricing_options', __('Pricing Option', 'fajar'), 'pricing');
+		$this->add_meta_box('team_options', __('Team About', 'fajar'), 'team');
+		$this->add_meta_box('portfolio_options', __('Portfolio About', 'fajar'), 'portfolio');
 	}
 
 	public function add_meta_box($id, $label, $post_type, $context = 'advanced', $priority = 'default')
@@ -42,16 +42,16 @@ class ZOMetaOptions
 		?>
 		<div class="tab-container clearfix">
 			<ul class='etabs clearfix'>
-				<li class="tab"><a href="#tabs-general"><i class="fa fa-server"></i><?php _e('General', 'creativ'); ?></a></li>
-				<li class="tab"><a href="#tabs-header"><i class="fa fa-diamond"></i><?php _e('Header', 'creativ'); ?></a></li>
-				<li class="tab"><a href="#tabs-page-title"><i class="fa fa-connectdevelop"></i><?php _e('Page Title', 'creativ'); ?></a></li>
+				<li class="tab"><a href="#tabs-general"><i class="fa fa-server"></i><?php _e('General', 'fajar'); ?></a></li>
+				<li class="tab"><a href="#tabs-header"><i class="fa fa-diamond"></i><?php _e('Header', 'fajar'); ?></a></li>
+				<li class="tab"><a href="#tabs-page-title"><i class="fa fa-connectdevelop"></i><?php _e('Page Title', 'fajar'); ?></a></li>
 			</ul>
 			<div class='panel-container'>
 				<div id="tabs-general">
 					<?php
 					zo_options(array(
 						'id' => 'full_width',
-						'label' => __('Full Width','creativ'),
+						'label' => __('Full Width','fajar'),
 						'type' => 'switch',
 						'options' => array('on'=>'1','off'=>''),
 					));
@@ -62,7 +62,7 @@ class ZOMetaOptions
 					/* header. */
 					zo_options(array(
 						'id' => 'header',
-						'label' => __('Header','creativ'),
+						'label' => __('Header','fajar'),
 						'type' => 'switch',
 						'options' => array('on'=>'1','off'=>''),
 						'follow' => array('1'=>array('#page_header_enable'))
@@ -70,7 +70,7 @@ class ZOMetaOptions
 					?>  <div id="page_header_enable"><?php
 						zo_options(array(
 							'id' => 'header_layout',
-							'label' => __('Layout','creativ'),
+							'label' => __('Layout','fajar'),
 							'type' => 'imegesselect',
 							'options' => array(
 								'' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
@@ -78,17 +78,17 @@ class ZOMetaOptions
 						));
 						zo_options(array(
 							'id' => 'header_margin',
-							'label' => __('Header Margin','creativ'),
+							'label' => __('Header Margin','fajar'),
 							'type' => 'text',
 						));
 						zo_options(array(
 							'id' => 'header_padding',
-							'label' => __('Header Padding','creativ'),
+							'label' => __('Header Padding','fajar'),
 							'type' => 'text',
 						));
 						zo_options(array(
 							'id' => 'header_logo',
-							'label' => __('Logo','creativ'),
+							'label' => __('Logo','fajar'),
 							'type' => 'image'
 						));
 						/*
@@ -96,7 +96,7 @@ class ZOMetaOptions
 						 */
 						zo_options(array(
 							'id' => 'enable_header_menu',
-							'label' => __('Custom Header Menu Color','creativ'),
+							'label' => __('Custom Header Menu Color','fajar'),
 							'type' => 'switch',
 							'options' => array('on'=>'1','off'=>''),
 							'follow' => array('1'=>array('#page_header_menu_enable'))
@@ -104,19 +104,19 @@ class ZOMetaOptions
 						?> <div id="page_header_menu_enable"><?php
 							zo_options(array(
 								'id' => 'header_menu_color',
-								'label' => __('Menu Color - First Level','creativ'),
+								'label' => __('Menu Color - First Level','fajar'),
 								'type' => 'color',
 								'default' => ''
 							));
 							zo_options(array(
 								'id' => 'header_menu_color_hover',
-								'label' => __('Menu Hover - First Level','creativ'),
+								'label' => __('Menu Hover - First Level','fajar'),
 								'type' => 'color',
 								'default' => ''
 							));
 							zo_options(array(
 								'id' => 'header_menu_color_active',
-								'label' => __('Menu Active - First Level','creativ'),
+								'label' => __('Menu Active - First Level','fajar'),
 								'type' => 'color',
 								'default' => ''
 							));
@@ -126,7 +126,7 @@ class ZOMetaOptions
 						 */
 						zo_options(array(
 							'id' => 'enable_header_fixed',
-							'label' => __('Header Fixed','creativ'),
+							'label' => __('Header Fixed','fajar'),
 							'type' => 'switch',
 							'options' => array('on'=>'1','off'=>''),
 							'follow' => array('1'=>array('#page_header_fixed_enable'))
@@ -134,26 +134,26 @@ class ZOMetaOptions
 						?> <div id="page_header_fixed_enable"><?php
 							zo_options(array(
 								'id' => 'header_fixed_bg_color',
-								'label' => __('Header Fixed - Background Color','creativ'),
+								'label' => __('Header Fixed - Background Color','fajar'),
 								'type' => 'color',
 								'default' => '#fff',
 								'rgba' => true
 							));
 							zo_options(array(
 								'id' => 'header_fixed_menu_color',
-								'label' => __('Header Fixed - Menu Color - First Level','creativ'),
+								'label' => __('Header Fixed - Menu Color - First Level','fajar'),
 								'type' => 'color',
 								'default' => ''
 							));
 							zo_options(array(
 								'id' => 'header_fixed_menu_color_hover',
-								'label' => __('Header Fixed - Menu Hover Color - First Level','creativ'),
+								'label' => __('Header Fixed - Menu Hover Color - First Level','fajar'),
 								'type' => 'color',
 								'default' => ''
 							));
 							zo_options(array(
 								'id' => 'header_fixed_menu_color_active',
-								'label' => __('Header Fixed - Menu Active Color - First Level','creativ'),
+								'label' => __('Header Fixed - Menu Active Color - First Level','fajar'),
 								'type' => 'color',
 								'default' => ''
 							));
@@ -181,7 +181,7 @@ class ZOMetaOptions
 					/* page title. */
 					zo_options(array(
 						'id' => 'page_title',
-						'label' => __('Page Title','creativ'),
+						'label' => __('Page Title','fajar'),
 						'type' => 'switch',
 						'options' => array('on'=>'1','off'=>''),
 						'follow' => array('1'=>array('#page_title_enable'))
@@ -189,27 +189,27 @@ class ZOMetaOptions
 					?>  <div id="page_title_enable"><?php
 						zo_options(array(
 							'id' => 'page_title_text',
-							'label' => __('Title','creativ'),
+							'label' => __('Title','fajar'),
 							'type' => 'text',
 						));
 						zo_options(array(
 							'id' => 'page_title_sub_text',
-							'label' => __('Sub Title','creativ'),
+							'label' => __('Sub Title','fajar'),
 							'type' => 'text',
 						));
 						zo_options(array(
 							'id' => 'page_title_margin',
-							'label' => __('Page Title Margin','creativ'),
+							'label' => __('Page Title Margin','fajar'),
 							'type' => 'text',
 						));
 						zo_options(array(
 							'id' => 'page_title_background',
-							'label' => __('Page Title Background','creativ'),
+							'label' => __('Page Title Background','fajar'),
 							'type' => 'image',
 						));
 						zo_options(array(
 							'id' => 'page_title_type',
-							'label' => __('Layout','creativ'),
+							'label' => __('Layout','fajar'),
 							'type' => 'imegesselect',
 							'options' => array(
 								'' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-0.png',
@@ -235,7 +235,7 @@ class ZOMetaOptions
 			<?php
 			zo_options(array(
 				'id' => 'testimonial_position',
-				'label' => __('Client Position','creativ'),
+				'label' => __('Client Position','fajar'),
 				'type' => 'text',
 			));
 			?>
@@ -253,13 +253,13 @@ class ZOMetaOptions
 						<?php
 						zo_options(array(
 							'id' => 'price',
-							'label' => __('Price','creativ'),
+							'label' => __('Price','fajar'),
 							'type' => 'text',
 						));
 
 						zo_options(array(
 							'id' => 'value',
-							'label' => __('Value','creativ'),
+							'label' => __('Value','fajar'),
 							'type' => 'select',
 							'options' => array(
 								'Monthly' => 'Monthly',
@@ -269,7 +269,7 @@ class ZOMetaOptions
 
 						zo_options(array(
 							'id' => 'color',
-							'label' => __('Header Color','creativ'),
+							'label' => __('Header Color','fajar'),
 							'type' => 'color',
 							'default' => ''
 						));
@@ -280,20 +280,20 @@ class ZOMetaOptions
 						<?php
 						zo_options(array(
 							'id' => 'is_feature',
-							'label' => __('Is feature','creativ'),
+							'label' => __('Is feature','fajar'),
 							'type' => 'switch',
 							'options' => array('on'=>'1','off'=>''),
 						));
 
 						zo_options(array(
 							'id' => 'button_url',
-							'label' => __('Button Url','creativ'),
+							'label' => __('Button Url','fajar'),
 							'type' => 'text',
 						));
 
 						zo_options(array(
 							'id' => 'button_text',
-							'label' => __('Button Text','creativ'),
+							'label' => __('Button Text','fajar'),
 							'type' => 'text',
 						));
 						?>
@@ -311,14 +311,14 @@ class ZOMetaOptions
 
 		<div class="tab-container clearfix">
 			<ul class='etabs clearfix'>
-				<li class="tab"><a href="#tabs-position"><i class="fa fa-server"></i><?php _e('Position', 'creativ'); ?></a></li>
+				<li class="tab"><a href="#tabs-position"><i class="fa fa-server"></i><?php _e('Position', 'fajar'); ?></a></li>
 			</ul>
 			<div class='panel-container'>
 				<div id="tabs-position">
 					<?php
 					zo_options(array(
 						'id' => 'team_position',
-						'label' => __('Position', 'creativ'),
+						'label' => __('Position', 'fajar'),
 						'type' => 'text',
 						'placeholder' => '',
 					));
@@ -326,7 +326,7 @@ class ZOMetaOptions
 					<?php
 					zo_options(array(
 						'id' => 'socials',
-						'label' => __('Socials of team','creativ'),
+						'label' => __('Socials of team','fajar'),
 						'type' => 'social',
 					));
 					?>
@@ -340,39 +340,39 @@ class ZOMetaOptions
 		?>
 		<div class="tab-container clearfix">
 			<ul class='etabs clearfix'>
-				<li class="tab"><a href="#tabs-about"><i class="fa fa-server"></i><?php _e('About', 'creativ'); ?></a></li>
-				<li class="tab"><a href="#tabs-layout"><i class="fa fa-server"></i><?php _e('Layout', 'creativ'); ?></a></li>
+				<li class="tab"><a href="#tabs-about"><i class="fa fa-server"></i><?php _e('About', 'fajar'); ?></a></li>
+				<li class="tab"><a href="#tabs-layout"><i class="fa fa-server"></i><?php _e('Layout', 'fajar'); ?></a></li>
 			</ul>
 			<div class='panel-container'>
 				<div id="tabs-about">
 					<?php
 					zo_options(array(
 						'id' => 'portfolio_client',
-						'label' => __('Client', 'creativ'),
+						'label' => __('Client', 'fajar'),
 						'type' => 'text',
 						'placeholder' => '',
 					));
 					zo_options(array(
 						'id' => 'portfolio_date',
-						'label' => __('Date', 'creativ'),
+						'label' => __('Date', 'fajar'),
 						'type' => 'date',
 						'placeholder' => '',
 					));
 					zo_options(array(
 						'id' => 'portfolio_skills',
-						'label' => __('Skills', 'creativ'),
+						'label' => __('Skills', 'fajar'),
 						'type' => 'text',
 						'placeholder' => '',
 					));
 					zo_options(array(
 						'id' => 'portfolio_url',
-						'label' => __('URL', 'creativ'),
+						'label' => __('URL', 'fajar'),
 						'type' => 'text',
 						'value' => '#',
 					));
 					zo_options(array(
 						'id' => 'portfolio_images',
-						'label' => __('Gallery', 'creativ'),
+						'label' => __('Gallery', 'fajar'),
 						'type' => 'images',
 					));
 					?>
@@ -381,7 +381,7 @@ class ZOMetaOptions
 					<?php
 					zo_options(array(
 						'id' => 'portfolio_layout',
-						'label' => __('Layout', 'creativ'),
+						'label' => __('Layout', 'fajar'),
 						'type' => 'select',
 						'options' => array(
 							'' => 'Default',

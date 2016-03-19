@@ -33,15 +33,15 @@ if( basename($template) === 'blog-classic.php') {
         <div class="zo-blog-content">
             <?php the_excerpt();
             wp_link_pages( array(
-                'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'creativ' ) . '</span>',
+                'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fajar' ) . '</span>',
                 'after'       => '</p>',
                 'link_before' => '<span>',
                 'link_after'  => '</span>',
-                'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'creativ' ) . ' </span>%',
+                'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'fajar' ) . ' </span>%',
                 'separator'   => '<span class="screen-reader-text">, </span>',
             ) );
             ?>
         </div>
-        <a class="btn-readmore" title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php _e('Read More ', 'creativ') ?></a>
+        <a class="btn-readmore" title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php _e('Read More ', 'fajar') ?></a>
     </div>
 </article>

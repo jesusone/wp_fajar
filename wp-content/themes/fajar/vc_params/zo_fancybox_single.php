@@ -2,7 +2,7 @@
 	$params = array(
 		array(
 			"type" => "dropdown",
-			"heading" => __("Title Size",'creativ'),
+			"heading" => __("Title Size",'fajar'),
 			"param_name" => "zo_title_size",
 			"value" => array(
 					"H2" => "h2",
@@ -14,7 +14,7 @@
 		),
         array(
             "type" => "dropdown",
-            "heading" => __("Style",'creativ'),
+            "heading" => __("Style",'fajar'),
             "param_name" => "zo_fancybox_style",
             "value" => array(
                 "Default" => "",
@@ -23,7 +23,7 @@
         ),
         array(
             "type" => "dropdown",
-            "heading" => __("Align",'creativ'),
+            "heading" => __("Align",'fajar'),
             "param_name" => "zo_fancybox_align",
             "value" => array(
                 "Left" => "",

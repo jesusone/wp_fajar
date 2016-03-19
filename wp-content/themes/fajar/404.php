@@ -27,17 +27,17 @@
 
 				<article id="post-0" class="entry-error404 no-results not-found">
 					<header class="entry-header">
-						<img src="<?php print get_template_directory_uri(); ?>/assets/images/direction.png" alt="<?php _e('404 Page Not Found', 'creativ'); ?>" />
-						<h1><?php _e('404', 'creativ'); ?></h1>
-						<h2><?php _e('PAGE NOT FOUND', 'creativ'); ?></h2>
+						<img src="<?php print get_template_directory_uri(); ?>/assets/images/direction.png" alt="<?php _e('404 Page Not Found', 'fajar'); ?>" />
+						<h1><?php _e('404', 'fajar'); ?></h1>
+						<h2><?php _e('PAGE NOT FOUND', 'fajar'); ?></h2>
 					</header>
 
 					<div class="entry-content">
-						<p><?php _e('Whoops, sorry, this page does not exist.', 'creativ'); ?></p>
+						<p><?php _e('Whoops, sorry, this page does not exist.', 'fajar'); ?></p>
 					</div><!-- .entry-content -->
 					
 					<footer class="entry-footer">
-						<a class="btn btn-white btn-home" href="<?php echo esc_url(home_url('/')); ?>"><?php _e('Go Back Home', 'creativ'); ?></a>
+						<a class="btn btn-white btn-home" href="<?php echo esc_url(home_url('/')); ?>"><?php _e('Go Back Home', 'fajar'); ?></a>
 					</footer>
 				</article><!-- #post-0 -->
 
