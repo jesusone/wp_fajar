@@ -21,6 +21,10 @@ footer {
 		border: 1px solid #e0e0e0;
 		padding: 26px 36px;
 		min-height: 146px;
+		@include breakpoint-max(768px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 		i{
 			float: left;
 			font-size: 80px;
@@ -31,6 +35,10 @@ footer {
 		border: 1px solid #e0e0e0;
 		padding: 26px 36px;
 		min-height: 146px;
+		@include breakpoint-max(768px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 		i {
 			float: left;
 			font-size: 70px;
@@ -70,6 +78,9 @@ footer {
 			display: block;
 			@extend .google-font-1;
 		}
+		@include breakpoint-max(768px) {
+			padding-left: 80px;
+		}
 	}
 }
 .yeah-footer-row-2 {
@@ -81,6 +92,14 @@ footer {
 		line-height: 24px;
 		color: #f0f0f0;
 		font-size: 16px;
+	}
+	@include breakpoint-max(768px) {
+		.row > div {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 .yeah-footer-row-3 {
@@ -112,6 +131,14 @@ footer {
 				&:after {
 					left: 16px;
 				}
+			}
+		}
+	}
+	@include breakpoint-max(768px) {
+		.row > div {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}
