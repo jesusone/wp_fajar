@@ -61,20 +61,20 @@ class ZoTheme_DynamicCss
         /* End Header Fixed Only Page */
         /* Custom Menu Color Only Page */
         if (!empty($zo_meta->_zo_header_menu_color)) {
-            echo "#yeah-header-menu.header-menu-custom #zo-header-navigation .main-navigation .menu-main-menu > li > a, #yeah-header-menu.zo-header-1 #zo-menu-mobile-fixed {
+            echo "#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li > a, #yeah-header-menu.zo-header-1 #zo-menu-mobile-fixed {
 				color: ".esc_attr($zo_meta->_zo_header_menu_color).";
 			}\n";
         }
         if (!empty($zo_meta->_zo_header_menu_color_hover)) {
-            echo "#yeah-header-menu.header-menu-custom #zo-header-navigation .main-navigation .menu-main-menu > li > a:hover, #yeah-header-menu .widget_cart_search_wrap .widget_cart_search_wrap_item > a.icon:hover {
+            echo "#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li > a:hover, #yeah-header-menu .widget_cart_search_wrap .widget_cart_search_wrap_item > a.icon:hover {
 				color: ".esc_attr($zo_meta->_zo_header_menu_color_hover).";
 			}\n";
         }
         if (!empty($zo_meta->_zo_header_menu_color_active)) {
-            echo "#yeah-header-menu.header-menu-custom #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
-			#yeah-header-menu.header-menu-custom #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
-			#yeah-header-menu.header-menu-custom #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
-			#yeah-header-menu.header-menu-custom #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a,
+            echo "#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
+			#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
+			#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
+			#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a,
 			#yeah-header-menu .widget_cart_search_wrap .widget_cart_search_wrap_item > a.icon:hover {
 				color: ".esc_attr($zo_meta->_zo_header_menu_color_active).";
 			}\n";
@@ -83,20 +83,20 @@ class ZoTheme_DynamicCss
 
         /* Menu Fixed Only Page */
         if (!empty($zo_meta->_zo_header_fixed_menu_color)) {
-            echo "#yeah-header-menu.header-fixed-page #zo-header-navigation .main-navigation .menu-main-menu > li > a {
+            echo "#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li > a {
 				color: ".esc_attr($zo_meta->_zo_header_fixed_menu_color).";
 			}\n";
         }
         if (!empty($zo_meta->_zo_header_fixed_menu_color_hover)) {
-            echo "#yeah-header-menu.header-fixed-page #zo-header-navigation .main-navigation .menu-main-menu > li > a:hover {
+            echo "#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li > a:hover {
 				color: ".esc_attr($zo_meta->_zo_header_fixed_menu_color_hover).";
 			}\n";
         }
         if (!empty($zo_meta->_zo_header_fixed_menu_color_active)) {
-            echo "#yeah-header-menu.header-fixed-page #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
-			#yeah-header-menu.header-fixed-page #zo-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
-			#yeah-header-menu.header-fixed-page #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
-			#yeah-header-menu.header-fixed-page #zo-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a {
+            echo "#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
+			#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
+			#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
+			#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a {
 				color: ".esc_attr($zo_meta->_zo_header_fixed_menu_color_active).";
 			}\n";
         }

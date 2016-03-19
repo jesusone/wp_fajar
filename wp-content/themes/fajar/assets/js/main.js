@@ -168,7 +168,7 @@ jQuery(document).ready(function($) {
 	 */
 	
 	$('body').on('click', '#zo-menu-mobile', function(){
-		var navigation = $(this).parent().find('#zo-header-navigation');
+		var navigation = $(this).parent().find('#yeah-header-navigation');
 		if(!navigation.hasClass('collapse')){
 			navigation.addClass('collapse');
 		} else {
@@ -177,7 +177,7 @@ jQuery(document).ready(function($) {
 	});
 	/* check mobile screen. */
 	function zo_mobile_menu() {
-		var menu = $('#zo-header-navigation');
+		var menu = $('#yeah-header-navigation');
 		
 		/* active mobile menu. */
 		switch (true) {

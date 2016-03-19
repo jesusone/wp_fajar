@@ -39,7 +39,7 @@
 </div>
 
 <!-- Header Navigation -->
-<div id="yeah-header-menu" class="zo-main-header header-default <?php if (!$smof_data['menu_sticky']) {
+<div id="yeah-header-menu" class="yeah-main-header header-default <?php if (!$smof_data['menu_sticky']) {
 	echo 'no-sticky';
 } ?> <?php if ($smof_data['menu_sticky_tablets']) {
 	echo 'sticky-tablets';
@@ -52,7 +52,7 @@
 } ?>">
 	<div class="container">
 		<div class="row">
-			<div id="zo-header-navigation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div id="yeah-header-navigation" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
 

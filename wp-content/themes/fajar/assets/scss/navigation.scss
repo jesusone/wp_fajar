@@ -1,7 +1,7 @@
 /* ==========================================================================
     Style Main Menu
 ========================================================================== */
-#zo-header-navigation {
+#yeah-header-navigation {
     position: static;
     .main-navigation {
         ul.ping-right {
@@ -91,10 +91,10 @@ Menu Default
     #menu-mobile {
         display: none;
     }
-    #zo-header-navigation.collapse {
+    #yeah-header-navigation.collapse {
         display: block;
     }
-    #zo-header-navigation .main-navigation {
+    #yeah-header-navigation .main-navigation {
         div.nav-menu > ul {
             display: inline-block !important;
             width: 100%;
@@ -205,10 +205,10 @@ Menu Default
             }
         }
     }
-    #zo-header-navigation .main-navigation li li {
+    #yeah-header-navigation .main-navigation li li {
         margin: 0;
     }
-    #zo-header-navigation .main-navigation li ul {
+    #yeah-header-navigation .main-navigation li ul {
         margin: 10px 0 0;
         padding: 0;
         position: absolute;
@@ -223,7 +223,7 @@ Menu Default
 		border: 1px solid #c2c2c2;
     }
     /* Menu Stick Wall */
-    #zo-header-navigation .main-navigation li ul ul {
+    #yeah-header-navigation .main-navigation li ul ul {
         left: 100%;
         width: 275px;
         &.back {
@@ -248,7 +248,7 @@ Menu Default
         }
     }
     /* End Menu Stick Wall */
-    #zo-header-navigation .main-navigation {
+    #yeah-header-navigation .main-navigation {
         ul li:hover > ul, ul li:focus > ul, .focus > ul {
             border-left: 0;
             clip: inherit;
@@ -266,7 +266,7 @@ Menu Default
     /* End Menu Sub Level */
 
     /* Start Mega Menu */
-    #zo-header-navigation .main-navigation {
+    #yeah-header-navigation .main-navigation {
         .columns2 > li:nth-of-type(2n+1),
             .columns3 > li:nth-child(3n+1),
             .columns4 > li:nth-child(4n+1),
@@ -384,7 +384,7 @@ Menu Default
 -----> Max width of 992 pixels.
 */
 @media screen and (max-width: 992px) {
-    #zo-header-navigation.collapse {
+    #yeah-header-navigation.collapse {
         background: #222;
         position: absolute;
         top: 80px;
@@ -406,7 +406,7 @@ Menu Default
             }
         }
     }
-    #zo-header-navigation .main-navigation ul {
+    #yeah-header-navigation .main-navigation ul {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -427,7 +427,7 @@ Menu Default
         display: block;
         max-height: 2000px;
     }
-    #yeah-header-menu #zo-header-navigation .main-navigation {
+    #yeah-header-menu #yeah-header-navigation .main-navigation {
         padding: 15px 0;
         .menu-main-menu {
             > li > a i {
@@ -449,7 +449,7 @@ Menu Default
     .zo-menu-toggle {
         display: block;
     }
-    #zo-header-navigation .main-navigation .menu-main-menu > li {
+    #yeah-header-navigation .main-navigation .menu-main-menu > li {
         position: relative;
         li {
             position: relative;

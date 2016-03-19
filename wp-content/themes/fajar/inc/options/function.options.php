@@ -238,8 +238,8 @@ $this->sections[] = array(
             'type' => 'spacing',
             'units' => 'px',
             'mode' => 'margin',
-            'output' => array('#zo-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
+            'output' => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
+                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
             'default' => array(
                 'margin-top'     => '0',
                 'margin-right'   => '0',
@@ -254,8 +254,8 @@ $this->sections[] = array(
             'type' => 'spacing',
             'units' => 'px',
             'mode' => 'padding',
-            'output' => array('#zo-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
+            'output' => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
+                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
             'default' => array(
                 'padding-top'     => '15px',
                 'padding-right'   => '28px',
@@ -277,8 +277,8 @@ $this->sections[] = array(
             'font-family' => false,
             'line-height' => false,
             'text-align' => false,
-            'output'  => array('#zo-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#zo-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
+            'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
+                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
             'units' => 'px',
             'default' => array(
                 'font-size' => '15px',
@@ -297,8 +297,8 @@ $this->sections[] = array(
             'font-family' => false,
             'line-height' => false,
             'text-align' => false,
-            'output'  => array('#zo-header-navigation .main-navigation .menu-main-menu > li ul a',
-                '#zo-header-navigation .main-navigation .menu-main-menu > ul > li ul a'),
+            'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li ul a',
+                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul a'),
             'units' => 'px',
             'default' => array(
                 'font-size' => '16px',
@@ -338,7 +338,7 @@ $this->sections[] = array(
             'font-family' => false,
             'line-height' => false,
             'text-align' => false,
-            'output'  => array('#zo-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children .zo-menu-toggle'),
+            'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children .zo-menu-toggle'),
             'units' => 'px',
             'default' => array(
                 'font-size' => '14px',
