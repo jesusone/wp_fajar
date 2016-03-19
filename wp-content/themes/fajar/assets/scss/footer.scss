@@ -51,6 +51,7 @@ footer {
 	p{
 		padding-left: 70px;
 		font-size: 32px;
+		margin: 0;
 		@extend .museo_slab_100;
 		span {
 			color: $primary_color;
