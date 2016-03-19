@@ -90,7 +90,6 @@ footer {
 		li {
 			padding: 3px 0 3px 28px;
 			position: relative;
-			@include transition(all 500ms ease 0s);
 			a {
 				color: #f0f0f0;
 				display: block;
@@ -101,10 +100,13 @@ footer {
 			&:after{
 				content: "\f105";
 				font-family: "FontAwesome";
+				font-size: 19px;
 				position: absolute;
 				left: 8px;
 				top: 50%;
+				color: #f0f0f0;
 				@include transform(translateY(-50%));
+				@include transition(all 500ms ease 0s);
 			}
 			&:hover {
 				&:after {
