@@ -5,13 +5,33 @@ footer {
     position: relative;
 
 }
-
-#yeah-footer-bottom {
-    .copyright{
+.yeah-footer-row-2 {
+	padding: 60px 0;
+    background: #1b1b1b;
+    color: #fff;
+    border-bottom: 6px solid #171717;
+}
+.yeah-footer-row-3 {
+	padding: 60px 0;
+    background: #222222;
+}
+.yeah-footer-row-4 {
+	padding: 25px 0;
+    background: #171717;
+	text-align: center;
+}
+.yeah-footer-bottom {
+	padding: 20px 0;
+    background: #222222;
+    font-size: 14px;
+    color: #9b9b9b;
+    line-height: 28px;
+	.copyright{
         font-size: 12px;
 		text-transform: uppercase;
     }
 }
+
 /* End Widget Categories */
 footer.entry-meta {
     font-size: 13px;
