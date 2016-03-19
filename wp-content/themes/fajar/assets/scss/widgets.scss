@@ -467,12 +467,13 @@
 		}
 		input[type="submit"] {
 			width: 64px;
-			height: 56px;
+			height: 53px;
 			background: url(../images/email-icon.png) no-repeat center center #ee3b24;
 			border: 0;
 			position: absolute;
 			right: 0;
 			top: 0;
+			text-indent: 9999px;
 		}
 	}
 }
