@@ -35,6 +35,40 @@
 		padding: 10px 15px;
 	}
 }
+.social{
+	margin: 0;
+	padding: 0;
+	li{
+		display: inline-block;
+		list-style: none;
+		a{
+			background: #ccc;
+			color: #fff;
+			display: block;
+			font-size: 24px;
+			height: 51px;
+			line-height: 57px;
+			text-align: center;
+			width: 51px;
+			@include border-radius(100%);
+		}
+		a.facebook {
+			background-color: #346da6;
+		}
+		a.twitter {
+			background-color: #4caed7;
+		}
+		a.google-plus {
+			background-color: #d42932;
+		}
+		a.rss {
+			background-color: #f06b23;
+		}
+		a.vimeo {
+			background-color: #db2160;
+		}
+	}
+}
 .entry-blog {
     position: relative;
     margin: 0 0 50px;
