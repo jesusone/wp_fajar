@@ -35,10 +35,6 @@ footer {
 		border: 1px solid #e0e0e0;
 		padding: 26px 36px;
 		min-height: 146px;
-		@include breakpoint-max(768px) {
-			padding-left: 0;
-			padding-right: 0;
-		}
 		i {
 			float: left;
 			font-size: 70px;
@@ -64,6 +60,14 @@ footer {
 				background: url(../images/tag-arrow.png);
 				width: 36px;
 				height: 45px;
+			}
+		}
+		@include breakpoint-max(768px) {
+			padding-left: 0;
+			padding-right: 0;
+			.tag {
+				padding: 2.7px 5px;
+				&:after { top: 6px; }
 			}
 		}
 	}
@@ -95,7 +99,7 @@ footer {
 	}
 	@include breakpoint-max(768px) {
 		.row > div {
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			&:last-child {
 				margin-bottom: 0;
 			}
