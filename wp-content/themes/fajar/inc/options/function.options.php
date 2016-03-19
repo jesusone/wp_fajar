@@ -712,7 +712,7 @@ $this->sections[] = array(
 		array(
             'title' => __('Select Logo', 'creativ'),
             'subtitle' => __('Select an image file for your logo.', 'creativ'),
-            'id' => 'main_logo',
+            'id' => 'footer_logo',
             'type' => 'media',
             'url' => true,
             'default' => array(

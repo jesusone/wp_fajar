@@ -149,6 +149,20 @@ if (!function_exists('zo_page_header_logo')) {
     }
 }
 
+if (!function_exists('zo_footer_logo')) {
+    function zo_footer_logo()
+    {
+        global $smof_data, $zo_meta;
+        $logo = isset($smof_data['main_logo']['url']) ? $smof_data['main_logo']['url'] : get_template_directory() . '/assets/logo.png';
+        if (isset($zo_meta->_zo_header) && $zo_meta->_zo_header) {
+            if (isset($zo_meta->_zo_header_logo)) {
+                $logo = !empty($zo_meta->_zo_header_logo) ? wp_get_attachment_url($zo_meta->_zo_header_logo) : $logo;
+            }
+        }
+        return $logo;
+    }
+}
+
 /**
  * Get menu location ID.
  *
