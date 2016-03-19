@@ -3,7 +3,29 @@
 ========================================================================== */
 footer {
     position: relative;
-
+}
+.yeah-footer-row-1{
+	.available-widget{
+		border: 1px solid #e0e0e0;
+		padding: 26px 36px;
+		min-height: 146px;
+		i{
+			float: left;
+			font-size: 80px;
+			margin: 2px 6px 0 0;
+		}
+		p{
+			padding-left: 70px;
+			font-size: 32px;
+			@extend .museo_slab_100;
+			span {
+				color: #ee3b24;
+				font-size: 22px;
+				display: block;
+				@extend .google-font-1;
+			}
+		}
+	}
 }
 .yeah-footer-row-2 {
 	padding: 60px 0;
