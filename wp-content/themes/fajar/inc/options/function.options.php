@@ -706,7 +706,7 @@ $this->sections[] = array(
             'default' => '',
             'type' => 'image_select',
             'options' => array(
-                '' => get_template_directory_uri().'/inc/options/images/footer/footer.png',
+                '' => get_template_directory_uri().'/inc/options/images/footer/footer-layout.png',
             )
         ),
 		array(
