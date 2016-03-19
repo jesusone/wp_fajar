@@ -220,13 +220,7 @@ class ZoTheme_StaticCss
         /* ==========================================================================
            Start Footer
         ========================================================================== */
-        /* Footer Top */
-        if($smof_data['footer_heading_color']){
-            echo "#zo-footer-top .wg-title:before {
-				background-color:".esc_attr($smof_data['footer_heading_color']).";
-			}";
-        }
-        /* End Footer Top */
+
 
         /* ==========================================================================
            Start Button

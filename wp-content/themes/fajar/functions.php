@@ -411,9 +411,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Content', 'creativ' ),
-    	'id' => 'sidebar-content',
-    	'description' => __( 'Appears when using the optional Content with a page set as Content', 'creativ' ),
+    	'name' => __( 'Footer 1 left', 'creativ' ),
+    	'id' => 'footer-1-left',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 1 left', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -421,9 +421,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Top 1', 'creativ' ),
-    	'id' => 'sidebar-5',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 1', 'creativ' ),
+    	'name' => __( 'Footer 1 Right', 'creativ' ),
+    	'id' => 'footer-1-right',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 1 Right', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -431,19 +431,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Top 2', 'creativ' ),
-    	'id' => 'sidebar-6',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 2', 'creativ' ),
-    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</aside>',
-    	'before_title' => '<h3 class="wg-title">',
-    	'after_title' => '</h3>',
-	) );
-	
-	register_sidebar( array(
-    	'name' => __( 'Footer Top 3', 'creativ' ),
-    	'id' => 'sidebar-7',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 3', 'creativ' ),
+    	'name' => __( 'Footer 2 Item 1', 'creativ' ),
+    	'id' => 'footer-2-item-1',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 1', 'creativ' ),
     	'before_widget' => '<aside class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -451,9 +441,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Top 4', 'creativ' ),
-    	'id' => 'sidebar-8',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 4', 'creativ' ),
+    	'name' => __( 'Footer 2 Item 2', 'creativ' ),
+    	'id' => 'footer-2-item-2',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 2', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -461,9 +451,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Top 5', 'creativ' ),
-    	'id' => 'footer-top-5',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 5', 'creativ' ),
+    	'name' => __( 'Footer 2 Item 3', 'creativ' ),
+    	'id' => 'footer-2-item-3',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 2 Item 3', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -471,9 +461,9 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Top 6', 'creativ' ),
-    	'id' => 'footer-top-6',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 6', 'creativ' ),
+    	'name' => __( 'Footer 3 Item 1', 'creativ' ),
+    	'id' => 'footer-3-item-1',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 1', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -481,9 +471,29 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Top 7', 'creativ' ),
-    	'id' => 'footer-top-7',
-    	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 7', 'creativ' ),
+    	'name' => __( 'Footer 3 Item 2', 'creativ' ),
+    	'id' => 'footer-3-item-2',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 2', 'creativ' ),
+    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</aside>',
+    	'before_title' => '<h3 class="wg-title">',
+    	'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer 3 Item 3', 'creativ' ),
+    	'id' => 'footer-3-item-3',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 3', 'creativ' ),
+    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</aside>',
+    	'before_title' => '<h3 class="wg-title">',
+    	'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+    	'name' => __( 'Footer 3 Item 4', 'creativ' ),
+    	'id' => 'footer-3-item-4',
+    	'description' => __( 'Appears when using the optional Footer with a page set as Footer 3 Item 4', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
@@ -501,20 +511,10 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Footer Bottom Left', 'creativ' ),
-    	'id' => 'sidebar-9',
-    	'description' => __( 'Appears when using the optional Footer Bottom with a page set as Footer Bottom left', 'creativ' ),
+    	'name' => __( 'Footer Bottom Text', 'creativ' ),
+    	'id' => 'footer-bottom-text',
+    	'description' => __( 'Appears when using the optional Footer Bottom with a page set as Footer Bottom Text', 'creativ' ),
     	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</aside>',
-    	'before_title' => '<h3 class="wg-title">',
-    	'after_title' => '</h3>',
-	) );
-	
-	register_sidebar( array(
-    	'name' => __( 'Footer Bottom Right', 'creativ' ),
-    	'id' => 'sidebar-10',
-    	'description' => __( 'Appears when using the optional Footer Bottom with a page set as Footer Bottom right', 'creativ' ),
-    	'before_widget' => '<aside class="widget %2$s">',
     	'after_widget' => '</aside>',
     	'before_title' => '<h3 class="wg-title">',
     	'after_title' => '</h3>',

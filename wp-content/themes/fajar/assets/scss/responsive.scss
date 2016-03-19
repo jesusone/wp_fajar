@@ -136,15 +136,6 @@
 	body #yeah-header-menu.sticky-tablets {
 		position: fixed;
 	}
-	/* Footer Top */
-	#zo-footer-top .row > [class*="col-"]:nth-child(2n+1) {
-		clear: left;
-	}
-	#zo-footer-top {
-		[class^="col-"] {
-			margin-bottom: 30px;
-		}
-	}
 
 	.wpb_single_image .vc_single_image-wrapper {
 		img {
@@ -191,7 +182,7 @@
 	/* End Tab */
 
 	/* Footer Bottom */
-	#zo-footer-bottom {
+	#yeah-footer-bottom {
 		[class^="col-"] {
 			text-align: center;
 			.text-left, .text-right, .align-right, .align-left {

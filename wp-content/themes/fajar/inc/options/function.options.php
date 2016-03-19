@@ -709,123 +709,55 @@ $this->sections[] = array(
                 '' => get_template_directory_uri().'/inc/options/images/footer/footer.png',
             )
         ),
+		array(
+            'title' => __('Select Logo', 'creativ'),
+            'subtitle' => __('Select an image file for your logo.', 'creativ'),
+            'id' => 'main_logo',
+            'type' => 'media',
+            'url' => true,
+            'default' => array(
+                'url'=>get_template_directory_uri().'/footer-logo.png'
+            )
+        )
 	)
 );
 
-/* Footer top */
+/* Custom Footer */
 $this->sections[] = array(
-    'title' => __('Footer Top', 'creativ'),
+    'title' => __('Customize Footer', 'creativ'),
     'icon' => 'el-icon-fork',
     'subsection' => true,
     'fields' => array(
         array(
-            'subtitle' => __('Enable footer top.', 'creativ'),
-            'id' => 'enable_footer_top',
+            'id' => 'footer_row_1',
             'type' => 'switch',
-            'title' => __('Enable Footer Top', 'creativ'),
-            'default' => true,
+            'title' => __('Enable Footer Row 1', 'creativ'),
+            'default' => false,
         ),
         array(
-            'id'       => 'footer_background',
-            'type'     => 'background',
-            'title'    => __( 'Background', 'creativ' ),
-            'subtitle' => __( 'footer background with image, color, etc.', 'creativ' ),
-            'output'   => array('footer #zo-footer-top'),
-            'default'   => array(
-                'background-color'=>'#202020'
-            ),
-            'required' => array( 0 => 'enable_footer_top', 1 => '=', 2 => 1 )
+            'id' => 'footer_row_2',
+            'type' => 'switch',
+            'title' => __('Enable Footer Row 2', 'creativ'),
+            'default' => false,
         ),
         array(
-            'id' => 'footer_margin',
-            'title' => __('Margin', 'creativ'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('footer #zo-footer-top'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'enable_footer_top', 1 => '=', 2 => 1 )
+            'id' => 'footer_row_3',
+            'type' => 'switch',
+            'title' => __('Enable Footer Row 3', 'creativ'),
+            'default' => false,
         ),
         array(
-            'id' => 'footer_padding',
-            'title' => __('Padding', 'creativ'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('footer #zo-footer-top'),
-            'default' => array(
-                'padding-top'     => '60px',
-                'padding-right'   => '0',
-                'padding-bottom'  => '20px',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'enable_footer_top', 1 => '=', 2 => 1 )
+            'id' => 'footer_banners',
+            'type' => 'switch',
+            'title' => __('Enable Footer Banners', 'creativ'),
+            'default' => false,
         ),
-    )
-);
-
-/* footer botton */
-$this->sections[] = array(
-    'title' => __('Footer Bottom', 'creativ'),
-    'icon' => 'el-icon-bookmark',
-    'subsection' => true,
-    'fields' => array(
-        array(
+		array(
             'subtitle' => __('Enable footer bottom.', 'creativ'),
             'id' => 'enable_footer_bottom',
             'type' => 'switch',
             'title' => __('Enable Footer Bottom', 'creativ'),
             'default' => false,
-        ),
-        array(
-            'id'       => 'footer_botton_background',
-            'type'     => 'background',
-            'title'    => __( 'Background', 'creativ' ),
-            'subtitle' => __( 'background with image, color, etc.', 'creativ' ),
-            'output'   => array('footer #zo-footer-bottom'),
-            'default'   => array(
-                'background-color'=>'#202020'
-            ),
-            'required' => array( 0 => 'enable_footer_bottom', 1 => '=', 2 => 1 )
-        ),
-        array(
-            'id' => 'footer_bottom_margin',
-            'title' => __('Margin', 'creativ'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('footer #zo-footer-bottom'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'enable_footer_bottom', 1 => '=', 2 => 1 )
-        ),
-        array(
-            'id' => 'footer_bottom_padding',
-            'title' => __('Padding', 'creativ'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('footer #zo-footer-bottom'),
-            'default' => array(
-                'padding-top'     => '20px',
-                'padding-right'   => '0',
-                'padding-bottom'  => '20px',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'enable_footer_bottom', 1 => '=', 2 => 1 )
         ),
         array(
             'subtitle' => __('enable button back to top.', 'creativ'),
@@ -1227,7 +1159,7 @@ $this->sections[] = array(
             'subtitle' => __('Set color footer top.', 'creativ'),
             'id' => 'footer_bottom_color',
             'type' => 'color',
-            'output' => array('#zo-footer-bottom'),
+            'output' => array('#yeah-footer-bottom'),
             'title' => __('Footer Bottom Color', 'creativ'),
             'default' => '#3a3a3a'
         )
