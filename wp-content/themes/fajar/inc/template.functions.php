@@ -118,6 +118,23 @@ function zo_header(){
     get_template_part('inc/header/header', $smof_data['header_layout']);
 }
 
+/**
+ * Get Header Layout.
+ *
+ * @author ZoTheme
+ */
+function zo_footer(){
+    global $smof_data, $zo_meta;
+    /* header for page */
+    if(isset($zo_meta->_zo_footer) && $zo_meta->_zo_footer){
+        if(isset($zo_meta->_zo_footer_layout)){
+            $smof_data['footer_layout'] = $zo_meta->_zo_footer_layout;
+        }
+    }
+    /* load template. */
+    get_template_part('inc/footer/footer', $smof_data['header_layout']);
+}
+
 if (!function_exists('zo_page_header_logo')) {
     function zo_page_header_logo()
     {
@@ -132,19 +149,6 @@ if (!function_exists('zo_page_header_logo')) {
     }
 }
 
-if (!function_exists('zo_page_header_logo_canvas')) {
-    function zo_page_header_logo_canvas()
-    {
-        global $smof_data, $zo_meta;
-        $logo = isset($smof_data['main_logo']['url']) ? $smof_data['main_logo']['url'] : get_template_directory() . '/assets/logo.png';
-        if (isset($zo_meta->_zo_header) && $zo_meta->_zo_header) {
-            if (isset($zo_meta->_zo_header_logo_canvas)) {
-                $logo = !empty($zo_meta->_zo_header_logo_canvas) ? wp_get_attachment_url($zo_meta->_zo_header_logo_canvas) : $logo;
-            }
-        }
-        return $logo;
-    }
-}
 /**
  * Get menu location ID.
  *

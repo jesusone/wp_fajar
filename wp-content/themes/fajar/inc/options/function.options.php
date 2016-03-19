@@ -698,6 +698,18 @@ $this->sections[] = array(
 $this->sections[] = array(
     'title' => __('Footer', 'creativ'),
     'icon' => 'el-icon-credit-card',
+	'fields' => array(
+		array(
+            'id' => 'footer_layout',
+            'title' => __('Layouts', 'creativ'),
+            'subtitle' => __('select a layout for footer', 'creativ'),
+            'default' => '',
+            'type' => 'image_select',
+            'options' => array(
+                '' => get_template_directory_uri().'/inc/options/images/footer/footer.png',
+            )
+        ),
+	)
 );
 
 /* Footer top */
