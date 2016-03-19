@@ -452,3 +452,27 @@
         }
     }
 }
+
+.widget_newsletterwidget {
+	form {
+		position: relative;
+		margin-top: 27px;
+		input[type="text"] {
+			background: #fff;
+			border: 0;
+			height: 56px;
+			width: 90%;
+			padding: 0 5%;
+			color: #222;
+		}
+		input[type="submit"] {
+			width: 64px;
+			height: 56px;
+			background: url(../images/email-icon.png) no-repeat center center #ee3b24;
+			border: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
