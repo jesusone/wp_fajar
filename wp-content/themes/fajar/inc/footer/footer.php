@@ -57,6 +57,7 @@
 		<div class="container">
 			<div class="row">				
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="" src="<?php echo esc_url(zo_footer_logo()); ?>"></a>
 				</div>
 				<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
 					<?php if (is_active_sidebar('footer-bottom-text')) : ?><?php dynamic_sidebar('footer-bottom-text'); ?><?php endif; ?>

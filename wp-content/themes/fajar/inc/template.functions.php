@@ -139,12 +139,12 @@ if (!function_exists('zo_page_header_logo')) {
     function zo_page_header_logo()
     {
         global $smof_data, $zo_meta;
-        $logo = isset($smof_data['main_logo']['url']) ? $smof_data['main_logo']['url'] : get_template_directory() . '/assets/logo.png';
-        if (isset($zo_meta->_zo_header) && $zo_meta->_zo_header) {
-            if (isset($zo_meta->_zo_header_logo)) {
-                $logo = !empty($zo_meta->_zo_header_logo) ? wp_get_attachment_url($zo_meta->_zo_header_logo) : $logo;
-            }
-        }
+		$logo = '';
+		if (isset($zo_meta->_zo_header_logo) && !empty($zo_meta->_zo_header_logo) && !empty($zo_meta->_zo_header)) {
+			$logo = wp_get_attachment_url($zo_meta->_zo_header_logo);
+        }else {
+			$logo = isset($smof_data['main_logo']['url']) ? $smof_data['main_logo']['url'] : get_template_directory_uri() . '/logo.png';
+		}
         return $logo;
     }
 }
@@ -152,13 +152,13 @@ if (!function_exists('zo_page_header_logo')) {
 if (!function_exists('zo_footer_logo')) {
     function zo_footer_logo()
     {
-        global $smof_data, $zo_meta;
-        $logo = isset($smof_data['main_logo']['url']) ? $smof_data['main_logo']['url'] : get_template_directory() . '/assets/logo.png';
-        if (isset($zo_meta->_zo_header) && $zo_meta->_zo_header) {
-            if (isset($zo_meta->_zo_header_logo)) {
-                $logo = !empty($zo_meta->_zo_header_logo) ? wp_get_attachment_url($zo_meta->_zo_header_logo) : $logo;
-            }
-        }
+		global $smof_data, $zo_meta;
+		$logo = '';
+		if (isset($zo_meta->_zo_footer_logo) && !empty($zo_meta->_zo_footer_logo) && !empty($zo_meta->_zo_footer)) {
+			$logo = wp_get_attachment_url($zo_meta->_zo_footer_logo);
+        }else {
+			$logo = isset($smof_data['footer_logo']['url']) ? $smof_data['footer_logo']['url'] : get_template_directory_uri() . '/footer-logo.png';
+		}
         return $logo;
     }
 }
