@@ -57,18 +57,19 @@ if ( ! empty( $full_height ) ) {
 	}
 }
 
+$css_row_flex = array();
 if ( ! empty( $equal_height ) ) {
 	$flex_row = true;
-	$css_classes[] = ' vc_row-o-equal-height';
+	$css_row_flex[] = ' vc_row-o-equal-height';
 }
 
 if ( ! empty( $content_placement ) ) {
 	$flex_row = true;
-	$css_classes[] = ' vc_row-o-content-' . $content_placement;
+	$css_row_flex[] = ' vc_row-o-content-' . $content_placement;
 }
 
 if ( ! empty( $flex_row ) ) {
-	$css_classes[] = ' vc_row-flex';
+	$css_row_flex[] = ' vc_row-flex';
 }
 
 /**
@@ -144,22 +145,18 @@ if(!empty($background_position)) {
 $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 
-$output .= '<div ' . implode( ' ', $wrapper_attributes ) . ' style="'. implode(' ', $stylesheet) .'">';
-
+$output .= '<div ' . implode( ' ', $wrapper_attributes ) . ' style="'. implode('', $stylesheet) .'">';
 $output .= $html_overlay_row;
-
 if ( empty( $full_width ) ) {
-    $output .= '<div class="container"><div class="row">';
+	$output .= '<div class="container">';
 } else {
-    $output .= '<div class="container-fluid"><div class="row">';
+	$output .= '<div class="container-fluid">';
 }
-    $output .= wpb_js_remove_wpautop( $content );
-if ( empty( $full_width ) ) {
-    $output .= '</div></div>';
-} else {
-    $output .= '</div></div>';
-}
+$output .= '<div class="row vc_row '. implode(' ', $css_row_flex) .'">';
 
+$output .= wpb_js_remove_wpautop( $content );
+
+$output .= '</div></div>';
 $output .= '</div>';
 $output .= $after_output;
 
