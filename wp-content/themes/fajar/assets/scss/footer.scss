@@ -127,9 +127,11 @@ footer {
     font-size: 14px;
     color: #9b9b9b;
     line-height: 28px;
-	.row {
-		display: flex;
-		align-items: center;
+	@include breakpoint-min(768px){
+		.row {
+			display: flex;
+			align-items: center;
+		}
 	}
 	.copyright{
         font-size: 12px;
