@@ -38,73 +38,11 @@ $this->sections[] = array(
             )
         ),
         array(
-            'id' => 'header_margin',
-            'title' => __('Margin', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('body #yeah-header-menu'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
-        array(
-            'id' => 'header_padding',
-            'title' => __('Padding', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('body #yeah-header-menu'),
-            'default' => array(
-                'padding-top'     => '0',
-                'padding-right'   => '0', 
-                'padding-bottom'  => '0',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
-        array(
             'subtitle' => __('enable sticky mode for menu.', 'fajar'),
             'id' => 'menu_sticky',
             'type' => 'switch',
             'title' => __('Sticky Header', 'fajar'),
             'default' => true,
-        ),
-        array(
-            'id' => 'menu_sticky_header_margin',
-            'title' => __('Sticky Header Margin', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('body #yeah-header-menu.header-fixed'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
-        ),
-        array(
-            'id' => 'menu_sticky_header_padding',
-            'title' => __('Sticky Header Padding', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('body #yeah-header-menu.header-fixed'),
-            'default' => array(
-                'padding-top'     => '0',
-                'padding-right'   => '0',
-                'padding-bottom'  => '0',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
         ),
         array(
             'subtitle' => __('enable sticky mode for menu Tablets.', 'fajar'),

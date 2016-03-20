@@ -77,16 +77,6 @@ class ZOMetaOptions
 							)
 						));
 						zo_options(array(
-							'id' => 'header_margin',
-							'label' => __('Header Margin','fajar'),
-							'type' => 'text',
-						));
-						zo_options(array(
-							'id' => 'header_padding',
-							'label' => __('Header Padding','fajar'),
-							'type' => 'text',
-						));
-						zo_options(array(
 							'id' => 'header_logo',
 							'label' => __('Logo','fajar'),
 							'type' => 'image'
