@@ -258,7 +258,11 @@
     .yeah-blog-image {
         text-align: center;
 		position: relative;
-		@include border-radius(100%);
+		img {
+			.blog &, .archive &, .search & {
+				@include border-radius(100%);
+			}
+		}
 		.carousel {
 			.carousel-control {
 				background: none;
