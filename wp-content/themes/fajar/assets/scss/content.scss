@@ -239,7 +239,7 @@
     }
 }
 .post-item {
-    margin-bottom: 50px;
+    margin-bottom: 140px;
     &.sticky {
         background-color: #F9F9F9;
         padding: 10px 20px 20px;
@@ -331,9 +331,6 @@
 							@include border-radius(100%);
 							margin-right: 10px;
 						}
-					}
-					&.yeah-blog-date {
-						
 					}
 					a {
 						color: #727272;
