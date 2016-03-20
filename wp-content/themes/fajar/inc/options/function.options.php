@@ -754,7 +754,7 @@ $this->sections[] = array(
         ),
 		array(
             'subtitle' => __('Enable footer bottom.', 'fajar'),
-            'id' => 'enable_footer_bottom',
+            'id' => 'footer_bottom',
             'type' => 'switch',
             'title' => __('Enable Footer Bottom', 'fajar'),
             'default' => false,

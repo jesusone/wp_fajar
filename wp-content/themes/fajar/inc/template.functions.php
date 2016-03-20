@@ -553,6 +553,6 @@ function zo_comment_nav() {
 if( !function_exists('zo_get_data_theme_options') ) {
 	function zo_get_data_theme_options($key) {
 		global $smof_data;
-		return isset($smof_data[$key]) ? $smof_data[$key] : NULL;
+		return isset($smof_data[$key]) && !empty($smof_data[$key]) ? $smof_data[$key] : NULL;
 	}
 }
