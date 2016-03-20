@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-teaser'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
     <div class="zo-blog-image zo-blog-audio">
         <?php echo zo_archive_audio(); ?>
     </div>

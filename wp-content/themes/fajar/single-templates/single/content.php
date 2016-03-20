@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-teaser'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
     <?php if(has_post_thumbnail()) : ?>
     <div class="zo-blog-image">
         <a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_post_thumbnail( 'full' ); ?></a>

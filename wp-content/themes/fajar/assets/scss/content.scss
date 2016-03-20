@@ -221,7 +221,7 @@
     }
 }
 .page, .blog, .archive, .search{
-	.post-teaser {
+	.post-item {
 		blockquote{
 			margin-left: 0;
 			margin-right: 0;
@@ -230,7 +230,7 @@
 	}
 }
 .single {
-    .post-teaser {
+    .post-item {
         .zo-blog-detail {
             .zo-blog-title {
                 font-size: 26px;
@@ -238,7 +238,7 @@
         }
     }
 }
-.post-teaser {
+.post-item {
     margin-bottom: 50px;
     &.sticky {
         background-color: #F9F9F9;
@@ -467,7 +467,7 @@
     }
 }
 @include breakpoint-in(768px,992px){
-	.page .post-teaser .zo-blog-detail .zo-blog-content{
+	.page .post-item .zo-blog-detail .zo-blog-content{
 		min-height: 85px;
 	}
 }

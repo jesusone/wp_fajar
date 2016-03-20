@@ -16,7 +16,7 @@ if( basename($template) === 'blog-classic.php') {
     $zo_image_size = 'zo-blog-medium';
 }
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-teaser'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
     <div class="zo-blog-image zo-blog-video">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail( $zo_image_size ); ?>
