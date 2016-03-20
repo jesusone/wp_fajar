@@ -259,7 +259,7 @@ function zo_get_post_like(){
 function zo_archive_detail(){
     ?>
     <ul>
-		<li class="author vcard"><?php echo get_avatar( get_the_author_id(), 42); ?><?php the_author_posts_link(); ?></li>
+		<li class="author vcard"><?php echo get_avatar( get_the_author_meta('ID'), 42); ?><?php the_author_posts_link(); ?></li>
 		<li class="yeah-blog-date">
             <span><i class="icon-clock"></i><?php echo get_the_date("M d, Y"); ?></span>
         </li>
