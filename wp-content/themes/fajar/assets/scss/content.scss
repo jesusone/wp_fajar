@@ -327,9 +327,9 @@
 					font-size: 20px;
 					color: #727272;
 					&.author {
-						margin-left: 10px;
 						img {
 							@include border-radius(100%);
+							margin-right: 10px;
 						}
 					}
 					&.yeah-blog-date {
@@ -343,7 +343,7 @@
 					}
 					i {
 						font-size: 25px;
-						margin-left: 10px;
+						margin-right: 10px;
 					}
 				}
 			}
