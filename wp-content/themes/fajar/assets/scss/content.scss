@@ -259,6 +259,7 @@
         text-align: center;
 		position: relative;
 		img {
+			margin-bottom: 30px;
 			.blog &, .archive &, .search & {
 				@include border-radius(100%);
 			}
@@ -296,6 +297,7 @@
 		max-width: 610px;
 		font-size: 42px;
 		line-height: 1.1;
+		text-align: center;
 		@extend .museo_slab_100;
 		a {
 			color: #222222;
