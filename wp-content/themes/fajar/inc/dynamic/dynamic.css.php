@@ -47,18 +47,6 @@ class ZoTheme_DynamicCss
         /* ==========================================================================
            Start Header
         ========================================================================== */
-        /* Header Fixed Only Page */
-        if (!empty($zo_meta->_zo_header_fixed_bg_color)) {
-            echo "#yeah-header-menu.header-fixed-page {
-				background-color: ".esc_attr($zo_meta->_zo_header_fixed_bg_color).";
-			}\n";
-        }
-        if (!empty($zo_meta->_zo_header_fixed_bg_color)) {
-            echo "#yeah-header-menu.header-fixed-page {
-				background-color: ".esc_attr($zo_meta->_zo_header_fixed_bg_color).";
-			}\n";
-        }
-        /* End Header Fixed Only Page */
         /* Custom Menu Color Only Page */
         if (!empty($zo_meta->_zo_header_menu_color)) {
             echo "#yeah-header-menu.header-menu-custom #yeah-header-navigation .main-navigation .menu-main-menu > li > a, #yeah-header-menu.zo-header-1 #zo-menu-mobile-fixed {
@@ -81,26 +69,6 @@ class ZoTheme_DynamicCss
         }
         /* End Custom Menu Color Only Page */
 
-        /* Menu Fixed Only Page */
-        if (!empty($zo_meta->_zo_header_fixed_menu_color)) {
-            echo "#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li > a {
-				color: ".esc_attr($zo_meta->_zo_header_fixed_menu_color).";
-			}\n";
-        }
-        if (!empty($zo_meta->_zo_header_fixed_menu_color_hover)) {
-            echo "#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li > a:hover {
-				color: ".esc_attr($zo_meta->_zo_header_fixed_menu_color_hover).";
-			}\n";
-        }
-        if (!empty($zo_meta->_zo_header_fixed_menu_color_active)) {
-            echo "#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
-			#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
-			#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
-			#yeah-header-menu.header-fixed-page #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a {
-				color: ".esc_attr($zo_meta->_zo_header_fixed_menu_color_active).";
-			}\n";
-        }
-        /* End Menu Fixed Only Page */
         /* Start Page Title */
         if (!empty($zo_meta->_zo_page_title_margin)) {
             echo "body #page .page-title {

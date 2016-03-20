@@ -67,7 +67,8 @@ class ZOMetaOptions
 						'options' => array('on'=>'1','off'=>''),
 						'follow' => array('1'=>array('#page_header_enable'))
 					));
-					?>  <div id="page_header_enable"><?php
+					?>  
+					<div id="page_header_enable"><?php
 						zo_options(array(
 							'id' => 'header_layout',
 							'label' => __('Layout','fajar'),
@@ -91,78 +92,44 @@ class ZOMetaOptions
 							'options' => array('on'=>'1','off'=>''),
 							'follow' => array('1'=>array('#page_header_menu_enable'))
 						));
-						?> <div id="page_header_menu_enable"><?php
-							zo_options(array(
-								'id' => 'header_menu_color',
-								'label' => __('Menu Color - First Level','fajar'),
-								'type' => 'color',
-								'default' => ''
-							));
-							zo_options(array(
-								'id' => 'header_menu_color_hover',
-								'label' => __('Menu Hover - First Level','fajar'),
-								'type' => 'color',
-								'default' => ''
-							));
-							zo_options(array(
-								'id' => 'header_menu_color_active',
-								'label' => __('Menu Active - First Level','fajar'),
-								'type' => 'color',
-								'default' => ''
-							));
-							?> </div><?php
-						/*
-						 * Custom menu color for header fixed
-						 */
-						zo_options(array(
-							'id' => 'enable_header_fixed',
-							'label' => __('Header Fixed','fajar'),
-							'type' => 'switch',
-							'options' => array('on'=>'1','off'=>''),
-							'follow' => array('1'=>array('#page_header_fixed_enable'))
-						));
-						?> <div id="page_header_fixed_enable"><?php
-							zo_options(array(
-								'id' => 'header_fixed_bg_color',
-								'label' => __('Header Fixed - Background Color','fajar'),
-								'type' => 'color',
-								'default' => '#fff',
-								'rgba' => true
-							));
-							zo_options(array(
-								'id' => 'header_fixed_menu_color',
-								'label' => __('Header Fixed - Menu Color - First Level','fajar'),
-								'type' => 'color',
-								'default' => ''
-							));
-							zo_options(array(
-								'id' => 'header_fixed_menu_color_hover',
-								'label' => __('Header Fixed - Menu Hover Color - First Level','fajar'),
-								'type' => 'color',
-								'default' => ''
-							));
-							zo_options(array(
-								'id' => 'header_fixed_menu_color_active',
-								'label' => __('Header Fixed - Menu Active Color - First Level','fajar'),
-								'type' => 'color',
-								'default' => ''
-							));
-							?> </div><?php
-						$menus = array();
-						$menus[''] = 'Default';
-						$obj_menus = wp_get_nav_menus();
-						foreach ($obj_menus as $obj_menu){
-							$menus[$obj_menu->term_id] = $obj_menu->name;
-						}
-						$navs = get_registered_nav_menus();
-						foreach ($navs as $key => $mav){
-							zo_options(array(
-								'id' => $key,
-								'label' => $mav,
-								'type' => 'select',
-								'options' => $menus
-							));
-						}
+						?> 
+							<div id="page_header_menu_enable"><?php
+								zo_options(array(
+									'id' => 'header_menu_color',
+									'label' => __('Menu Color - First Level','fajar'),
+									'type' => 'color',
+									'default' => ''
+								));
+								zo_options(array(
+									'id' => 'header_menu_color_hover',
+									'label' => __('Menu Hover - First Level','fajar'),
+									'type' => 'color',
+									'default' => ''
+								));
+								zo_options(array(
+									'id' => 'header_menu_color_active',
+									'label' => __('Menu Active - First Level','fajar'),
+									'type' => 'color',
+									'default' => ''
+								));
+								?> 
+							</div>
+						<?php
+							$menus = array();
+							$menus[''] = 'Default';
+							$obj_menus = wp_get_nav_menus();
+							foreach ($obj_menus as $obj_menu){
+								$menus[$obj_menu->term_id] = $obj_menu->name;
+							}
+							$navs = get_registered_nav_menus();
+							foreach ($navs as $key => $mav){
+								zo_options(array(
+									'id' => $key,
+									'label' => $mav,
+									'type' => 'select',
+									'options' => $menus
+								));
+							}
 						?>
 					</div>
 				</div>

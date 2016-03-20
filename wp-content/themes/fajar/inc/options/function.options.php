@@ -64,7 +64,6 @@ $this->sections[] = array(
 );
 
 /* Header Top */
-
 $this->sections[] = array(
     'title' => __('Header Top', 'fajar'),
     'icon' => 'el-icon-minus',
@@ -72,42 +71,10 @@ $this->sections[] = array(
     'fields' => array(
         array(
             'subtitle' => __('Enable header top.', 'fajar'),
-            'id' => 'enable_header_top',
+            'id' => 'header_top',
             'type' => 'switch',
             'title' => __('Enable Header Top', 'fajar'),
             'default' => false,
-        ),
-        array(
-            'id' => 'header_top_margin',
-            'title' => __('Margin', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('body #yeah-header-top'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'enable_header_top', 1 => '=', 2 => 1 )
-        ),
-        array(
-            'id' => 'header_top_padding',
-            'title' => __('Padding', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('body #yeah-header-top'),
-            'default' => array(
-                'padding-top'     => '0',
-                'padding-right'   => '0',
-                'padding-bottom'  => '0',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            ),
-            'required' => array( 0 => 'enable_header_top', 1 => '=', 2 => 1 )
         ),
     )
 );

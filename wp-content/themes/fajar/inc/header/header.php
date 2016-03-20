@@ -5,21 +5,22 @@
  * @author : OhyeahThemes
  */
 ?>
-<?php global $smof_data, $zo_meta; ?>
 
 <!-- Header Top -->
-<div id="yeah-header-top">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-				<?php if(is_active_sidebar('sidebar-2')){ dynamic_sidebar('sidebar-2'); } ?>
-			</div>
-			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-				<?php if(is_active_sidebar('sidebar-3')){ dynamic_sidebar('sidebar-3'); } ?>
+<?php if(zo_get_data_theme_options('header_top')){ ?>
+	<div id="yeah-header-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<?php if(is_active_sidebar('sidebar-2')){ dynamic_sidebar('sidebar-2'); } ?>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<?php if(is_active_sidebar('sidebar-3')){ dynamic_sidebar('sidebar-3'); } ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+<?php }?>
 
 <!-- Header Logo, Icon, Cart -->
 <div id="yeah-header-brand">
@@ -39,14 +40,12 @@
 </div>
 
 <!-- Header Navigation -->
-<div id="yeah-header-menu" class="yeah-main-header header-default <?php if (!$smof_data['menu_sticky']) {
+<div id="yeah-header-menu" class="yeah-main-header header-default <?php if (!zo_get_data_theme_options('menu_sticky')) {
 	echo 'no-sticky';
-} ?> <?php if ($smof_data['menu_sticky_tablets']) {
+} ?> <?php if (zo_get_data_theme_options('menu_sticky_tablets')) {
 	echo 'sticky-tablets';
-} ?> <?php if ($smof_data['menu_sticky_mobile']) {
+} ?> <?php if (zo_get_data_theme_options('menu_sticky_mobile'])) {
 	echo 'sticky-mobile';
-} ?> <?php if (!empty($zo_meta->_zo_enable_header_fixed)) {
-	echo 'header-fixed-page';
 } ?> <?php if (!empty($zo_meta->_zo_enable_header_menu)) {
 	echo 'header-menu-custom';
 } ?>">
