@@ -105,16 +105,6 @@ $this->sections[] = array(
                 'height'  => '60px'
             ),
         ),
-        array(
-            'id'       => 'sticky_logo_height',
-            'type'     => 'dimensions',
-            'units'    => array('px'),
-            'title'    => __('Sticky Logo Height', 'fajar'),
-            'width' => false,
-            'default'  => array(
-                'height'  => '80px'
-            ),
-        ),
     )
 );
 

@@ -103,7 +103,6 @@ class ZoTheme_StaticCss
 		zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
 		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
 		zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
-		zo_setvariablescss($smof_data['sticky_logo_height']['height'],'$sticky_logo_height','');
         /* ==========================================================================
            Start Header
         ========================================================================== */      
@@ -120,9 +119,6 @@ class ZoTheme_StaticCss
         /* Sticky Header */
         if(!empty($smof_data['bg_sticky_header']['rgba'])){
             echo "#yeah-header-menu.yeah-main-header.header-fixed { background-color:".esc_attr($smof_data['bg_sticky_header']['rgba'])."; }";
-        }
-        if($smof_data['sticky_logo_height']){
-            echo "#yeah-header-menu.header-fixed #yeah-header-logo a img { max-height: \$sticky_logo_height; }";
         }
         /* End Sticky Header */
         /* Main Menu */
