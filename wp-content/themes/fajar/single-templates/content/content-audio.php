@@ -17,7 +17,7 @@ if( basename($template) === 'blog-classic.php') {
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
-    <div class="yeah-blog-image zo-blog-audio">
+    <div class="yeah-blog-image yeah-blog-audio">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail( $zo_image_size ); ?>
             <div class="overlay">
