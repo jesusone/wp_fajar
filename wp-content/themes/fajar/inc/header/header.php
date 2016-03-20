@@ -44,7 +44,7 @@
 	echo 'no-sticky';
 } ?> <?php if (zo_get_data_theme_options('menu_sticky_tablets')) {
 	echo 'sticky-tablets';
-} ?> <?php if (zo_get_data_theme_options('menu_sticky_mobile'))) {
+} ?> <?php if (zo_get_data_theme_options('menu_sticky_mobile')) {
 	echo 'sticky-mobile';
 } ?> <?php if (!empty($zo_meta->_zo_enable_header_menu)) {
 	echo 'header-menu-custom';

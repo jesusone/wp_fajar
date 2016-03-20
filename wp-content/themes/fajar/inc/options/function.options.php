@@ -74,7 +74,7 @@ $this->sections[] = array(
             'id' => 'header_top',
             'type' => 'switch',
             'title' => __('Enable Header Top', 'fajar'),
-            'default' => false,
+            'default' => true
         ),
     )
 );
