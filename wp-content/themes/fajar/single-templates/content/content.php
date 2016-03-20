@@ -23,10 +23,10 @@ if( basename($template) === 'blog-classic.php') {
     </div>
     <?php endif ?>
 
-    <div class="zo-blog-detail">
-        <h2 class="zo-blog-title"><a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_title(); ?></a></h2>
-        <div class="zo-blog-meta"><?php zo_archive_detail(); ?></div>
-        <div class="zo-blog-content">
+    <div class="yeah-blog-detail">
+        <h2 class="yeah-blog-title"><a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_title(); ?></a></h2>
+        <div class="yeah-blog-meta"><?php zo_archive_detail(); ?></div>
+        <div class="yeah-blog-content">
             <?php
             if(get_post_type( get_the_ID() ) != 'page'):
                 the_excerpt();

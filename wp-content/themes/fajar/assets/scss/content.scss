@@ -231,8 +231,8 @@
 }
 .single {
     .post-item {
-        .zo-blog-detail {
-            .zo-blog-title {
+        .yeah-blog-detail {
+            .yeah-blog-title {
                 font-size: 26px;
             }
         }
@@ -243,8 +243,8 @@
     &.sticky {
         background-color: #F9F9F9;
         padding: 10px 20px 20px;
-        .zo-blog-detail {
-            .zo-blog-title {
+        .yeah-blog-detail {
+            .yeah-blog-title {
                 &:before {
                     content: "\f08d";
                     font-size: 30px;
@@ -261,8 +261,8 @@
 	.zo-blog-link{
 		text-align: left;
 	}
-    .zo-blog-detail {
-		.zo-blog-title {
+    .yeah-blog-detail {
+		.yeah-blog-title {
 			letter-spacing: 0;
             font-size: 18px;
             font-weight: 400;
@@ -285,7 +285,7 @@
                 }
             }
         }
-		.zo-blog-meta {
+		.yeah-blog-meta {
             margin-bottom: 27px;
 			ul {
 				padding-left: 0;
@@ -349,7 +349,7 @@
 				}
 			}
 		}
-		.zo-blog-content {
+		.yeah-blog-content {
 			font-size: 13px;
             line-height: 24px;
             min-height: 130px;
@@ -467,7 +467,7 @@
     }
 }
 @include breakpoint-in(768px,992px){
-	.page .post-item .zo-blog-detail .zo-blog-content{
+	.page .post-item .yeah-blog-detail .yeah-blog-content{
 		min-height: 85px;
 	}
 }

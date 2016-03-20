@@ -15,10 +15,10 @@
     </div>
     <?php endif ?>
 
-    <div class="zo-blog-detail">
-        <h2 class="zo-blog-title"><?php the_title(); ?></h2>
-        <div class="zo-blog-meta"><?php zo_archive_detail(); ?></div>
-        <div class="zo-blog-content">
+    <div class="yeah-blog-detail">
+        <h2 class="yeah-blog-title"><?php the_title(); ?></h2>
+        <div class="yeah-blog-meta"><?php zo_archive_detail(); ?></div>
+        <div class="yeah-blog-content">
             <?php the_content();
 			wp_link_pages( array(
 				'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fajar' ) . '</span>',
