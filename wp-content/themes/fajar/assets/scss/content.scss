@@ -326,7 +326,7 @@
 					margin: 0 10px;
 					font-size: 20px;
 					color: #727272;
-					.author {
+					&.author {
 						margin-left: 10px;
 						img {
 							@include border-radius(100%);
@@ -343,6 +343,7 @@
 					}
 					i {
 						font-size: 25px;
+						margin-left: 10px;
 					}
 				}
 			}
