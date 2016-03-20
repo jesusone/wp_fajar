@@ -88,39 +88,39 @@
 
                 // $this->field['type'] && $this->field['id'] is sanitized in the ReduxFramework class, no need to re-sanitize it.
                 ?>
-                    <h4><?php esc_html_e( 'Import Options', 'percorp' ); ?></h4>
+                    <h4><?php esc_html_e( 'Import Options', 'fajar' ); ?></h4>
 
-                    <p><a href="javascript:void(0);" id="redux-import-code-button" class="button-secondary"><?php esc_html_e( 'Import from File', 'percorp' ); ?></a> <a href="javascript:void(0);" id="redux-import-link-button" class="button-secondary"><?php esc_html_e( 'Import from URL', 'percorp' ) ?></a></p>
+                    <p><a href="javascript:void(0);" id="redux-import-code-button" class="button-secondary"><?php esc_html_e( 'Import from File', 'fajar' ); ?></a> <a href="javascript:void(0);" id="redux-import-link-button" class="button-secondary"><?php esc_html_e( 'Import from URL', 'fajar' ) ?></a></p>
 
                     <div id="redux-import-code-wrapper">
-                        <p class="description" id="import-code-description"><?php echo esc_html( apply_filters( 'redux-import-file-description', esc_html__( 'Input your backup file below and hit Import to restore your sites options from a backup.', 'percorp' ) ) ); ?></p>
+                        <p class="description" id="import-code-description"><?php echo esc_html( apply_filters( 'redux-import-file-description', esc_html__( 'Input your backup file below and hit Import to restore your sites options from a backup.', 'fajar' ) ) ); ?></p>
                         <?php // $this->parent->args['opt_name'] is sanitized in the ReduxFramework class, no need to re-sanitize it. ?>
                         <textarea id="import-code-value" name="<?php echo esc_attr($this->parent->args['opt_name']); ?>[import_code]" class="large-text noUpdate" rows="2"></textarea>
                     </div>
 
                     <div id="redux-import-link-wrapper">
-                        <p class="description" id="import-link-description"><?php echo esc_html( apply_filters( 'redux-import-link-description', esc_html__( 'Input the URL to another sites options set and hit Import to load the options from that site.', 'percorp' ) ) ); ?></p>
+                        <p class="description" id="import-link-description"><?php echo esc_html( apply_filters( 'redux-import-link-description', esc_html__( 'Input the URL to another sites options set and hit Import to load the options from that site.', 'fajar' ) ) ); ?></p>
                         <?php // $this->parent->args['opt_name'] is sanitized in the ReduxFramework class, no need to re-sanitize it. ?>
                         <textarea class="large-text noUpdate" id="import-link-value" name="<?php echo esc_attr($this->parent->args['opt_name']) ?>[import_link]" rows="2"></textarea>
                     </div>
 
-                    <p id="redux-import-action"><input type="submit" id="redux-import" name="import" class="button-primary" value="<?php esc_html_e( 'Import', 'percorp' ) ?>">&nbsp;&nbsp;<span><?php echo esc_html( apply_filters( 'redux-import-warning', esc_html__( 'WARNING! This will overwrite all existing option values, please proceed with caution!', 'percorp' ) ) ) ?></span></p>
+                    <p id="redux-import-action"><input type="submit" id="redux-import" name="import" class="button-primary" value="<?php esc_html_e( 'Import', 'fajar' ) ?>">&nbsp;&nbsp;<span><?php echo esc_html( apply_filters( 'redux-import-warning', esc_html__( 'WARNING! This will overwrite all existing option values, please proceed with caution!', 'fajar' ) ) ) ?></span></p>
 
                     <div class="hr"/>
                     <div class="inner"><span>&nbsp;</span></div></div>
-                    <h4><?php esc_html_e( 'Export Options', 'percorp' ) ?></h4>
+                    <h4><?php esc_html_e( 'Export Options', 'fajar' ) ?></h4>
 
                     <div class="redux-section-desc">
-                        <p class="description"><?php echo esc_html( apply_filters( 'redux-backup-description', esc_html__( 'Here you can copy/download your current option settings. Keep this safe as you can use it as a backup should anything go wrong, or you can use it to restore your settings on this site (or any other site).', 'percorp' ) ) ) ?></p>
+                        <p class="description"><?php echo esc_html( apply_filters( 'redux-backup-description', esc_html__( 'Here you can copy/download your current option settings. Keep this safe as you can use it as a backup should anything go wrong, or you can use it to restore your settings on this site (or any other site).', 'fajar' ) ) ) ?></p>
                     </div>
                 <?php
                 // $this->parent->args['opt_name'] is sanitized in the ReduxFramework class, no need to re-sanitize it.
                 $link = esc_url( admin_url( 'admin-ajax.php?action=redux_download_options-' . $this->parent->args['opt_name'] . '&secret=' . $secret ) );
                 ?>
                     <p>
-                        <a href="javascript:void(0);" id="redux-export-code-copy" class="button-secondary"><?php esc_html_e( 'Copy Data', 'percorp' ) ?></a>
-                        <a href="<?php echo esc_url($link); ?>" id="redux-export-code-dl" class="button-primary"><?php esc_html_e( 'Download Data File', 'percorp' ) ?></a>
-                        <a href="javascript:void(0);" id="redux-export-link" class="button-secondary"><?php esc_html_e( 'Copy Export URL', 'percorp' ) ?></a>
+                        <a href="javascript:void(0);" id="redux-export-code-copy" class="button-secondary"><?php esc_html_e( 'Copy Data', 'fajar' ) ?></a>
+                        <a href="<?php echo esc_url($link); ?>" id="redux-export-code-dl" class="button-primary"><?php esc_html_e( 'Download Data File', 'fajar' ) ?></a>
+                        <a href="javascript:void(0);" id="redux-export-link" class="button-secondary"><?php esc_html_e( 'Copy Export URL', 'fajar' ) ?></a>
                     </p>
 
                     <p></p>

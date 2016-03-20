@@ -65,13 +65,13 @@ if (! class_exists('ReduxFramework_intro_product')) {
             echo '</td></tr></table>';
             ?>
             <div class="intro-product">
-                <div class="zo-logo"><img alt="ZoTheme" src="<?php echo get_template_directory_uri() . '/assets/images/zotheme.png'; ?>"></div>
+                <div class="zo-logo"><img alt="OyyeahTheme" src="<?php echo get_template_directory_uri() . '/assets/images/ohyeahtheme.jpg'; ?>"></div>
                 <div class="zo-tools">
                     <ul>
                         <li><a href="#"><i class="dashicons dashicons-album"></i><span>V<?php echo esc_attr($theme->get('Version')); ?></span></a></li>
-                        <li><a href="<?php echo esc_url('http://zotheme.com/forum');?>"><i class="dashicons dashicons-groups"></i><span><?php esc_html_e("Forum Support", 'percorp'); ?></span></a></li>
-                        <li><a href="<?php echo esc_url('http://themeforest.net/user/ZoTheme/portfolio?WT.ac=portfolio_item&WT.z_author=ZoTheme');?>"><i class="dashicons dashicons-products"></i><span><?php esc_html_e("ZoTheme", 'percorp'); ?></span></a></li>
-                        <li><a href="mailto:wp@zotheme.com"><i class="dashicons dashicons-email"></i><span><?php esc_html_e("Contact Now", 'percorp'); ?></span></a></li>
+                        <li><a href="<?php echo esc_url('http://ohyeahthemes.com/');?>"><i class="dashicons dashicons-groups"></i><span><?php esc_html_e("Forum Support", 'fajar'); ?></span></a></li>
+                        <li><a href="<?php echo esc_url('http://themeforest.net/user/ohyeahtheme');?>"><i class="dashicons dashicons-products"></i><span><?php esc_html_e("OhyeahTheme", 'fajar'); ?></span></a></li>
+                        <li><a href="mailto:wp@ohyeahthemes.com"><i class="dashicons dashicons-email"></i><span><?php esc_html_e("Contact Now", 'fajar'); ?></span></a></li>
                     </ul>
                 </div>
                 <div class="zo-content">

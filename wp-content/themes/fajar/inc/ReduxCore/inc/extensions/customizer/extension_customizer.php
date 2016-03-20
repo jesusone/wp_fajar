@@ -676,9 +676,9 @@ echo '1';
                 );
 
                 $localize = array(
-                    'save_pending'   => esc_html__( 'You have changes that are not saved. Would you like to save them now?', 'percorp' ),
-                    'reset_confirm'  => esc_html__( 'Are you sure? Resetting will lose all custom values.', 'percorp' ),
-                    'preset_confirm' => esc_html__( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'percorp' ),
+                    'save_pending'   => esc_html__( 'You have changes that are not saved. Would you like to save them now?', 'fajar' ),
+                    'reset_confirm'  => esc_html__( 'Are you sure? Resetting will lose all custom values.', 'fajar' ),
+                    'preset_confirm' => esc_html__( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'fajar' ),
                     'opt_name'       => $this->args['opt_name'],
                     //'folds'             => $this->folds,
                     'options'        => $this->parent->options,
@@ -711,9 +711,9 @@ echo '1';
                 //wp_enqueue_style('redux-extension-customizer-css', $this->_extension_url . 'assets/css/customizer.css');
 
                 $localize = array(
-                    'save_pending'   => esc_html__( 'You have changes that are not saved.  Would you like to save them now?', 'percorp' ),
-                    'reset_confirm'  => esc_html__( 'Are you sure?  Resetting will lose all custom values.', 'percorp' ),
-                    'preset_confirm' => esc_html__( 'Your current options will be replaced with the values of this preset.  Would you like to proceed?', 'percorp' ),
+                    'save_pending'   => esc_html__( 'You have changes that are not saved.  Would you like to save them now?', 'fajar' ),
+                    'reset_confirm'  => esc_html__( 'Are you sure?  Resetting will lose all custom values.', 'fajar' ),
+                    'preset_confirm' => esc_html__( 'Your current options will be replaced with the values of this preset.  Would you like to proceed?', 'fajar' ),
                     'opt_name'       => $this->args['opt_name'],
                     //'folds'             => $this->folds,
                     'field'          => $this->parent->options,

@@ -94,7 +94,7 @@
                                     $output .= "</div> \n";
                                     echo do_shortcode($output);
                                 } else {
-                                    echo '<div ' . $add_style . ' class="' . $notice['type'] . ' notice is-dismissable"><p>' . $notice['msg'] . '&nbsp;&nbsp;<a href="?dismiss=true&amp;id=' . $notice['id'] . $pageName . $curTab . '">' . esc_html__( 'Dismiss', 'percorp' ) . '</a>.</p></div>';
+                                    echo '<div ' . $add_style . ' class="' . $notice['type'] . ' notice is-dismissable"><p>' . $notice['msg'] . '&nbsp;&nbsp;<a href="?dismiss=true&amp;id=' . $notice['id'] . $pageName . $curTab . '">' . esc_html__( 'Dismiss', 'fajar' ) . '</a>.</p></div>';
                                 }
                             }
                         } else {

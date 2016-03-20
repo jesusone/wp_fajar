@@ -13,14 +13,14 @@
             if ( $redux ) {
 
                 $blacklist = array(
-                    '.tx'                    => esc_html__( 'Redux localization utilities', 'percorp' ),
-                    'bin'                    => esc_html__( 'Redux Resting Diles', 'percorp' ),
-                    'codestyles'             => esc_html__( 'Redux Code Styles', 'percorp' ),
-                    'tests'                  => esc_html__( 'Redux Unit Testing', 'percorp' ),
-                    'class.redux-plugin.php' => esc_html__( 'Redux Plugin File', 'percorp' ),
-                    'bootstrap_tests.php'    => esc_html__( 'Redux Boostrap Tests', 'percorp' ),
-                    '.travis.yml'            => esc_html__( 'CI Testing FIle', 'percorp' ),
-                    'phpunit.xml'            => esc_html__( 'PHP Unit Testing', 'percorp' ),
+                    '.tx'                    => esc_html__( 'Redux localization utilities', 'fajar' ),
+                    'bin'                    => esc_html__( 'Redux Resting Diles', 'fajar' ),
+                    'codestyles'             => esc_html__( 'Redux Code Styles', 'fajar' ),
+                    'tests'                  => esc_html__( 'Redux Unit Testing', 'fajar' ),
+                    'class.redux-plugin.php' => esc_html__( 'Redux Plugin File', 'fajar' ),
+                    'bootstrap_tests.php'    => esc_html__( 'Redux Boostrap Tests', 'fajar' ),
+                    '.travis.yml'            => esc_html__( 'CI Testing FIle', 'fajar' ),
+                    'phpunit.xml'            => esc_html__( 'PHP Unit Testing', 'fajar' ),
                 );
 
                 $errors = array();
@@ -33,7 +33,7 @@
                 }
 
                 if ( ! empty( $errors ) ) {
-                    $error = '<span class="tc-lead tc-required">REQUIRED</span> ' . esc_html__( 'It appears that you have embedded the full Redux package inside your theme. You need only embed the <strong>ReduxCore</strong> folder. Embedding anything else will get your rejected from theme submission. Suspected Redux package file(s):', 'percorp' );
+                    $error = '<span class="tc-lead tc-required">REQUIRED</span> ' . esc_html__( 'It appears that you have embedded the full Redux package inside your theme. You need only embed the <strong>ReduxCore</strong> folder. Embedding anything else will get your rejected from theme submission. Suspected Redux package file(s):', 'fajar' );
                     $error .= '<ol>';
                     foreach ( $errors as $key => $e ) {
                         $error .= '<li><strong>' . $e . '</strong>: ' . $key . '</li>';

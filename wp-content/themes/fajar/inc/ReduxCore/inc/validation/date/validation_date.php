@@ -13,7 +13,7 @@
 
                 $this->parent       = $parent;
                 $this->field        = $field;
-                $this->field['msg'] = ( isset( $this->field['msg'] ) ) ? $this->field['msg'] : esc_html__( 'This field must be a valid date.', 'percorp' );
+                $this->field['msg'] = ( isset( $this->field['msg'] ) ) ? $this->field['msg'] : esc_html__( 'This field must be a valid date.', 'fajar' );
                 $this->value        = $value;
                 $this->current      = $current;
 

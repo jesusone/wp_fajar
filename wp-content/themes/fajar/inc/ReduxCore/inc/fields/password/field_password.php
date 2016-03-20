@@ -59,8 +59,8 @@
                     'username'    => '',
                     'password'    => '',
                     'placeholder' => array(
-                        'password' => esc_html__( 'Password', 'percorp' ),
-                        'username' => esc_html__( 'Username', 'percorp' )
+                        'password' => esc_html__( 'Password', 'fajar' ),
+                        'username' => esc_html__( 'Username', 'fajar' )
                     )
                 );
 

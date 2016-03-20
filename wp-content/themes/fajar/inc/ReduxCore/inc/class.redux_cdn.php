@@ -71,14 +71,14 @@
                             }
                         } else {
                             if ( ! self::is_enqueued( $handle, 'enqueued', $is_script ) ) {
-                                $msg = esc_html__( 'Please wait a few minutes, then try refreshing the page. Unable to load some remotely hosted scripts.', 'percorp' );
+                                $msg = esc_html__( 'Please wait a few minutes, then try refreshing the page. Unable to load some remotely hosted scripts.', 'fajar' );
                                 if ( self::$_parent->args['dev_mode'] ) {
-                                    $msg = sprintf( esc_html__( 'If you are developing offline, please download and install the <a href="%s" target="_blank">Redux Vendor Support</a> plugin/extension to bypass the our CDN and avoid this warning', 'percorp' ), 'https://github.com/reduxframework/redux-vendor-support' );
+                                    $msg = sprintf( esc_html__( 'If you are developing offline, please download and install the <a href="%s" target="_blank">Redux Vendor Support</a> plugin/extension to bypass the our CDN and avoid this warning', 'fajar' ), 'https://github.com/reduxframework/redux-vendor-support' );
                                 }
 
                                 self::$_parent->admin_notices[] = array(
                                     'type'    => 'error',
-                                    'msg'     => '<strong>' . esc_html__( 'Redux Framework Warning', 'percorp' ) . '</strong><br/>' . sprintf( esc_html__( '%s CDN unavailable.  Some controls may not render properly.', 'percorp' ), $handle ) . '  ' . $msg,
+                                    'msg'     => '<strong>' . esc_html__( 'Redux Framework Warning', 'fajar' ) . '</strong><br/>' . sprintf( esc_html__( '%s CDN unavailable.  Some controls may not render properly.', 'fajar' ), $handle ) . '  ' . $msg,
                                     'id'      => $handle . $tran_key,
                                     'dismiss' => false,
                                 );
@@ -110,7 +110,7 @@
                     if ( ! self::$_set ) {
                         self::$_parent->admin_notices[] = array(
                             'type'    => 'error',
-                            'msg'     => sprintf( esc_html__( 'The <a href="%s">Vendor Support plugin</a> (or extension) is either not installed or not activated and thus, some controls may not render properly.  Please ensure that it is installed and <a href="%s">activated</a>', 'percorp' ), 'https://github.com/reduxframework/redux-vendor-support', admin_url( 'plugins.php' ) ),
+                            'msg'     => sprintf( esc_html__( 'The <a href="%s">Vendor Support plugin</a> (or extension) is either not installed or not activated and thus, some controls may not render properly.  Please ensure that it is installed and <a href="%s">activated</a>', 'fajar' ), 'https://github.com/reduxframework/redux-vendor-support', admin_url( 'plugins.php' ) ),
                             'id'      => $handle . '23',
                             'dismiss' => false,
                         );

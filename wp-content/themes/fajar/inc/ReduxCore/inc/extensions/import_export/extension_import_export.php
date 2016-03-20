@@ -117,7 +117,7 @@
             public function add_section() {
                 $this->parent->sections[] = array(
                     'id'         => 'import/export',
-                    'title'      => esc_html__( 'Import / Export', 'percorp' ),
+                    'title'      => esc_html__( 'Import / Export', 'fajar' ),
                     'heading'    => '',
                     'icon'       => 'el el-refresh',
                     'customizer' => false,

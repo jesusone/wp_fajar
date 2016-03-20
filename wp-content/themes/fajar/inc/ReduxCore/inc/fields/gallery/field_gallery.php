@@ -70,8 +70,8 @@ if ( ! class_exists( 'ReduxFramework_gallery' ) ) {
             }
 
             echo '</div>';
-            echo '<a href="#" onclick="return false;" id="edit-gallery" class="gallery-attachments button button-primary">' . esc_html__( 'Add/Edit Gallery', 'percorp' ) . '</a> ';
-            echo '<a href="#" onclick="return false;" id="clear-gallery" class="gallery-attachments button">' . esc_html__( 'Clear Gallery', 'percorp' ) . '</a>';
+            echo '<a href="#" onclick="return false;" id="edit-gallery" class="gallery-attachments button button-primary">' . esc_html__( 'Add/Edit Gallery', 'fajar' ) . '</a> ';
+            echo '<a href="#" onclick="return false;" id="clear-gallery" class="gallery-attachments button">' . esc_html__( 'Clear Gallery', 'fajar' ) . '</a>';
             echo '<input type="hidden" class="gallery_values ' . $this->field['class'] . '" value="' . esc_attr( $this->value ) . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '" />';
         }
 

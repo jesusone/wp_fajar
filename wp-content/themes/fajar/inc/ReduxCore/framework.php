@@ -220,15 +220,15 @@
                 }
 
                 if ( empty ( $this->args['footer_credit'] ) ) {
-                    $this->args['footer_credit'] = '<span id="footer-thankyou">' . sprintf( esc_html__( 'Options panel created using %1$s', 'percorp' ), '<a href="' . esc_url( $this->framework_url ) . '" target="_blank">' . esc_html__( 'Redux Framework', 'percorp' ) . '</a> v' . self::$_version ) . '</span>';
+                    $this->args['footer_credit'] = '<span id="footer-thankyou">' . sprintf( esc_html__( 'Options panel created using %1$s', 'fajar' ), '<a href="' . esc_url( $this->framework_url ) . '" target="_blank">' . esc_html__( 'Redux Framework', 'fajar' ) . '</a> v' . self::$_version ) . '</span>';
                 }
 
                 if ( empty ( $this->args['menu_title'] ) ) {
-                    $this->args['menu_title'] = esc_html__( 'Options', 'percorp' );
+                    $this->args['menu_title'] = esc_html__( 'Options', 'fajar' );
                 }
 
                 if ( empty ( $this->args['page_title'] ) ) {
-                    $this->args['page_title'] = esc_html__( 'Options', 'percorp' );
+                    $this->args['page_title'] = esc_html__( 'Options', 'fajar' );
                 }
 
                 $this->old_opt_name = $this->args['opt_name'];
@@ -617,16 +617,16 @@
                  * filter 'redux/textdomain/{opt_name}'
                  *
                  * @param string     The locale of the blog or from the 'locale' hook
-                 * @param string     'percorp'  text domain
+                 * @param string     'fajar'  text domain
                  */
-                $locale = apply_filters( "redux/textdomain/{$this->args['opt_name']}", get_locale(), 'percorp' );
+                $locale = apply_filters( "redux/textdomain/{$this->args['opt_name']}", get_locale(), 'fajar' );
 
                 if ( strpos( $locale, '_' ) === false ) {
                     if ( file_exists( self::$_dir . 'languages/' . strtolower( $locale ) . '_' . strtoupper( $locale ) . '.mo' ) ) {
                         $locale = strtolower( $locale ) . '_' . strtoupper( $locale );
                     }
                 }
-                load_textdomain( 'percorp', self::$_dir . 'languages/' . $locale . '.mo' );
+                load_textdomain( 'fajar', self::$_dir . 'languages/' . $locale . '.mo' );
             }
 // _internationalization()
 
@@ -1525,7 +1525,7 @@
                     $nodeargs = array(
                         'id'    => $this->args["page_slug"],
                         'title' => $title,
-                        // $theme_data->get( 'Name' ) . " " . esc_html__( 'Options', 'percorp' ),
+                        // $theme_data->get( 'Name' ) . " " . esc_html__( 'Options', 'fajar' ),
                         'href'  => admin_url( 'admin.php?page=' . $this->args["page_slug"] ),
                         'meta'  => array()
                     );
@@ -1717,29 +1717,29 @@
 
                     // Default url values for enabling hints.
                     $dismiss = 'true';
-                    $s       = esc_html__( 'Enable', 'percorp' );
+                    $s       = esc_html__( 'Enable', 'fajar' );
 
                     // Values for disabling hints.
                     if ( 'true' == $hint_status ) {
                         $dismiss = 'false';
-                        $s       = esc_html__( 'Disable', 'percorp' );
+                        $s       = esc_html__( 'Disable', 'fajar' );
                     }
 
                     // Make URL
                     $url = '<a class="redux_hint_status" href="?dismiss=' . $dismiss . '&amp;id=hints&amp;page=' . $curPage . '&amp;tab=' . $curTab . '">' . $s . ' hints</a>';
 
-                    $event = esc_html__( 'moving the mouse over', 'percorp' );
+                    $event = esc_html__( 'moving the mouse over', 'fajar' );
                     if ( 'click' == $this->args['hints']['tip_effect']['show']['event'] ) {
-                        $event = esc_html__( 'clicking', 'percorp' );
+                        $event = esc_html__( 'clicking', 'fajar' );
                     }
 
                     // Construct message
-                    $msg = sprintf( esc_html__( 'Hints are tooltips that popup when %d the hint icon, offering addition information about the field in which they appear.  They can be %d d by using the link below.', 'percorp' ), $event, strtolower( $s ) ) . '<br/><br/>' . $url;
+                    $msg = sprintf( esc_html__( 'Hints are tooltips that popup when %d the hint icon, offering addition information about the field in which they appear.  They can be %d d by using the link below.', 'fajar' ), $event, strtolower( $s ) ) . '<br/><br/>' . $url;
 
                     // Construct hint tab
                     $tab = array(
                         'id'      => 'redux-hint-tab',
-                        'title'   => esc_html__( 'Hints', 'percorp' ),
+                        'title'   => esc_html__( 'Hints', 'fajar' ),
                         'content' => '<p>' . $msg . '</p>'
                     );
 
@@ -1866,7 +1866,7 @@
                 }
 
                 if ( ! empty ( $default_output ) ) {
-                    $default_output = esc_html__( 'Default', 'percorp' ) . ": " . substr( $default_output, 0, - 2 );
+                    $default_output = esc_html__( 'Default', 'fajar' ) . ": " . substr( $default_output, 0, - 2 );
                 }
 
                 if ( ! empty ( $default_output ) ) {
@@ -2737,7 +2737,7 @@
 
                 if ( ! wp_verify_nonce( $_REQUEST['nonce'], "redux_ajax_nonce" ) ) {
                     json_encode( array(
-                        'status' => esc_html__( 'Invalid security credential, please reload the page and try again.', 'percorp' ),
+                        'status' => esc_html__( 'Invalid security credential, please reload the page and try again.', 'fajar' ),
                         'action' => 'reload'
                     ) );
                     die();
@@ -2813,7 +2813,7 @@
                             $return_array = array( 'status' => $e->getMessage() );
                         }
                     } else {
-                        echo json_encode( array( 'status' => esc_html__( 'Your panel has no fields. Nothing to save.', 'percorp' ) ) );
+                        echo json_encode( array( 'status' => esc_html__( 'Your panel has no fields. Nothing to save.', 'fajar' ) ) );
                     }
                 }
                 if ( isset ( $this->transients['run_compiler'] ) && $this->transients['run_compiler'] ) {

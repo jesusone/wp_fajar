@@ -593,7 +593,7 @@
                                     $outdated_templates = true;
                                 }
 
-                                $found_files[ $plugin_name ][] = sprintf( esc_html__( '<code>%s</code> version <strong style="color:red">%s</strong> is out of date. The core version is %s', 'percorp' ), str_replace( WP_CONTENT_DIR . '/themes/', '', $theme_file ), $theme_version ? $theme_version : '-', $core_version );
+                                $found_files[ $plugin_name ][] = sprintf( esc_html__( '<code>%s</code> version <strong style="color:red">%s</strong> is out of date. The core version is %s', 'fajar' ), str_replace( WP_CONTENT_DIR . '/themes/', '', $theme_file ), $theme_version ? $theme_version : '-', $core_version );
                             } else {
                                 $found_files[ $plugin_name ][] = sprintf( '<code>%s</code>', str_replace( WP_CONTENT_DIR . '/themes/', '', $theme_file ) );
                             }

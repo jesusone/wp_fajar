@@ -12,7 +12,7 @@
             function __construct( $parent, $field, $value, $current ) {
                 $this->parent       = $parent;
                 $this->field        = $field;
-                $this->field['msg'] = ( isset( $this->field['msg'] ) ) ? $this->field['msg'] : esc_html__( 'You must not enter any HTML in this field, all HTML tags have been removed.', 'percorp' );
+                $this->field['msg'] = ( isset( $this->field['msg'] ) ) ? $this->field['msg'] : esc_html__( 'You must not enter any HTML in this field, all HTML tags have been removed.', 'fajar' );
                 $this->value        = $value;
                 $this->current      = $current;
 

@@ -188,7 +188,7 @@ if ( ! class_exists( 'ReduxFramework_spacing' ) ) {
             echo '<input type="hidden" class="field-units" value="' . $this->value['units'] . '">';
 
             if ( isset( $this->field['all'] ) && $this->field['all'] == true ) {
-                echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-fullscreen icon-large"></i></span><input type="text" class="redux-spacing-all redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'All', 'percorp' ) . '" rel="' . $this->field['id'] . '-all" value="' . $this->value['top'] . '"></div>';
+                echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-fullscreen icon-large"></i></span><input type="text" class="redux-spacing-all redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'All', 'fajar' ) . '" rel="' . $this->field['id'] . '-all" value="' . $this->value['top'] . '"></div>';
             }
 
             if ( $this->field['top'] === true ) {
@@ -212,28 +212,28 @@ if ( ! class_exists( 'ReduxFramework_spacing' ) ) {
                  * Top
                  * */
                 if ( $this->field['top'] === true ) {
-                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-up icon-large"></i></span><input type="text" class="redux-spacing-top redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Top', 'percorp' ) . '" rel="' . $this->field['id'] . '-top" value="' . $this->value['top'] . '"></div>';
+                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-up icon-large"></i></span><input type="text" class="redux-spacing-top redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Top', 'fajar' ) . '" rel="' . $this->field['id'] . '-top" value="' . $this->value['top'] . '"></div>';
                 }
 
                 /**
                  * Right
                  * */
                 if ( $this->field['right'] === true ) {
-                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-right icon-large"></i></span><input type="text" class="redux-spacing-right redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Right', 'percorp' ) . '" rel="' . $this->field['id'] . '-right" value="' . $this->value['right'] . '"></div>';
+                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-right icon-large"></i></span><input type="text" class="redux-spacing-right redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Right', 'fajar' ) . '" rel="' . $this->field['id'] . '-right" value="' . $this->value['right'] . '"></div>';
                 }
 
                 /**
                  * Bottom
                  * */
                 if ( $this->field['bottom'] === true ) {
-                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-down icon-large"></i></span><input type="text" class="redux-spacing-bottom redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Bottom', 'percorp' ) . '" rel="' . $this->field['id'] . '-bottom" value="' . $this->value['bottom'] . '"></div>';
+                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-down icon-large"></i></span><input type="text" class="redux-spacing-bottom redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Bottom', 'fajar' ) . '" rel="' . $this->field['id'] . '-bottom" value="' . $this->value['bottom'] . '"></div>';
                 }
 
                 /**
                  * Left
                  * */
                 if ( $this->field['left'] === true ) {
-                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-left icon-large"></i></span><input type="text" class="redux-spacing-left redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Left', 'percorp' ) . '" rel="' . $this->field['id'] . '-left" value="' . $this->value['left'] . '"></div>';
+                    echo '<div class="field-spacing-input input-prepend"><span class="add-on"><i class="el el-arrow-left icon-large"></i></span><input type="text" class="redux-spacing-left redux-spacing-input mini ' . $this->field['class'] . '" placeholder="' . esc_html__( 'Left', 'fajar' ) . '" rel="' . $this->field['id'] . '-left" value="' . $this->value['left'] . '"></div>';
                 }
             }
 
@@ -242,8 +242,8 @@ if ( ! class_exists( 'ReduxFramework_spacing' ) ) {
              * */
             if ( $this->field['units'] !== false && is_array( $this->field['units'] ) /* && !isset($absolute) */ && $this->field['display_units'] == true ) {
 
-                echo '<div class="select_wrapper spacing-units" original-title="' . esc_html__( 'Units', 'percorp' ) . '">';
-                echo '<select data-placeholder="' . esc_html__( 'Units', 'percorp' ) . '" class="redux-spacing redux-spacing-units select ' . $this->field['class'] . '" original-title="' . esc_html__( 'Units', 'percorp' ) . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[units]' . '" id="' . $this->field['id'] . '_units">';
+                echo '<div class="select_wrapper spacing-units" original-title="' . esc_html__( 'Units', 'fajar' ) . '">';
+                echo '<select data-placeholder="' . esc_html__( 'Units', 'fajar' ) . '" class="redux-spacing redux-spacing-units select ' . $this->field['class'] . '" original-title="' . esc_html__( 'Units', 'fajar' ) . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[units]' . '" id="' . $this->field['id'] . '_units">';
 
                 if ( $this->field['units_extended'] ) {
                     $testUnits = array( 'px', 'em', 'rem', '%', 'in', 'cm', 'mm', 'ex', 'pt', 'pc' );

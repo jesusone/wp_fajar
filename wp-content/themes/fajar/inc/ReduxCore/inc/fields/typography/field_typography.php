@@ -228,8 +228,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 echo '<input type="hidden" class="redux-typography-google-font" value="' . $isGoogleFont . '" id="' . $this->field['id'] . '-google-font">';
 
                 echo '<div class="select_wrapper typography-family" style="width: 220px; margin-right: 5px;">';
-                echo '<label>' . esc_html__( 'Font Family', 'percorp' ) . '</label>';
-                $placeholder = $fontFamily[0] ? $fontFamily[0] : esc_html__( 'Font family', 'percorp' );
+                echo '<label>' . esc_html__( 'Font Family', 'fajar' ) . '</label>';
+                $placeholder = $fontFamily[0] ? $fontFamily[0] : esc_html__( 'Font family', 'fajar' );
 
                 echo '<div class=" redux-typography redux-typography-family select2-container ' . $this->field['class'] . '" id="' . $this->field['id'] . '-family" placeholder="' . $placeholder . '" data-id="' . $this->field['id'] . '" data-value="' . $fontFamily[0] . '">';
 
@@ -255,8 +255,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
                 if ( $this->field['font-backup'] === true ) {
                     echo '<div class="select_wrapper typography-family-backup" style="width: 220px; margin-right: 5px;">';
-                    echo '<label>' . esc_html__( 'Backup Font Family', 'percorp' ) . '</label>';
-                    echo '<select data-placeholder="' . esc_html__( 'Backup Font Family', 'percorp' ) . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-backup]' . '" class="redux-typography redux-typography-family-backup ' . $this->field['class'] . '" id="' . $this->field['id'] . '-family-backup" data-id="' . $this->field['id'] . '" data-value="' . $this->value['font-backup'] . '">';
+                    echo '<label>' . esc_html__( 'Backup Font Family', 'fajar' ) . '</label>';
+                    echo '<select data-placeholder="' . esc_html__( 'Backup Font Family', 'fajar' ) . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-backup]' . '" class="redux-typography redux-typography-family-backup ' . $this->field['class'] . '" id="' . $this->field['id'] . '-family-backup" data-id="' . $this->field['id'] . '" data-value="' . $this->value['font-backup'] . '">';
                     echo '<option data-google="false" data-details="" value=""></option>';
 
                     foreach ( $this->field['fonts'] as $i => $family ) {
@@ -270,15 +270,15 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Font Style/Weight */
             if ( $this->field['font-style'] === true || $this->field['font-weight'] === true ) {
 
-                echo '<div class="select_wrapper typography-style" original-title="' . esc_html__( 'Font style', 'percorp' ) . '">';
-                echo '<label>' . esc_html__( 'Font Weight &amp; Style', 'percorp' ) . '</label>';
+                echo '<div class="select_wrapper typography-style" original-title="' . esc_html__( 'Font style', 'fajar' ) . '">';
+                echo '<label>' . esc_html__( 'Font Weight &amp; Style', 'fajar' ) . '</label>';
 
                 $style = $this->value['font-weight'] . $this->value['font-style'];
 
                 echo '<input type="hidden" class="typography-font-weight" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-weight]' . '" value="' . $this->value['font-weight'] . '" data-id="' . $this->field['id'] . '"  /> ';
                 echo '<input type="hidden" class="typography-font-style" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-style]' . '" value="' . $this->value['font-style'] . '" data-id="' . $this->field['id'] . '"  /> ';
                 $multi = ( isset( $this->field['multi']['weight'] ) && $this->field['multi']['weight'] ) ? ' multiple="multiple"' : "";
-                echo '<select' . $multi . ' data-placeholder="' . esc_html__( 'Style', 'percorp' ) . '" class="redux-typography redux-typography-style select ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font style', 'percorp' ) . '" id="' . $this->field['id'] . '_style" data-id="' . $this->field['id'] . '" data-value="' . $style . '">';
+                echo '<select' . $multi . ' data-placeholder="' . esc_html__( 'Style', 'fajar' ) . '" class="redux-typography redux-typography-style select ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font style', 'fajar' ) . '" id="' . $this->field['id'] . '_style" data-id="' . $this->field['id'] . '" data-value="' . $style . '">';
 
                 if ( empty( $this->value['subset'] ) || empty( $this->value['font-weight'] ) ) {
                     echo '<option value=""></option>';
@@ -318,11 +318,11 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             /* Font Script */
             if ( $this->field['font-family'] == true && $this->field['subsets'] == true && $this->field['google'] == true ) {
-                echo '<div class="select_wrapper typography-script tooltip" original-title="' . esc_html__( 'Font subsets', 'percorp' ) . '">';
+                echo '<div class="select_wrapper typography-script tooltip" original-title="' . esc_html__( 'Font subsets', 'fajar' ) . '">';
                 echo '<input type="hidden" class="typography-subsets" name="' . $this->field['name'] . $this->field['name_suffix'] . '[subsets]' . '" value="' . $this->value['subsets'] . '" data-id="' . $this->field['id'] . '"  /> ';
-                echo '<label>' . esc_html__( 'Font Subsets', 'percorp' ) . '</label>';
+                echo '<label>' . esc_html__( 'Font Subsets', 'fajar' ) . '</label>';
                 $multi = ( isset( $this->field['multi']['subset'] ) && $this->field['multi']['subset'] ) ? ' multiple="multiple"' : "";
-                echo '<select'.$multi.' data-placeholder="' . esc_html__( 'Subsets', 'percorp' ) . '" class="redux-typography redux-typography-subsets ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font script', 'percorp' ) . '"  id="' . $this->field['id'] . '-subsets" data-value="' . $this->value['subsets'] . '" data-id="' . $this->field['id'] . '" >';
+                echo '<select'.$multi.' data-placeholder="' . esc_html__( 'Subsets', 'fajar' ) . '" class="redux-typography redux-typography-subsets ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font script', 'fajar' ) . '"  id="' . $this->field['id'] . '-subsets" data-value="' . $this->value['subsets'] . '" data-id="' . $this->field['id'] . '" >';
 
                 if ( empty( $this->value['subsets'] ) ) {
                     echo '<option value=""></option>';
@@ -339,9 +339,9 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             /* Font Align */
             if ( $this->field['text-align'] === true ) {
-                echo '<div class="select_wrapper typography-align tooltip" original-title="' . esc_html__( 'Text Align', 'percorp' ) . '">';
-                echo '<label>' . esc_html__( 'Text Align', 'percorp' ) . '</label>';
-                echo '<select data-placeholder="' . esc_html__( 'Text Align', 'percorp' ) . '" class="redux-typography redux-typography-align ' . $this->field['class'] . '" original-title="' . esc_html__( 'Text Align', 'percorp' ) . '"  id="' . $this->field['id'] . '-align" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-align]' . '" data-value="' . $this->value['text-align'] . '" data-id="' . $this->field['id'] . '" >';
+                echo '<div class="select_wrapper typography-align tooltip" original-title="' . esc_html__( 'Text Align', 'fajar' ) . '">';
+                echo '<label>' . esc_html__( 'Text Align', 'fajar' ) . '</label>';
+                echo '<select data-placeholder="' . esc_html__( 'Text Align', 'fajar' ) . '" class="redux-typography redux-typography-align ' . $this->field['class'] . '" original-title="' . esc_html__( 'Text Align', 'fajar' ) . '"  id="' . $this->field['id'] . '-align" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-align]' . '" data-value="' . $this->value['text-align'] . '" data-id="' . $this->field['id'] . '" >';
                 echo '<option value=""></option>';
 
                 $align = array(
@@ -362,9 +362,9 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             /* Text Transform */
             if ( $this->field['text-transform'] === true ) {
-                echo '<div class="select_wrapper typography-transform tooltip" original-title="' . esc_html__( 'Text Transform', 'percorp' ) . '">';
-                echo '<label>' . esc_html__( 'Text Transform', 'percorp' ) . '</label>';
-                echo '<select data-placeholder="' . esc_html__( 'Text Transform', 'percorp' ) . '" class="redux-typography redux-typography-transform ' . $this->field['class'] . '" original-title="' . esc_html__( 'Text Transform', 'percorp' ) . '"  id="' . $this->field['id'] . '-transform" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-transform]' . '" data-value="' . $this->value['text-transform'] . '" data-id="' . $this->field['id'] . '" >';
+                echo '<div class="select_wrapper typography-transform tooltip" original-title="' . esc_html__( 'Text Transform', 'fajar' ) . '">';
+                echo '<label>' . esc_html__( 'Text Transform', 'fajar' ) . '</label>';
+                echo '<select data-placeholder="' . esc_html__( 'Text Transform', 'fajar' ) . '" class="redux-typography redux-typography-transform ' . $this->field['class'] . '" original-title="' . esc_html__( 'Text Transform', 'fajar' ) . '"  id="' . $this->field['id'] . '-transform" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-transform]' . '" data-value="' . $this->value['text-transform'] . '" data-id="' . $this->field['id'] . '" >';
                 echo '<option value=""></option>';
 
                 $values = array(
@@ -385,9 +385,9 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             /* Font Variant */
             if ( $this->field['font-variant'] === true ) {
-                echo '<div class="select_wrapper typography-font-variant tooltip" original-title="' . esc_html__( 'Font Variant', 'percorp' ) . '">';
-                echo '<label>' . esc_html__( 'Font Variant', 'percorp' ) . '</label>';
-                echo '<select data-placeholder="' . esc_html__( 'Font Variant', 'percorp' ) . '" class="redux-typography redux-typography-font-variant ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font Variant', 'percorp' ) . '"  id="' . $this->field['id'] . '-font-variant" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-variant]' . '" data-value="' . $this->value['font-variant'] . '" data-id="' . $this->field['id'] . '" >';
+                echo '<div class="select_wrapper typography-font-variant tooltip" original-title="' . esc_html__( 'Font Variant', 'fajar' ) . '">';
+                echo '<label>' . esc_html__( 'Font Variant', 'fajar' ) . '</label>';
+                echo '<select data-placeholder="' . esc_html__( 'Font Variant', 'fajar' ) . '" class="redux-typography redux-typography-font-variant ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font Variant', 'fajar' ) . '"  id="' . $this->field['id'] . '-font-variant" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-variant]' . '" data-value="' . $this->value['font-variant'] . '" data-id="' . $this->field['id'] . '" >';
                 echo '<option value=""></option>';
 
                 $values = array(
@@ -405,9 +405,9 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             /* Text Decoration */
             if ( $this->field['text-decoration'] === true ) {
-                echo '<div class="select_wrapper typography-decoration tooltip" original-title="' . esc_html__( 'Text Decoration', 'percorp' ) . '">';
-                echo '<label>' . esc_html__( 'Text Decoration', 'percorp' ) . '</label>';
-                echo '<select data-placeholder="' . esc_html__( 'Text Decoration', 'percorp' ) . '" class="redux-typography redux-typography-decoration ' . $this->field['class'] . '" original-title="' . esc_html__( 'Text Decoration', 'percorp' ) . '"  id="' . $this->field['id'] . '-decoration" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-decoration]' . '" data-value="' . $this->value['text-decoration'] . '" data-id="' . $this->field['id'] . '" >';
+                echo '<div class="select_wrapper typography-decoration tooltip" original-title="' . esc_html__( 'Text Decoration', 'fajar' ) . '">';
+                echo '<label>' . esc_html__( 'Text Decoration', 'fajar' ) . '</label>';
+                echo '<select data-placeholder="' . esc_html__( 'Text Decoration', 'fajar' ) . '" class="redux-typography redux-typography-decoration ' . $this->field['class'] . '" original-title="' . esc_html__( 'Text Decoration', 'fajar' ) . '"  id="' . $this->field['id'] . '-decoration" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-decoration]' . '" data-value="' . $this->value['text-decoration'] . '" data-id="' . $this->field['id'] . '" >';
                 echo '<option value=""></option>';
 
                 $values = array(
@@ -429,8 +429,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Font Size */
             if ( $this->field['font-size'] === true ) {
                 echo '<div class="input_wrapper font-size redux-container-typography">';
-                echo '<label>' . esc_html__( 'Font Size', 'percorp' ) . '</label>';
-                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-size mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Font Size', 'percorp' ) . '" placeholder="' . esc_html__( 'Size', 'percorp' ) . '" id="' . $this->field['id'] . '-size" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-size]' . '" value="' . str_replace( $unit, '', $this->value['font-size'] ) . '" data-value="' . str_replace( $unit, '', $this->value['font-size'] ) . '"><span class="add-on">' . $unit . '</span></div>';
+                echo '<label>' . esc_html__( 'Font Size', 'fajar' ) . '</label>';
+                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-size mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Font Size', 'fajar' ) . '" placeholder="' . esc_html__( 'Size', 'fajar' ) . '" id="' . $this->field['id'] . '-size" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-size]' . '" value="' . str_replace( $unit, '', $this->value['font-size'] ) . '" data-value="' . str_replace( $unit, '', $this->value['font-size'] ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-font-size" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-size]' . '" value="' . $this->value['font-size'] . '" data-id="' . $this->field['id'] . '"  />';
                 echo '</div>';
             }
@@ -438,8 +438,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Line Height */
             if ( $this->field['line-height'] === true ) {
                 echo '<div class="input_wrapper line-height redux-container-typography">';
-                echo '<label>' . esc_html__( 'Line Height', 'percorp' ) . '</label>';
-                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-height mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Line Height', 'percorp' ) . '" placeholder="' . esc_html__( 'Height', 'percorp' ) . '" id="' . $this->field['id'] . '-height" value="' . str_replace( $unit, '', $this->value['line-height'] ) . '" data-value="' . str_replace( $unit, '', $this->value['line-height'] ) . '"><span class="add-on">' . $unit . '</span></div>';
+                echo '<label>' . esc_html__( 'Line Height', 'fajar' ) . '</label>';
+                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-height mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Line Height', 'fajar' ) . '" placeholder="' . esc_html__( 'Height', 'fajar' ) . '" id="' . $this->field['id'] . '-height" value="' . str_replace( $unit, '', $this->value['line-height'] ) . '" data-value="' . str_replace( $unit, '', $this->value['line-height'] ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-line-height" name="' . $this->field['name'] . $this->field['name_suffix'] . '[line-height]' . '" value="' . $this->value['line-height'] . '" data-id="' . $this->field['id'] . '"  />';
                 echo '</div>';
             }
@@ -447,8 +447,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Word Spacing */
             if ( $this->field['word-spacing'] === true ) {
                 echo '<div class="input_wrapper word-spacing redux-container-typography">';
-                echo '<label>' . esc_html__( 'Word Spacing', 'percorp' ) . '</label>';
-                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-word mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Word Spacing', 'percorp' ) . '" placeholder="' . esc_html__( 'Word Spacing', 'percorp' ) . '" id="' . $this->field['id'] . '-word" value="' . str_replace( $unit, '', $this->value['word-spacing'] ) . '" data-value="' . str_replace( $unit, '', $this->value['word-spacing'] ) . '"><span class="add-on">' . $unit . '</span></div>';
+                echo '<label>' . esc_html__( 'Word Spacing', 'fajar' ) . '</label>';
+                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-word mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Word Spacing', 'fajar' ) . '" placeholder="' . esc_html__( 'Word Spacing', 'fajar' ) . '" id="' . $this->field['id'] . '-word" value="' . str_replace( $unit, '', $this->value['word-spacing'] ) . '" data-value="' . str_replace( $unit, '', $this->value['word-spacing'] ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-word-spacing" name="' . $this->field['name'] . $this->field['name_suffix'] . '[word-spacing]' . '" value="' . $this->value['word-spacing'] . '" data-id="' . $this->field['id'] . '"  />';
                 echo '</div>';
             }
@@ -456,8 +456,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Letter Spacing */
             if ( $this->field['letter-spacing'] === true ) {
                 echo '<div class="input_wrapper letter-spacing redux-container-typography">';
-                echo '<label>' . esc_html__( 'Letter Spacing', 'percorp' ) . '</label>';
-                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-letter mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Letter Spacing', 'percorp' ) . '" placeholder="' . esc_html__( 'Letter Spacing', 'percorp' ) . '" id="' . $this->field['id'] . '-letter" value="' . str_replace( $unit, '', $this->value['letter-spacing'] ) . '" data-value="' . str_replace( $unit, '', $this->value['letter-spacing'] ) . '"><span class="add-on">' . $unit . '</span></div>';
+                echo '<label>' . esc_html__( 'Letter Spacing', 'fajar' ) . '</label>';
+                echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-letter mini typography-input ' . $this->field['class'] . '" title="' . esc_html__( 'Letter Spacing', 'fajar' ) . '" placeholder="' . esc_html__( 'Letter Spacing', 'fajar' ) . '" id="' . $this->field['id'] . '-letter" value="' . str_replace( $unit, '', $this->value['letter-spacing'] ) . '" data-value="' . str_replace( $unit, '', $this->value['letter-spacing'] ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-letter-spacing" name="' . $this->field['name'] . $this->field['name_suffix'] . '[letter-spacing]' . '" value="' . $this->value['letter-spacing'] . '" data-id="' . $this->field['id'] . '"  />';
                 echo '</div>';
             }
@@ -475,9 +475,9 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 }
 
                 echo '<div class="picker-wrapper">';
-                echo '<label>' . esc_html__( 'Font Color', 'percorp' ) . '</label>';
+                echo '<label>' . esc_html__( 'Font Color', 'fajar' ) . '</label>';
                 echo '<div id="' . $this->field['id'] . '_color_picker" class="colorSelector typography-color"><div style="background-color: ' . $this->value['color'] . '"></div></div>';
-                echo '<input data-default-color="' . $default . '" class="redux-color redux-typography-color ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font color', 'percorp' ) . '" id="' . $this->field['id'] . '-color" name="' . $this->field['name'] . $this->field['name_suffix'] . '[color]' . '" type="text" value="' . $this->value['color'] . '" data-id="' . $this->field['id'] . '" />';
+                echo '<input data-default-color="' . $default . '" class="redux-color redux-typography-color ' . $this->field['class'] . '" original-title="' . esc_html__( 'Font color', 'fajar' ) . '" id="' . $this->field['id'] . '-color" name="' . $this->field['name'] . $this->field['name_suffix'] . '[color]' . '" type="text" value="' . $this->value['color'] . '" data-id="' . $this->field['id'] . '" />';
                 echo '</div>';
             }
 
@@ -887,7 +887,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 }
 
                 $this->parent->font_groups['std'] = array(
-                    'text'     => esc_html__( 'Standard Fonts', 'percorp' ),
+                    'text'     => esc_html__( 'Standard Fonts', 'fajar' ),
                     'children' => array(),
                 );
 
@@ -988,7 +988,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
                     // optgroup
                     $this->parent->font_groups['google'] = array(
-                        'text'     => esc_html__( 'Google Webfonts', 'percorp' ),
+                        'text'     => esc_html__( 'Google Webfonts', 'fajar' ),
                         'children' => array(),
                     );
 

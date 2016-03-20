@@ -8,7 +8,7 @@
      * @version:    3.5.4.18
      */
 
-    $tip_title = esc_html__( 'Developer Mode Enabled', 'percorp' );
+    $tip_title = esc_html__( 'Developer Mode Enabled', 'fajar' );
 
     if ( $this->parent->dev_mode_forced ) {
         $is_debug     = false;
@@ -17,23 +17,23 @@
         $debug_bit = '';
         if ( Redux_Helpers::isWpDebug() ) {
             $is_debug  = true;
-            $debug_bit = esc_html__( 'WP_DEBUG is enabled', 'percorp' );
+            $debug_bit = esc_html__( 'WP_DEBUG is enabled', 'fajar' );
         }
 
         $localhost_bit = '';
         if ( Redux_Helpers::isLocalHost() ) {
             $is_localhost  = true;
-            $localhost_bit = esc_html__( 'you are working in a localhost environment', 'percorp' );
+            $localhost_bit = esc_html__( 'you are working in a localhost environment', 'fajar' );
         }
 
         $conjunction_bit = '';
         if ( $is_localhost && $is_debug ) {
-            $conjunction_bit = ' ' . esc_html__( 'and', 'percorp' ) . ' ';
+            $conjunction_bit = ' ' . esc_html__( 'and', 'fajar' ) . ' ';
         }
 
-        $tip_msg = esc_html__( 'This has been automatically enabled because', 'percorp' ) . ' ' . $debug_bit . $conjunction_bit . $localhost_bit . '.';
+        $tip_msg = esc_html__( 'This has been automatically enabled because', 'fajar' ) . ' ' . $debug_bit . $conjunction_bit . $localhost_bit . '.';
     } else {
-        $tip_msg = esc_html__( 'If you are not a developer, your theme/plugin author shipped with developer mode enabled. Contact them directly to fix it.', 'percorp' );
+        $tip_msg = esc_html__( 'If you are not a developer, your theme/plugin author shipped with developer mode enabled. Contact them directly to fix it.', 'fajar' );
     }
 
 ?>
@@ -46,7 +46,7 @@
                      qtip-title="<?php echo esc_attr( $tip_title ); ?>"
                      qtip-content="<?php echo esc_attr( $tip_msg ); ?>">
                     <span
-                        class="redux-dev-mode-notice"><?php esc_html_e( 'Developer Mode Enabled', 'percorp' ); ?></span>
+                        class="redux-dev-mode-notice"><?php esc_html_e( 'Developer Mode Enabled', 'fajar' ); ?></span>
                 </div>
             <?php } elseif (isset($this->parent->args['forced_dev_mode_off']) && $this->parent->args['forced_dev_mode_off'] == true ) { ?>
                 <?php $tip_title    = 'The "forced_dev_mode_off" argument has been set to true.'; ?>
@@ -55,7 +55,7 @@
                      qtip-title="<?php echo esc_attr( $tip_title ); ?>"
                      qtip-content="<?php echo esc_attr( $tip_msg ); ?>">
                     <span
-                        class="redux-dev-mode-notice" style="background-color: #FF001D;"><?php esc_html_e( 'FORCED DEV MODE OFF ENABLED', 'percorp' ); ?></span>
+                        class="redux-dev-mode-notice" style="background-color: #FF001D;"><?php esc_html_e( 'FORCED DEV MODE OFF ENABLED', 'fajar' ); ?></span>
                 </div>
             
             <?php } ?>

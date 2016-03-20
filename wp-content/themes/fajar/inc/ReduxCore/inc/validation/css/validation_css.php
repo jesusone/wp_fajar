@@ -35,7 +35,7 @@
                 $data = str_replace( '&gt;', '>', $data );
 
                 if ($data != $this->value) {
-                    $this->warning = esc_html__( 'Unsafe strings were found in your CSS and have been filtered out.', 'percorp' );
+                    $this->warning = esc_html__( 'Unsafe strings were found in your CSS and have been filtered out.', 'fajar' );
                 }
 
                 $this->value = $data;

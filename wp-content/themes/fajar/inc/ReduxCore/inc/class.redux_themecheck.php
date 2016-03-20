@@ -58,7 +58,7 @@
                             ?>
                             <div class="updated">
                             <p><?php
-                                    echo sprintf( esc_html__( 'The theme you are testing has %s embedded. We invite you to read the %sTheme-Check Documentation%s to understand some warnings you will see because of Redux.', 'percorp' ), '<a href="'. esc_url("http://reduxframework.com") .'" target="_blank">Redux Framework</a>', '<a href="'. esc_url("http://docs.reduxframework.com/core/theme-check/") .'">', '</a>' );
+                                    echo sprintf( esc_html__( 'The theme you are testing has %s embedded. We invite you to read the %sTheme-Check Documentation%s to understand some warnings you will see because of Redux.', 'fajar' ), '<a href="'. esc_url("http://reduxframework.com") .'" target="_blank">Redux Framework</a>', '<a href="'. esc_url("http://docs.reduxframework.com/core/theme-check/") .'">', '</a>' );
                                 ?>
                             </div><?php
                         }
@@ -106,7 +106,7 @@
                             ?>
                             <div class="error">
                             <p><?php
-                                    esc_html_e( 'The following directories & files are still located in your <strong>Redux</strong>  directory. They may cause errors in Theme-Check.', 'percorp' );
+                                    esc_html_e( 'The following directories & files are still located in your <strong>Redux</strong>  directory. They may cause errors in Theme-Check.', 'fajar' );
                                     echo '<br /><ul style="margin-left:15px;">';
                                     foreach ( $errors as $error ) {
                                         echo '<li><strong>~/' . $error . '</strong></li>';

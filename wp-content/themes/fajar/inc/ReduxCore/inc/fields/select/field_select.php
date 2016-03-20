@@ -80,7 +80,7 @@ if ( ! class_exists( 'ReduxFramework_select' ) ) {
                     $nameBrackets = "[]";
                 }
 
-                $placeholder = ( isset( $this->field['placeholder'] ) ) ? esc_attr( $this->field['placeholder'] ) : esc_html__( 'Select an item', 'percorp' );
+                $placeholder = ( isset( $this->field['placeholder'] ) ) ? esc_attr( $this->field['placeholder'] ) : esc_html__( 'Select an item', 'fajar' );
 
                 if ( isset( $this->field['select2'] ) ) { // if there are any let's pass them to js
                     $select2_params = json_encode( $this->field['select2'] );
@@ -131,7 +131,7 @@ if ( ! class_exists( 'ReduxFramework_select' ) ) {
 
                 echo '</select>';
             } else {
-                echo '<strong>' . esc_html__( 'No items of this type were found.', 'percorp' ) . '</strong>';
+                echo '<strong>' . esc_html__( 'No items of this type were found.', 'fajar' ) . '</strong>';
             }
         } //function
 

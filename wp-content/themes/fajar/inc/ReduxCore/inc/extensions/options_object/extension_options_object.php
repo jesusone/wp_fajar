@@ -79,7 +79,7 @@
             public function add_section() {
                 $this->parent->sections[] = array(
                     'id' => 'options-object',
-                    'title' => esc_html__( 'Options Object', 'percorp' ),
+                    'title' => esc_html__( 'Options Object', 'fajar' ),
                     'heading' => '',
                     'icon' => 'el el-info-circle',
                     'customizer' => false,
