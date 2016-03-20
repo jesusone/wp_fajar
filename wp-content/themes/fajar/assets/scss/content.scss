@@ -339,27 +339,8 @@
 						padding-right: 10px;
 						font-size: 16px;
 					}
-					&.zo-blog-date {
-						position: absolute;
-						bottom: 0;
-						right: 0;
-                        margin: 0;
-						color: #fff;
-						background: $primary_color;
-                        width: 58px;
-                        height: 52px;
-						text-transform: uppercase;
-						line-height: normal;
-						text-align: center;
-						@extend .font-second;
-                        font-style: italic;
-                        font-size: 16px;
-                        @include transition(all 420ms ease 0s);
-                        padding-top: 7px;
-                        span {
-                            display: inline-block;
-                            width: 100%;
-                        }
+					&.yeah-blog-date {
+						
 					}
 					a {
 						color: #6f6f6f;

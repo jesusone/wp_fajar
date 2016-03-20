@@ -258,20 +258,12 @@ function zo_get_post_like(){
  */
 function zo_archive_detail(){
     ?>
-    <div class="author vcard"><?php _e('By', 'fajar'); ?> <?php the_author_posts_link(); ?></div>
     <ul>
-        <li class="zo-blog-comment"><i class="fa fa-comments-o"></i><a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','%'); ?></a></li>
-        <li class="zo-blog-views"><i class="fa fa-eye"></i> <?php echo zo_get_count_view(); ?></li>
-        <?php if(has_category()): ?>
-            <li class="zo-blog-category"><?php the_terms( get_the_ID(), 'category', '<i class="fa fa-bookmark-o"></i>', ' / ' ); ?></li>
-        <?php endif; ?>
-        <?php if(has_tag()): ?>
-            <li class="zo-blog-tag"><?php the_tags('<i class="fa fa-tags"></i>', ' / ' ); ?></li>
-        <?php endif; ?>
-        <li class="zo-blog-date">
-            <span class="day"><?php echo get_the_date("d"); ?></span>
-            <span class="month"><?php echo get_the_date("M"); ?></span>
+		<li class="author vcard"><?php echo get_avatar( get_the_author_id(), 42); ?><?php the_author_posts_link(); ?></li>
+		<li class="yeah-blog-date">
+            <span><i class="icon-clock"></i><?php echo get_the_date("M d, Y"); ?></span>
         </li>
+        <li class="yeah-blog-comment"><i class="icon-chat-1"></i><a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','%'); ?></a></li>
     </ul>
 <?php
 }
