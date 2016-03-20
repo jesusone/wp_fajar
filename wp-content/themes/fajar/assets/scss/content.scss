@@ -390,6 +390,20 @@
 			margin-bottom: 30px;
 		}
 	}
+	.yeah-blog-gallery {
+		.carousel {
+			margin-bottom: 30px;
+			a.carousel-control {
+				height: 60px;
+				line-height: 60px;
+				width: 60px;
+				top: 50%;
+				@transform: translateY(-50%);
+				&.left { left: 15px; }
+				&.right { right: 15px; }
+			}
+		}
+	}
     .zo-blog-link {
         position: relative;
         .overlay-link {
