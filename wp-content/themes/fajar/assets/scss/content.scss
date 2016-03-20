@@ -398,7 +398,7 @@
 				line-height: 60px;
 				width: 60px;
 				top: 50%;
-				@transform: translateY(-50%);
+				@include transform: translateY(-50%);
 				&.left { left: 15px; }
 				&.right { right: 15px; }
 			}
