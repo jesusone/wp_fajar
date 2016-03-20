@@ -48,7 +48,5 @@ if( basename($template) === 'blog-classic.php') {
 	<!-- Detail -->
     <div class="yeah-blog-detail">
         <div class="yeah-blog-meta"><?php zo_archive_detail(); ?></div>
-        
-        <a class="btn-readmore" title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php _e('Read More ', 'fajar') ?></a>
     </div>
 </article>

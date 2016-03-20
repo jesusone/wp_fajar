@@ -313,47 +313,36 @@
 		text-align: center;
 	}
     .yeah-blog-detail {
+		text-align: center;
 		.yeah-blog-meta {
             margin-bottom: 27px;
 			ul {
 				padding-left: 0;
-                padding-right: 57px;
-                margin: 15px 0 0;
-				border-top: 1px solid #ececec;
-				border-bottom: 1px solid #ececec;
+                margin: 40px 0 0;
 				position: relative;
                 width: 100%;
 				li {
                     display: inline-block;
-					font-size: 12px;
-                    margin-right: 20px;
-                    line-height: 35px;
-					color: #6f6f6f;
-					&.zo-blog-category, &.zo-blog-tag{
-						color: #c8c8c8;
-						i{
-							color: #6f6f6f;
+					margin: 0 10px;
+					font-size: 20px;
+					color: #727272;
+					.author {
+						margin-left: 10px;
+						img {
+							@include border-radius(100%);
 						}
-					}
-					.fa {
-						padding-right: 10px;
-						font-size: 16px;
 					}
 					&.yeah-blog-date {
 						
 					}
 					a {
-						color: #6f6f6f;
+						color: #727272;
 						&:hover {
 							color: $primary_color;
 						}
 					}
-					@include breakpoint-max(480px){
-						&.zo-blog-category{
-							a{
-								font-size: 10px;
-							}
-						}
+					i {
+						font-size: 25px;
 					}
 				}
 			}
