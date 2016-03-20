@@ -9,7 +9,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
-    <div class="yeah-blog-image zo-blog-gallery">
+    <div class="yeah-blog-image yeah-blog-gallery">
         <?php echo zo_archive_gallery( 'full' ); ?>
     </div>
 
