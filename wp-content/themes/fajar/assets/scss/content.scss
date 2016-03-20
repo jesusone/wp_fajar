@@ -306,6 +306,12 @@
 			}
 		}
 	}
+	.yeah-blog-content , .yeah-blog-content p {
+		margin: 0;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+	}
     .yeah-blog-detail {
 		.yeah-blog-meta {
             margin-bottom: 27px;
@@ -370,12 +376,6 @@
 					}
 				}
 			}
-		}
-		.yeah-blog-content {
-			font-size: 13px;
-            line-height: 24px;
-            min-height: 130px;
-			color: #6f6f6f;
 		}
 		.zo-blog-readmore {
 			border-color: #e4e4e4;
@@ -460,11 +460,6 @@
             color: $primary_color;
         }
     }
-}
-@include breakpoint-in(768px,992px){
-	.page .post-item .yeah-blog-detail .yeah-blog-content{
-		min-height: 85px;
-	}
 }
 
 /* ==========================================================================
