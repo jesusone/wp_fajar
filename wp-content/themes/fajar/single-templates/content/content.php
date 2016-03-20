@@ -13,7 +13,7 @@ global $template;
 if( basename($template) === 'blog-classic.php') {
     $zo_image_size = 'full';
 } else {
-    $zo_image_size = 'zo-blog-medium';
+    $zo_image_size = 'yeah-blog-medium';
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-teaser'); ?>>
