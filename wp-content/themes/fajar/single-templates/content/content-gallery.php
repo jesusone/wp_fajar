@@ -17,7 +17,7 @@ if( basename($template) === 'blog-classic.php') {
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
-    <div class="zo-blog-image zo-blog-gallery">
+    <div class="yeah-blog-image zo-blog-gallery">
         <?php echo zo_archive_gallery( $zo_image_size); ?>
     </div>
 

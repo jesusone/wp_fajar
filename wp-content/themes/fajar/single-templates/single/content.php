@@ -10,7 +10,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
     <?php if(has_post_thumbnail()) : ?>
-    <div class="zo-blog-image">
+    <div class="yeah-blog-image">
         <a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_post_thumbnail( 'full' ); ?></a>
     </div>
     <?php endif ?>

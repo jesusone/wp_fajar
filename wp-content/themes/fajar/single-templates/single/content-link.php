@@ -9,7 +9,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
-    <div class="zo-blog-image zo-blog-link">
+    <div class="yeah-blog-image zo-blog-link">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail( 'full' ); ?>
             <div class="overlay-link">

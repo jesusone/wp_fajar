@@ -9,7 +9,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
-    <div class="zo-blog-image zo-blog-quote">
+    <div class="yeah-blog-image zo-blog-quote">
         <?php echo zo_archive_quote(); ?>
     </div>
     <div class="zo-blog-detail">
