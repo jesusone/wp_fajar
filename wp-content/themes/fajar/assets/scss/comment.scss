@@ -19,22 +19,20 @@
 			border: 1px solid #c7c7c7;
         }
         .comment-body {
-            padding-bottom: 25px;
-            margin-bottom: 25px;
             overflow: hidden;
+			position: relative;
             .comment-author-image {
                 float: left;
-                max-width: 70px;
+                max-width: 60px;
                 img {
-                    height: 70px;
-                    width: 70px;
+                    height: 60px;
+                    width: 60px;
                 }
             }
         }
         .comment-main {
-            margin-left: 100px;
+            margin-left: 96px;
             color: #272727;
-            padding: 15px 40px 25px;
             @media screen and (max-width: 767px) {
                 margin-left: 0;
             }

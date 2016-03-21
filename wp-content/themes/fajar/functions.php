@@ -723,7 +723,7 @@ function zo_comment($comment, $args, $depth) {
 <div id="div-comment-<?php comment_ID() ?>" class="comment-body clearfix">
 <?php endif; ?>
 <div class="comment-author-image vcard">
-	<?php echo get_avatar( $comment, 109 ); ?>
+	<?php echo get_avatar( $comment, 60 ); ?>
 </div>
 <div class="comment-main">
     <div class="comment-header">
