@@ -37,6 +37,7 @@
                 margin-left: 0;
             }
             .comment-header {
+				line-height: 1.428571429;
                 .comment-author {
                     font-size: 20px;
 					display: block;
@@ -50,12 +51,11 @@
                     }
                 }
                 .comment-date {
-                    color: #6f6f6f;
-                    font-size: 11px;
-                    line-height: 24px;
+                    color: #626262;
+					font-size: 14px;
                 }
                 .comment-awaiting-moderation {
-                    font-size: 10px;
+                    font-size: 14px;
                     color: $primary_color;
                 }
             }
