@@ -60,8 +60,8 @@ if ( post_password_required() ) {
         'title_reply'       => wp_kses(__( '<span>Post to Reply</span>','fajar'), $allowed_html),
         'title_reply_to'    => __( 'Post to Reply %s','fajar'),
         'cancel_reply_link' => __( 'Cancel Reply','fajar'),
-        'label_submit'      => __( 'Send Message','fajar'),
-        'class_submit'  => 'btn btn-primary',
+        'label_submit'      => __( 'Submit','fajar'),
+        'class_submit'  => 'btn',
         'comment_notes_before' => '',
         'fields' => apply_filters( 'comment_form_default_fields', array(
 

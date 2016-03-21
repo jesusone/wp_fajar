@@ -142,6 +142,18 @@
 			}
             &.form-submit {
                 text-align: left;
+				input[type="submit"] {
+					background: #222;
+					color: #fff;
+					text-transform: uppercase;
+					padding: 12px 32px 10px;
+					font-size: 16px;
+					line-height: 1.42857143;
+					text-align: center;
+					&:hover {
+						background: $primary_color;
+					}
+				}
             }
 		}
 	}
