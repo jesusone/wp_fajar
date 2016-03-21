@@ -1207,7 +1207,7 @@ $this->sections[] = array(
                 1 => '!=',
                 2 => ''
             )
-        )
+        ),
         array(
             'id'       => 'local-fonts-3',
             'type'     => 'select',
