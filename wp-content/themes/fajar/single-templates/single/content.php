@@ -13,11 +13,10 @@
     <div class="yeah-blog-image">
         <a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_post_thumbnail( 'full' ); ?></a>
     </div>
-    <?php endif ?>
-
+    <?php endif; ?>
+	<div class="yeah-blog-meta"><?php zo_archive_detail(); ?></div>
+	<h2 class="yeah-blog-title"><?php the_title(); ?></h2>
     <div class="yeah-blog-detail">
-        <h2 class="yeah-blog-title"><?php the_title(); ?></h2>
-        <div class="yeah-blog-meta"><?php zo_archive_detail(); ?></div>
         <div class="yeah-blog-content">
             <?php the_content();
 			wp_link_pages( array(

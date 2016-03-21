@@ -220,24 +220,23 @@
         border-bottom: 1px solid #141414;
     }
 }
-.page, .blog, .archive, .search{
-	.post-item {
-		blockquote{
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-		}
-	}
-}
+
 .single {
     .post-item {
         .yeah-blog-detail {
+			text-align: left;
             .yeah-blog-title {
-                font-size: 26px;
+                font-size: 32px;
+				font-weight: bold;
+				@extend .museo_slab_300;
             }
         }
+		.yeah-blog-content , .yeah-blog-content p {
+			text-align: initial;
+		}
     }
 }
+
 .post-item {
     margin-bottom: 140px;
     &.sticky {
@@ -293,12 +292,14 @@
 		text-align: left;
 	}
 	.yeah-blog-title {
-		margin: 0 auto 35px;
-		max-width: 610px;
-		font-size: 42px;
 		line-height: 1.1;
-		text-align: center;
-		@extend .museo_slab_100;
+		.blog &, .archive &, .search & { 
+			margin: 0 auto 35px;
+			max-width: 610px;
+			font-size: 42px;
+			text-align: center;
+			@extend .museo_slab_100;
+		}
 		a {
 			color: #222222;
 			&:hover {
