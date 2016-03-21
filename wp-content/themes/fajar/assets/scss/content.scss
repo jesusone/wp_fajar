@@ -406,6 +406,7 @@
 	}
     .yeah-blog-link {
         position: relative;
+		margin-bottom: 30px;
         .overlay-link {
             position: absolute;
             top: 0;
@@ -432,6 +433,7 @@
         }
     }
 	.yeah-blog-quote {
+		text-align: center;
 		blockquote {
 			font-style: italic;
 			margin-bottom: 30px;
