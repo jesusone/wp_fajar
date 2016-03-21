@@ -1208,6 +1208,26 @@ $this->sections[] = array(
                 2 => ''
             )
         )
+        array(
+            'id'       => 'local-fonts-3',
+            'type'     => 'select',
+            'title'    => __( 'Fonts 3', 'fajar' ),
+            'options'  => $local_fonts,
+            'default'  => 'museo_slab_500',
+        ),
+        array(
+            'id' => 'local-fonts-selector-3',
+            'type' => 'textarea',
+            'title' => __('Selector 3', 'fajar'),
+            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_500" to use font', 'fajar'),
+            'validate' => 'no_html',
+            'default' => '.museo_slab_500',
+            'required' => array(
+                0 => 'local-fonts-2',
+                1 => '!=',
+                2 => ''
+            )
+        )
     )
 );
 

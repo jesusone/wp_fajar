@@ -38,16 +38,15 @@
             }
             .comment-header {
                 .comment-author {
-                    font-size: 12px;
-                    line-height: 60px;
-					@include breakpoint-max(1200px){
-						line-height: 1.5;
-					}
-                    color: $primary_color;
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
+                    font-size: 20px;
+					display: block;
+					line-height: 22px;
+					@extend .museo_slab_500
                     a {
-                        color: $primary_color;
+						color: #222222;
+						&:hover {
+							color: $primary_color;
+						}
                     }
                 }
                 .comment-date {

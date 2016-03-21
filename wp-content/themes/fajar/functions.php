@@ -307,12 +307,6 @@ function fajar_scripts_styles() {
 	
 	/* Loads Font Awesome. */
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5.0');
-
-	/* Loads Font Ionicons. */
-	wp_enqueue_style('font-ionicons', get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), '2.0.1');
-
-	/* Loads Pe Icon. */
-	wp_enqueue_style('pe-icon', get_template_directory_uri() . '/assets/css/pe-icon-7-stroke.css', array(), '1.0.1');
 	
 	/** --------------------------custom------------------------------- */
 	
