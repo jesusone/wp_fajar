@@ -20,15 +20,15 @@ textarea, select {
     font-size: 16px;
     font-weight: 400;
     padding: 15px 17px;
-    border: 1px solid #ececec;
+    border: 1px solid #b1b1b1;
     width: 100%;
     @include border-radius(0);
     line-height: normal;
 }
 
 textarea {
-    height: 240px;
-    max-height: 240px;
+    height: 200px;
+    max-height: 200px;
     max-width: 100%;
 }
 input[type='text']:focus,
@@ -46,7 +46,7 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-    border: 1px solid #141414;
+    border: 1px solid #b1b1b1;
     background-color: inherit;
 }
 
