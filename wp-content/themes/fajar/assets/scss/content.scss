@@ -215,9 +215,11 @@
 		margin-bottom: 27px;
 		ul {
 			padding-left: 0;
-			margin: 40px 0 0;
 			position: relative;
 			width: 100%;
+			.blog &, .archive &, .search & { 
+				margin: 40px 0 0;
+			}
 			li {
 				display: inline-block;
 				margin: 0 10px;
