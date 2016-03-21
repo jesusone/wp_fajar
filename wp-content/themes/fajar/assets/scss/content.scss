@@ -289,7 +289,7 @@
 			}
 		}
     }
-	.zo-blog-link{
+	.yeah-blog-link{
 		text-align: left;
 	}
 	.yeah-blog-title {
@@ -404,7 +404,7 @@
 			}
 		}
 	}
-    .zo-blog-link {
+    .yeah-blog-link {
         position: relative;
         .overlay-link {
             position: absolute;
@@ -431,20 +431,14 @@
             }
         }
     }
-    .btn-readmore {
-        border: 2px solid #909090;
-        color: #141414;
-        display: inline-block;
-        font-size: 14px;
-        letter-spacing: 0.2em;
-        margin: 0;
-        padding: 10px 34px;
-        text-transform: uppercase;
-        &:hover {
-            border-color: $primary_color;
-            color: $primary_color;
-        }
-    }
+	.yeah-blog-quote {
+		blockquote {
+			font-style: italic;
+			margin-bottom: 30px;
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
+	}
 }
 
 /* ==========================================================================
