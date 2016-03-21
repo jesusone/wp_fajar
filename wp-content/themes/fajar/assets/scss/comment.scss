@@ -60,11 +60,9 @@
                 }
             }
             .comment-content {
-                color: #272727;
-                @extend .font-second;
-                font-size: 18px;
-                font-style: italic;
-                margin-bottom: 15px;
+                font-size: 20px;
+				padding-top: 12px;
+				p { margin: 0; }
             }
             .reply {
                 position: absolute;
