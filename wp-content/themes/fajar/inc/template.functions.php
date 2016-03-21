@@ -263,7 +263,7 @@ function zo_archive_detail(){
 		<li class="yeah-blog-date">
             <span><i class="icon-clock"></i><?php echo get_the_date("M d, Y"); ?></span>
         </li>
-        <li class="yeah-blog-comment"><i class="icon-chat-1"></i><a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','% Comments'); ?></a></li>
+        <li class="yeah-blog-comment"><i class="icon-chat-1"></i><a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','%'); ?> <?php esc_html_e('Comments','fajar');?></a></li>
     </ul>
 <?php
 }
