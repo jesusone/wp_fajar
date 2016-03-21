@@ -225,12 +225,12 @@
     .post-item {
         .yeah-blog-detail {
 			text-align: left;
-            .yeah-blog-title {
-                font-size: 32px;
-				font-weight: bold;
-				@extend .museo_slab_300;
-            }
         }
+		.yeah-blog-title {
+			font-size: 32px;
+			font-weight: bold;
+			@extend .museo_slab_300;
+		}
 		.yeah-blog-content , .yeah-blog-content p {
 			text-align: initial;
 		}
