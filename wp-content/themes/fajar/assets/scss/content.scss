@@ -315,39 +315,39 @@
 	}
     .yeah-blog-detail {
 		text-align: center;
-		.yeah-blog-meta {
-            margin-bottom: 27px;
-			ul {
-				padding-left: 0;
-                margin: 40px 0 0;
-				position: relative;
-                width: 100%;
-				li {
-                    display: inline-block;
-					margin: 0 10px;
-					font-size: 20px;
-					color: #727272;
-					&.author {
-						img {
-							@include border-radius(100%);
-							margin-right: 10px;
-						}
-					}
-					a {
-						color: #727272;
-						&:hover {
-							color: $primary_color;
-						}
-					}
-					i {
-						font-size: 25px;
+		.zo-blog-readmore {
+			border-color: #e4e4e4;
+		}
+	}
+	.yeah-blog-meta {
+		margin-bottom: 27px;
+		ul {
+			padding-left: 0;
+			margin: 40px 0 0;
+			position: relative;
+			width: 100%;
+			li {
+				display: inline-block;
+				margin: 0 10px;
+				font-size: 20px;
+				color: #727272;
+				&.author {
+					img {
+						@include border-radius(100%);
 						margin-right: 10px;
 					}
 				}
+				a {
+					color: #727272;
+					&:hover {
+						color: $primary_color;
+					}
+				}
+				i {
+					font-size: 25px;
+					margin-right: 10px;
+				}
 			}
-		}
-		.zo-blog-readmore {
-			border-color: #e4e4e4;
 		}
 	}
 	.yeah-blog-video,
