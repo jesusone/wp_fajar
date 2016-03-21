@@ -72,111 +72,7 @@
 .fajar-alert {
 	background: url('../images/alert-icon.png') no-repeat right 0;
 }
-.entry-blog {
-    position: relative;
-    margin: 0 0 50px;
 
-    .entry-title {
-        font-size: 24px;
-        line-height: 38px;
-        margin: 0;
-        padding: 30px 0;
-        text-transform: uppercase;
-    }
-    .entry-header {
-        .entry-feature.entry-feature-image img {
-            width: 100%;
-        }
-    }
-    .entry-meta {
-        border-bottom: 1px solid #EEEEEE;
-        padding: 25px 0;
-        ul {
-            position: relative;
-            display: inline-block;
-            padding: 0;
-            margin: 0;
-            li {
-                display: inline-block;
-                margin-right: 6px;
-                padding-right: 10px;
-                position: relative;
-                font-size: 12px;
-                color: #aaa;
-                a {
-                    color: #aaa;
-                    &:hover {
-                       color: $primary_color;
-                    }
-                }
-                i {
-                    padding-right: 6px;
-                }
-                &.detail-like {
-                    .zo-post-like {
-                        cursor: pointer;
-                        &:hover {
-                            color: $primary_color;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .entry-content {
-        .list-style-check {
-            margin-left: 40px;
-        }
-    }
-    /*** Blog Type ***/
-    .entry-gallery .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 52px;
-        text-align: center;
-        opacity: 1;
-        top: 50%;
-        transform: translate(0, -50%);
-        @include text-shadow(0 0 0 rgba(0, 0, 0, 0));
-        border: 1px solid $primary_color;
-        @include border-radius(100%);
-        background-color: transparent;
-        background-image: none!important;
-        filter: none;
-        &.left {
-            left: 10px;
-        }
-        &.right {
-            right: 10px;
-        }
-
-        .fa {
-            font-size: 36px;
-            color: $primary_color;
-        }
-    }
-    .entry-video iframe {
-        width: 100%;
-    }
-    .entry-quote {
-        blockquote {
-            background: none repeat scroll 0 0 #ece9ef;
-            border-left: 3px solid $primary_color;
-            padding: 23px;
-            margin: 0 0 0 78px;
-            position: relative;
-            &:before {
-                content: "\f10d";
-                font-size: 60px;
-                font-family: FontAwesome;
-                color: $primary_color;
-                position: absolute;
-                top: 15px;
-                left: -75px;
-            }
-        }
-    }
-}
 /**
 * ----> Single Post
 */
@@ -219,10 +115,7 @@
         border-top: 1px solid #141414;
         border-bottom: 1px solid #141414;
     }
-}
-
-.single {
-    .post-item {
+	.post-item {
         .yeah-blog-detail {
 			text-align: left;
         }
@@ -442,7 +335,6 @@
 		}
 	}
 }
-
 /* ==========================================================================
    [End] Blog Classic
 ========================================================================== */
