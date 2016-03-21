@@ -32,7 +32,6 @@
         }
         .comment-main {
             margin-left: 96px;
-            color: #272727;
             @media screen and (max-width: 767px) {
                 margin-left: 0;
             }
@@ -90,11 +89,9 @@
 		ul.children {
 			padding-left: 130px;
 			position: relative;
-
 			.comment-author-image {
-				max-width: 109px;
+				max-width: 60px;
 				float: left;
-				padding: 10px 0 20px;
 				background: #fff;
 			}
 		}
