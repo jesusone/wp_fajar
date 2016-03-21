@@ -96,7 +96,7 @@ class ZoTheme_StaticCss
         /* local fonts */
         $zo_base->setTypographyLocal($smof_data['local-fonts-1'], $smof_data['local-fonts-selector-1']);
         $zo_base->setTypographyLocal($smof_data['local-fonts-2'], $smof_data['local-fonts-selector-2']);
-        //$zo_base->setTypographyLocal($smof_data['local-fonts-3'], $smof_data['local-fonts-selector-3']);
+        $zo_base->setTypographyLocal($smof_data['local-fonts-3'], $smof_data['local-fonts-selector-3']);
 		/* Google Font Selecter */
 		$zo_base->setGoogleFont($smof_data['font_body'], wp_filter_nohtml_kses($smof_data['font-body-selector']));
 		$zo_base->setGoogleFont($smof_data['google-font-1'], wp_filter_nohtml_kses($smof_data['google-font-selector-1']));
