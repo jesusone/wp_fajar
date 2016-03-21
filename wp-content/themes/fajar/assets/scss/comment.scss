@@ -124,6 +124,10 @@
 					}
 				}
             }
+			&.comment-form-url input {
+				margin-right: 0;
+				width: 33.4%;
+			}
             &.comment-form-comment {
                 clear: both;
 				textarea {
