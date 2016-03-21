@@ -10,12 +10,19 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
     <?php if(has_post_thumbnail()) : ?>
+	<!-- Thumb -->
     <div class="yeah-blog-image">
         <a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_post_thumbnail( 'full' ); ?></a>
     </div>
     <?php endif; ?>
+	
+	<!-- Meta -->
 	<div class="yeah-blog-meta"><?php zo_archive_detail(); ?></div>
+	
+	<!-- Title -->
 	<h2 class="yeah-blog-title"><?php the_title(); ?></h2>
+	
+	<!-- Detail -->
     <div class="yeah-blog-detail">
         <div class="yeah-blog-content">
             <?php the_content();
