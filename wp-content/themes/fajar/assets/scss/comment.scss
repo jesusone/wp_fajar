@@ -70,10 +70,25 @@
                 margin-bottom: 15px;
             }
             .reply {
-                text-align: right;
-                font-size: 12px;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
+                position: absolute;
+				top: 0;
+				right: 0;
+				a {
+					background-color: #000000;
+					color: #FFFFFF;
+					cursor: pointer;
+					display: inline-block;
+					font-size: 14px;
+					line-height: 1.42857;
+					margin-bottom: 0;
+					padding: 6px 15px 7px;
+					text-align: center;
+					vertical-align: middle;
+					white-space: nowrap;
+					&:hover {
+						background-color: $primary_color;
+					}
+				}
             }
         }
 

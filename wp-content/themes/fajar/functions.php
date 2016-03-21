@@ -743,7 +743,6 @@ function zo_comment($comment, $args, $depth) {
                'max_depth' => $args['max_depth'] )
            )
        ); ?>
-        <i class="fa fa-mail-forward"></i>
     </div>
 	<div class="comment-content">
 		<?php comment_text(); ?>
