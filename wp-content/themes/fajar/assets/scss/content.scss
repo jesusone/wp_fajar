@@ -231,9 +231,6 @@
 			font-weight: bold;
 			@extend .museo_slab_300;
 		}
-		.yeah-blog-content , .yeah-blog-content p {
-			text-align: initial;
-		}
     }
 }
 
@@ -309,9 +306,11 @@
 	}
 	.yeah-blog-content , .yeah-blog-content p {
 		margin: 0;
-		font-size: 20px;
-		line-height: 30px;
-		text-align: center;
+		.blog &, .archive &, .search & { 
+			font-size: 20px;
+			line-height: 30px;
+			text-align: center;
+		}
 	}
     .yeah-blog-detail {
 		text-align: center;
