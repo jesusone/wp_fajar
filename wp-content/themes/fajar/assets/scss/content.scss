@@ -110,21 +110,21 @@
 				width: 90%;
 				padding: 13px 14px 12px;
 				float: right;
-				&.facebook:hover {
-				    background: #456098;
-					color: #fff;
-					border-color: #456098;
-				}
-				&.twitter:hover {
-					background: #07a2dc;
-					color: #fff;
-					border-color: #07a2dc;
-				}
-				&.pinterest:hover {
-					background: #a92020;
-					color: #fff;
-					border-color: #a92020;
-				}
+			}
+			a.facebook:hover {
+				background: #456098;
+				color: #fff;
+				border-color: #456098;
+			}
+			a.twitter:hover {
+				background: #07a2dc;
+				color: #fff;
+				border-color: #07a2dc;
+			}
+			a.pinterest:hover {
+				background: #a92020;
+				color: #fff;
+				border-color: #a92020;
 			}
         }
     }
