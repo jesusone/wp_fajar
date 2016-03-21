@@ -80,6 +80,8 @@
     .social-share {
 		border: 1px solid #c7c7c7;
 		padding: 26px;
+		display: inline-block;
+		width: 100%;
 		p {
 			width: 22%;
 			float: left;
@@ -100,28 +102,30 @@
 			font-size: 16px;
 			width: 33%;
 			text-align: center;
-            .fa {
-                display: block;
-                width: 37px;
-                height: 37px;
-                line-height: 37px;
-                text-align: center;
-                font-size: 18px;
-                color: #FFF;
-                @include border-radius(100%);
-                &.fa-facebook {
-                    background-color: #3b5997;
-                }
-                &.fa-google-plus {
-                    background-color: #df4c3c;
-                }
-                &.fa-twitter {
-                    background-color: #2fc2ee;
-                }
-                &.fa-linkedin {
-                    background-color: #0077B5;
-                }
-            }
+			a {
+			    display: block;
+				border: 1px solid #b1b1b1;
+				color: #929191;
+				text-transform: uppercase;
+				width: 90%;
+				padding: 13px 14px 12px;
+				float: right;
+				&.facebook &:hover {
+				    background: #456098;
+					color: #fff;
+					border-color: #456098;
+				}
+				&.twitter &:hover {
+					background: #07a2dc;
+					color: #fff;
+					border-color: #07a2dc;
+				}
+				&.pinterest &:hover {
+					background: #a92020;
+					color: #fff;
+					border-color: #a92020;
+				}
+			}
         }
     }
     .post-navigation {
