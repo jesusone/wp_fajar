@@ -67,19 +67,16 @@ if ( post_password_required() ) {
 
                 'author' =>
                     '<p class="comment-form-author">'.
-                    '<label for="author">'.__('Name','fajar').'</label>'.
                     '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
                     '" size="30"' . esc_attr($aria_req) . ' placeholder="'.__('Name','fajar').'"/></p>',
 
                 'email' =>
                     '<p class="comment-form-email">'.
-                    '<label for="email">'.__('Email Address','fajar').'</label>'.
                     '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
                     '" size="30"' . esc_attr($aria_req) . ' placeholder="'.__('Email','fajar').'"/></p>',
 
                 'url' =>
                     '<p class="comment-form-url">'.
-                    '<label for="url">' . __( 'Website', 'fajar' ) . '</label>' .
                     '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
                     '" size="30" /></p>',
             )

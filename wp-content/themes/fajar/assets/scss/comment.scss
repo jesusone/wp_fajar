@@ -98,7 +98,7 @@
 	}
 	#commentform {
 		p {
-			margin: 0 0 10px;
+            margin: 0 1.2% 16px 0;
             input[type="text"], textarea {
                 @include border-radius(0);
                 font-size: 13px;
@@ -107,20 +107,14 @@
                     border-color: $primary_color;
                 }
             }
-            label {
-                @extend .font-second;
-                font-size: 12px;
-                font-style: italic;
-                letter-spacing: 0.1em;
-                color: #141414;
-                text-transform: uppercase;
-            }
             &.comment-form-author,
             &.comment-form-url,
             &.comment-form-email {
-                width: 33.33%;
-                float: left;
-                padding-right: 30px;
+				padding: 8px 2% 5px;
+				width: 32.1%;
+				font-size: 16px;
+				height: 47px;
+				color: #767676;
                 @media screen and (max-width: 767px) {
                     width: 100%;
                     padding-right: 0;
@@ -131,7 +125,15 @@
             }
             &.comment-form-comment {
                 clear: both;
-				margin-bottom: 30px;
+				textarea {
+					padding: 18px 2% 15px;
+					margin-bottom: 14px;
+					resize: none;
+					width: 100%;
+					font-size: 16px;
+					color: #767676;
+					height: 200px;
+				}
 			}
             &.form-submit {
                 text-align: right;
