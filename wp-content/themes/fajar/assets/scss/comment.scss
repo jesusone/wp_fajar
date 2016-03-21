@@ -1,31 +1,11 @@
 #comments {
 	.comments-title, .comment-reply-title {
-	    margin: 0 0 65px;
-	    padding-bottom: 12px;
-		color: #141414;
-        position: relative;
-        @extend .font-second;
-        font-size: 24px;
-        font-style: italic;
-        font-weight: 700;
-        border-bottom: 2px solid #141414;
-        line-height: normal;
-        letter-spacing: 0;
-        &:before {
-            content: '';
-            width: 11px;
-            height: 11px;
-            display: inline-block;
-            background-color: $primary_color;
-            margin-right: 20px;
-            @include transform(rotate(45deg));
-        }
-	}
-    .comments-title {
-        margin-top: 80px;
-    }
-	.comment-reply-title {
-		margin-top: 50px;
+	    margin: 50px 0 30px;
+		color: #222222;
+        font-weight: bold;
+        line-height: 1.1;
+        font-size: 32px;
+		@extend .museo_slab_300;
 	}
 	.comment-list {
 		list-style: none;
