@@ -98,7 +98,6 @@
 	}
 	#commentform {
 		p {
-            margin: 0 1.2% 16px 0;
             input[type="text"], textarea {
                 @include border-radius(0);
                 font-size: 13px;
@@ -110,12 +109,12 @@
             &.comment-form-author,
             &.comment-form-url,
             &.comment-form-email {
+				margin: 0 1.2% 16px 0;
 				padding: 8px 2% 5px;
 				width: 32.1%;
 				font-size: 16px;
 				height: 47px;
 				color: #767676;
-				width: 33.33%;
                 float: left;
                 @media screen and (max-width: 767px) {
                     width: 100%;
@@ -135,7 +134,7 @@
 				}
 			}
             &.form-submit {
-                text-align: right;
+                text-align: left;
             }
 		}
 	}
