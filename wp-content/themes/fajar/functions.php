@@ -735,9 +735,6 @@ function zo_comment($comment, $args, $depth) {
             <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' , 'fajar'); ?></em>
         <?php endif; ?>
     </div>
-	<div class="comment-content">
-		<?php comment_text(); ?>
-	</div>
     <div class="reply">
        <?php comment_reply_link(
            array_merge( $args, array(
@@ -748,6 +745,9 @@ function zo_comment($comment, $args, $depth) {
        ); ?>
         <i class="fa fa-mail-forward"></i>
     </div>
+	<div class="comment-content">
+		<?php comment_text(); ?>
+	</div>
 </div>
 <?php if ( 'div' != $args['style'] ) : ?>
 </div>
