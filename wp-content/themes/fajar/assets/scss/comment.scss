@@ -109,17 +109,20 @@
             &.comment-form-author,
             &.comment-form-url,
             &.comment-form-email {
-				margin: 0 1.2% 16px 0;
-				padding: 8px 2% 5px;
-				width: 32.1%;
-				font-size: 16px;
-				height: 47px;
-				color: #767676;
-                float: left;
-                @media screen and (max-width: 767px) {
-                    width: 100%;
-                    padding-right: 0;
-                }
+				margin: 0;
+				input{
+					margin: 0 15px 16px 0;
+					padding: 8px 30px 5px;
+					width: calc(33.3% - 16px);
+					font-size: 16px;
+					height: 47px;
+					color: #767676;
+					float: left;
+					@media screen and (max-width: 767px) {
+						width: 100%;
+						padding-right: 0;
+					}
+				}
             }
             &.comment-form-comment {
                 clear: both;
