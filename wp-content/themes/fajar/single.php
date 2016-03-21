@@ -21,7 +21,7 @@ get_header(); ?>
                         <?php zo_social_share() ?>
                     </div>
 
-                    <?php zo_post_nav(); ?>
+                    <?php //zo_post_nav(); ?>
 
                     <?php comments_template( '', true ); ?>
 
