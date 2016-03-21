@@ -67,8 +67,12 @@
 =============================================*/
 
 blockquote {
-    border-left: 5px solid $primary_color;
-    padding-left: 10px;
+	font-size: 24px !important;
+    color: #333333;
+    font-family: 'museo_slab_300';
+    font-style: italic;
+    background: url(../images/quotes-text.png) no-repeat 0 25px;
+    padding: 20px 20px 20px 60px;
 }
 
 dl {
