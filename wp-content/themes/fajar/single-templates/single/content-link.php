@@ -30,15 +30,20 @@
 	<!-- Detail -->
     <div class="yeah-blog-detail">
         <div class="yeah-blog-content">
-            <?php the_content();
-			wp_link_pages( array(
-				'before'      => '<p class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fajar' ) . '</span>',
-				'after'       => '</p>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'fajar' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
+            <?php
+				if(zo_archive_link()) {
+					echo apply_filters('the_content', preg_replace('/<a(.*)href=\"(.*)\"(.*)<\/a>/', '', get_the_content()));
+				} else {
+					the_content();
+				}
+				wp_link_pages( array(
+					'before'      => '<p class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'brando' ) . '</span>',
+					'after'       => '</p>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'brando' ) . ' </span>%',
+					'separator'   => '<span class="screen-reader-text">, </span>',
+				) );
 			?>
         </div>
     </div>
