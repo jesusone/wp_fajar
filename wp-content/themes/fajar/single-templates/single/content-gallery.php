@@ -24,7 +24,7 @@
     <div class="yeah-blog-detail">
         <div class="yeah-blog-content">
             <?php
-				if(brando_archive_gallery()){
+				if(zo_archive_gallery()){
 					echo apply_filters('the_content', preg_replace('/\[gallery.*ids=.(.*).\]/', '', get_the_content()));
 				} else {
 					the_content();
