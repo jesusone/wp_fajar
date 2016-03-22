@@ -6,6 +6,8 @@ $dismissed = get_option('newsletter_dismissed', array());
 if (isset($_REQUEST['dismiss'])) {
     $dismissed[$_REQUEST['dismiss']] = 1;
     update_option('newsletter_dismissed', $dismissed);
+    wp_redirect($_SERVER['HTTP_REFERER']);
+    die();
 }
 
 $user_count = $wpdb->get_var("select count(*) from " . NEWSLETTER_USERS_TABLE . " where status='C'");
@@ -151,24 +153,32 @@ function newsletter_print_entries($group) {
     </div>
 <?php } ?>
 
-<?php if (NEWSLETTER_DEBUG || !isset($dismissed['rate']) && $user_count > 200) { ?>
-    <div class="notice">
-        <a href="<?php echo $_SERVER['REQUEST_URI'] . '&dismiss=rate' ?>" class="dismiss">&times;</a>
-        <p>
-            We never asked before and we're curious: <a href="http://wordpress.org/extend/plugins/newsletter/" target="_blank">would you rate this plugin</a>?
-            (few seconds required - account on WordPress.org required, every blog owner should have one...). <strong>Really appreciated, The Newsletter Team</strong>.
-        </p>
+<?php if (NEWSLETTER_DEBUG || !isset($dismissed['rate']) && $user_count > 300) { ?>
+    <div class="tnp-notice">
+        <a href="<?php echo $_SERVER['REQUEST_URI'] . '&noheader=1&dismiss=rate' ?>" class="tnp-dismiss">&times;</a>
+
+        We never asked before and we're curious: <a href="http://wordpress.org/extend/plugins/newsletter/" target="_blank">would you rate this plugin</a>?
+        (few seconds required - account on WordPress.org required, every blog owner should have one...). <strong>Really appreciated, The Newsletter Team</strong>.
+
     </div>
 <?php } ?>
 
 <?php if (NEWSLETTER_DEBUG || !isset($dismissed['newsletter-page']) && empty(NewsletterSubscription::instance()->options['url'])) { ?>
-    <div class="notice">
-        <a href="<?php echo $_SERVER['REQUEST_URI'] . '&dismiss=newsletter-page' ?>" class="dismiss">&times;</a>
-        <p>
-            You should create a blog page to show the subscription form and the subscription messages. Go to the
-            <a href="?page=newsletter_subscription_options">subscription panel</a> to
-            configure it.
-        </p>
+    <div class="tnp-notice">
+        <a href="<?php echo $_SERVER['REQUEST_URI'] . '&noheader=1&dismiss=newsletter-page' ?>" class="tnp-dismiss">&times;</a>
+
+        You should create a blog page to show the subscription form and the subscription messages. Go to the
+        <a href="?page=newsletter_subscription_options">subscription panel</a> to configure it.
+
+    </div>
+<?php } ?>
+
+<?php if (!isset($dismissed['wpmail'])) { ?>
+    <div class="tnp-notice">
+        <a href="<?php echo $_SERVER['REQUEST_URI'] . '&noheader=1&dismiss=wpmail' ?>" class="tnp-dismiss">&times;</a>
+
+        Important change: now Newsletter sends emails using WordPress! <a href="http://www.thenewsletterplugin.com/configuration-tnin-send-email" target="_blank">Read more</a>.
+
     </div>
 <?php } ?>
 

@@ -410,6 +410,12 @@ if (count($calls) > 1) {
                         </thead>
                         <tbody>
                             <tr>
+                                <td>PHP Version</td>
+                                <td>
+                                    <?php echo phpversion(); ?>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Database Wait Timeout</td>
                                 <td>
                                     <?php $wait_timeout = $wpdb->get_var("select @@wait_timeout"); ?>

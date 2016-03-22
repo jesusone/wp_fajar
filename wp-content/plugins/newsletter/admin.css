@@ -298,17 +298,29 @@ table.clicks {
 }
 */
 
-.notice {
+.tnp-notice {
+    padding: 15px;
+    margin: 10px 0;
     padding-right: 70px;
     position: relative;
+    border: 1px sold #eee;
+    background-color: #fff;
+    color: #444;
+    font-size: 15px;
 }
 
-.notice a.dismiss {
+.tnp-notice a {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tnp-notice a.tnp-dismiss {
     display: block;
     position: absolute;
     right: 10px;
-    top: 10px;
-    font-size: 20px;
+    top: 13px;
+    font-size: 25px;
     text-decoration: none;
     color: #666;
 }
@@ -452,8 +464,39 @@ table.clicks {
 }
 
 .tnp-tab-notice {
-    padding: 20px;
-    background-color: #eee;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid gray;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.tnp-tab-warning {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid orange;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.tnp-tab-success {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid green;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.tnp-tab-error {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid red;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
 }
 
 .tnp-wrap a[target=_blank] {

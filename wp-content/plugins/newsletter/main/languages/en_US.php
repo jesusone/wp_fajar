@@ -12,5 +12,6 @@ $options = array(
     'sender_email' => 'newsletter@' . $sitename,
     'sender_name' => get_option('blogname'),
     'editor' => 0,
-    'scheduler_max' => 100
+    'scheduler_max' => 100,
+    'phpmailer'=>0
 );

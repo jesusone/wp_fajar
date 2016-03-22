@@ -25,6 +25,7 @@ send and track e-mails, headache-free. It just works out of box!
 * Html and Text versions of Emails 
 * All messages are **fully translatable** from Admin Panel (no .po/.mo)
 * Diagnostics Panel to check your blog mailing capability 
+* **Compatible with Postman, WP Mail SMTP, Easy WP SMTP, Easy SMTP Mail, WP Mail Bank**
 
 **Set Up Your First Newsletter In Just A Couple Of Clicks**
 [youtube https://www.youtube.com/watch?v=JaxK7XwqvVI]
@@ -75,6 +76,11 @@ Thank you, The Newsletter Team
 No screenshots are available at this time.
 
 == Changelog ==
+
+= 4.1.1 =
+
+* Added compatibility with SMTP plugins
+* Small CSS fixes
 
 = 4.1.0 =
 

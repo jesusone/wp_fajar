@@ -327,6 +327,9 @@ if ($email['editor'] == 0) {
 
 
             <div id="tabs-b">
+                <?php if (Newsletter::instance()->options['phpmailer'] == 0) { ?>
+                <p class="tnp-tab-warning">The text part is sent only when Newsletter manages directly the sending process. <a href="admin.php?page=newsletter_main_main" target="_blank">See the main settings</a>.</p>
+                <?php } ?>
                 <p>
                     This is the textual version of your newsletter. If you empty it, only an HTML version will be sent but
                     is an anti-spam best practice to include a text only version.

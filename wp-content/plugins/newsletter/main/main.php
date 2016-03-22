@@ -238,12 +238,26 @@ if (!empty($controls->data['contract_key'])) {
                         </td>
                     </tr>
                     <tr valign="top">
+                        <th>Send emails directly</th>
+                        <td>
+                            <?php $controls->yesno('phpmailer'); ?>
+                            <p class="description">
+                                Instead of using WordPress emails are sent directly by Newsletter. 
+                                This enable the textual part of newsletters and the content encoding setting. 
+                                Keep at "No" if you're using
+                                ans SMTP plugin like Postman. 
+                                <a href=" http://www.thenewsletterplugin.com/configuration-tnin-send-email" target="_blank">Read more</a>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
                         <th>Email body content encoding</th>
                         <td>
                             <?php $controls->select('content_transfer_encoding', array('' => 'Default', '8bit' => '8 bit', 'base64' => 'Base 64', 'binary'=>'Binary', 'quoted-printable'=>'Quoted printable', '7bit'=>'7 bit')); ?>
                             <p class="description">
                                 Sometimes setting it to Base 64 solves problem with old mail servers (for example truncated or unformatted emails.
                                 <a href="http://www.thenewsletterplugin.com/plugins/newsletter/newsletter-configuration#enconding" target="_blank">Read more here</a>.
+                                Works only with direct email sending, see the option above.
                             </p>
                         </td>
                     </tr>

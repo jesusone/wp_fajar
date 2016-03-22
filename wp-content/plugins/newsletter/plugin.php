@@ -4,7 +4,7 @@
   Plugin Name: Newsletter
   Plugin URI: http://www.thenewsletterplugin.com/plugins/newsletter
   Description: Newsletter is a cool plugin to create your own subscriber list, to send newsletters, to build your business. <strong>Before update give a look to <a href="http://www.thenewsletterplugin.com/category/release">this page</a> to know what's changed.</strong>
-  Version: 4.1.0
+  Version: 4.1.1
   Author: Stefano Lissa, The Newsletter Team
   Author URI: http://www.thenewsletterplugin.com
   Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -14,7 +14,7 @@
  */
 
 // Used as dummy parameter on css and js links
-define('NEWSLETTER_VERSION', '4.1.0');
+define('NEWSLETTER_VERSION', '4.1.1');
 
 global $wpdb, $newsletter;
 
@@ -189,6 +189,14 @@ class Newsletter extends NewsletterModule {
         }
     }
 
+    function first_install() {
+        parent::first_install();
+        $dismissed = get_option('newsletter_dismissed', array());
+
+        $dismissed['wpmail'] = 1;
+        update_option('newsletter_dismissed', $dismissed);
+    }
+
     function upgrade() {
         global $wpdb, $charset_collate;
 
@@ -287,7 +295,6 @@ class Newsletter extends NewsletterModule {
 
         //wp_mkdir_p(WP_CONTENT_DIR . '/extensions/newsletter');
         //wp_mkdir_p(WP_CONTENT_DIR . '/cache/newsletter');
-
         //wp_clear_scheduled_hook('newsletter_updates_run');
         wp_clear_scheduled_hook('newsletter_statistics_version_check');
         wp_clear_scheduled_hook('newsletter_reports_version_check');
@@ -638,7 +645,7 @@ class Newsletter extends NewsletterModule {
             $this->logger->debug('mail> Subject empty, skipped');
             return true;
         }
-               
+
         // Message carrige returns and line feeds clean up
         if (!is_array($message)) {
             $message = str_replace("\r\n", "\n", $message);
@@ -662,8 +669,49 @@ class Newsletter extends NewsletterModule {
             return call_user_func($this->mail_method, $to, $subject, $message, $headers);
         }
 
-        if ($this->mailer == null)
+        if ($this->mailer == null) {
             $this->mailer_init();
+        }
+
+        if ($this->mailer == null) {
+            // If still null, we need to use wp_mail()...
+
+            $headers = array();
+            $headers[] = 'MIME-Version: 1.0';
+            $headers[] = 'Content-Type: text/html;charset=UTF-8';
+            $headers[] = 'From: ' . $this->options['sender_name'] . ' <' . $this->options['sender_email'] . '>';
+
+            if (!empty($this->options['return_path'])) {
+                $headers[] = 'Return-Path: ' . $this->options['return_path'];
+            }
+            if (!empty($this->options['reply_to'])) {
+                $headers[] = 'Reply-To: ' . $this->options['reply_to'];
+            }
+
+            if (!is_array($message)) {
+                $headers[] = 'Content-Type: text/html;charset=UTF-8';
+                $body = $message;
+            } else {
+                // Only html is present?
+                if (!empty($message['html'])) {
+                    $headers[] = 'Content-Type: text/html;charset=UTF-8';
+
+                    $body = $message['html'];
+                } else if (!empty($message['text'])) {
+                    $headers[] = 'Content-Type: text/plain;charset=UTF-8';
+                    $this->mailer->IsHTML(false);
+                    $body = $message['text'];
+                }
+            }
+            $r = wp_mail($to, $subject, $body, $headers);
+            if (!$r) {
+                $last_error = error_get_last();
+                if (is_array($last_error)) {
+                    $this->mail_last_error = $last_error['message'];
+                }
+            }
+            return $r;
+        }
 
         // Simple message is asumed to be html
         if (!is_array($message)) {
@@ -709,7 +757,7 @@ class Newsletter extends NewsletterModule {
         }
         return true;
     }
-    
+
     /**
      * Returns the SMTP options filtered so extensions can change them.
      */
@@ -722,7 +770,6 @@ class Newsletter extends NewsletterModule {
     function mailer_init() {
         require_once ABSPATH . WPINC . '/class-phpmailer.php';
         require_once ABSPATH . WPINC . '/class-smtp.php';
-        $this->mailer = new PHPMailer();
 
         $smtp_options = $this->get_smtp_options();
 //        $smtp_options['enabled'] = $this->options['smtp_enabled'];
@@ -735,6 +782,7 @@ class Newsletter extends NewsletterModule {
 
 
         if ($smtp_options['enabled'] == 1) {
+            $this->mailer = new PHPMailer();
             $this->mailer->IsSMTP();
             $this->mailer->Host = $smtp_options['host'];
             if (!empty($smtp_options['port']))
@@ -749,7 +797,13 @@ class Newsletter extends NewsletterModule {
             $this->mailer->SMTPSecure = $smtp_options['secure'];
             $this->mailer->SMTPAutoTLS = false;
         } else {
-            $this->mailer->IsMail();
+            if ($this->options['phpmailer'] == 1) {
+                $this->mailer = new PHPMailer();
+                $this->mailer->IsMail();
+            } else {
+                $this->mailer = null;
+                return;
+            }
         }
 
         if (!empty($this->options['content_transfer_encoding'])) {

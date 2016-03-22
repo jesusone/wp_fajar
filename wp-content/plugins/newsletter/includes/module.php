@@ -59,6 +59,10 @@ class NewsletterModule {
         if (is_admin()) {
             $this->old_version = get_option($this->prefix . '_version', '0.0.0');
             
+            if ($this->old_version == '0.0.0') {
+                $this->first_install();
+            }
+            
             if (strcmp($this->old_version, $this->version) != 0) {
                 $this->logger->info('Version changed from ' . $this->old_version . ' to ' . $this->version);
                 // Do all the stuff for this version change
@@ -69,6 +73,10 @@ class NewsletterModule {
             add_action('admin_menu', array($this, 'admin_menu'));
             $this->available_version = get_option($this->prefix . '_available_version');
         }
+    }
+    
+    function first_install() {
+        
     }
 
     /**
