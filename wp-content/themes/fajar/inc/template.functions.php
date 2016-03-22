@@ -12,11 +12,10 @@ function zo_setvariablescss($var, $output, $var_default, $var_empty = null) {
 }
 function zo_page_title(){
     global $smof_data, $zo_meta;
-    if(is_page() && isset($zo_meta->_zo_page_title) && $zo_meta->_zo_page_title){
-        if(isset($zo_meta->_zo_page_title_type)){
-			/* Page title for page */
+    if(is_page()){
+		if(isset($zo_meta->_zo_page_title) && $zo_meta->_zo_page_title && isset($zo_meta->_zo_page_title_type)){
 			zo_page_title_content($zo_meta->_zo_page_title_type);
-        }
+		}
     } else {
 		/* Page title content */
 		zo_page_title_content($smof_data['page_title_layout']);
