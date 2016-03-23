@@ -888,3 +888,23 @@
         }
     }
 }
+
+.main-category-content {
+	text-align: center;
+	background: #eeeeee;
+    padding: 30px;
+    margin-bottom: 20px;
+	h3 {
+		text-transform: uppercase;
+		padding-bottom: 14px;
+		font-size: 24px;
+		margin: 0;
+		line-height: 1.1;
+		color: #222222;
+		@extend .museo_slab_100;
+	}
+	p {
+		border-top: 1px solid #959595;
+		padding: 10px 0 22px;
+	}
+}

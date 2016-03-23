@@ -214,51 +214,6 @@ class ZoTheme_StaticCss
         /* ==========================================================================
            End Header
         ========================================================================== */
-        /* ==========================================================================
-           Start Footer
-        ========================================================================== */
-
-
-        /* ==========================================================================
-           Start Button
-        ========================================================================== */
-        /** Button Default **/
-        if($smof_data['btn_default_color']){
-            echo ".vc_general.vc_btn3.btn , button.vc_general.vc_btn3, a.vc_general.vc_btn3, .btn, .button, input[type='submit'] {
-                    color:".esc_attr($smof_data['btn_default_color']).";
-                    background-color:".esc_attr($smof_data['btn_default_bg_color']).";
-                    @include border-radius(".esc_attr($smof_data['btn_default_border_radius']['height']).");
-                }";
-        }
-        if($smof_data['btn_default_color_hover']) {
-            echo ".vc_general.vc_btn3.btn:hover, button.vc_general.vc_btn3:hover, a.vc_general.vc_btn3:hover, .btn:hover, .button:hover, input[type='submit']:hover,.vc_general.vc_btn3.btn:focus, button.vc_general.vc_btn3:focus, a.vc_general.vc_btn3:focus, .btn:focus, .button:focus, input[type='submit']:focus {
-                    color:".esc_attr($smof_data['btn_default_color_hover']).";
-                    background-color:".esc_attr($smof_data['btn_default_bg_color_hover']).";
-                }";
-        }
-        /** Button Primary **/
-        if($smof_data['btn_primary_color']){
-            echo ".vc_general.vc_btn3.btn.btn-primary, .btn.btn-primary {
-                    color:".esc_attr($smof_data['btn_primary_color']).";
-                    background-color:".esc_attr($smof_data['btn_primary_bg_color']).";
-					@include border-radius(".esc_attr($smof_data['btn_primary_border_radius']['height']).");
-                }";
-        }
-        if($smof_data['btn_primary_color_hover']) {
-            echo ".vc_general.vc_btn3.btn.btn-primary:hover, .btn.btn-primary:hover,
-			.vc_general.vc_btn3.btn.btn-primary:focus, .btn.btn-primary:focus {
-				color:".esc_attr($smof_data['btn_primary_color_hover']).";
-				background-color:".esc_attr($smof_data['btn_primary_bg_color_hover']).";
-			}";
-        }
-        if($smof_data['button_text_uppercase'] == '1'){
-            echo ".btn , button, .button, a.vc_general.vc_btn3, input[type='submit'] {
-				text-transform: uppercase;
-			}";
-        }
-        /* ==========================================================================
-           End Button
-        ========================================================================== */
         return ob_get_clean();
     }
 }
