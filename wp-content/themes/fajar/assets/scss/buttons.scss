@@ -22,19 +22,53 @@ $preset-gray-color: #909090;
     text-decoration: none;
 }
 
-/* Custom VC Button */
 /* Button default */
-.zo_button {
-
+.btn {
+    display: inline-block;
+    padding: 12px 32px 10px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-transform: uppercase;
 }
-
-@include breakpoint-max(768px) {
-    .btn-parallax-scrolling .btn {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-    }
+.btn-default {
+    color: #4b4b4b;
+    z-index: 1;
+    position: relative;
+	border: 1px solid #303030;
+	@include transition(border-color 0.4s, color 0.4s);
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 101%;
+		height: 100%;
+		background: #303030;
+		z-index: -1;
+		opacity: 0;
+		@include transform(scale3d(0.7, 1, 1));
+		-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+		transition: transform 0.4s, opacity 0.4s;
+		-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	}
+	&:hover {
+		color: #fff;
+		&:before {
+			opacity: 1;
+			@include transform(translate3d(0, 0, 0));
+		}
+	}
 }
-
 /* ==========================================================================
     End Style Button
 ========================================================================== */
