@@ -30,14 +30,18 @@ if (! class_exists('YeahWooDeals')) {
 
         public $theme_dir = null;
         public $theme_url = null;
+
+        public  $admin_dir = null;
+        public  $admin_url = null;
          public static function  instance(){
              static $_instance = null;
              if (is_null($_instance)) {
                  $_instance = new YeahWooDeals();
-                 // Install Deal.
-                 $_instance->yeah_install();
                  /*Include Setting*/
                  $_instance->yeah_globalSetting();
+                 // Install Deal.
+                 $_instance->yeah_install();
+
                  //Include
                  $_instance->yeah_includes();
 
@@ -66,19 +70,25 @@ if (! class_exists('YeahWooDeals')) {
             /* custom template. */
             $this->theme_dir = trailingslashit(get_template_directory () . '/yeah-woo-deals');
             $this->theme_url = trailingslashit(get_template_directory_uri() . '/yeah-woo-deals');
+            /* Admin url. */
+            $this->admin_dir = trailingslashit($this->plugin_dir. 'admin');
+            $this->admin_url = trailingslashit($this->plugin_url . 'admin');
         }
         private function  yeah_includes(){
             /*Include class admin*/
+            require_once $this->plugin_dir . 'includes/core-functions.php';
+            require_once $this->plugin_dir . 'includes/helper.class.php';
             require_once $this->plugin_dir . 'admin/admin.class.php';
+            require_once $this->plugin_dir . 'admin/admin.module.class.php';
         }
         /*@author: OyeahThemes
         @function: Install tables
         */
         public  function yeah_install(){
-            global $yeah_db_name;
-            $yeah_db_name = 'yeah_woo_deals';
             register_activation_hook(__FILE__,array($this,'yeah_install_table'));
-
+            // datetimepicker
+            wp_register_script( 'jquery.datetimepicker', $this->plugin_url . '/assets/js/jquery.datetimepicker.js', array( 'jquery' ) );
+            wp_register_style( 'jquery.datetimepicker', $this->plugin_url . '/assets/css/jquery.datetimepicker.css' );
 
         }
         /*@author: OyeahThemes
@@ -88,21 +98,38 @@ if (! class_exists('YeahWooDeals')) {
 
             global $wpdb;
             global $yeah_db_name;
+            global $yeah_table_short_code;
+            $yeah_db_name = 'yeah_woo_deals';
+            $yeah_table_short_code = 'yeah_woo_deals_short_code';
+            // create the  database table short code
+
+            if($wpdb->get_var("show tables like '$yeah_table_short_code'") != $yeah_table_short_code)
+            {
+                $sql_short_code = "CREATE TABLE " . $yeah_table_short_code . " (
+                `id` INT(11) NOT NULL AUTO_INCREMENT ,
+                `name` varchar(200)	 NOT NULL ,
+                `content` TEXT NOT NULL ,
+                 PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+                require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+                dbDelta($sql_short_code);
+            }
+
             // create the  database table
             if($wpdb->get_var("show tables like '$yeah_db_name'") != $yeah_db_name)
             {
-                $sql = "CREATE TABLE " . $yeah_db_name . "(
+                $sql = "CREATE TABLE " . $yeah_db_name ." (
                 `id` INT(11) NOT NULL AUTO_INCREMENT ,
                 `product_id` INT(11) NOT NULL ,
                 `dealsstart` DATETIME NOT NULL ,
                 `dealsend` DATETIME NOT NULL ,
                 `dealssale` INT NOT NULL ,
                 `dealsprice` INT NOT NULL ,
+                `short_code_id` INT(11) NOT NULL,
                  PRIMARY KEY (`id`)) ENGINE = InnoDB;";
-
                 require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
                 dbDelta($sql);
             }
+
         }
 
     }
