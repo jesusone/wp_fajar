@@ -145,6 +145,14 @@
 				}
 			}
 		}
+		.vc_tta-panels-container {
+			.vc_tta-panels {
+				background: #fff;
+				&:before, &:after {
+					border: 0;
+				}
+			}
+		}
 	}
 }
 /* ==========================================================================
