@@ -131,6 +131,7 @@
 						color: #404040;
 						background: #fff;
 						@include border-radius(0);
+						@extend .museo_slab_500;
 						&:before, &:after {
 							border: 0;
 						}
