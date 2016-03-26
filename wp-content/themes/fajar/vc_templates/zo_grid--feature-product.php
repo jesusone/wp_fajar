@@ -82,7 +82,7 @@
                 </div>
 				<?php
 					/* Get Price Product */
-					$product->get_price_html();
+					woocommerce_template_single_price();
 				?>
             </div>
             <?php
