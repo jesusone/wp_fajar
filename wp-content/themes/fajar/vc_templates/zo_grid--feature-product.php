@@ -76,12 +76,13 @@
                 <div class="zo-grid-title">
                     <?php the_title();?>
                 </div>
-                <div class="zo-grid-time">
-                    <?php the_time('l, F jS, Y');?>
+                <div class="zo-grid-content">
+                    <?php the_content();?>
                 </div>
-                <div class="zo-grid-categories">
-                    <?php echo get_the_term_list( get_the_ID(), $taxo, 'Category: ', ', ', '' ); ?>
-                </div>
+               
+				<?php 
+					woocommerce_template_single_price();
+				?>
             </div>
             <?php
         }
