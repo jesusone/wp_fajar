@@ -1,5 +1,4 @@
 <?php 
-	global $product;
     /* get categories */
         $taxo = 'category';
         $_category = array();
