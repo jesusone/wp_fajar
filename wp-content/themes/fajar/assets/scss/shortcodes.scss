@@ -3,7 +3,7 @@
 
   1. Shortcode Fancy Box
   2. Heading
-  3. Shortcode Team
+  3. Shortcode Gird
   4. Shortcode Testimonial
   5. Tab
   6. Counter
@@ -90,11 +90,40 @@
 ========================================================================== */
 
 /* ==========================================================================
-   [Start] 3. Team
+   [Start] 3. Grid
 ========================================================================== */
-
+.template-zo_grid--feature-product {
+	.zo-grid-item {
+		text-align: center;
+		.has-thumbnail {
+			margin-bottom: 29px;
+		}
+		.zo-grid-title {
+			a{
+				font-size: 18px;
+				line-height: 1.1;
+				padding-bottom: 5px;
+				font-weight: bold;
+				color: #222;
+				@extend .museo_slab_100;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+		.zo-grid-content {
+			color: #404040;
+			padding-bottom: 7px;
+		}
+		.zo-grid-price {
+			font-size: 20px;
+			padding-bottom: 7px;
+			@extend .museo_slab_300;
+		}
+	}
+}
 /* ==========================================================================
-   [End] 3. Team
+   [End] 3. Grid
 ========================================================================== */
 
 /* ==========================================================================
@@ -148,8 +177,12 @@
 		.vc_tta-panels-container {
 			.vc_tta-panels {
 				background: #fff;
+				border: 0;
 				&:before, &:after {
 					border: 0;
+				}
+				.vc_tta-panel {
+					margin: 0;
 				}
 			}
 		}

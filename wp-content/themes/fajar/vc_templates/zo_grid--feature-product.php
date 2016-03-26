@@ -74,15 +74,17 @@
                     echo '<div class="zo-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
                 ?>
                 <div class="zo-grid-title">
-                    <?php the_title();?>
+                    <a href="<?php the_permalink();?>"><?php the_title();?></a>
                 </div>
                 <div class="zo-grid-content">
                     <?php the_content();?>
                 </div>
-				<?php
-					/* Get Price Product */
-					woocommerce_template_single_price();
-				?>
+				<div class="zo-grid-price">
+					<?php
+						/* Get Price Product */
+						woocommerce_template_single_price();
+					?>
+				</div>
             </div>
             <?php
         }
