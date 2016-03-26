@@ -82,7 +82,7 @@
                 </div>
 				<?php
 					/* Get Price Product */
-					$product->get_price();
+					$product->get_price_html();
 				?>
             </div>
             <?php
