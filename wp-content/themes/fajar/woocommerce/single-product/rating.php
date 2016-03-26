@@ -35,3 +35,4 @@ $average      = $product->get_average_rating();
 	</div>
 
 <?php endif; ?>
+</div>
