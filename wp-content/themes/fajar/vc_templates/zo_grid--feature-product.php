@@ -71,7 +71,7 @@
                         $class = ' no-image';
                         $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
                     endif;
-                    echo '<div class="zo-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
+                    echo '<div class="zo-grid-media '.esc_attr($class).'"><a href="'.the_permalink().'">'.$thumbnail.'</a></div>';
                 ?>
                 <div class="zo-grid-title">
                     <a href="<?php the_permalink();?>"><?php the_title();?></a>
