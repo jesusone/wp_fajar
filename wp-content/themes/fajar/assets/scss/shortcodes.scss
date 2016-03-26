@@ -2,7 +2,7 @@
 [All Style Shortcode]
 
   1. Shortcode Fancy Box
-        2. Shortcode Pie Chart
+  2. Heading
   3. Shortcode Team
         4. Shortcode Testimonial
   5. Tab
@@ -78,7 +78,13 @@
 /* ==========================================================================
    [Start] 2. Shortcode Pie Chart
 ========================================================================== */
-
+.heading-1 {
+	font-size: 42px;
+	font-weight: bold;
+	margin: 0;
+	line-height: 1.1;
+	color: #222;
+}
 /* ==========================================================================
    [End] 2. Shortcode Pie Chart
 ========================================================================== */
