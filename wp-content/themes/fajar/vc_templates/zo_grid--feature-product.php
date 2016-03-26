@@ -1,4 +1,5 @@
 <?php 
+	global $product;
     /* get categories */
         $taxo = 'category';
         $_category = array();
@@ -79,9 +80,9 @@
                 <div class="zo-grid-content">
                     <?php the_content();?>
                 </div>
-               
-				<?php 
-					woocommerce_template_single_price();
+				<?php
+					/* Get Price Product */
+					$product->get_price();
 				?>
             </div>
             <?php
