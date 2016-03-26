@@ -132,7 +132,10 @@ figure {
 del {
     opacity: 0.8;
 }
-
+ins {
+	text-decoration: none;
+	color: $primary_color;
+}
 dl {
     dt {
         font-weight: bold;
