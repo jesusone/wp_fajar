@@ -4,7 +4,7 @@
   1. Shortcode Fancy Box
   2. Heading
   3. Shortcode Team
-        4. Shortcode Testimonial
+  4. Shortcode Testimonial
   5. Tab
   6. Counter
   7. Accordion
@@ -108,7 +108,11 @@
 /* ==========================================================================
    [Start] 5. Tabs
 ========================================================================== */
-
+.vc_tta.vc_general.yeah-feature-product {
+	.vc_tta-tabs-container {
+		float: none;
+	}
+}
 /* ==========================================================================
    [End] 5. Tabs
 ========================================================================== */

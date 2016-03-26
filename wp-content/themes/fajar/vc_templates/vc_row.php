@@ -115,7 +115,6 @@ if ( ! $parallax && $has_video_bg ) {
 }
 
 $stylesheet = array();
-
 /**
  * Animation
  */
@@ -139,13 +138,18 @@ if(!empty($background_position)) {
 	$stylesheet[] = "background-position: {$background_position} !important;";
 }
 
+$styleInline = '';
+if(!empty($stylesheet)){
+	$styleInline = 'style="'. implode('', $stylesheet) .'"';
+}
+	
 /**
  * Get css classes
  */
 $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 
-$output .= '<div ' . implode( ' ', $wrapper_attributes ) . ' style="'. implode('', $stylesheet) .'">';
+$output .= '<div ' . implode( ' ', $wrapper_attributes ) . $styleInline . ' >';
 $output .= $html_overlay_row;
 if ( empty( $full_width ) ) {
 	$output .= '<div class="container">';
