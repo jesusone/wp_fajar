@@ -129,7 +129,11 @@
 						cursor: pointer;
 						font-size: 18px;
 						color: #404040;
+						background: #fff;
 						@include border-radius(0);
+						&:before, &:after {
+							border: 0;
+						}
 					}
 					&.vc_active, &:hover {
 						a {
