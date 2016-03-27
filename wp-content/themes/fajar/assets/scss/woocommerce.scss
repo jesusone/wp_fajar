@@ -881,7 +881,6 @@
 
 .woocommerce {
 	.yeah-loop-product {
-		margin-bottom: 29px;
 		position: relative;
 		overflow: hidden;
 		@include breakpoint-min(992px){
@@ -900,6 +899,7 @@
 		.yeah-product-header {
 			position: relative;
 			overflow: hidden;
+			margin-bottom: 29px;
 			.onsale {
 				top: 5px!important;
 				left: 5px!important;
@@ -930,7 +930,7 @@
 			.yeah-add-to-cart {
 				position: absolute;
 				right: 10px;
-				bottom: -100%;
+				bottom: -30px;
 				height: 30px;
 				overflow: hidden;
 				width: 34px;
