@@ -71,8 +71,13 @@
                         $class = ' no-image';
                         $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
                     endif;
-                    echo '<div class="zo-grid-media '.esc_attr($class).'"><a href="'.get_the_permalink().'">'.$thumbnail.'</a></div>';
                 ?>
+				<div class="zo-grid-media <?php echo esc_attr($class);?>">
+					<a href="<?php the_permalink();?>"><?php echo esc_attr($thumbnail);?></a>
+					<?php 
+						woocommerce_template_single_add_to_cart();
+					?>
+				</div>
                 <div class="zo-grid-title">
                     <a href="<?php the_permalink();?>"><?php the_title();?></a>
                 </div>
