@@ -113,10 +113,14 @@
 					margin-left: -1px;
 				}
 				&:hover {
-					bottom: 10px;
 					i {
 						@include animation(0.5s ease 0s normal forwards 1 running spinAround);
 					}
+				}
+			}
+			&:hover {
+				.yeah-add-to-cart {
+					bottom: 10px;
 				}
 			}
 		}
