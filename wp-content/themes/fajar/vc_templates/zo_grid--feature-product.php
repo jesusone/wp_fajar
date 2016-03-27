@@ -75,7 +75,7 @@
 				<div class="zo-grid-media <?php echo esc_attr($class);?>">
 					<a href="<?php the_permalink();?>"><img src="<?php echo esc_url($thumbnail);?>" alt="<?php the_title();?>"/></a>
 					<?php 
-						woocommerce_template_single_add_to_cart();
+						woocommerce_template_loop_add_to_cart();
 					?>
 				</div>
                 <div class="zo-grid-title">
