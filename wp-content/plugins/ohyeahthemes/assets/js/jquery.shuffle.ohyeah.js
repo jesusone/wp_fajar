@@ -2,7 +2,7 @@
     $(document).ready(function () {
         $('.zo-grid-masonry').each(function () {
             var $this = $(this),
-                $filter = $this.parent().find('.zo-grid-filter'),
+                $filter = $this.parent().find('.yeah-grid-filter'),
                 $sizer = $this.find('.shuffle__sizer');
             $this.imagesLoaded(function () {
                 $this.shuffle({

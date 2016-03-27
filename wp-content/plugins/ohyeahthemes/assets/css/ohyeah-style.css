@@ -1,12 +1,12 @@
 /* ZO Carousel */
 /* ZO Grid */
-.zo-grid-wraper .zo-grid-filter{
+.yeah-grid-wrapper .yeah-grid-filter{
 	width: 100%;
 }
-.zo-grid-wraper .zo-grid-filter li{
+.yeah-grid-wrapper .yeah-grid-filter li{
 	list-style: none;
 }
-.zo-grid-wraper .zo-grid-filter li a{
+.yeah-grid-wrapper .yeah-grid-filter li a{
 	display: block;
 }
 .zo-grid-masonry {

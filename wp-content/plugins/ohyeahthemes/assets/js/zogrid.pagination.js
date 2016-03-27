@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
     "use strict";
-    $('.zo-grid-wraper').each(function () {
+    $('.yeah-grid-wrapper').each(function () {
         var $this = $(this);
         var $id = $(this).attr('id');
         $this.find('a.page-numbers').live('click', function () {

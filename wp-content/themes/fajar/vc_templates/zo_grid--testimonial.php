@@ -13,10 +13,10 @@ global $smof_data;
         }
         $atts['categories'] = $_category;
 ?>
-<div class="zo-grid-wrapper zo-grid-testimonial <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-grid-wrapper zo-grid-testimonial <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
     <!-- Get Filter Query -->
 	<?php if (isset($atts['filter']) && $atts['filter'] == 1 && $atts['layout'] == 'masonry'): ?>
-        <div class="zo-grid-filter">
+        <div class="yeah-grid-filter">
             <ul>
                 <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'fajar');?></a></li>
 				<?php

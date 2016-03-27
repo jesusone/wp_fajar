@@ -8,7 +8,7 @@
 vc_add_param("vc_custom_heading", array(
 	"type" => "dropdown",
 	"class" => "",
-	"heading" => __("Custom Heading Style", 'zap'),
+	"heading" => __("Custom Heading Style", 'fajar'),
 	"admin_label" => true,
 	"param_name" => "zo_custom_heading",
 	"value" => array(

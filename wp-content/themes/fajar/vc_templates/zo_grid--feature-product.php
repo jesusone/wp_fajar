@@ -12,13 +12,13 @@
         }
         $atts['categories'] = $_category;
 ?>
-<div class="zo-grid-wrapper <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-grid-wrapper <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
 
 	<!-- Get Filter Query -->
 	<?php if (isset($atts['filter']) && $atts['filter'] == 1 && $atts['layout'] == 'masonry'): ?>
-        <div class="zo-grid-filter">
-            <ul class="zo-filter-category list-unstyled list-inline">
-                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'zap');?></a></li>
+        <div class="yeah-grid-filter">
+            <ul class="yeah-filter-category list-unstyled list-inline">
+                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'fajar');?></a></li>
 				<?php
 					$posts = $atts['posts'];
 					$query = $posts->query;
@@ -50,7 +50,7 @@
         </div>
     <?php endif; ?>
 	
-    <div class="row zo-grid <?php echo esc_attr($atts['grid_class']);?>">
+    <div class="row yeah-grid <?php echo esc_attr($atts['grid_class']);?>">
         <?php
         $posts = $atts['posts'];
         $size = ( isset($atts['layout']) && $atts['layout']=='basic')?'thumbnail':'medium';
@@ -62,7 +62,7 @@
                 $groups[] = '"category-'.$category->slug.'"';
             }
             ?>
-            <div class="zo-grid-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
+            <div class="yeah-grid-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
                 <?php 
                     if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)):
                         $class = ' has-thumbnail';
@@ -72,19 +72,19 @@
                         $thumbnail = ZO_IMAGES.'no-image.jpg';
                     endif;
                 ?>
-				<div class="zo-grid-media <?php echo esc_attr($class);?>">
+				<div class="yeah-grid-media <?php echo esc_attr($class);?>">
 					<a href="<?php the_permalink();?>"><img src="<?php echo esc_url($thumbnail);?>" alt="<?php the_title();?>"/></a>
 					<?php 
 						woocommerce_template_loop_add_to_cart();
 					?>
 				</div>
-                <div class="zo-grid-title">
+                <div class="yeah-grid-title">
                     <a href="<?php the_permalink();?>"><?php the_title();?></a>
                 </div>
-                <div class="zo-grid-content">
+                <div class="yeah-grid-content">
                     <?php the_content();?>
                 </div>
-				<div class="zo-grid-price">
+				<div class="yeah-grid-price">
 					<?php
 						/* Get Price Product */
 						woocommerce_template_single_price();

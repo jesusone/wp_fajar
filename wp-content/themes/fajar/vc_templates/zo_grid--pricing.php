@@ -14,7 +14,7 @@ $atts['categories'] = $_category;
 
 ?>
 
-<div class="zo-grid-wrapper zo-pricing-default <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-grid-wrapper zo-pricing-default <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
     <div class="zo-grid <?php echo esc_attr($atts['grid_class']);?> zo-gird-pricing-item-wrap">
         <?php
         $posts = $atts['posts'];

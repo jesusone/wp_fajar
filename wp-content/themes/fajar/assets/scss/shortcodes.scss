@@ -93,9 +93,9 @@
    [Start] 3. Grid
 ========================================================================== */
 .template-zo_grid--feature-product {
-	.zo-grid-item {
+	.yeah-grid-item {
 		text-align: center;
-		.zo-grid-media.has-thumbnail {
+		.yeah-grid-media.has-thumbnail {
 			margin-bottom: 29px;
 			position: relative;	
 			overflow: hidden;
@@ -124,7 +124,7 @@
 				}
 			}
 		}
-		.zo-grid-title {
+		.yeah-grid-title {
 			padding-bottom: 5px;
 			a{
 				font-size: 18px;
@@ -137,12 +137,12 @@
 				}
 			}
 		}
-		.zo-grid-content {
+		.yeah-grid-content {
 			color: #404040;
 			padding-bottom: 7px;
 			p { margin: 0; }
 		}
-		.zo-grid-price {
+		.yeah-grid-price {
 			font-size: 20px;
 			padding-bottom: 7px;
 			@extend .museo_slab_300;
@@ -453,7 +453,7 @@
    [Start] 10. Zo Grid
 ========================================================================== */
 .zo-grid-wraper {
-    .zo-grid-filter {
+    .yeah-grid-filter {
         margin-bottom: 40px;
         ul {
             padding: 0;

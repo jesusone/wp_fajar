@@ -35,7 +35,7 @@ vc_add_param("vc_row", array(
 vc_add_param("vc_row", array(
 	"type" => "dropdown",
 	"class" => "",
-	"heading" => esc_html__("Animation", 'zap'),
+	"heading" => esc_html__("Animation", 'fajar'),
 	"admin_label" => true,
 	"param_name" => "animation",
 	"value" => array(
@@ -84,26 +84,26 @@ vc_add_param("vc_row", array(
 		"zoomInUp" => "zoomInUp",
 		"rollIn" => "rollIn",
 	),
-	'description' => esc_html__('View animation effect at https://daneden.github.io/animate.css/', 'zap')
+	'description' => esc_html__('View animation effect at https://daneden.github.io/animate.css/', 'fajar')
 ));
 
 vc_add_param("vc_row", array(
 	"type" => "textfield",
 	"class" => "",
-	"heading" => esc_html__('Animation Delay', 'zap'),
+	"heading" => esc_html__('Animation Delay', 'fajar'),
 	"param_name" => "animation_delay",
 	"value" => "0",
 	"dependency" => array(
 		"element" => "animation",
 		"not_empty" => true,
 	),
-	"description" => esc_html__('Delay before the animation starts. Ex: 200ms, 0.5s, 1s...', 'zap')
+	"description" => esc_html__('Delay before the animation starts. Ex: 200ms, 0.5s, 1s...', 'fajar')
 ));
 
 vc_add_param("vc_row", array(
 	"type" => "dropdown",
 	"class" => "",
-	"heading" => esc_html__("Background Position", 'zap'),
+	"heading" => esc_html__("Background Position", 'fajar'),
 	"param_name" => "background_position",
 	"value" => array(
 		"Theme Default" => "",

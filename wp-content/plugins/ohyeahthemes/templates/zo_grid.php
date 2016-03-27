@@ -12,11 +12,11 @@
         }
         $atts['categories'] = $_category;
 ?>
-<div class="zo-grid-wraper <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-grid-wrapper <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
 
 	<?php if (isset($atts['filter']) && $atts['filter'] == 1 && $atts['layout'] == 'masonry'): ?>
-        <div class="zo-grid-filter">
-            <ul class="zo-filter-category list-unstyled list-inline">
+        <div class="yeah-grid-filter">
+            <ul class="yeah-filter-category list-unstyled list-inline">
                 <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'ohyeahthemes');?></a></li>
 				<?php
 					$posts = $atts['posts'];

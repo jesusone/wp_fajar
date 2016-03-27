@@ -16,7 +16,7 @@
 
 	<?php if ( isset($atts['filter']) && $atts['filter'] == 1 ): ?>
         <div class="zo-masonry-filter">
-            <ul class="zo-filter-category list-unstyled list-inline">
+            <ul class="yeah-filter-category list-unstyled list-inline">
                 <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'ohyeahthemes');?></a></li>
 				<?php
 					$posts = $atts['posts'];

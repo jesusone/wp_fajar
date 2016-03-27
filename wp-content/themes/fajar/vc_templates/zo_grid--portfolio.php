@@ -12,13 +12,13 @@
         }
         $atts['categories'] = $_category;
 ?>
-<div class="zo-grid-wrapper <?php echo esc_attr($atts['template']);?> <?php echo esc_attr($atts['zo_full_width']); ?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-grid-wrapper <?php echo esc_attr($atts['template']);?> <?php echo esc_attr($atts['zo_full_width']); ?>" id="<?php echo esc_attr($atts['html_id']);?>">
     
 	<!-- Get Filter Query -->
 	<?php if (isset($atts['filter']) && $atts['filter'] == 1 && $atts['layout'] == 'masonry'): ?>
-        <div class="zo-grid-filter">
-            <ul class="zo-filter-category list-unstyled list-inline">
-                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'zap');?></a></li>
+        <div class="yeah-grid-filter">
+            <ul class="yeah-filter-category list-unstyled list-inline">
+                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'fajar');?></a></li>
 				<?php
 					$posts = $atts['posts'];
 					$query = $posts->query;
