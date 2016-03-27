@@ -878,111 +878,106 @@
 		width: 100%;
 	}
 }
-.yeah-loop-product {
-    margin-bottom: 29px;
-	position: relative;
-	overflow: hidden;
-	@include breakpoint-min(992px){
-		width: 100%;
-	}
-	@include breakpoint-in(480px, 992px){
-		width: inherit;
-	}
-    &:hover {
-        .yeah-product-header {
-            .yeah-product-overlay {
-                bottom: 0;
-            }
-        }
-    }
-    .yeah-product-header {
-        position: relative;
-        overflow: hidden;
-        .onsale {
-            top: 5px!important;
-            left: 5px!important;
-			right: initial !important;
-            margin: 0 !important;
-			height: initial;
-			min-height: initial;
-			width: initial;
-			min-width: initial;
-            border: 1px solid #222;
-            color: #404040;
-            line-height: 1.1;
-            text-align: center;
-            position: absolute;
-            padding: 5px 15px;
-            background-color: transparent;
-            text-transform: uppercase;
-            z-index: 10;
-            @include border-radius(0);
-			@extend .museo_slab_100;
-        }
-        img {
-            margin: 0!important;
-			@include breakpoint-max(480px){
-				width: 100%;
-			}
-        }
-		.yeah-add-to-cart {
-			position: absolute;
-			right: 10px;
-			bottom: -100%;
-			height: 30px;
-			overflow: hidden;
-			width: 34px;
-			@include transition(bottom 0.5s ease);
-			a i {
-				float: left;
-				font-size: 26px;
-				margin-left: -1px;
-			}
-			&:hover {
-				i {
-					@include animation(0.5s ease 0s normal forwards 1 running spinAround);
+
+.woocommerce {
+	.yeah-loop-product {
+		margin-bottom: 29px;
+		position: relative;
+		overflow: hidden;
+		@include breakpoint-min(992px){
+			width: 100%;
+		}
+		@include breakpoint-in(480px, 992px){
+			width: inherit;
+		}
+		&:hover {
+			.yeah-product-header {
+				.yeah-product-overlay {
+					bottom: 0;
 				}
 			}
 		}
-		&:hover {
+		.yeah-product-header {
+			position: relative;
+			overflow: hidden;
+			.onsale {
+				top: 5px!important;
+				left: 5px!important;
+				right: initial !important;
+				margin: 0 !important;
+				height: initial;
+				min-height: initial;
+				width: initial;
+				min-width: initial;
+				border: 1px solid #222;
+				color: #404040;
+				line-height: 1.1;
+				text-align: center;
+				position: absolute;
+				padding: 5px 15px;
+				background-color: transparent;
+				text-transform: uppercase;
+				z-index: 10;
+				@include border-radius(0);
+				@extend .museo_slab_100;
+			}
+			img {
+				margin: 0!important;
+				@include breakpoint-max(480px){
+					width: 100%;
+				}
+			}
 			.yeah-add-to-cart {
-				bottom: 10px;
+				position: absolute;
+				right: 10px;
+				bottom: -100%;
+				height: 30px;
+				overflow: hidden;
+				width: 34px;
+				@include transition(bottom 0.5s ease);
+				a i {
+					float: left;
+					font-size: 26px;
+					margin-left: -1px;
+				}
+				&:hover {
+					i {
+						@include animation(0.5s ease 0s normal forwards 1 running spinAround);
+					}
+				}
+			}
+			&:hover {
+				.yeah-add-to-cart {
+					bottom: 10px;
+				}
 			}
 		}
-    }
-    .yeah-product-meta {
-        .yeah-product-title {
-            padding: 0;
-            margin: 0;
-            a {
-                letter-spacing: 0.1em;
-                font-size: 12px;
-                line-height: 60px;
-                text-transform: uppercase;
-                font-weight: 400;
-                color: #141414;
-                &:hover { color: $primary_color; }
-            }
-        }
-        .zo-product-price {
-            display: block;
-            @extend .font-second;
-            font-size: 18px;
-            font-style: italic;
-            color: #141414;
-			.amount{
-				letter-spacing: 0.1em;
+		.yeah-product-meta {
+			.yeah-product-title {
+				padding-bottom: 5px;
+				a{
+					font-size: 18px;
+					line-height: 1.1;
+					font-weight: bold;
+					color: #222;
+					@extend .museo_slab_100;
+					&:hover {
+						color: $primary_color;
+					}
+				}
 			}
-            ins {
-                float: left;
-                margin-right: 10px;
-                text-decoration: none;
-            }
-            del {
-                color: #6f6f6f;
-            }
-        }
-    }
+			.yeah-product-content {
+				color: #404040;
+				padding-bottom: 7px;
+				p { margin: 0; }
+			}
+			.yeah-product-price {
+				font-size: 20px;
+				padding-bottom: 7px;
+				@extend .museo_slab_300;
+			}
+		}
+	}
 }
 
 /**

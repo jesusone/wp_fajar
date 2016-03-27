@@ -15,5 +15,5 @@ global $product;
 ?>
 
 <?php if ( $price_html = $product->get_price_html() ) : ?>
-	<span class="zo-product-price"><?php echo ''.$price_html; ?></span>
+	<span class="yeah-product-price"><?php echo ''.$price_html; ?></span>
 <?php endif; ?>
