@@ -66,14 +66,14 @@
                 <?php 
                     if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)):
                         $class = ' has-thumbnail';
-                        $thumbnail = get_the_post_thumbnail(get_the_ID(),$size);
+                        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false);
                     else:
                         $class = ' no-image';
-                        $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
+                        $thumbnail = ZO_IMAGES.'no-image.jpg';
                     endif;
                 ?>
 				<div class="zo-grid-media <?php echo esc_attr($class);?>">
-					<a href="<?php the_permalink();?>"><?php esc_attr($thumbnail);?></a>
+					<a href="<?php the_permalink();?>"><img src="<?php echo esc_url($thumbnail);?>" alt="<?php the_title();?>"/></a>
 					<?php 
 						woocommerce_template_single_add_to_cart();
 					?>
