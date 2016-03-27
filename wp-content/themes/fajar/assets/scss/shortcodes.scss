@@ -95,8 +95,25 @@
 .template-zo_grid--feature-product {
 	.zo-grid-item {
 		text-align: center;
-		.has-thumbnail {
+		.zo-grid-media.has-thumbnail {
 			margin-bottom: 29px;
+			position: relative;			
+			.yeah-add-to-cart {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				height: 30px;
+				overflow: hidden;
+				width: 34px;
+				a i {
+					float: left;
+					font-size: 26px;
+					margin-left: -1px;
+				}
+				a:hover i {
+					@include animation(0.3s ease 0s normal forwards 1 running spinAround);
+				}
+			}
 		}
 		.zo-grid-title {
 			padding-bottom: 5px;
