@@ -97,20 +97,23 @@
 		text-align: center;
 		.zo-grid-media.has-thumbnail {
 			margin-bottom: 29px;
-			position: relative;			
+			position: relative;	
+			overflow: hidden;
 			.yeah-add-to-cart {
 				position: absolute;
 				right: 10px;
-				bottom: 10px;
+				bottom: -100%;
 				height: 30px;
 				overflow: hidden;
 				width: 34px;
+				@include transition(bottom 0.3 ease);
 				a i {
 					float: left;
 					font-size: 26px;
 					margin-left: -1px;
 				}
 				&:hover {
+					bottom: 10px;
 					i {
 						@include animation(0.5s ease 0s normal forwards 1 running spinAround);
 					}
