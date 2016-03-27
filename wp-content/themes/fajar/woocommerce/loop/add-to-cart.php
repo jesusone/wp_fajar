@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-	sprintf( '<div class="zo-add-to-cart"><a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="btn %s product_type_%s"><span>%s</span></a></div>',
+	sprintf( '<div class="zo-add-to-cart"><a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" data-quantity="%s" class="btn %s product_type_%s"><i class="icon-icons240"></i><span>%s</span></a></div>',
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( $product->id ),
 		esc_attr( $product->get_sku() ),
