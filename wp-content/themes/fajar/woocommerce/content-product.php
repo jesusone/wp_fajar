@@ -60,6 +60,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
         </div>
         <div class="zo-product-meta">
             <h3 class="zo-product-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+			<div class="zo-product-content"><?php the_content();?></div>
             <?php
             /**
              * woocommerce_after_shop_loop_item_title hook
