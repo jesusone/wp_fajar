@@ -912,7 +912,7 @@
             line-height: 1.1;
             text-align: center;
             position: absolute;
-            padding: 5px 5px;
+            padding: 5px 15px;
             background-color: transparent;
             text-transform: uppercase;
             z-index: 10;
@@ -928,7 +928,7 @@
 		.yeah-add-to-cart {
 			position: absolute;
 			right: 10px;
-			bottom: 10px;
+			bottom: -100%;
 			height: 30px;
 			overflow: hidden;
 			width: 34px;
@@ -943,6 +943,9 @@
 					@include animation(0.5s ease 0s normal forwards 1 running spinAround);
 				}
 			}
+		}
+		&:hover {
+			bottom: 10px;
 		}
     }
     .yeah-product-meta {
