@@ -873,12 +873,12 @@
 /**
 * Product Single
 */
-.woocommerce .products .zo-product-teaser{
+.woocommerce .products .yeah-loop-product{
 	@include breakpoint-max(992px){
 		width: 100%;
 	}
 }
-.zo-product-teaser {
+.yeah-loop-product {
     margin-bottom: 30px;
 	position: relative;
 	left: 50%;
@@ -891,13 +891,13 @@
 		width: inherit;
 	}
     &:hover {
-        .zo-product-header {
-            .zo-product-overlay {
+        .yeah-product-header {
+            .yeah-product-overlay {
                 bottom: 0;
             }
         }
     }
-    .zo-product-header {
+    .yeah-product-header {
         position: relative;
         overflow: hidden;
         .onsale {
@@ -924,7 +924,7 @@
 				width: 100%;
 			}
         }
-        .zo-product-overlay {
+        .yeah-product-overlay {
             position: absolute;
             width: 100%;
             height: 60px;
@@ -976,8 +976,8 @@
             }
         }
     }
-    .zo-product-meta {
-        .zo-product-title {
+    .yeah-product-meta {
+        .yeah-product-title {
             padding: 0;
             margin: 0;
             a {

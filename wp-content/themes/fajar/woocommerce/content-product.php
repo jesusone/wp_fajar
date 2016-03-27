@@ -31,9 +31,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	$classes[] = 'last';
 ?>
 <li <?php post_class( $classes ); ?>>
-    <div class="zo-product-teaser">
-        <div class="zo-product-header">
-            <div class="zo-product-image">
+    <div class="yeah-loop-product">
+        <div class="yeah-product-header">
+            <div class="yeah-product-image">
                 <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
                 <a href="<?php the_permalink(); ?>" title="<?php _e('View detail', 'fajar'); ?>">
                     <?php
@@ -47,7 +47,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
                     ?>
                 </a>
             </div>
-            <div class="zo-product-overlay">
+            <div class="yeah-product-overlay">
                 <?php
                 /**
                  * woocommerce_after_shop_loop_item hook
@@ -58,9 +58,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
                 ?>
             </div>
         </div>
-        <div class="zo-product-meta">
-            <h3 class="zo-product-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-			<div class="zo-product-content"><?php the_content();?></div>
+        <div class="yeah-product-meta">
+            <h3 class="yeah-product-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+			<div class="yeah-product-content"><?php the_content();?></div>
             <?php
             /**
              * woocommerce_after_shop_loop_item_title hook
