@@ -34,7 +34,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
     <div class="yeah-loop-product">
         <div class="yeah-product-header">
             <div class="yeah-product-image">
-                <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
                 <a href="<?php the_permalink(); ?>" title="<?php _e('View detail', 'fajar'); ?>">
                     <?php
                     /**
