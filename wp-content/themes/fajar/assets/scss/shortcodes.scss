@@ -100,24 +100,14 @@
 			position: relative;	
 			overflow: hidden;
 			.onsale {
-				top: 5px!important;
-				left: 5px!important;
-				right: initial !important;
-				margin: 0 !important;
-				height: initial;
-				min-height: initial;
-				width: initial;
-				min-width: initial;
-				border: 1px solid #222;
+				top: 7px!important;
+				left: 10px!important;
 				color: #404040;
 				line-height: 1.1;
-				text-align: center;
 				position: absolute;
-				padding: 5px 15px;
-				background-color: transparent;
 				text-transform: uppercase;
 				z-index: 10;
-				@include border-radius(0);
+				font-size: 13px;
 				@extend .museo_slab_100;
 			}
 			.yeah-add-to-cart {
