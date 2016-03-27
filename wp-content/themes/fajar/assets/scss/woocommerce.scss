@@ -879,11 +879,9 @@
 	}
 }
 .yeah-loop-product {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 	position: relative;
-	left: 50%;
-	@include transform(translateX(-50%));
-	display: inline-block;
+	overflow: hidden;
 	@include breakpoint-min(992px){
 		width: 100%;
 	}
@@ -901,22 +899,20 @@
         position: relative;
         overflow: hidden;
         .onsale {
-            width: 50px;
-            height: 40px;
-            border: 2px solid #000;
-            color: #333;
-            line-height: 40px;
+            border: 1px solid #222;
+            color: #404040;
+            line-height: 1.1;
             text-align: center;
             position: absolute;
-            top: 20px!important;
-            left: 20px!important;
-            right: auto!important;
+            top: 5px!important;
+            left: 5px!important;
             margin: 0;
-            padding: 0;
+            padding: 8px 20px;
             background-color: transparent;
             text-transform: uppercase;
             z-index: 10;
             @include border-radius(0);
+			@extend .museo_slab_100;
         }
         img {
             margin: 0!important;
@@ -924,57 +920,25 @@
 				width: 100%;
 			}
         }
-        .yeah-product-overlay {
-            position: absolute;
-            width: 100%;
-            height: 60px;
-            bottom: -60px;
-            left: 0;
-            @include transition(all 200ms ease-in-out);
-            .yeah-add-to-cart {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                .add_to_cart_button,
-                .added_to_cart {
-                    width: 100%;
-                    background-color: $primary_color;
-                    padding: 0;
-                    height: 60px;
-                    line-height: 60px;
-                    letter-spacing: 0.05em;
-                    font-size: 14px;
-                    color: #000;
-                    text-align: center;
-                    display: block;
-                    span:after {
-                        content: '+';
-                        padding-left: 10px;
-                    }
-                    &.added {
-                        display: none;
-                    }
-                    &.loading:after {
-                        content: "\f110";
-                        display: inline-block;
-                        font-family: FontAwesome;
-                        margin-left: 10px;
-                    }
-                    &:hover {
-                        color: #FFF;
-                    }
-                }
-                .added_to_cart {
-                    &:before {
-                        content: "\f07a";
-                        display: inline-block;
-                        font-family: FontAwesome;
-                        margin-right: 10px;
-                    }
-                }
-            }
-        }
+		.yeah-add-to-cart {
+			position: absolute;
+			right: 10px;
+			bottom: -100%;
+			height: 30px;
+			overflow: hidden;
+			width: 34px;
+			@include transition(bottom 0.5s ease);
+			a i {
+				float: left;
+				font-size: 26px;
+				margin-left: -1px;
+			}
+			&:hover {
+				i {
+					@include animation(0.5s ease 0s normal forwards 1 running spinAround);
+				}
+			}
+		}
     }
     .yeah-product-meta {
         .yeah-product-title {
