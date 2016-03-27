@@ -73,7 +73,7 @@
                     endif;
                 ?>
 				<div class="zo-grid-media <?php echo esc_attr($class);?>">
-					<a href="<?php the_permalink();?>"><?php echo esc_attr($thumbnail);?></a>
+					<a href="<?php the_permalink();?>"><?php esc_attr($thumbnail);?></a>
 					<?php 
 						woocommerce_template_single_add_to_cart();
 					?>
