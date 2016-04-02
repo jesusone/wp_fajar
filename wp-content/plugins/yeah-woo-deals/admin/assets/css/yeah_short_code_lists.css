@@ -95,7 +95,7 @@
 .yeah-loading.yeah-open  {
     transform: translateY(0%);
     top: 50% !important;
-    z-index: 9999999;
+    z-index: 999999999;
 }
 .yeah-loading {
     background: rgba(0, 0, 0, 0.7);
