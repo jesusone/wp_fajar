@@ -31,7 +31,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
             }
             $yeah_group = !empty($instance['group_deals']) ? $instance['group_deals'] : '';
-
+            var_dump($yeah_group);
             $module = new YeahWooDealsAdminModule();
             $posts = $module->yeah_get_data_widget($yeah_group);
             $sale_off = $module->yeah_get_sale_off($yeah_group);
