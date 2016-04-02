@@ -57,7 +57,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 ?>
                 <div class="yeah-weekend-deals-widget-top">
                     <img src="<?php echo yeah_woo_deals()->acess_url; ?>/images/weekend-deals.png">
-                    <h3>25% - 90% off</h3>
+                    <h3 class="museo_slab_500">25% - 90% off</h3>
                 </div>
                 <!--Start CountDown-->
                 <!---->
