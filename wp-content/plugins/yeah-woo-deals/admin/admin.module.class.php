@@ -158,7 +158,7 @@ IN ( ".esc_sql($data['category'])." )) ";
                 'id' => $wpdb->insert_id,
                 'alias' => $alias_input,
                 'title' => $data['title'],
-                'content' => '[yeah_woo_deals alias="'.$alias_input.'"]',
+                'content' => $description,
             );
             $result['data']= $data_ouput;
 
