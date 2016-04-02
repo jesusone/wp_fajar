@@ -289,7 +289,7 @@ IN ( ".esc_sql($data['category'])." )) ";
 
            $price_sale = get_post_meta($posts_min->posts[0]->ID,'_yeah_price_sale',true);
            $price_regular = get_post_meta($posts_min->posts[0]->ID,'_regular_price',true);
-            var_dump($posts_min);
+            var_dump($meta_fields);
             var_dump($price_regular);
             $sale_off['min'] = ($price_sale * 0.01) / $price_regular;
         }
