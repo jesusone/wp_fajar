@@ -106,7 +106,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 <?php if($groups){?>
                 <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals')); ?>[]" multiple="multiple">
                         <?php foreach($groups as $group):?>
-                            <option value="<?php echo esc_attr($group->id)?>"><?php echo esc_attr($group->name); ?></option>
+                            <option <?php if(in_array($group->id,$instance['group_deals'])){ echo "selected";}?> value="<?php echo esc_attr($group->id)?>"><?php echo esc_attr($group->name); ?></option>
                         <?php endforeach;?>
                 </select>
                 <?php } else { ?>
@@ -132,7 +132,6 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
          */
         public function update($new_instance, $old_instance)
         {
-            var_dump($new_instance);die;
             $instance = $old_instance;
             $instance['title'] = (! empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
             $instance['group_deals'] = (! empty($new_instance['group_deals'])) ? strip_tags($new_instance['group_deals']) : '';
