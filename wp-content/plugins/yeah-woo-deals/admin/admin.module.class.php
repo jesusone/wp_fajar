@@ -285,7 +285,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         $posts_min = new WP_Query( $min );
         $sale_off = array();
         if($posts_min){
-            $meta_fields = get_post_custom($posts_min->ID);
+            $meta_fields = get_post_custom($posts_min->posts[0]->ID);
 
            $price_sale = get_post_meta($posts_min->posts[0]->ID,'_yeah_price_sale',true);
            $price_regular = get_post_meta($posts_min->posts[0]->ID,'_regular_price',true);
