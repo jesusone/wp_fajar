@@ -270,7 +270,7 @@ IN ( ".esc_sql($data['category'])." )) ";
                 ),
                 array(
                     'key' => '_yeah_group_deals',
-                    'value' =>$yeah_group,
+                    'value' =>array('1','2'),
                     'compare' => 'IN'
                 ),
                 array(
