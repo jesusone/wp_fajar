@@ -250,6 +250,15 @@ IN ( ".esc_sql($data['category'])." )) ";
     public  function  yeah_get_sale_off($yeah_group = ''){
         global $wpdb;
         $current_datetimes = date('Y/m/d H:i:s');
+        for ($i=0; $i< count($yeah_group); $i++)
+        {
+            $count = count($yeah_group);
+            $arrays[$count] = array(
+                'key' => '_yeah_group_deals',
+                'value' => $yeah_group[$i],
+                'compare' => 'LIKE'
+            );
+        }
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
@@ -266,13 +275,10 @@ IN ( ".esc_sql($data['category'])." )) ";
                     'type' => 'DATETIME'
                 ),
                 array(
-                    'key' => '_yeah_group_deals',
-                    'value' =>serialize(  $yeah_group ),
-                    'compare' => 'LIKE'
-                ),
-                array(
                     'key' => '_yeah_price_sale',
                 ),
+                $arrays,
+
 
             ),
         );
