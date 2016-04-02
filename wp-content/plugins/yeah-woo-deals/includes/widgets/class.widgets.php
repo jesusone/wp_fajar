@@ -134,9 +134,9 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
         {
             $instance = $old_instance;
             $instance['title'] = (! empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-            $instance['group_deals'] = (! empty($new_instance['group_deals'])) ? strip_tags($new_instance['group_deals']) : '';
+            $instance['group_deals'] = (! empty($new_instance['group_deals'])) ? strip_tags($new_instance['group_deals']) :array();
             $instance['image_title'] = (! empty($new_instance['image_title'])) ? strip_tags($new_instance['image_title']) : '';
-
+            var_dump($instance['group_deals'] );die;
             return $instance;
         }
     }
