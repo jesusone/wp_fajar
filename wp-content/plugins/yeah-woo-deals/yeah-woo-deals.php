@@ -79,7 +79,7 @@ if (! class_exists('YeahWooDeals')) {
             require_once $this->plugin_dir . 'includes/core-functions.php';
             require_once $this->plugin_dir . 'includes/helper.class.php';
            // require_once $this->plugin_dir . 'admin/admin.class.php';
-            require_once $this->plugin_dir . 'admin/admin.module.class.php';
+          //  require_once $this->plugin_dir . 'admin/admin.module.class.php';
             require_once $this->plugin_dir . 'includes/widgets/class.widgets.php';
         }
         /*@author: OyeahThemes
