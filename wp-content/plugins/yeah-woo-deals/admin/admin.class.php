@@ -65,7 +65,6 @@ class YeahWooDealsAdmin {
     function yeah_fields_meta() {
         global $post;
         $custom = get_post_custom($post->ID);
-
         //echo '<pre>'; print_r($custom); echo '</pre>';
         $dates = ( isset( $custom['_yeah_woo_dates'] ) )? unserialize( $custom['_yeah_woo_dates'][0] ) : "";
 

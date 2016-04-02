@@ -28,7 +28,10 @@ if( !class_exists( 'Yeah_Woo_Deals_Helper' ) ) {
                     array_push( $result_html, "<select name='{$f_name}' class='{$class}' {$attr} multiple='true'> " );
 
                     foreach( $options as $k => $v ){
-                        $selected = (in_array($k,$default) )? "selected" : "";
+                        $selected ='';
+                        if($default) {
+                            $selected = (in_array($k,$default) )? "selected" : "";
+                        }
                         array_push( $result_html, "<option value='{$k}' {$selected}>{$v}</option>" );
                     }
                     array_push( $result_html, "</select>" );
