@@ -40,7 +40,7 @@ if (! class_exists('YeahWooDeals')) {
                  /*Include Setting*/
                  $_instance->yeah_globalSetting();
                  // Install Deal.
-                 $_instance->yeah_install();
+                // $_instance->yeah_install();
 
                  //Include
                  $_instance->yeah_includes();
