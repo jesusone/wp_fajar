@@ -70,7 +70,7 @@ $results = $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
            <div class="yeah-group">
                <label for=""><?php echo esc_html__('Name','yeah-woo-deals') ?></label>
                <textarea id="yeah-content"  name="content" value="" placeholder="<?php echo esc_html__('Name Short Code','yeah-woo-deals');?>">
-                   
+
                </textarea>
            </div>
            <div class="yeah-hidden">

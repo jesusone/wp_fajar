@@ -155,7 +155,7 @@ function  yeah_save_short_code(){
        {
            'title': jQuery('#yeah-name').val(),
            'alias': jQuery('#yeah-alias').val(),
-           'content': jQuery('#yeah-content').val(),
+           'description': jQuery('#yeah-content').val(),
            'id': jQuery('#yeah-id').val(),
        };
     jQuery.ajax({
@@ -223,6 +223,7 @@ function yeah_deals_modal($_this){
                         jQuery('.dialog-content').show(200);
                         jQuery('#dialog-box #yeah-name').attr('value',$yeah_data.name);
                         jQuery('#dialog-box #yeah-content').attr('value',$yeah_data.content);
+                        jQuery('#dialog-box #yeah-alias').attr('value',$yeah_data.alias);
                         jQuery('#dialog-box #yeah-id').attr('value',$yeah_data.id);
                     }
                 }
