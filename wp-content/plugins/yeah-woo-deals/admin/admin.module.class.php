@@ -250,7 +250,7 @@ IN ( ".esc_sql($data['category'])." )) ";
     public  function  yeah_get_sale_off($yeah_group = ''){
         global $wpdb;
         $current_datetimes = date('Y/m/d H:i:s');
-        var_dump(serialize( strval( 1 ) );
+        var_dump(serialize( strval( 1 )) );
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
