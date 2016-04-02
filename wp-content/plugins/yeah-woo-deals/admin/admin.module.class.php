@@ -263,6 +263,7 @@ IN ( ".esc_sql($data['category'])." )) ";
             'posts_per_page' => 1,
             'post_type' => 'product',
             'paged' => 1,
+            'order' =>'ASC',
             'orderby' => 'meta_value_num',
             'meta_query' => array(
                 'relation' => 'AND',
@@ -280,9 +281,9 @@ IN ( ".esc_sql($data['category'])." )) ";
 
             ),
         );
-        $min = $args;
-        $min = $min['order']=  "ASC";
-        $posts_min = new WP_Query( $min );
+        $mins = $args;
+        $mins = $mins['order']=  "ASC";
+        $posts_min = new WP_Query( $args );
         $sale_off = array();
         if($posts_min){
             $meta_fields = get_post_custom($posts_min->posts[0]->ID);
