@@ -86,12 +86,22 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
          */
         public function form($instance)
         {
-            $title = ! empty($instance['title']) ? $instance['title'] : '';
+            $title = !empty($instance['title']) ? $instance['title'] : '';
+            $group_deals = !empty($instance['group_deals']) ? $instance['group_deals'] : '';
+            $image_title = !empty($instance['image_title']) ? $instance['image_title'] : '';
 
             ?>
             <p>
                 <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'yeah-woo-deals' ); ?></label>
                 <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id( 'group_deals' ); ?>"><?php esc_html_e( 'Woo Deals Group:', 'yeah-woo-deals' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals' )); ?>" type="text" value="<?php echo esc_attr( $group_deals ); ?>">
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id( 'image_title' ); ?>"><?php esc_html_e( 'Image Title:', 'yeah-woo-deals' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'image_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'image_title' )); ?>" type="text" value="<?php echo esc_attr( $image_title ); ?>">
             </p>
             <?php
         }
