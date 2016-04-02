@@ -4,8 +4,9 @@ jQuery(document).ready(function(){
     /*Seting Delas*/
     // end setting page JS
     if( jQuery('.wa-field-dates').length > 0 ){
-        alert('Tesst');
+
         jQuery('.wa-field-dates').each(function(){
+            alert('Delass');
             jQuery(this).datetimepicker({
                 value: jQuery(this).data('dates'),
                 step: 10
