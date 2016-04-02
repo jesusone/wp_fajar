@@ -55,12 +55,15 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                     $_extra_data['status'] = 'open';
                 }
                 ?>
-                <li class="wa-countdown-content">
-                <span class="countdown wa-countdown-inner" data-extradata="<?php echo esc_attr( json_encode( $_extra_data ) ); ?>" data-datatime="<?php echo "{$date_countdown}"; ?>"  data-format='<div>%-d<span>day%!d</span></div><div>%H<span>hrs</span></div><div>%M<span>min</span></div><div>%S<span>sec</span></div>'>
-                    <span class="clock"></span>
-                </span>
-                </li>
+                <!--Start CountDown-->
 
+                <div class="yeah-countdown-content">
+                    <h2 class="yeah-title-countdown"><?php echo esc_html__('Time Left','yeah-woo-deals') ?></h2>
+                    <div class="countdown yeah-countdown-inner" data-extradata="<?php echo esc_attr( json_encode( $_extra_data ) ); ?>" data-datatime="<?php echo "{$date_countdown}"; ?>"  data-format='<div>%-d<span>day%!d</span></div><div>%H<span>hrs</span></div><div>%M<span>min</span></div><div>%S<span>sec</span></div>'>
+                        <div class="clock"></div>
+                    </div>
+                </div>
+                <!--End CountDown-->
                 <?php
             }
 
