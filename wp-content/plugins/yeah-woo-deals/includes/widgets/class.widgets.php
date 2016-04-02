@@ -119,10 +119,9 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                             $id
                         );
                     }
-
                     echo '</select>';
                     ?>
-              
+
                 <?php } else { ?>
                     <a href="admin.php?page=yeah-woo-deals-groups"><?php echo esc_html__('Create Group Deals','yeah-woo-deals')?></a>
                 <?php } ?>
