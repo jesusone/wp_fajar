@@ -104,7 +104,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 var_dump($instance);
                 ?>
                 <?php if($groups){?>
-                <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals[]')); ?>" multiple="multiple">
+                <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals')); ?>[]" multiple="multiple">
                         <?php foreach($groups as $group):?>
                             <option value="<?php $group->id?>"><?php echo $group->name; ?></option>
                         <?php endforeach;?>
@@ -134,7 +134,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
         {
             $instance = array();
             $instance['title'] = (! empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-            $instance['group_deals'] = (! empty($new_instance['group_deals[]'])) ? strip_tags($new_instance['group_deals[]']) : '';
+            $instance['group_deals'] = (! empty($new_instance['group_deals'])) ? strip_tags($new_instance['group_deals']) : '';
             $instance['image_title'] = (! empty($new_instance['image_title'])) ? strip_tags($new_instance['image_title']) : '';
 
             return $instance;
