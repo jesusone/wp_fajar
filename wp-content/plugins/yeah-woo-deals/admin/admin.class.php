@@ -130,13 +130,13 @@ class YeahWooDealsAdmin {
         );
         /*Add page short code setting*/
     }
-    function add_ajax_url(){
+   /* function add_ajax_url(){
         wp_localize_script( 'jquery-ui', 'WooDeals', array(
                 'ajaxurl'   => admin_url( 'admin-ajax.php' ),
                 'yeahNonce' => wp_create_nonce( 'yeah-nonce' )
             )
         );
-    }
+    }*/
 
     /*List woo deals*/
     /*public function  yeah_woo_deals_setting()
