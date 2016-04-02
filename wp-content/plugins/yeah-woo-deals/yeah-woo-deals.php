@@ -115,6 +115,7 @@ if (! class_exists('YeahWooDeals')) {
                 $sql_short_code = "CREATE TABLE " . $yeah_table_short_code . " (
                 `id` INT(11) NOT NULL AUTO_INCREMENT ,
                 `name` varchar(200)	 NOT NULL ,
+                `alias` varchar(200) NOT NULL ,
                 `content` TEXT NOT NULL ,
                  PRIMARY KEY (`id`)) ENGINE = InnoDB;";
                 require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
