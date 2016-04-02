@@ -6,11 +6,7 @@ jQuery(document).ready(function(){
     if( jQuery('.wa-field-dates').length > 0 ){
 
         jQuery('.wa-field-dates').each(function(){
-            alert('Delass');
-            jQuery(this).datetimepicker({
-                value: jQuery(this).data('dates'),
-                step: 10
-            });
+            jQuery(this).datetimepicker();
         })
     }
     /*End date*/
