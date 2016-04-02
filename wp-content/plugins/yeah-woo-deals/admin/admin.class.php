@@ -118,18 +118,7 @@ class YeahWooDealsAdmin {
 
         return $tabs;
     }
-    public  function add_admin_page(){
-        add_menu_page(
-            esc_html__( 'Woo Deals', 'yeah-woo-deals' ),
-            'Woo Deals',
-            'manage_options',
-            'yeah-woo-deals-short-codes',
-            array($this,'yeah_woo_deals_setting'),
-            yeah_woo_deals()->admin_url.'assets/images/menu-icon.png',
-            25
-        );
-        /*Add page short code setting*/
-    }
+   
    /* function add_ajax_url(){
         wp_localize_script( 'jquery-ui', 'WooDeals', array(
                 'ajaxurl'   => admin_url( 'admin-ajax.php' ),
