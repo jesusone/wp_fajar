@@ -264,8 +264,6 @@ IN ( ".esc_sql($data['category'])." )) ";
             'post_type' => 'product',
             'paged' => 1,
             'orderby' => 'meta_value_num',
-            'orderby' => '_yeah_dates_end',
-            'order' => 'ASC',
             'meta_query' => array(
                 'relation' => 'AND',
                 array(
@@ -282,10 +280,16 @@ IN ( ".esc_sql($data['category'])." )) ";
 
             ),
         );
-        $posts = new WP_Query( $args );
-
-        var_dump($posts->posts[0]->ID);
-
+        $min = $args;
+        $min = $min['order']=  "ASC";
+        $posts_min = new WP_Query( $min );
+        $sale_off = array();
+        if($posts_min){
+           $price_sale = get_post_meta($posts_min->posts[0]->ID,'_yeah_price_sale',true);
+           $price_regular = get_post_meta($posts_min->posts[0]->ID,'_regular_price',true);
+            $sale_off['min'] = ((float)$price_sale * 1/100) /  (float) $price_regular;
+        }
+        var_dump($sale_off);
     }
     /*Get Data to widget*/
     public function yeah_get_data_widget($yeah_group = ''){
