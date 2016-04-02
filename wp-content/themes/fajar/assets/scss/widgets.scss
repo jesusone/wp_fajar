@@ -486,6 +486,14 @@
     padding: 43px 40px 20px;
     position: relative;
     text-align: center;
+    h2.yeah-title-countdown{
+      left: 50%;
+      position: absolute;
+      top: -24px;
+      padding: 10px 20px 7px;
+      background: #fff;
+      font-size: 22px;
+      margin-left: -70px;
+    }
   }
-
 }
