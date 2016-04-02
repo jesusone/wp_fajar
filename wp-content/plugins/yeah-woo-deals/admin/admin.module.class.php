@@ -288,7 +288,7 @@ IN ( ".esc_sql($data['category'])." )) ";
     public function yeah_get_data_widget($yeah_group = ''){
         global $wpdb;
         $current_datetimes = date('Y/m/d H:i:s');
-        
+
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
@@ -305,8 +305,8 @@ IN ( ".esc_sql($data['category'])." )) ";
                 ),
                 array(
                     'key' => '_yeah_group_deals',
-                    'value' => $yeah_group,
-                    'compare' => 'LIKE'
+                    'value' => in_array( '1', '_yeah_group_deals'),
+                    'compare' => 'IN'
                 ),
 
             ),
