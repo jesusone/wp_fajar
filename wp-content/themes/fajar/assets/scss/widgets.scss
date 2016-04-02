@@ -496,15 +496,18 @@
       margin-left: -70px;
     }
     .yeah-countdown-inner {
+      div.clock {
         div{
-          background: #393939;border-bottom: 3px
-          solid #ffffff; color: #fff; display: inline-block;
+          background: #393939;border-bottom: 3px solid #ffffff;
+          color: #fff; display: inline-block;
           font-size: 22px; font-weight: 600;
           line-height: 25px;  margin: 0 2%; padding: 17px;
           width: 21%; text-transform:uppercase;
-          span{ display:block; font-weight:300; font-size:15px;}
+            span{ display:block; font-weight:300; font-size:15px;}
+          }
         }
       }
+
     }
 
 }
