@@ -250,11 +250,13 @@ IN ( ".esc_sql($data['category'])." )) ";
     public  function  yeah_get_sale_off($yeah_group = ''){
         global $wpdb;
         $current_datetimes = date('Y/m/d H:i:s');
+
         if(!empty($yeah_group)){
             if (strpos($yeah_group, ',') !== false) {
                 $yeah_group = explode(',',$yeah_group);
             }
         }
+        var_dump($yeah_group);
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
@@ -282,7 +284,8 @@ IN ( ".esc_sql($data['category'])." )) ";
             ),
         );
         $posts = new WP_Query( $args );
-        var_dump($posts); die;
+
+        var_dump($posts->posts[0]->ID); die;
 
     }
     /*Get Data to widget*/
