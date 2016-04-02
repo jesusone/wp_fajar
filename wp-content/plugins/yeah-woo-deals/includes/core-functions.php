@@ -5,6 +5,16 @@
  * Date: 19/03/2016
  * Time: 16:43
  */
+/*Register Sidebar Woo-deals*/
+register_sidebar( array(
+    'name' => __( 'Woo Deals', 'yeah-woo-deals' ),
+    'id' => 'sidebar-2',
+    'description' => __( 'Appears when using the optional Woo Deals with a page set as Woo Deals', 'yeah-woo-deals' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="wg-title">',
+    'after_title' => '</h3>',
+) );
 function yeah_get_template_part( $slug, $name = '') {
     $template = '';
 
