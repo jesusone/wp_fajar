@@ -41,11 +41,7 @@ jQuery(document).ready(function(){
         jQuery('#dialog-box').dialog('close');
         jQuery('.ui-widget-overlay').fadeOut(2000);
     });
-    /*Change Input Alias*/
-    jQuery('#yeah-alias').change(function(){
-        var  $_alias = jQuery(this).val();
-        jQuery('#yeah-content').val('[yeah_woo_deals alias="'+$_alias+'"]');
-    });
+
     /*Delete Item Short code*/
     jQuery('.yeah-trash').live('click',function(){
         var $_this = jQuery(this);

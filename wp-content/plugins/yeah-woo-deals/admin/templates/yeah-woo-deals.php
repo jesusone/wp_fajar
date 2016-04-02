@@ -69,7 +69,9 @@ $results = $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
            </div>
            <div class="yeah-group">
                <label for=""><?php echo esc_html__('Name','yeah-woo-deals') ?></label>
-               <input id="yeah-content"  name="content" disabled="true" value="" placeholder="<?php echo esc_html__('Name Short Code','yeah-woo-deals');?>"/>
+               <textarea id="yeah-content"  name="content" value="" placeholder="<?php echo esc_html__('Name Short Code','yeah-woo-deals');?>">
+                   
+               </textarea>
            </div>
            <div class="yeah-hidden">
                <input type="hidden" name="id" id="yeah-id" value=""/>

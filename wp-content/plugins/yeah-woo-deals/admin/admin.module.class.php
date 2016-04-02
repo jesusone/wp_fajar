@@ -117,6 +117,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         }
         $alias_input = str_replace(' ','-',strtolower($data['alias']));
         $alias = $this->yeah_check_alias($alias_input,$data['id']);
+        $description =  $data['description'] ;
         if(!$alias['status']){
             echo   json_encode($alias); exit();
         }
@@ -142,7 +143,7 @@ IN ( ".esc_sql($data['category'])." )) ";
                 'id' => $wpdb->insert_id,
                 'alias' => $alias_input,
                 'title' => $data['title'],
-                'content' => '[yeah_woo_deals alias="'.$alias_input.'"]',
+                'content' => $description,
             );
             $data_output['html'] = $this->yeah_rend_html($data_output);
             $result['data']= $data_output;
