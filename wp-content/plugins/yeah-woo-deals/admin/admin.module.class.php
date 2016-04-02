@@ -305,8 +305,8 @@ IN ( ".esc_sql($data['category'])." )) ";
                 ),
                 array(
                     'key' => '_yeah_group_deals',
-                    'value' =>serialize( strval( 1 ) ),
-                    'compare' => 'LIKE'
+                    'value' =>$yeah_group,
+                    'compare' => 'IN'
                 ),
 
             ),
