@@ -1,7 +1,8 @@
 <?php
 $tablename = "yeah_woo_deals_short_code";
 global $wpdb;
-$results = $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
+$deals = new  YeahWooDealsAdminModule();
+$result =$deals->yeah_get_data_widget();
 ?>
 <div class="yeah-message">
     <div class="yeah-message-content"></div>
@@ -9,7 +10,7 @@ $results = $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
 <div class="yeah-loading">
     <div class="yeah-loading-content">
         <i class="fa fa-spinner fa-spin"></i>
-        <span class="yeah-text-loading">Loading...</span>
+        <span class="yeah-text-loading"><?php echo esc_html__('Loading...','yeah-woo-deals') ?></span>
     </div>
 </div>
 <section class="yeah-deals-admin">

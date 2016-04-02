@@ -102,6 +102,11 @@ IN ( ".esc_sql($data['category'])." )) ";
         }
         exit();
     }
+    public  function yeah_get_group_widget(){
+      $result =  $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
+        return $result;
+
+    }
     /*Ajax add update short code*/
     public  function yeah_ajax_short_code_new_update(){
         global $wpdb;
@@ -271,7 +276,7 @@ IN ( ".esc_sql($data['category'])." )) ";
             ),
         );
         $posts = new WP_Query( $args );
-      
+
         return $posts;
     }
   
