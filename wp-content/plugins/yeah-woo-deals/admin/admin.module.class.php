@@ -192,8 +192,8 @@ IN ( ".esc_sql($data['category'])." )) ";
             $query = " SELECT  COUNT(*) as count_alias   FROM  `yeah_woo_deals_short_code` WHERE alias= '".$alias."' AND id NOT IN (".$id.")";
         }
         $data_count = $wpdb->get_row($query);
+        $error = array('status'=>true);
         if($data_count) {
-            $error = array('status'=>true);
             $error['status'] = ($data_count->count_alias > 0) ? false : true;
             $error['message'] = ($data_count->count_alias > 0) ? "Field <b>Alias</b> exsist" : '';
 
