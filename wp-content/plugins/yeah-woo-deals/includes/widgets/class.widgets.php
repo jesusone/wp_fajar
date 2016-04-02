@@ -106,7 +106,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 <?php if($groups){?>
                 <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals')); ?>[]" multiple="multiple">
                         <?php foreach($groups as $group):?>
-                            <option value="<?php echo $group->id?>"><?php echo $group->name; ?></option>
+                            <option value="<?php echo esc_attr($group->id)?>"><?php echo esc_attr($group->name); ?></option>
                         <?php endforeach;?>
                 </select>
                 <?php } else { ?>
