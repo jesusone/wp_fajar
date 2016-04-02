@@ -259,11 +259,12 @@ IN ( ".esc_sql($data['category'])." )) ";
                 'compare' => 'LIKE'
             );
         }
-        $args = array(
+        $args_min = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
             'paged' => 1,
             'orderby' => 'meta_value_num',
+            'order' => 'ASC',
             'meta_query' => array(
                 'relation' => 'AND',
                 array(
@@ -280,19 +281,44 @@ IN ( ".esc_sql($data['category'])." )) ";
 
             ),
         );
-        $min = $args;
+        $args_max = array(
+            'posts_per_page' => 1,
+            'post_type' => 'product',
+            'paged' => 1,
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC',
+            'meta_query' => array(
+                'relation' => 'AND',
+                array(
+                    'key' => '_yeah_dates_end',
+                    'value' => $current_datetimes,
+                    'compare' => '>',
+                    'type' => 'DATETIME'
+                ),
+                array(
+                    'key' => '_yeah_price_sale',
+                ),
+                $arrays,
 
-        $posts_min = new WP_Query( $min );
+
+            ),
+        );
+        $posts_min = new WP_Query( $args_min );
+        $posts_max = new WP_Query( $args_max );
         $sale_off = array();
         if($posts_min){
             $meta_fields = get_post_custom($posts_min->posts[0]->ID);
            $price_sale = get_post_meta($posts_min->posts[0]->ID,'_yeah_price_sale',true);
            $price_regular = get_post_meta($posts_min->posts[0]->ID,'_regular_price',true);
-            var_dump($meta_fields);
-            var_dump($price_regular);
-            $sale_off['min'] = ($price_sale * 0.01) / $price_regular;
+            $sale_off['min'] = ($price_sale * 100) / $price_regular;
         }
-        var_dump($sale_off);
+        if($posts_min){
+            $meta_fields = get_post_custom($posts_max->posts[0]->ID);
+            $price_sale = get_post_meta($posts_max->posts[0]->ID,'_yeah_price_sale',true);
+            $price_regular = get_post_meta($posts_max->posts[0]->ID,'_regular_price',true);
+            $sale_off['max'] = ($price_sale * 100) / $price_regular;
+        }
+        return $sale_off;
     }
     /*Get Data to widget*/
     public function yeah_get_data_widget($yeah_group = ''){

@@ -59,7 +59,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 ?>
                 <div class="yeah-weekend-deals-widget-top">
                     <img src="<?php echo yeah_woo_deals()->acess_url; ?>/images/weekend-deals.png">
-                    <h3 class="museo_slab_500">25% - 90% off</h3>
+                    <h3 class="museo_slab_500"><?php echo esc_attr($sale_off['min'])?><?php echo esc_html__('% -','yeah-woo-deals'); ?> <?php echo esc_attr($sale_off['max'])?><?php echo esc_html__('% off','yeah-woo-deals') ?></h3>
                 </div>
                 <!--Start CountDown-->
                 <!---->
