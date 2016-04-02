@@ -245,7 +245,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         $current_datetimes = date('Y/m/d H:i:s');
         if(!empty($yeah_group)){
             $yeah_group = explode($yeah_group);
-            var_dump($yeah_group); die;
+            var_dump(',',$yeah_group); die;
         }
         $args = array(
             'posts_per_page' => 1,
