@@ -252,7 +252,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         $current_datetimes = date('Y/m/d H:i:s');
 
 
-        var_dump($yeah_group);
+
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
@@ -279,9 +279,9 @@ IN ( ".esc_sql($data['category'])." )) ";
 
             ),
         );
-        $posts = new WP_Query( $args );
+        //$posts = new WP_Query( $args );
 
-        var_dump($posts->posts[0]->ID); die;
+        //var_dump($posts->posts[0]->ID); die;
 
     }
     /*Get Data to widget*/
