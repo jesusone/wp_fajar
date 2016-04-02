@@ -109,7 +109,7 @@ class YeahWooDealsAdmin {
         }
        return $data;
     }
-    function yeah_product_tab($tabs) {
+   /* function yeah_product_tab($tabs) {
         $tabs['woo_yeah_woo_deals_tab'] = array(
             'label'  => __( 'Woo Deals', 'yeah-woo-deals' ),
             'target' => 'woo_yeah_woo_deals_tab',
@@ -117,8 +117,8 @@ class YeahWooDealsAdmin {
         );
 
         return $tabs;
-    }
-   
+    }*/
+
    /* function add_ajax_url(){
         wp_localize_script( 'jquery-ui', 'WooDeals', array(
                 'ajaxurl'   => admin_url( 'admin-ajax.php' ),
