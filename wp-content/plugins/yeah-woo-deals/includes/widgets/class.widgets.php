@@ -88,7 +88,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
         {
             $title = !empty($instance['title']) ? $instance['title'] : '';
             $group_deals = !empty($instance['group_deals']) ? $instance['group_deals'] : '';
-            $image_title = !empty($instance['image_title']) ? $instance['image_title'] : '';
+            $image_title = !empty($instance['image_title']) ? $instance['image_title'] : yeah_woo_deals()->acess_url.'/images/weekend-deals.png';
 
             ?>
             <p>
