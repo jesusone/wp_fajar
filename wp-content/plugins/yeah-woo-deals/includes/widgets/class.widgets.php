@@ -132,7 +132,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
          */
         public function update($new_instance, $old_instance)
         {
-            var_dump($new_instance);
+            var_dump($new_instance);die;
             $instance = $old_instance;
             $instance['title'] = (! empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
             $instance['group_deals'] = (! empty($new_instance['group_deals'])) ? strip_tags($new_instance['group_deals']) : '';
