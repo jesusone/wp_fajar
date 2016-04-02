@@ -62,11 +62,10 @@ class YeahWooDealsAdmin {
             do_action('after_yeah_fields_save', $_POST);
         }
     }
-    function yeah_fields_meta() {
+    /*function yeah_fields_meta() {
         global $post;
         $custom = get_post_custom($post->ID);
 
-        //echo '<pre>'; print_r($custom); echo '</pre>';
         $dates = ( isset( $custom['_yeah_woo_dates'] ) )? unserialize( $custom['_yeah_woo_dates'][0] ) : "";
 
         $fields = apply_filters( 'yeah_fields_product_data_tabs', array(
@@ -97,7 +96,7 @@ class YeahWooDealsAdmin {
         ) );
 
         return $fields;
-    }
+    }*/
     public function yeah_get_group_deals(){
         global $wpdb;
         $tablename = "yeah_woo_deals_short_code";
@@ -138,21 +137,7 @@ class YeahWooDealsAdmin {
             )
         );
     }
-    public  function add_admin_script()
-    {
-        /** post-type */
-            wp_enqueue_script('jquery');
-            wp_enqueue_style('font-awesome', yeah_woo_deals()->admin_url . 'assets/css/font-awesome.min.css', array(), '4.5.0');
-            wp_enqueue_style('chosen', yeah_woo_deals()->admin_url . 'assets/css/chosen.min.css', array(), '4.5.0');
-            wp_enqueue_style('jquery-ui', yeah_woo_deals()->admin_url . 'assets/css/jquery-ui.min.css', array(), '4.5.0');
-            wp_enqueue_style('yeah-short-codes-lists', yeah_woo_deals()->admin_url . 'assets/css/yeah_short_code_lists.css');
-            wp_register_script('jquery.datetimepicker', yeah_woo_deals()->admin_url . 'assets/js/jquery.datetimepicker.js', array('jquery'), '1.0.0', true);
-            wp_enqueue_script('jquery.sortable', yeah_woo_deals()->admin_url . 'assets/js/jquery.sortable.js', array('jquery'), '1.0.0', true);
-            wp_enqueue_script('jquery.chosen', yeah_woo_deals()->admin_url . 'assets/js/chosen.jquery.min.js', array('jquery'), '1.0.0', true);
-            wp_enqueue_script('jquery-ui', yeah_woo_deals()->admin_url . 'assets/js/jquery-ui.min.js', array('jquery'), '1.0.0', true);
-            wp_enqueue_script('yeah-short-codes-lists', yeah_woo_deals()->admin_url . 'assets/js/yeah_short_code_lists.js', array('jquery'), '1.0.0', true);
-
-    }
+ 
     /*List woo deals*/
     public function  yeah_woo_deals_setting()
     {
