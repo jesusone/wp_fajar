@@ -251,11 +251,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         global $wpdb;
         $current_datetimes = date('Y/m/d H:i:s');
 
-        if(!empty($yeah_group)){
-            if (strpos($yeah_group, ',') !== false) {
-                $yeah_group = explode(',',$yeah_group);
-            }
-        }
+
         var_dump($yeah_group);
         $args = array(
             'posts_per_page' => 1,
@@ -292,11 +288,7 @@ IN ( ".esc_sql($data['category'])." )) ";
     public function yeah_get_data_widget($yeah_group = ''){
         global $wpdb;
         $current_datetimes = date('Y/m/d H:i:s');
-        if(!empty($yeah_group)){
-            if (strpos($yeah_group, ',') !== false) {
-                $yeah_group = explode(',',$yeah_group);
-            }
-        }
+        
         $args = array(
             'posts_per_page' => 1,
             'post_type' => 'product',
