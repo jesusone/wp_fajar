@@ -87,11 +87,16 @@ if (! class_exists('YeahWooDeals')) {
         */
         public  function yeah_install(){
             register_activation_hook(__FILE__,array($this,'yeah_install_table'));
-            // datetimepicker
-          /*  wp_enqueue_script( 'jquery.countdown', $this->plugin_url . '/assets/js/jquery.countdown.min.js', array( 'jquery' ) );
-            wp_enqueue_script( 'yeah-woo-deals', $this->plugin_url . '/assets/js/yeah_woo_deals.js', array( 'jquery' ) );
-            wp_register_style( 'jquery.datetimepicker', $this->plugin_url . '/assets/css/jquery.datetimepicker.css' );*/
+            add_action( 'wp_enqueue_scripts', 'yeah_enqueue_scripts' );
 
+
+
+        }
+        public  function yeah_enqueue_scripts() {
+            // datetimepicker
+            wp_enqueue_script( 'jquery.countdown', $this->plugin_url . '/assets/js/jquery.countdown.min.js', array( 'jquery' ) );
+            wp_enqueue_script( 'yeah-woo-deals', $this->plugin_url . '/assets/js/yeah_woo_deals.js', array( 'jquery' ) );
+            wp_register_style( 'jquery.datetimepicker', $this->plugin_url . '/assets/css/jquery.datetimepicker.css' );
         }
         /*@author: OyeahThemes
         @function: Install tables
