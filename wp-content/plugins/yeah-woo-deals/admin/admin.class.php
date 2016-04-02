@@ -123,7 +123,7 @@ class YeahWooDealsAdmin {
             esc_html__( 'Woo Deals', 'yeah-woo-deals' ),
             'Woo Deals',
             'manage_options',
-            'yeah-woo-deals-short-codes',
+            'yeah-woo-deals-groups',
             array($this,'yeah_woo_deals_setting'),
             yeah_woo_deals()->admin_url.'assets/images/menu-icon.png',
             25

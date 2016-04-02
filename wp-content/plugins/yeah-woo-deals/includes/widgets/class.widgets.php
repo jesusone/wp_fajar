@@ -99,7 +99,18 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
             </p>
             <p>
                 <label for="<?php echo $this->get_field_id( 'group_deals' ); ?>"><?php esc_html_e( 'Woo Deals Group:', 'yeah-woo-deals' ); ?></label>
-                <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals' )); ?>" type="text" value="<?php echo esc_attr( $group_deals ); ?>">
+                <?php $model = new YeahWooDealsAdminModule();
+                $groups = $model->yeah_get_group_widget();
+                ?>
+                <?php if($groups){?>
+                <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals' )); ?>[]" multiple="multiple">
+                        <?php foreach($groups as $group):?>
+                            <option value="<?php $group->id?>"
+                        <?php endforeach;?>
+                </select>
+                <?php } else { ?>
+                    <a href="admin.php?page=yeah-woo-deals-groups"><?php echo esc_html__('Create Group Deals','yeah-woo-deals')?></a>
+                <?php } ?>
             </p>
             <p>
                 <label for="<?php echo $this->get_field_id( 'image_title' ); ?>"><?php esc_html_e( 'Image Title:', 'yeah-woo-deals' ); ?></label>
