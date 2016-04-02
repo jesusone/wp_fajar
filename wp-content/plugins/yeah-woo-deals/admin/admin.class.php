@@ -156,7 +156,7 @@ class YeahWooDealsAdmin {
     /*List woo deals*/
     public function  yeah_woo_deals_setting()
     {
-        $view = $_REQUEST['view'];
+        $view = !empty($_REQUEST['view']) ? $_REQUEST['view'] : '';
         switch($view){
             case '':
                 require_once(yeah_woo_deals()->admin_dir.'/templates/yeah-woo-deals.php');
