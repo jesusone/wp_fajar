@@ -103,6 +103,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         exit();
     }
     public  function yeah_get_group_widget(){
+        global $wpdb;
       $result =  $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
         return $result;
 
