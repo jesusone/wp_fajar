@@ -24,7 +24,7 @@ class YeahWooDealsAdmin {
     }
     function yeah_product_tab_content(){
             // enqueue
-            wp_enqueue_script('jquery');
+          //  wp_enqueue_script('jquery');
           /*  wp_enqueue_script('jquery.datetimepicker');
             wp_enqueue_style('jquery.datetimepicker');*/
          /*   wp_enqueue_script('script.yeahwoodeals');
