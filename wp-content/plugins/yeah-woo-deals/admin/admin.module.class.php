@@ -246,7 +246,6 @@ IN ( ".esc_sql($data['category'])." )) ";
         if(!empty($yeah_group)){
             if (strpos($yeah_group, ',') !== false) {
                 $yeah_group = explode(',',$yeah_group);
-
             }
         }
         $args = array(
@@ -266,7 +265,7 @@ IN ( ".esc_sql($data['category'])." )) ";
                 array(
                     'key' => '_yeah_group_deals',
                     'value' => $yeah_group,
-                    'compare' => 'IN'
+                    'compare' => 'LIKE'
                 ),
 
             ),
