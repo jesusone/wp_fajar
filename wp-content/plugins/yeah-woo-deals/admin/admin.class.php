@@ -8,7 +8,7 @@
 new YeahWooDealsAdmin();
 class YeahWooDealsAdmin {
 
-    public function  __construct(){
+/*    public function  __construct(){
         // wp head.
         add_action('admin_head', array($this, 'add_ajax_url'));
         // admin scripts.
@@ -21,7 +21,7 @@ class YeahWooDealsAdmin {
         add_action( 'woocommerce_product_data_panels', array( &$this, 'yeah_product_tab_content' ) );
         add_action( 'save_post', array( &$this,'yeah_update_custom_meta_fields' ) );
         $this->yeah_get_group_deals();
-    }
-  
+    }*/
+
 
 }
