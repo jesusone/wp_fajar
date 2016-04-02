@@ -140,12 +140,13 @@ class YeahWooDealsAdmin {
     }
     function add_admin_script()
     {
-        /** post-type */
+            /** post-type */
             wp_enqueue_script('jquery');
             wp_enqueue_style('font-awesome', yeah_woo_deals()->admin_url . 'assets/css/font-awesome.min.css', array(), '4.5.0');
             wp_enqueue_style('chosen', yeah_woo_deals()->admin_url . 'assets/css/chosen.min.css', array(), '4.5.0');
             wp_enqueue_style('jquery-ui', yeah_woo_deals()->admin_url . 'assets/css/jquery-ui.min.css', array(), '4.5.0');
             wp_enqueue_style('yeah-short-codes-lists', yeah_woo_deals()->admin_url . 'assets/css/yeah_short_code_lists.css');
+            wp_enqueue_style('jquery.datetimepicker', yeah_woo_deals()->admin_url . 'assets/css/jquery.datetimepicker.css');
             wp_enqueue_script('jquery.datetimepicker', yeah_woo_deals()->admin_url . 'assets/js/jquery.datetimepicker.js', array('jquery'), '1.0.0', true);
             wp_enqueue_script('jquery.sortable', yeah_woo_deals()->admin_url . 'assets/js/jquery.sortable.js', array('jquery'), '1.0.0', true);
             wp_enqueue_script('jquery.chosen', yeah_woo_deals()->admin_url . 'assets/js/chosen.jquery.min.js', array('jquery'), '1.0.0', true);
