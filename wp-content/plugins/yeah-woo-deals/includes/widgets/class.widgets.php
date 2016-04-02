@@ -110,7 +110,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                         $this->get_field_name('group_deals'),
                         $this->get_field_id('group_deals')
                     );
-                    foreach( $groups as $id )
+                    foreach( $instance['group_deals'] as $id )
                     {
                         printf(
                             '<option value="%s" %s style="margin-bottom:3px;">%s</option>',
