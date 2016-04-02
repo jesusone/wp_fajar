@@ -87,7 +87,7 @@ if (! class_exists('YeahWooDeals')) {
         */
         public  function yeah_install(){
             register_activation_hook(__FILE__,array($this,'yeah_install_table'));
-            add_action( 'wp_enqueue_scripts', 'yeah_enqueue_scripts' );
+            add_action( 'wp_enqueue_scripts',array($this, 'yeah_enqueue_scripts') );
 
 
 
