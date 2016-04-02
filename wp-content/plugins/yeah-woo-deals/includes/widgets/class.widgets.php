@@ -103,12 +103,26 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 $groups = $model->yeah_get_group_widget();
                 var_dump($this->get_field_name( 'group_deals'));
                 ?>
-                <?php if($groups){?>
-                <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals')).'[]'; ?>" multiple="multiple">
-                        <?php foreach($groups as $group):?>
-                            <option value="<?php $group->id?>"><?php echo $group->name; ?></option>
-                        <?php endforeach;?>
-                </select>
+                <?php if($groups){
+
+                    printf (
+                        '<select multiple="multiple" name="%s[]" id="%s" class="widefat" size="15" style="margin-bottom:10px">',
+                        $this->get_field_name('group_deals'),
+                        $this->get_field_id('group_deals')
+                    );
+                    foreach( $groups as $id )
+                    {
+                        printf(
+                            '<option value="%s" %s style="margin-bottom:3px;">%s</option>',
+                            $id,
+                            in_array( $id, $instance['group_deals']) ? 'selected="selected"' : '',
+                            $id
+                        );
+                    }
+
+                    echo '</select>';
+                    ?>
+              
                 <?php } else { ?>
                     <a href="admin.php?page=yeah-woo-deals-groups"><?php echo esc_html__('Create Group Deals','yeah-woo-deals')?></a>
                 <?php } ?>
