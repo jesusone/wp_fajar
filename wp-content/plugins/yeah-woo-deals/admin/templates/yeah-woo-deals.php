@@ -2,7 +2,7 @@
 $tablename = "yeah_woo_deals_short_code";
 global $wpdb;
 $deals = new  YeahWooDealsAdminModule();
-$results =$deals->yeah_get_data_widget();
+$results =$deals->yeah_get_group_widget();
 ?>
 <div class="yeah-message">
     <div class="yeah-message-content"></div>
