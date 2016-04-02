@@ -271,7 +271,7 @@ IN ( ".esc_sql($data['category'])." )) ";
             ),
         );
         $posts = new WP_Query( $args );
-        var_dump($posts);die;
+      
         return $posts;
     }
   
