@@ -137,9 +137,9 @@ class YeahWooDealsAdmin {
             )
         );
     }
- 
+
     /*List woo deals*/
-    public function  yeah_woo_deals_setting()
+    /*public function  yeah_woo_deals_setting()
     {
         $view = $_REQUEST['view'];
         switch($view){
@@ -152,6 +152,6 @@ class YeahWooDealsAdmin {
             default:
                 break;
         }
-    }
+    }*/
 
 }
