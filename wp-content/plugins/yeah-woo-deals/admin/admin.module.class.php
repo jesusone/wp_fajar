@@ -260,7 +260,7 @@ IN ( ".esc_sql($data['category'])." )) ";
             );
         }
         $args_min = array(
-            'posts_per_page' => 1,
+            'posts_per_page' => 2,
             'post_type' => 'product',
             'paged' => 1,
             'orderby' => 'meta_value_num',
@@ -282,7 +282,7 @@ IN ( ".esc_sql($data['category'])." )) ";
             ),
         );
         $args_max = array(
-            'posts_per_page' => 1,
+            'posts_per_page' => 2,
             'post_type' => 'product',
             'paged' => 1,
             'orderby' => 'meta_value_num',
