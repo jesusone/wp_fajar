@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
     /*Seting Delas*/
     // end setting page JS
     if( jQuery('.wa-field-dates').length > 0 ){
+        alert('Tesst');
         jQuery('.wa-field-dates').each(function(){
             jQuery(this).datetimepicker({
                 value: jQuery(this).data('dates'),
@@ -11,6 +12,7 @@ jQuery(document).ready(function(){
             });
         })
     }
+    /*End date*/
     jQuery(".yeah-group-deal").chosen();
     jQuery('.chosen-container').css({"width": "300px"});
     jQuery('.yeah-setting').live('click',function(){

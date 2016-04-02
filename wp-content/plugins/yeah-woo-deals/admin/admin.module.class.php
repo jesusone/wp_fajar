@@ -137,7 +137,7 @@ IN ( ".esc_sql($data['category'])." )) ";
             global $yeah_short_code;
             $insert = $wpdb->insert( $table_name, $data_input, $format);
             $result['status'] = ($insert) ? true : false;
-            $result['message'] = ($insert) ? "Save success short code." : "Can't save short code.";
+            $result['message'] = ($insert) ? "Save success Group Deals." : "Can't save Group Deals.";
             $yeah_short_code = array('name'=>$data['title'],$wpdb->insert_id);
             $data_output = array(
                 'id' => $wpdb->insert_id,
@@ -152,7 +152,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         else {
             /*Update item*/
             $update =  $wpdb->update($table_name,$data_input ,array( 'id' => $data['id'] ),$format, array( '%d' ));
-            $result['message'] = ($update) ? "Save success short code." : "Can't save short code.";
+            $result['message'] = ($update) ? "Save success short code." : "Can't save Group Deals.";
             $result['status'] = ($update) ? true : false;
             $data_ouput = array(
                 'id' => $wpdb->insert_id,
