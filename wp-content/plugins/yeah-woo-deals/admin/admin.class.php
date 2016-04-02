@@ -138,7 +138,7 @@ class YeahWooDealsAdmin {
             )
         );
     }
-    function add_admin_script()
+    public  function add_admin_script()
     {
         /** post-type */
             wp_enqueue_script('jquery');
