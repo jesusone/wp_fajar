@@ -1,6 +1,5 @@
 <?php
-$tablename = "yeah_woo_deals_short_code";
-global $wpdb;
+
 $deals = new  YeahWooDealsAdminModule();
 $results =$deals->yeah_get_group_widget();
 ?>

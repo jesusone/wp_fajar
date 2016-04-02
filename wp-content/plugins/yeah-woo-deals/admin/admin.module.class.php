@@ -104,6 +104,7 @@ IN ( ".esc_sql($data['category'])." )) ";
     }
     public  function yeah_get_group_widget(){
         global $wpdb;
+        $tablename = "yeah_woo_deals_short_code";
       $result =  $wpdb->get_results( 'SELECT * FROM '.$tablename.' ', OBJECT );
         return $result;
 
