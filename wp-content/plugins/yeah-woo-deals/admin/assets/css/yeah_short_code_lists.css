@@ -94,8 +94,8 @@
 /*Loading*/
 .yeah-loading.yeah-open  {
     transform: translateY(0%);
-    top: 50%;
-    display: block;
+    top: 50% !important;
+    z-index: 9999999;
 }
 .yeah-loading {
     background: rgba(0, 0, 0, 0.7);
@@ -103,7 +103,7 @@
     position: fixed;
     left: 50%;
     top: 0;
-    z-index: 99999;
+
     padding: 10px;
     border-radius: 5px;
     transform: translateY(-100%);
