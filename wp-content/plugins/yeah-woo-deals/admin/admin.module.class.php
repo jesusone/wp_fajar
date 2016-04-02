@@ -270,8 +270,8 @@ IN ( ".esc_sql($data['category'])." )) ";
                 ),
                 array(
                     'key' => '_yeah_group_deals',
-                    'value' => $yeah_group,
-                    'compare' => 'LIKE'
+                    'value' =>$yeah_group,
+                    'compare' => 'IN'
                 ),
                 array(
                     'key' => '_yeah_price_sale',
@@ -279,9 +279,9 @@ IN ( ".esc_sql($data['category'])." )) ";
 
             ),
         );
-        //$posts = new WP_Query( $args );
+        $posts = new WP_Query( $args );
 
-        //var_dump($posts->posts[0]->ID); die;
+        var_dump($posts->posts[0]->ID); die;
 
     }
     /*Get Data to widget*/
