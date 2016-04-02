@@ -281,7 +281,7 @@ IN ( ".esc_sql($data['category'])." )) ";
         );
         $posts = new WP_Query( $args );
 
-        var_dump($posts->posts[0]->ID); die;
+        var_dump($posts->posts[0]->ID);
 
     }
     /*Get Data to widget*/
