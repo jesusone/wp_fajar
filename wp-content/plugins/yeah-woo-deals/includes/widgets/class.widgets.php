@@ -30,8 +30,10 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
             if (! empty($instance['title'])) {
                 echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
             }
+            $yeah_group = !empty($instance['group_deals']) ? $instance['group_deals'] : '';
+
             $module = new YeahWooDealsAdminModule();
-            $posts = $module->yeah_get_data_widget();
+            $posts = $module->yeah_get_data_widget($yeah_group);
             $current_datetimes = date('Y/m/d H:i:s');
             while ( $posts->have_posts() ) {
                 $posts->the_post();
