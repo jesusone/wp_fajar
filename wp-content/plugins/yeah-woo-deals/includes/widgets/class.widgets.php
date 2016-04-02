@@ -34,6 +34,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
 
             $module = new YeahWooDealsAdminModule();
             $posts = $module->yeah_get_data_widget($yeah_group);
+            $sale_off = $module->yeah_get_sale_off($yeah_group);
             $current_datetimes = date('Y/m/d H:i:s');
             while ( $posts->have_posts() ) {
                 $posts->the_post();
@@ -100,7 +101,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
             <p>
                 <label for="<?php echo $this->get_field_id( 'group_deals' ); ?>"><?php esc_html_e( 'Woo Deals Group:', 'yeah-woo-deals' ); ?></label>
                 <?php $model = new YeahWooDealsAdminModule();
-                $groups = $model->yeah_get_group_widget();
+                      $groups = $model->yeah_get_group_widget();
                 ?>
                 <?php if($groups){?>
                 <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals')); ?>[]" multiple="multiple">
