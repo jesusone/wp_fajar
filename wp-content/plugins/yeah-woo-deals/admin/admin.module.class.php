@@ -298,15 +298,13 @@ IN ( ".esc_sql($data['category'])." )) ";
                 array(
                     'key' => '_yeah_price_sale',
                 ),
-              //  $arrays,
+               $arrays,
 
 
             ),
         );
         $posts_min = new WP_Query( $args_min );
         $posts_max = new WP_Query( $args_max );
-        var_dump($posts_min->posts);
-        var_dump($posts_max->posts);
         $sale_off = array();
         if($posts_min){
             $meta_fields = get_post_custom($posts_min->posts[0]->ID);
