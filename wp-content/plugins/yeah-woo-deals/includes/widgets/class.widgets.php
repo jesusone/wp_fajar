@@ -101,6 +101,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 <label for="<?php echo $this->get_field_id( 'group_deals' ); ?>"><?php esc_html_e( 'Woo Deals Group:', 'yeah-woo-deals' ); ?></label>
                 <?php $model = new YeahWooDealsAdminModule();
                 $groups = $model->yeah_get_group_widget();
+                var_dump($instance['group_deals']);
                 ?>
                 <?php if($groups){?>
                 <select class="widefat" id="<?php echo esc_attr($this->get_field_id( 'group_deals' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'group_deals')); ?>[]" multiple="multiple">
