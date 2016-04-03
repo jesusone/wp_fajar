@@ -23,7 +23,7 @@ if($yeah_carousel){
     <div class="yeah-fancyboxes-body">
         <?php if($yeah_carousel == 'no'){ ?>
             <div class="row">
-        <?}?>
+        <?php}?>
 
             <?php
 
@@ -82,6 +82,6 @@ if($yeah_carousel){
 
     <?php if($yeah_carousel == 'no'){ ?>
          </div>
-        <?}?>
+        <?php}?>
     </div>
 </div>
