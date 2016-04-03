@@ -5,6 +5,7 @@ $class_link = 'zo-fancyboxes-' . $uqid;
 $yeah_carousel = isset($atts['yeah_carousel']) ? $atts['yeah_carousel'] : 'no';
 $class_carousel = isset($atts['yeah_carousel']) ? 'yeah-carousel yeah-carousel-'.esc_attr($atts['html_id']) : 'row';
 $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
+
 if($yeah_carousel == 'yes'){
     $atts['item_class'] = '';
     wp_enqueue_style('owl-carousel',ZO_CSS.'owl.carousel.css','','2.0.0b','all');
@@ -21,7 +22,6 @@ if($yeah_carousel == 'yes'){
                 margin:0,
                 nav:true,
                 items: 1,
-                slideBy: 6
             })
 
         })
@@ -50,7 +50,6 @@ if($yeah_carousel == 'yes'){
             $zo_fancybox_content_color = isset($atts['zo_fancybox_content_color']) ? $atts['zo_fancybox_content_color'] : '';
 
             for ($i = 1; $i <= $columns; $i++) : ?>
-                <?php if ($i != 5):
                 $icon = isset($atts['icon' . $i]) ? $atts['icon' . $i] : '';
                 $content = isset($atts['description' . $i]) ? $atts['description' . $i] : '';
                 $image = isset($atts['image' . $i]) ? $atts['image' . $i] : '';
@@ -94,7 +93,6 @@ if($yeah_carousel == 'yes'){
                         <?php endif;?>
                     </div>
                 </div>
-                <?php endif; ?>
             <?php endfor; ?>
         </div>
     </div>
