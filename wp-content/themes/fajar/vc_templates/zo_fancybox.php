@@ -87,7 +87,7 @@ if($yeah_carousel == 'yes'){
                             <?php if($atts['button_text']!=''):?>
                                 <div class="yeah-fancyboxes-readmore">
                                     <?php
-                                    $class_btn = ($atts['button_type']=='button')?'btn btn-large':'';
+                                    $class_btn = ($atts['button_type']=='button')?'btn btn-large':'btn btn-default btn-white';
                                     ?>
                                     <a href="<?php echo esc_url($button_link);?>" class="<?php echo esc_attr($class_btn);?>"><?php echo esc_attr($atts['button_text']);?></a>
                                 </div>
