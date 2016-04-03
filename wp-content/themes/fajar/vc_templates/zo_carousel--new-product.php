@@ -48,21 +48,21 @@ $atts['categories'] = $_category;
 				?>
             </ul>
         </div>
-		<div class="zo-carousel-filter-hidden" style="display: none"></div>
+		<div class="yeah-carousel-filter-hidden" style="display: none"></div>
     <?php endif; ?>
 	
-    <div class="zo-carousel <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
+    <div class="yeah-carousel <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
         <?php
         $posts = $atts['posts'];
         while ($posts->have_posts()) :
             $posts->the_post();
             $groups = array();
-            $groups[] = 'zo-carousel-filter-item all';
+            $groups[] = 'yeah-carousel-filter-item all';
             foreach (zoGetCategoriesByPostID(get_the_ID(), $taxonomy) as $category) {
                 $groups[] = 'category-' . $category->slug;
             }
             ?>
-            <div class="zo-carousel-item <?php echo implode(' ', $groups);?>">
+            <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
                 <?php
                 if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                     $class = ' has-thumbnail';
@@ -71,15 +71,15 @@ $atts['categories'] = $_category;
                     $class = ' no-image';
                     $thumbnail = '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" />';
                 endif;
-                echo '<div class="zo-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
+                echo '<div class="yeah-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
                 ?>
-                <div class="zo-carousel-title">
+                <div class="yeah-carousel-title">
                     <?php the_title();?>
                 </div>
-                <div class="zo-carousel-time">
+                <div class="yeah-carousel-time">
                     <?php the_time('l, F jS, Y');?>
                 </div>
-                <div class="zo-carousel-categories">
+                <div class="yeah-carousel-categories">
                     <?php echo get_the_term_list(get_the_ID(), 'category', 'Category: ', ', ', ''); ?>
                 </div>
             </div>
