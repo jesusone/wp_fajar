@@ -23,8 +23,7 @@ if($yeah_carousel){
     <div class="yeah-fancyboxes-body">
         <?php if($yeah_carousel == 'no'){ ?>
             <div class="row">
-        <?php}?>
-
+        <?php } ?>
             <?php
 
             $zo_title_size = isset($atts['zo_title_size']) ? $atts['zo_title_size'] : 'h2';
@@ -81,7 +80,7 @@ if($yeah_carousel){
             <?php endfor; ?>
 
     <?php if($yeah_carousel == 'no'){ ?>
-         </div>
-        <?php}?>
+             </div>
+    <?php}  ?>
     </div>
 </div>
