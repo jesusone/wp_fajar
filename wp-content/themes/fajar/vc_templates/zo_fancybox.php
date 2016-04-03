@@ -18,8 +18,22 @@ if($yeah_carousel == 'yes'){
         jQuery(document).ready(function(){
             jQuery('.'+'<?php echo $class_carousel; ?>').owlCarousel({
                 loop:true,
-                margin:10,
+                margin:0,
                 nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:1
+                    },
+                    992:{
+                        items:1
+                    },
+                    1200:{
+                        items:1
+                    }
+                }
             })
 
         })
