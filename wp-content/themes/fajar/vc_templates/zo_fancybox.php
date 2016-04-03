@@ -49,7 +49,7 @@ if($yeah_carousel == 'yes'){
             $zo_fancybox_title_color = isset($atts['zo_fancybox_title_color']) ? $atts['zo_fancybox_title_color'] : '';
             $zo_fancybox_content_color = isset($atts['zo_fancybox_content_color']) ? $atts['zo_fancybox_content_color'] : '';
 
-            for ($i = 1; $i <= $columns; $i++) : ?>
+            for ($i = 1; $i <= $columns; $i++) :
                 $icon = isset($atts['icon' . $i]) ? $atts['icon' . $i] : '';
                 $content = isset($atts['description' . $i]) ? $atts['description' . $i] : '';
                 $image = isset($atts['image' . $i]) ? $atts['image' . $i] : '';
@@ -93,6 +93,7 @@ if($yeah_carousel == 'yes'){
                         <?php endif;?>
                     </div>
                 </div>
+
             <?php endfor; ?>
         </div>
     </div>
