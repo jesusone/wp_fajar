@@ -1037,6 +1037,9 @@
 * [Start] 12. Carousel New Product  *
 *==================================*/
 .template-zo_carousel--new-product {
+  .owl-stage-outer {
+    padding-top: 28px;
+  }
   position: relative;
   div.owl-nav {
     position: absolute;
