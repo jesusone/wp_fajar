@@ -1039,9 +1039,17 @@
 .template-zo_carousel--new-product {
   .owl-stage-outer {
     padding-top: 28px;
-    .zo-carousel-item {
-
-    }
+      .yeah-carousel-item {
+        text-align: center;
+        .yeah-grid-media {
+          margin-bottom: 29px;
+        }
+        .yeah-carousel-title {
+          a{
+            font-size: 18px;
+          }
+        }
+      }
   }
   position: relative;
   div.owl-nav {

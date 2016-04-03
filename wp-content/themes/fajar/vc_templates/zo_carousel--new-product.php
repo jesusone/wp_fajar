@@ -73,9 +73,9 @@ $atts['categories'] = $_category;
                 endif;
                 echo '<div class="yeah-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
                 ?>
-                <div class="yeah-carousel-title">
-                    <?php the_title();?>
-                </div>
+                <h4 class="yeah-carousel-title">
+                    <a href="<?php echo the_permalink(); ?>"></a><?php the_title();?></a>
+                </h4>
                 <div class="yeah-carousel-time">
                     <?php the_time('l, F jS, Y');?>
                 </div>
