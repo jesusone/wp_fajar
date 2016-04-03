@@ -372,4 +372,8 @@ body .wpb_button {
   width: 46px;
   height: 46px;
   border: 1px solid #A1A1A1;
+  @include border-radius(50%);
+    i{
+        font-size: 46px;
+    }
 }
