@@ -1048,7 +1048,7 @@
     @include transform(translateY(-100%));
     @include breakpoint-max(480px){
       left: 0;
-      top: 256px;
+      top: 160px;
       width: 100%;
       [class*='owl-'] {
         position: absolute;
