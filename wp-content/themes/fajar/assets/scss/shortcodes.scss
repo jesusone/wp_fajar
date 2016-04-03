@@ -1050,6 +1050,9 @@
       left: 0;
       top: 256px;
       width: 100%;
+      [class*='owl-'] {
+        position: absolute;
+      }
       .owl-prev {
         left: 0;
       }
