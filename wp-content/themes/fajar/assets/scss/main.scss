@@ -387,6 +387,9 @@ div.owl-theme .owl-nav {
         }
         &:hover {
             background: transparent;
+            i{
+                @include animation(0.5s ease 0s normal forwards 1 running spinAround);
+            }
         }
     }
 
