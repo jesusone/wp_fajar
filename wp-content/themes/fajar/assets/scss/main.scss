@@ -378,19 +378,16 @@ div.owl-theme .owl-nav {
             font-size: 36px;
             line-height: 36px;
             color: #A1A1A1;
+            &.owl-prev & {
+                text-indent: -3px;
+            }
+            &.owl-next & {
+                text-indent: 3px;
+            }
         }
         &:hover {
             background: transparent;
         }
     }
-    .owl-prev {
-        i {
-            text-indent: -3px;
-        }
-    }
-    .owl-next {
-        i {
-            text-indent: 3px;
-        }
-    }
+
 }
