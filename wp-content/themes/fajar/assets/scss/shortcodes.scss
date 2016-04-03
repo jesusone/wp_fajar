@@ -12,6 +12,7 @@
   9. Pricing
   10. Blog
   11. Images Carousel
+  12. Carousel New Product
 
 -------------------------------------------------------------------*/
 /* ==========================================================================
@@ -1031,4 +1032,16 @@
 		border-top: 1px solid #959595;
 		padding: 10px 0 22px;
 	}
+}
+/* =================================*
+* [Start] 12. Carousel New Product  *
+*==================================*/
+.template-zo_carousel--new-product {
+  position: relative;
+  div.owl-nav {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    @include transform(translateY(-100%));
+  }
 }

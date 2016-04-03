@@ -66,7 +66,7 @@ $atts['categories'] = $_category;
                 <?php
                 if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                     $class = ' has-thumbnail';
-                    $thumbnail = get_the_post_thumbnail(get_the_ID(), 'medium');
+                    $thumbnail = zo_post_thumbnail(388,588,true,true,true);
                 else:
                     $class = ' no-image';
                     $thumbnail = '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" />';
