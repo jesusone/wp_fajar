@@ -464,7 +464,7 @@ vc_map(
 			array(
 				"type" => "heading",
 				"heading" => __("Fancy Box 5",'ohyeahthemes'),
-				"param_name" => "heading_4",
+				"param_name" => "heading_5",
 				'dependency' => array(
 					"element"=>"zo_cols",
 					"value"=>array(
@@ -477,7 +477,7 @@ vc_map(
 			array(
 				'type' => 'iconpicker',
 				'heading' => __( 'Icon Item 5', 'ohyeahthemes' ),
-				'param_name' => 'icon4',
+				'param_name' => 'icon5',
 				'dependency' => array(
 					"element"=>"zo_cols",
 					"value"=>array(
@@ -496,7 +496,7 @@ vc_map(
 			array(
 				"type" => "attach_image",
 				"heading" => __("Image Item 5",'ohyeahthemes'),
-				"param_name" => "image4",
+				"param_name" => "image5",
 				'dependency' => array(
 					"element"=>"zo_cols",
 					"value"=>array(
@@ -509,7 +509,7 @@ vc_map(
 			array(
 				"type" => "textfield",
 				"heading" => __("Title Item 5",'ohyeahthemes'),
-				"param_name" => "title4",
+				"param_name" => "title5",
 				"value" => "",
 				'dependency' => array(
 					"element"=>"zo_cols",
@@ -524,7 +524,7 @@ vc_map(
 			array(
 				"type" => "textarea",
 				"heading" => __("Content Item 5",'ohyeahthemes'),
-				"param_name" => "description4",
+				"param_name" => "description5",
 				'dependency' => array(
 					"element"=>"zo_cols",
 					"value"=>array(
@@ -537,7 +537,7 @@ vc_map(
 			array(
 				"type" => "textfield",
 				"heading" => __("Link 5",'ohyeahthemes'),
-				"param_name" => "button_link4",
+				"param_name" => "button_link5",
 				"value" => "",
 				'dependency' => array(
 					"element"=>"zo_cols",
