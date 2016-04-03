@@ -43,6 +43,7 @@ vc_map(
 	            	"2 Columns",
 	            	"3 Columns",
 	            	"4 Columns",
+	            	"5 Columns",
 	            	"6 Columns",
 	            	),
 	            "group" => __("Fancy Icon Settings", 'ohyeahthemes')

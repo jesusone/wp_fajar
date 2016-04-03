@@ -16,7 +16,7 @@ if($yeah_carousel == 'yes'){
     ?>
     <script type="application/javascript">
         jQuery(document).ready(function(){
-            jQuery('.yeah-carousel-zo-fancy-box').owlCarousel({
+            jQuery('.yeah-carousel-zo-fancy-box').owlCarousel(Select Number Cols
                 loop:true,
                 margin:0,
                 nav:false,
