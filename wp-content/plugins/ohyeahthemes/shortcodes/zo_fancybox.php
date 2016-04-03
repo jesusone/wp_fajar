@@ -57,6 +57,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						"1 Column"
@@ -78,6 +79,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						"1 Column"
@@ -95,6 +97,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						"1 Column"
@@ -110,6 +113,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"2 Columns",
+						"5 Columns",
 						"6 Columns",
 						"4 Columns",
 						"3 Columns",
@@ -128,6 +132,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"2 Columns",
+						"5 Columns",
 						"6 Columns",
 						"4 Columns",
 						"3 Columns",
@@ -145,6 +150,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						"1 Column"
@@ -163,6 +169,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -178,6 +185,7 @@ vc_map(
 						"value"=>array(
 							"2 Columns",
 							"6 Columns",
+							"5 Columns",
 							"4 Columns",
 							"3 Columns",
 						)
@@ -198,6 +206,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -215,6 +224,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -230,6 +240,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -247,6 +258,7 @@ vc_map(
 	            	"value"=>array(
 						"2 Columns",
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -262,6 +274,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -275,6 +288,7 @@ vc_map(
 					"element"=>"zo_cols",
 					"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -295,6 +309,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -311,6 +326,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -325,6 +341,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -341,6 +358,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						"3 Columns",
 						)
@@ -356,6 +374,7 @@ vc_map(
 					"element"=>"zo_cols",
 					"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						)
 					),
@@ -369,6 +388,7 @@ vc_map(
 					"element"=>"zo_cols",
 					"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						)
 					),
@@ -388,6 +408,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						)
 	            	),
@@ -402,6 +423,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						)
 	            	),
@@ -416,6 +438,7 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						)
 	            	),
@@ -430,12 +453,102 @@ vc_map(
 	            	"element"=>"zo_cols",
 	            	"value"=>array(
 						"6 Columns",
+						"5 Columns",
 						"4 Columns",
 						)
 	            	),
 	            "description" => __("",'ohyeahthemes'),
 	            "group" => __("Fancy Icon Settings", 'ohyeahthemes')
 	        ),
+			/*End 4*/
+			array(
+				"type" => "heading",
+				"heading" => __("Fancy Box 5",'ohyeahthemes'),
+				"param_name" => "heading_4",
+				'dependency' => array(
+					"element"=>"zo_cols",
+					"value"=>array(
+						"6 Columns",
+						"5 Columns",
+					)
+				),
+				"group" => __("Fancy Icon Settings", 'ohyeahthemes')
+			),
+			array(
+				'type' => 'iconpicker',
+				'heading' => __( 'Icon Item 5', 'ohyeahthemes' ),
+				'param_name' => 'icon4',
+				'dependency' => array(
+					"element"=>"zo_cols",
+					"value"=>array(
+						"6 Columns",
+						"5 Columns",
+					)
+				),
+				'value' => '',
+				'settings' => array(
+					'emptyIcon' => true, // default true, display an "EMPTY" icon?
+					'iconsPerPage' => 200, // default 100, how many icons per/page to display
+				),
+				'description' => __( 'Select icon from library.', 'ohyeahthemes' ),
+				"group" => __("Fancy Icon Settings", 'ohyeahthemes')
+			),
+			array(
+				"type" => "attach_image",
+				"heading" => __("Image Item 5",'ohyeahthemes'),
+				"param_name" => "image4",
+				'dependency' => array(
+					"element"=>"zo_cols",
+					"value"=>array(
+						"6 Columns",
+						"5 Columns",
+					)
+				),
+				"group" => __("Fancy Icon Settings", 'ohyeahthemes')
+			),
+			array(
+				"type" => "textfield",
+				"heading" => __("Title Item 5",'ohyeahthemes'),
+				"param_name" => "title4",
+				"value" => "",
+				'dependency' => array(
+					"element"=>"zo_cols",
+					"value"=>array(
+						"6 Columns",
+						"5 Columns",
+					)
+				),
+				"description" => __("Title Of Item",'ohyeahthemes'),
+				"group" => __("Fancy Icon Settings", 'ohyeahthemes')
+			),
+			array(
+				"type" => "textarea",
+				"heading" => __("Content Item 5",'ohyeahthemes'),
+				"param_name" => "description4",
+				'dependency' => array(
+					"element"=>"zo_cols",
+					"value"=>array(
+						"6 Columns",
+						"5 Columns",
+					)
+				),
+				"group" => __("Fancy Icon Settings", 'ohyeahthemes')
+			),
+			array(
+				"type" => "textfield",
+				"heading" => __("Link 5",'ohyeahthemes'),
+				"param_name" => "button_link4",
+				"value" => "",
+				'dependency' => array(
+					"element"=>"zo_cols",
+					"value"=>array(
+						"6 Columns",
+						"5 Columns",
+					)
+				),
+				"description" => __("",'ohyeahthemes'),
+				"group" => __("Fancy Icon Settings", 'ohyeahthemes')
+			),
 	        array(
 	            "type" => "heading",
 	            "heading" => __("Fancy Box 6",'ohyeahthemes'),
@@ -576,6 +689,9 @@ class WPBakeryShortCode_zo_fancybox extends ZoShortcode{
                 break;
             case "4 Columns":
                 $item_class = "col-xs-12 col-sm-6 col-md-3 col-lg-3";
+                break;
+			case "5 Columns":
+                $item_class = "col-xs-12 col-sm-6 col-md-5 col-lg-5";
                 break;
             case "6 Columns":
                 $item_class = "col-xs-12 col-sm-6 col-md-2 col-lg-2";
