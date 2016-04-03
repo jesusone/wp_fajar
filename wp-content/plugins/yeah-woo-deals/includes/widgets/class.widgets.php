@@ -31,6 +31,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
             }
             $yeah_group = !empty($instance['group_deals']) ? $instance['group_deals'] : '';
+            $image_title = !empty($instance['image_title']) ? $instance['image_title'] : '';
             $module = new YeahWooDealsAdminModule();
             $posts = $module->yeah_get_data_widget($yeah_group);
             $sale_off = $module->yeah_get_sale_off($yeah_group);
@@ -58,7 +59,7 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
                 }
                 ?>
                 <div class="yeah-weekend-deals-widget-top">
-                    <img src="<?php echo yeah_woo_deals()->acess_url; ?>/images/weekend-deals.png">
+                    <img src="<?php echo esc_url($image_title);?>"/>
                     <h3 class="museo_slab_500"><?php echo esc_attr($sale_off['min'])?><?php echo esc_html__('% -','yeah-woo-deals'); ?> <?php echo esc_attr($sale_off['max'])?><?php echo esc_html__('% off','yeah-woo-deals') ?></h3>
                 </div>
                 <!--Start CountDown-->
