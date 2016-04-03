@@ -3,8 +3,8 @@ $uqid = uniqid();
 $class_link = 'zo-fancyboxes-' . $uqid;
 
 $yeah_carousel = isset($atts['yeah_carousel']) ? $atts['yeah_carousel'] : 'no';
+$class_carousel = isset($atts['yeah_carousel']) ? 'yeah-carousel' : 'row';
 $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
-
 if($yeah_carousel){
     $atts['item_class'] = '';
 }
@@ -21,9 +21,7 @@ if($yeah_carousel){
         </div>
     <?php endif; ?>
     <div class="yeah-fancyboxes-body">
-        <?php if($yeah_carousel == 'no'){ ?>
-            <div class="row">
-        <?php } ?>
+        <div class="<?php echo esc_attr($class_carousel);?>">
             <?php
 
             $zo_title_size = isset($atts['zo_title_size']) ? $atts['zo_title_size'] : 'h2';
@@ -78,9 +76,6 @@ if($yeah_carousel){
                 </div>
                 <?php endif; ?>
             <?php endfor; ?>
-
-    <?php if($yeah_carousel == 'no'){ ?>
-             </div>
-    <?php}  ?>
+        </div>
     </div>
 </div>
