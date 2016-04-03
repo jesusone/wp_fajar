@@ -20,20 +20,7 @@ if($yeah_carousel == 'yes'){
                 loop:true,
                 margin:0,
                 nav:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    768:{
-                        items:1
-                    },
-                    992:{
-                        items:1
-                    },
-                    1200:{
-                        items:1
-                    }
-                }
+                items: 1,
             })
 
         })
