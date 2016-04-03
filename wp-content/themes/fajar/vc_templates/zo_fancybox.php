@@ -3,7 +3,7 @@ $uqid = uniqid();
 $class_link = 'zo-fancyboxes-' . $uqid;
 
 $yeah_carousel = isset($atts['yeah_carousel']) ? $atts['yeah_carousel'] : 'no';
-$class_carousel = isset($atts['yeah_carousel']) ? 'yeah-carousel yeah-carousel-'.esc_attr($atts['html_id']) : 'row';
+$class_carousel = $yeah_carousel=='yes' ? 'yeah-carousel yeah-carousel-'.esc_attr($atts['html_id']) : 'row';
 $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
 
 if($yeah_carousel == 'yes'){
