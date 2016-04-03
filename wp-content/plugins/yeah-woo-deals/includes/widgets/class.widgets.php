@@ -27,7 +27,18 @@ if (! class_exists('Yeah_Woo_Deal_widget')) {
         {
             echo $args['before_widget'];
 
+            if (! empty($instance['title'])) {
+                echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+            }
+            $yeah_group = !empty($instance['group_deals']) ? $instance['group_deals'] : '';
+            $image_title = !empty($instance['image_title']) ? $instance['image_title'] : '';
+            $module = new YeahWooDealsAdminModule();
+           $posts = $module->yeah_get_data_widget($yeah_group);
+            $sale_off = $module->yeah_get_sale_off($yeah_group);
+            $current_datetimes = date('Y/m/d H:i:s');
          
+            ?>
+            <?php
             echo $args['after_widget'];
         }
 
