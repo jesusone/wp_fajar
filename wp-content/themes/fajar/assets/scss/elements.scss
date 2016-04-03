@@ -486,3 +486,13 @@ $message-red-light : #fff0ec;
 		}
 	}
 }
+/*Custom HTML parallax*/
+.parallax-content {
+	text-align: center;
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0 30px;
+	h1 {
+		color: #fff;
+	}
+}
