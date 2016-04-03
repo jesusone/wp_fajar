@@ -32,10 +32,10 @@ if($yeah_carousel == 'yes'){
 <div class="<?php echo esc_attr($class_link); ?> zo-fancyboxes-wraper zo-fancybox-default <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
     <?php if ($atts['title'] != ''): ?>
         <div class="yeah-fancyboxes-head">
-            <div class="zo-fancyboxes-title">
+            <div class="yeah-fancyboxes-title">
                 <?php echo apply_filters('the_title', $atts['title']); ?>
             </div>
-            <div class="zo-fancyboxes-description">
+            <div class="yeah-fancyboxes-description">
                 <?php echo apply_filters('the_content', $atts['description']); ?>
             </div>
         </div>
