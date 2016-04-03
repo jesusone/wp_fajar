@@ -79,8 +79,14 @@ $atts['categories'] = $_category;
                 <div class="yeah-carousel-time">
                     <?php the_time('l, F jS, Y');?>
                 </div>
-                <div class="yeah-carousel-categories">
-                    <?php echo get_the_term_list(get_the_ID(), 'category', 'Category: ', ', ', ''); ?>
+                <div class="yeah-carousel-content">
+                    <?php echo the_content(); ?>
+                </div>
+                <div class="yeah-carousel-price">
+                    <?php
+                    /* Get Price Product */
+                    woocommerce_template_single_price();
+                    ?>
                 </div>
             </div>
         <?php
