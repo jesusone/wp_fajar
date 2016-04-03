@@ -5,7 +5,7 @@ $class_link = 'zo-fancyboxes-' . $uqid;
 $yeah_carousel = isset($atts['yeah_carousel']) ? $atts['yeah_carousel'] : 'no';
 $class_carousel = isset($atts['yeah_carousel']) ? 'yeah-carousel' : 'row';
 $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
-if($yeah_carousel){
+if($yeah_carousel == 'yes'){
     $atts['item_class'] = '';
     wp_enqueue_style('owl-carousel',ZO_CSS.'owl.carousel.css','','2.0.0b','all');
     wp_enqueue_script('owl-carousel',ZO_JS.'owl.carousel.js',array('jquery'),'2.0.0b', true);
@@ -16,7 +16,7 @@ if($yeah_carousel){
     ?>
     <script type="application/javascript">
         jQuery(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
+            jQuery('.yeah-carousel').owlCarousel({
                 loop:true,
                 margin:10,
                 nav:true,
