@@ -1047,7 +1047,7 @@
     right: 0;
     @include transform(translateY(-100%));
     @include breakpoint-max(480px){
-      top: 50%;
+      top: 256px;
       @include transform(translateY(-50%));
     }
   }
