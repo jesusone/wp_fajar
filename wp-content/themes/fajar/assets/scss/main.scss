@@ -367,7 +367,7 @@ body .wpb_button {
     width: auto;
 }
 /*[Sample Carousel]*/
-.owl-theme .owl-nav [class*='owl-'] {
+div.owl-theme .owl-nav [class*='owl-'] {
   background: transparent;
   width: 46px;
   height: 46px;
@@ -375,5 +375,6 @@ body .wpb_button {
   @include border-radius(50%);
     i{
         font-size: 46px;
+        color: #A1A1A1;
     }
 }
