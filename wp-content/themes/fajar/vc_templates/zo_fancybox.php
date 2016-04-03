@@ -1,6 +1,13 @@
 <?php
 $uqid = uniqid();
 $class_link = 'zo-fancyboxes-' . $uqid;
+
+$yeah_carousel = isset($atts['yeah_carousel']) ? $atts['yeah_carousel'] : 'no';
+$columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
+
+if($yeah_carousel){
+    $atts['item_class'] = '';
+}
 ?>
 <div class="<?php echo esc_attr($class_link); ?> zo-fancyboxes-wraper zo-fancybox-default <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
     <?php if ($atts['title'] != ''): ?>
@@ -13,10 +20,12 @@ $class_link = 'zo-fancyboxes-' . $uqid;
             </div>
         </div>
     <?php endif; ?>
-    <div class="zo-fancyboxes-body">
-        <div class="row">
+    <div class="yeah-fancyboxes-body">
+        <?php if($yeah_carousel == 'no'){ ?>
+            <div class="row">
+        <?}?>
+
             <?php
-            $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
 
             $zo_title_size = isset($atts['zo_title_size']) ? $atts['zo_title_size'] : 'h2';
             $zo_fancybox_icon_color = isset($atts['zo_fancybox_icon_color']) ? $atts['zo_fancybox_icon_color'] : '';
@@ -70,6 +79,9 @@ $class_link = 'zo-fancyboxes-' . $uqid;
                 </div>
                 <?php endif; ?>
             <?php endfor; ?>
-        </div>
+
+    <?php if($yeah_carousel == 'no'){ ?>
+         </div>
+        <?}?>
     </div>
 </div>

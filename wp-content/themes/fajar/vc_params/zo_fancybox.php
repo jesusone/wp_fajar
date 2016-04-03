@@ -2,6 +2,15 @@
 	$params = array(
 		array(
 			"type" => "dropdown",
+			"heading" => __("Use Carousel?",'fajar'),
+			"param_name" => "yeah_carousel",
+			"value" => array(
+				"No" => "no",
+				"Yes" => "yes",
+			)
+		),
+		array(
+			"type" => "dropdown",
 			"heading" => __("Title Size",'fajar'),
 			"param_name" => "zo_title_size",
 			"value" => array(
