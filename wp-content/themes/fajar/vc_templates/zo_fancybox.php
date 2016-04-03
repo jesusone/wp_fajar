@@ -20,7 +20,8 @@ if($yeah_carousel == 'yes'){
             jQuery('.yeah-carousel-zo-fancy-box').owlCarousel({
                 loop:true,
                 margin:0,
-                nav:true,
+                nav:false,
+                dots:true,
                 items: 1,
             })
 
