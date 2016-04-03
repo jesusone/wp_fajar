@@ -93,8 +93,8 @@
 /* ==========================================================================
    [Start] 3. Grid
 ========================================================================== */
-.template-zo_grid--feature-product {
-	.yeah-grid-item {
+.template-zo_grid--feature-product .template-zo_carousel--new-product{
+	.yeah-grid-item ,.yeah-carousel-item{
 		text-align: center;
 		.yeah-grid-media.has-thumbnail {
 			margin-bottom: 29px;
@@ -1039,19 +1039,6 @@
 .template-zo_carousel--new-product {
   .owl-stage-outer {
     padding-top: 28px;
-      .yeah-carousel-item {
-        text-align: center;
-        .yeah-grid-media {
-          margin-bottom: 29px;
-        }
-        .yeah-carousel-title {
-          margin: 0;
-          text-transform: uppercase;
-          a{
-            font-size: 18px;
-          }
-        }
-      }
   }
   position: relative;
   div.owl-nav {

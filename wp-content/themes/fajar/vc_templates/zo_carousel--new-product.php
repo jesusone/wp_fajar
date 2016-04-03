@@ -73,13 +73,13 @@ $atts['categories'] = $_category;
                 endif;
                 echo '<div class="yeah-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
                 ?>
-                <h4 class="yeah-carousel-title">
+                <h4 class="yeah-grid-title">
                     <a href="<?php echo the_permalink(); ?>"></a><?php the_title();?></a>
                 </h4>
-                <div class="yeah-carousel-content">
+                <div class="yeah-grid-content">
                     <?php echo the_content(); ?>
                 </div>
-                <div class="yeah-carousel-price">
+                <div class="yeah-grid-price">
                     <?php
                     /* Get Price Product */
                     woocommerce_template_single_price();
