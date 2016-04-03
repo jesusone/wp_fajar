@@ -73,7 +73,7 @@ $atts['categories'] = $_category;
                 endif;
                 ?>
                 <div class="yeah-grid-media <?php echo esc_attr($class);?>">
-                    <a href="<?php the_permalink();?>"><img src="<?php echo esc_url($thumbnail);?>" alt="<?php the_title();?>"/></a>
+                    <a href="<?php the_permalink();?>"><?php echo $thumbnail;?></a>
                     <?php
                     woocommerce_show_product_loop_sale_flash();
                     woocommerce_template_loop_add_to_cart();
