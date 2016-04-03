@@ -1048,7 +1048,7 @@
     @include transform(translateY(-100%));
     @include breakpoint-max(480px){
       top: 256px;
-      @include transform(translateY(-50%));
+      @include transform(translateY(-256px));
     }
   }
 }
