@@ -72,8 +72,9 @@ $preset-gray-color: #909090;
 	}
 }
 .btn-white {
-  color: #fff !important;
-  border-color: #fff !important;
+  color: #fff ;
+  border-color: #fff;
+  background: transparent;
   webkit-transition: border-color 0.4s, color 0.4s;
   transition: border-color 0.4s, color 0.4s;
   &:hover {
