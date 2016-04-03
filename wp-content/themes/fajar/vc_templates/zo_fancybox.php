@@ -8,15 +8,15 @@ $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
 
 if($yeah_carousel == 'yes'){
     $atts['item_class'] = '';
-   /* wp_enqueue_style('owl-carousel',ZO_CSS.'owl.carousel.css','','2.0.0b','all');
+    wp_enqueue_style('owl-carousel',ZO_CSS.'owl.carousel.css','','2.0.0b','all');
     wp_enqueue_script('owl-carousel',ZO_JS.'owl.carousel.js',array('jquery'),'2.0.0b', true);
     wp_enqueue_script('owl-autoplay',ZO_JS.'owl.autoplay.js',array('jquery'),'2.0.0b', true);
     wp_enqueue_script('owl-navigation',ZO_JS.'owl.navigation.js',array('jquery'),'2.0.0b', true);
-    wp_enqueue_script('owl-animate',ZO_JS.'owl.animate.js',array('jquery'),'2.0.0b', true);*/
+    wp_enqueue_script('owl-animate',ZO_JS.'owl.animate.js',array('jquery'),'2.0.0b', true);
     ?>
     <script type="application/javascript">
         jQuery(document).ready(function(){
-            jQuery('.yeah-carousel-zo-fancy-box').owlCarousel(Select Number Cols
+            jQuery('.yeah-carousel-zo-fancy-box').owlCarousel({
                 loop:true,
                 margin:0,
                 nav:false,
