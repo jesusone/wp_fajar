@@ -71,6 +71,16 @@ $preset-gray-color: #909090;
 		}
 	}
 }
+.btn-white {
+  color: #fff !important;
+  border-color: #fff !important;
+  webkit-transition: border-color 0.4s, color 0.4s;
+  transition: border-color 0.4s, color 0.4s;
+  &:hover {
+    color: #222;
+    background: #fff;
+  }
+}
 /* ==========================================================================
     End Style Button
 ========================================================================== */
