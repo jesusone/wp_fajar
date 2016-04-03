@@ -16,7 +16,7 @@ if($yeah_carousel == 'yes'){
     ?>
     <script type="application/javascript">
         jQuery(document).ready(function(){
-            jQuery('.'+'<?php echo $class_carousel; ?>').owlCarousel({
+            jQuery('.yeah-carousel-zo-fancy-box').owlCarousel({
                 loop:true,
                 margin:0,
                 nav:true,
