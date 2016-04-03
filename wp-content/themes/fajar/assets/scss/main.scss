@@ -366,3 +366,10 @@ body .wpb_button {
 .zo-carousel.owl-carousel .owl-item img {
     width: auto;
 }
+/*[Sample Carousel]*/
+.owl-theme .owl-nav [class*='owl-'] {
+  background: transparent;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #A1A1A1;
+}
