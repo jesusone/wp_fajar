@@ -71,15 +71,18 @@ $preset-gray-color: #909090;
 		}
 	}
 }
-.btn-white {
+.btn-default.btn-white {
   color: #fff ;
   border-color: #fff;
   background: transparent;
   webkit-transition: border-color 0.4s, color 0.4s;
   transition: border-color 0.4s, color 0.4s;
-  &:hover {
-    color: #222;
+  &:before {
+    content: '';
     background: #fff;
+  }
+  &:hover{
+    color: #222;
   }
 }
 /* ==========================================================================
