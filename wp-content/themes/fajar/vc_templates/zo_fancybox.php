@@ -62,9 +62,9 @@ if($yeah_carousel == 'yes'){
                 }
                 ?>
                 <div class="yeah-fancybox-item <?php echo esc_attr($atts['item_class']); ?>">
-                    <div class="zo-fancybox-inner">
+                    <div class="yeah-fancybox-inner">
                         <?php if ($image_url): ?>
-                            <div class="zo-fancybox-image">
+                            <div class="yeah-fancybox-image">
                                 <img src="<?php echo esc_attr($image_url); ?>" alt=""/>
                             </div>
                         <?php else: ?>

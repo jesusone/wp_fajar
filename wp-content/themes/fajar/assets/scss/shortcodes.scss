@@ -1067,5 +1067,22 @@
 * 13. Carousel Fancy Box                    *
 *===========================================*/
 .template-zo_fancybox {
-
+  .yeah-fancybox-item {
+    .yeah-fancybox-inner {
+      .yeah-fancybox-details {
+        position: absolute;
+        left: 40px;
+        top: 25%;
+        .yeah-fancybox-content-title {
+          h2 {
+            font-size: 48px;
+            color: #fff;
+            max-width: 380px;
+            line-height: 50px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
 }
