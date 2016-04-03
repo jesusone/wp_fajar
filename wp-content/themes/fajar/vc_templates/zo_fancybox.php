@@ -3,7 +3,7 @@ $uqid = uniqid();
 $class_link = 'zo-fancyboxes-' . $uqid;
 
 $yeah_carousel = isset($atts['yeah_carousel']) ? $atts['yeah_carousel'] : 'no';
-$class_carousel = isset($atts['yeah_carousel']) ? 'yeah-carousel' : 'row';
+$class_carousel = isset($atts['yeah_carousel']) ? 'yeah-carousel'.esc_attr($atts['html_id']) : 'row';
 $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
 if($yeah_carousel == 'yes'){
     $atts['item_class'] = '';
@@ -16,21 +16,10 @@ if($yeah_carousel == 'yes'){
     ?>
     <script type="application/javascript">
         jQuery(document).ready(function(){
-            jQuery('.yeah-carousel').owlCarousel({
+            jQuery('.'+'<?php echo $class_carousel; ?>').owlCarousel({
                 loop:true,
                 margin:10,
                 nav:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:5
-                    }
-                }
             })
 
         })
