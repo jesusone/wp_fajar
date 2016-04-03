@@ -21,6 +21,7 @@ if($yeah_carousel == 'yes'){
                 margin:0,
                 nav:true,
                 items: 1,
+                slideBy: 6
             })
 
         })
