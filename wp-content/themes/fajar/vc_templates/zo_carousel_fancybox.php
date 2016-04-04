@@ -36,20 +36,22 @@
                             <i class="<?php echo esc_attr($icon);?>"></i>
                         </div>
                         <?php endif;?>
-                        <?php if($title):?>
-                            <div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2></div>
-                        <?php endif;?>
-                        <div class="yeah-fancy-box-content">
-                            <?php echo apply_filters('the_content',$content);?>
-                        </div>
-                        <?php if($atts['button_text']!=''):?>
-                            <div class="yeah-fancyboxes-button">
-                                <?php
-                                $class_btn = ($atts['button_type']== 1)?'btn btn-large':'';
-                                ?>
-                                <a href="<?php echo esc_url($button_link);?>" class="<?php echo esc_attr($class_btn);?>"><?php echo esc_attr($atts['button_text']);?></a>
-                            </div>
-                        <?php endif;?>
+						<div class="yeah-fancybox-details">
+							<?php if($title):?>
+								<div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2></div>
+							<?php endif;?>
+							<div class="yeah-fancy-box-content">
+								<?php echo apply_filters('the_content',$content);?>
+							</div>
+							<?php if($atts['button_text']!=''):?>
+								<div class="yeah-fancyboxes-button">
+									<?php
+									$class_btn = ($atts['button_type']== 1)?'btn btn-large':'';
+									?>
+									<a href="<?php echo esc_url($button_link);?>" class="<?php echo esc_attr($class_btn);?>"><?php echo esc_attr($atts['button_text']);?></a>
+								</div>
+							<?php endif;?>
+						</div>
                     </div>
             <?php }
         ?>
