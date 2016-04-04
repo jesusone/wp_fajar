@@ -875,7 +875,7 @@
 .zo-carousel-wrap {
 	.yeah-carousel {
 		display: none;
-		&.owl-theme {
+		&.owl-loaded {
 			display: block;
 			@include animation(0.7s ease fadeIn);
 		}
@@ -1069,6 +1069,15 @@
 /*==========================================*
 * 13. Carousel Fancy Box                    *
 *===========================================*/
+.zo-fancyboxes-wraper {
+	.yeah-carousel {
+		display: none;
+		&.owl-loaded {
+			display: block;
+			@include animation(0.7s ease fadeIn);
+		}
+	}
+}
 .template-zo_fancybox {
 	position: relative;
 	.yeah-fancybox-item {
