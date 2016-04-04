@@ -1069,26 +1069,49 @@
 * 13. Carousel Fancy Box                    *
 *===========================================*/
 .template-zo_fancybox {
-  .yeah-fancybox-item {
-    .yeah-fancybox-inner {
-      .yeah-fancybox-details {
-        position: absolute;
-        left: 40px;
-        top: 25%;
-        .yeah-fancybox-content-title {
-          h2 {
-            font-size: 48px;
-            color: #fff;
-            max-width: 380px;
-            line-height: 50px;
-            padding-bottom: 10px;
-            @extend .museo_slab_100;
-            strong {
-              @extend .museo_slab_500;
-            }
-          }
-        }
-      }
-    }
-  }
+	position: relative;
+	.yeah-fancybox-item {
+		.yeah-fancybox-inner {
+			.yeah-fancybox-details {
+				position: absolute;
+				left: 40px;
+				top: 25%;
+				.yeah-fancybox-content-title {
+					h2 {
+					font-size: 48px;
+					color: #fff;
+					max-width: 380px;
+					line-height: 50px;
+					padding-bottom: 10px;
+					@extend .museo_slab_100;
+						strong {
+							@extend .museo_slab_500;
+						}
+					}
+				}
+			}
+		}
+	}
+	.owl-dots{
+		position: absolute;
+		bottom: 0;
+		left: 40px;
+		.owl-dot {
+			span {
+				margin: 0;
+				padding-right: 4px;
+				display: block;
+				width: 11px;
+				height: 11px;
+				background: #fff;
+				border-radius: 100%;
+			}
+			&.active {
+				width: 15px;
+				height: 16px;
+				position: relative;
+				background: url(../images/selected-bullet.png) no-repeat;
+			}
+		}
+	}
 }
