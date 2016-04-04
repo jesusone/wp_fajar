@@ -37,7 +37,7 @@
                         </div>
                         <?php endif;?>
                         <?php if($title):?>
-                            <div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2>
+                            <div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2></div>
                         <?php endif;?>
                         <div class="yeah-fancy-box-content">
                             <?php echo apply_filters('the_content',$content);?>
