@@ -9,7 +9,7 @@
             </div>
         </div>
     <?php endif;?>
-    <div id="<?php echo esc_attr($atts['html_id']);?>" class="row yeah-carousel-fancyboxes-body">
+    <div id="<?php echo esc_attr($atts['html_id']);?>" class="yeah-carousel-fancyboxes-body">
         <?php
             $columns = ((int)$atts['zo_cols'])?(int)$atts['zo_cols']:1;
             
@@ -26,24 +26,24 @@
                     $image_url = $attachment_image[0];
                 }
                 ?>
-                    <div class="yeah-carousel-fancy-item">
+                    <div class="yeah-fancy-item">
                         <?php if($image_url):?>
-                        <div class="yeah-carousel-fancy-box-image">
+                        <div class="yeah-fancy-box-image">
                             <img src="<?php echo esc_attr($image_url);?>" />
                         </div>
                         <?php else:?>
-                        <div class="yeah-carousel-fancy-box-icon">
+                        <div class="yeah-fancy-box-icon">
                             <i class="<?php echo esc_attr($icon);?>"></i>
                         </div>
                         <?php endif;?>
                         <?php if($title):?>
-                            <h3><?php echo apply_filters('the_title',$title);?></h3>
+                            <div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2>
                         <?php endif;?>
-                        <div class="yeah-carousel-fancy-box-content">
+                        <div class="yeah-fancy-box-content">
                             <?php echo apply_filters('the_content',$content);?>
                         </div>
                         <?php if($atts['button_text']!=''):?>
-                            <div class="yeah-carousel-fancyboxes-button">
+                            <div class="yeah-fancyboxes-button">
                                 <?php
                                 $class_btn = ($atts['button_type']== 1)?'btn btn-large':'';
                                 ?>

@@ -1069,35 +1069,31 @@
 /*==========================================*
 * 13. Carousel Fancy Box                    *
 *===========================================*/
-/* .zo-fancyboxes-wraper {
-	.yeah-carousel-zo-fancy-box {
+.yeah-carousel-fancyboxes-wraper {
+	.yeah-carousel-fancyboxes-body {
 		display: none;
 		&.owl-loaded {
 			display: block;
 			@include animation(0.7s ease fadeIn);
 		}
 	}
-} */
-.template-zo_fancybox {
+}
+.template-zo_carousel_fancybox {
 	position: relative;
 	.yeah-fancybox-item {
-		.yeah-fancybox-inner {
-			.yeah-fancybox-details {
-				position: absolute;
-				left: 40px;
-				top: 25%;
-				.yeah-fancybox-content-title {
-					h2 {
-					font-size: 48px;
-					color: #fff;
-					max-width: 380px;
-					line-height: 50px;
-					padding-bottom: 10px;
-					@extend .museo_slab_100;
-						strong {
-							@extend .museo_slab_500;
-						}
-					}
+		position: absolute;
+		left: 40px;
+		top: 25%;
+		.yeah-fancybox-title {
+			h2 {
+			font-size: 48px;
+			color: #fff;
+			max-width: 380px;
+			line-height: 50px;
+			padding-bottom: 10px;
+			@extend .museo_slab_100;
+				strong {
+					@extend .museo_slab_500;
 				}
 			}
 		}
