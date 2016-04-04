@@ -1131,10 +1131,22 @@
    [Start] 14. Single Fancy Box
 ========================================================================== */
 .yeah-fancyboxes-wraper {
+  &.content-align-center {
+    text-align: center;
+  }
   .yeah-fancyboxes-body {
     padding: 65px 30px 70px;
     .yeah-fancybox-item {
-
+      .fancybox-icon {
+        i{ font-size: 55px;
+          display: inline-block;}
+        margin-bottom: 25px;
+      }
+      .fancybox-title {
+        font-size: 28px;
+        margin-bottom: 13px;
+        color: #ffffff;
+      }
     }
 
   }
