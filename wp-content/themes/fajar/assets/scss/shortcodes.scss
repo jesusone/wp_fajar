@@ -1101,10 +1101,12 @@
 				border-radius: 100%;
 			}
 			&.active, &:hover {
-				width: 15px;
-				height: 16px;
-				position: relative;
-				background: url(../images/selected-bullet.png) no-repeat;
+				span {
+					width: 15px;
+					height: 16px;
+					position: relative;
+					background: url(../images/selected-bullet.png) no-repeat;
+				}
 			}
 		}
 	}
