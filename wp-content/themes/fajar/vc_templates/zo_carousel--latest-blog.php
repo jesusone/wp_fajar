@@ -63,26 +63,9 @@ $atts['categories'] = $_category;
             }
             ?>
             <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
-                <?php
-                if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
-                    $class = ' has-thumbnail';
-                    $thumbnail = zo_post_thumbnail(365,307,true,true,true);
-                else:
-                    $class = ' no-image';
-                    $thumbnail = '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" />';
-                endif;
-                ?>
-                <div class="yeah-grid-media <?php echo esc_attr($class);?>">
-                    <a href="<?php the_permalink();?>"><?php echo $thumbnail;?></a>
-
-                </div>
-                <h4 class="yeah-grid-title">
-                    <a href="<?php echo the_permalink(); ?>"></a><?php the_title();?></a>
-                </h4>
-                <div class="yeah-grid-content">
-                    <?php echo the_content(); ?>
-                </div>
-
+                <?php 
+					get_template_part( 'single-templates/content/content', get_post_format() );
+				?>
             </div>
         <?php
         endwhile;
