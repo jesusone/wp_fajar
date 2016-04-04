@@ -853,12 +853,6 @@
 }
 /** Carousel Wrap
 ================================================*/
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-    background-color: $primary_color!important;
-
-}
-
 .zo-carousel-purchase {
 	.vc_btn3-container {
 		.vc_btn3 {
@@ -1092,7 +1086,7 @@
 			}
 		}
 	}
-	.owl-dots{
+	.owl-theme .owl-dots{
 		position: absolute;
 		bottom: 0;
 		left: 40px;
@@ -1106,7 +1100,7 @@
 				background: #fff;
 				border-radius: 100%;
 			}
-			&.active {
+			&.active, &:hover {
 				width: 15px;
 				height: 16px;
 				position: relative;
