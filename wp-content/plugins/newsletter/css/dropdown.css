@@ -90,8 +90,9 @@
     margin-left: 0;
     border: none;
     text-transform: none;
-    line-height: 1.9em;
+    line-height: 1.6em;
 }
+
 
 .tnp-drowpdown ul ul li:nth-child(even) {
     background-color: #3b3342;

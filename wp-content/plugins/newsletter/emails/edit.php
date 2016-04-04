@@ -1,4 +1,5 @@
 <?php
+/* @var $wpdb wpdb */
 require_once NEWSLETTER_INCLUDES_DIR . '/controls.php';
 $controls = new NewsletterControls();
 $module = NewsletterEmails::instance();
@@ -96,14 +97,14 @@ if ($controls->is_action('test') || $controls->is_action('save') || $controls->i
         if ($controls->data['preferences_status'] == 1) {
             $query .= " and (";
             foreach ($preferences as $x) {
-                $query .= "list_" . $x . "=0" . $operator;
+                $query .= "list_" . ((int)$x) . "=0" . $operator;
             }
             $query = substr($query, 0, -4);
             $query .= ")";
         } else {
             $query .= " and (";
             foreach ($preferences as $x) {
-                $query .= "list_" . $x . "=1" . $operator;
+                $query .= "list_" . ((int)$x) . "=1" . $operator;
             }
             $query = substr($query, 0, -4);
             $query .= ")";
@@ -114,7 +115,7 @@ if ($controls->is_action('test') || $controls->is_action('save') || $controls->i
     if (is_array($sex)) {
         $query .= " and sex in (";
         foreach ($sex as $x) {
-            $query .= "'" . $x . "', ";
+            $query .= "'" . esc_sql($x) . "', ";
         }
         $query = substr($query, 0, -2);
         $query .= ")";

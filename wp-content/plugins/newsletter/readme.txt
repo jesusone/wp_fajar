@@ -77,9 +77,13 @@ No screenshots are available at this time.
 
 == Changelog ==
 
+= 4.1.2 =
+
+* Minor security fix (on admin side with admin access)
+
 = 4.1.1 =
 
-* Added compatibility with SMTP plugins
+* Added compatibility with SMTP plugins (Newsletter now sends with wp_mail if not otherwise configured)
 * Small CSS fixes
 
 = 4.1.0 =

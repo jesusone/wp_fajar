@@ -43,27 +43,27 @@ if ($controls->is_action('remove_all')) {
 }
 
 if ($controls->is_action('list_add')) {
-  $r = $wpdb->query("update " . NEWSLETTER_USERS_TABLE . " set list_" . $controls->data['list'] . "=1");
+  $r = $wpdb->query("update " . NEWSLETTER_USERS_TABLE . " set list_" . ((int)$controls->data['list']) . "=1");
   $controls->messages = $r . ' ' . __('added to the list/preference', 'newsletter') . ' ' . $controls->data['list'];
 }
 
 if ($controls->is_action('list_remove')) {
-  $r = $wpdb->query("update " . NEWSLETTER_USERS_TABLE . " set list_" . $controls->data['list'] . "=0");
+  $r = $wpdb->query("update " . NEWSLETTER_USERS_TABLE . " set list_" . ((int)$controls->data['list']) . "=0");
   $controls->messages = $r . ' ' . __('removed to the list/preference', 'newsletter') . ' ' . $controls->data['list'];
 }
 
 if ($controls->is_action('list_delete')) {
-  $wpdb->query("delete from " . NEWSLETTER_USERS_TABLE . " where list_" . $controls->data['list'] . "<>0");
+  $wpdb->query("delete from " . NEWSLETTER_USERS_TABLE . " where list_" . ((int)$controls->data['list']) . "<>0");
 }
 
 if ($controls->is_action('list_manage')) {
   if ($controls->data['list_action'] == 'move') {
-    $wpdb->query("update " . NEWSLETTER_USERS_TABLE . ' set list_' . $controls->data['list_1'] . '=0, list_' . $controls->data['list_2'] . '=1' .
+    $wpdb->query("update " . NEWSLETTER_USERS_TABLE . ' set list_' . ((int)$controls->data['list_1']) . '=0, list_' . ((int)$controls->data['list_2']) . '=1' .
             ' where list_' . $controls->data['list_1'] . '=1');
   }
 
   if ($controls->data['list_action'] == 'add') {
-    $wpdb->query("update " . NEWSLETTER_USERS_TABLE . ' set list_' . $controls->data['list_2'] . '=1' .
+    $wpdb->query("update " . NEWSLETTER_USERS_TABLE . ' set list_' . ((int)$controls->data['list_2']) . '=1' .
             ' where list_' . $controls->data['list_1'] . '=1');
   }
 }
