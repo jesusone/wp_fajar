@@ -1,21 +1,21 @@
 <?php 
 	$icon_name = "icon_" . $atts['icon_type'];
 	$iconClass = isset($atts[$icon_name])?$atts[$icon_name]:'';
-    $zo_fancybox_style = isset($atts['zo_fancybox_style']) ? $atts['zo_fancybox_style'] : '';
+    $yeah_fancybox_style = isset($atts['zo_fancybox_style']) ? $atts['zo_fancybox_style'] : '';
 ?>
-<div class="zo-fancyboxes-wraper <?php echo esc_attr($zo_fancybox_style); ?> <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-fancyboxes-wraper <?php echo esc_attr($yeah_fancybox_style); ?> <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
     <?php if($atts['title']!=''):?>
-        <div class="zo-fancyboxes-head">
-            <div class="zo-fancyboxes-title">
+        <div class="yeah-fancyboxes-head">
+            <div class="yeah-fancyboxes-title">
                 <?php echo apply_filters('the_title',$atts['title']);?>
             </div>
-            <div class="zo-fancyboxes-description">
+            <div class="yeah-fancyboxes-description">
                 <?php echo apply_filters('the_content',$atts['description']);?>
             </div>
         </div>
     <?php endif;?>
-    <div class="zo-fancyboxes-body">
-        <div class="zo-fancybox-item">
+    <div class="yeah-fancyboxes-body">
+        <div class="yeah-fancybox-item">
             <?php
             $button_link = isset($atts['button_link']) ? $atts['button_link'] : '';
             $image_url = '';
@@ -24,9 +24,9 @@
                 $image_url = $attachment_image[0];
             }
             ?>
-            <div class="fancybox-header">
+            <div class="yeah-fancybox-header">
                 <?php if($image_url):?>
-                    <div class="fancybox-icon fancybox-image">
+                    <div class="yeah-fancybox-icon yeah-fancybox-image">
                         <img src="<?php echo esc_attr($image_url);?>" />
                     </div>
                 <?php else:?>
@@ -39,12 +39,12 @@
                 <?php endif;?>
             </div>
             <?php if( isset($atts['description_item']) && $atts['description_item']): ?>
-            <div class="fancybox-content">
+            <div class="yeah-fancybox-content">
                 <?php echo apply_filters('the_content',$atts['description_item']);?>
             </div>
             <?php endif; ?>
             <?php if($atts['button_text']!=''):?>
-                <div class="fancybox-footer">
+                <div class="yeah-fancybox-footer">
                     <?php
                     $class_btn = ($atts['button_type']=='button')?'btn btn-large':'';
                     ?>
