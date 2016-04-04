@@ -512,7 +512,7 @@ $message-red-light : #fff0ec;
 .yeah-product-classic-large {
 	position: relative;
 	.yeah-product-classic-large-inner {
-		&.yeah-right & {
+		.yeah-right & {
 			color: #fff;
 			right: auto;
 			left: 10%;
