@@ -873,6 +873,13 @@
 	}
 }
 .zo-carousel-wrap {
+	.yeah-carousel {
+		display: none;
+		&.owl-theme {
+			display: block;
+			@include animation(0.7s ease fadeIn);
+		}
+	}
 	.zo-carousel-filter {
 		ul {
 			margin-bottom: 40px;
@@ -1092,8 +1099,7 @@
 		left: 40px;
 		.owl-dot {
 			span {
-				margin: 0;
-				padding-right: 4px;
+				margin: 0 4px 0 0;
 				display: block;
 				width: 11px;
 				height: 11px;
