@@ -28,20 +28,17 @@
                 ?>
                     <div class="yeah-fancybox-item">
                         <?php if($image_url):?>
-                        <div class="yeah-fancybox-box-image">
+                        <div class="yeah-fancybox-image">
                             <img src="<?php echo esc_attr($image_url);?>" />
                         </div>
                         <?php else:?>
-                        <div class="yeah-fancybox-box-icon">
+                        <div class="yeah-fancybox-icon">
                             <i class="<?php echo esc_attr($icon);?>"></i>
                         </div>
                         <?php endif;?>
 						<div class="yeah-fancybox-details">
-							<?php if($title):?>
-								<div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2></div>
-							<?php endif;?>
-							<div class="yeah-fancybox-box-content">
-								<?php echo apply_filters('the_content',$content);?>
+							<div class="yeah-fancybox-content">
+								<?php echo apply_filters('the_content',$content);?><strong><?php echo apply_filters('the_title',$title);?></strong>
 							</div>
 							<?php if($atts['button_text']!=''):?>
 								<div class="yeah-fancyboxes-button">
