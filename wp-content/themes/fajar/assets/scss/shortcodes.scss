@@ -1088,7 +1088,7 @@
 	}
 	.owl-theme .owl-dots{
 		position: absolute;
-		bottom: 0;
+		bottom: 22px;
 		left: 40px;
 		.owl-dot {
 			span {
@@ -1104,6 +1104,7 @@
 				span {
 					width: 15px;
 					height: 16px;
+					top: 2px;
 					position: relative;
 					background: url(../images/selected-bullet.png) no-repeat;
 				}
