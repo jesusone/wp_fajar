@@ -527,6 +527,14 @@ $message-red-light : #fff0ec;
 	float: left;
 	width: 50%;
 	position: relative;
+	&.yeah-right  {
+		.yeah-product-classic-content-inner {
+			color: #fff;
+			right: auto;
+			left: 10%;
+		}
+
+	}
 	.yeah-product-classic-content-inner {
 		text-align: center;
 		position: absolute;
@@ -535,11 +543,7 @@ $message-red-light : #fff0ec;
 		top: 0;
 		text-align: center;
 		@include transform(translateY(30%));
-		.yeah-right & {
-			color: #fff;
-			right: auto;
-			left: 10%;
-		}
+
 		padding: 20px;
 		i {
 			font-size: 22px;
