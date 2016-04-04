@@ -26,13 +26,13 @@
                     $image_url = $attachment_image[0];
                 }
                 ?>
-                    <div class="yeah-fancy-item">
+                    <div class="yeah-fancybox-item">
                         <?php if($image_url):?>
-                        <div class="yeah-fancy-box-image">
+                        <div class="yeah-fancybox-box-image">
                             <img src="<?php echo esc_attr($image_url);?>" />
                         </div>
                         <?php else:?>
-                        <div class="yeah-fancy-box-icon">
+                        <div class="yeah-fancybox-box-icon">
                             <i class="<?php echo esc_attr($icon);?>"></i>
                         </div>
                         <?php endif;?>
@@ -40,7 +40,7 @@
 							<?php if($title):?>
 								<div class="yeah-fancybox-title"><h2><?php echo apply_filters('the_title',$title);?></h2></div>
 							<?php endif;?>
-							<div class="yeah-fancy-box-content">
+							<div class="yeah-fancybox-box-content">
 								<?php echo apply_filters('the_content',$content);?>
 							</div>
 							<?php if($atts['button_text']!=''):?>
