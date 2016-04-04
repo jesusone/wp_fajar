@@ -22,8 +22,7 @@ if($yeah_carousel == 'yes'){
                 nav:false,
                 dots:true,
                 items: 1,
-            })
-
+            });
         })
     </script>
 <?php
