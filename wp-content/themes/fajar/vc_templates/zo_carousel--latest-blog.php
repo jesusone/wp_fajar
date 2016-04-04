@@ -74,7 +74,7 @@ $atts['categories'] = $_category;
                 ?>
                 <div class="yeah-grid-media <?php echo esc_attr($class);?>">
                     <a href="<?php the_permalink();?>"><?php echo $thumbnail;?></a>
-                    
+
                 </div>
                 <h4 class="yeah-grid-title">
                     <a href="<?php echo the_permalink(); ?>"></a><?php the_title();?></a>
