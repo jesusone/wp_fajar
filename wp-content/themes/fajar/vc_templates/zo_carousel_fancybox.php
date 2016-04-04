@@ -38,7 +38,7 @@
                         <?php endif;?>
 						<div class="yeah-fancybox-details">
 							<div class="yeah-fancybox-content">
-								<?php echo apply_filters('the_content',$content);?><strong><?php echo apply_filters('the_title',$title);?></strong>
+								<?php echo esc_attr($content);?><strong><?php echo apply_filters('the_title',$title);?></strong>
 							</div>
 							<?php if($atts['button_text']!=''):?>
 								<div class="yeah-fancyboxes-button">
