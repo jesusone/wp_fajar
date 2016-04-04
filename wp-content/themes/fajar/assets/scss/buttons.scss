@@ -1,9 +1,6 @@
 /* ==========================================================================
     Style Button
 ========================================================================== */
-$preset-purple-color: #ad8bbf;
-$preset-crimson-color: #e86211;
-$preset-gray-color: #909090;
 .btn, button, .button, input[type="submit"] {
     line-height: 1;
     display: inline-block;
@@ -77,6 +74,7 @@ $preset-gray-color: #909090;
   background: transparent;
   webkit-transition: border-color 0.4s, color 0.4s;
   transition: border-color 0.4s, color 0.4s;
+  @extend .museo_slab_500;
   &:before {
     content: '';
     background: #fff;
