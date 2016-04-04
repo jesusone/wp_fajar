@@ -511,12 +511,15 @@ $message-red-light : #fff0ec;
 /*Custom Product Classic*/
 .yeah-product-classic-large {
 	position: relative;
-	.yeah-product-classic-large-inner {
-		.yeah-right & {
+	&.yeah-right  {
+		.yeah-product-classic-large-inner {
 			color: #fff;
 			right: auto;
 			left: 10%;
 		}
+	}
+	.yeah-product-classic-large-inner {
+
 		position: absolute;
 		right: 10%;
 		top: 20%;
