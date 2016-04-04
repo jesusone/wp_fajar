@@ -523,3 +523,17 @@ $message-red-light : #fff0ec;
 		}
 	}
 }
+.yeah-product-classic-content {
+	float: left;
+	width: 50%;
+	position: relative;
+	.yeah-product-classic-content-inner {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		text-align: center;
+		@include transform(translateY(-50%));
+		padding: 20px;
+	}
+}
