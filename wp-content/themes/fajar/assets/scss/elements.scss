@@ -532,9 +532,9 @@ $message-red-light : #fff0ec;
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 50%;
+		top: 0;
 		text-align: center;
-		@include transform(translateY(-50%));
+		@include transform(translateY(30%));
 		padding: 20px;
 		i {
 			font-size: 22px;
@@ -545,6 +545,10 @@ $message-red-light : #fff0ec;
 		}
 		.stars {
 			padding: 10px 0 6px;
+		}
+		.stars i {
+			color: #e6ae48;
+			font-size: 20px;
 		}
 	}
 }
