@@ -3,7 +3,7 @@ $uqid = uniqid();
 $class_link = 'zo-fancyboxes-' . $uqid;
 
 $yeah_carousel = isset($atts['yeah_carousel']) && $atts['yeah_carousel'] == 'yes'  ? $atts['yeah_carousel'] : 'no';
-$class_carousel = $yeah_carousel=='yes' ? 'yeah-carousel yeah-carousel-'.esc_attr($atts['html_id']) : 'row';
+$class_carousel = $yeah_carousel=='yes' ? 'yeah-carousel-'.esc_attr($atts['html_id']) : 'row';
 $columns = ((int)$atts['zo_cols']) ? (int)$atts['zo_cols'] : 1;
 
 if($yeah_carousel == 'yes'){
@@ -15,20 +15,22 @@ if($yeah_carousel == 'yes'){
     wp_enqueue_script('owl-animate',ZO_JS.'owl.animate.js',array('jquery'),'2.0.0b', true);
     ?>
     <script type="application/javascript">
-        jQuery(document).ready(function(){
-            jQuery('.yeah-carousel-zo-fancy-box').owlCarousel({
+		jQuery(document).ready(function($) {
+			"use strict";
+			var _this = $('.yeah-carousel-zo-fancy-box');
+            _this.owlCarousel({
                 loop:true,
                 margin:0,
                 nav:false,
                 dots:true,
                 items: 1,
             });
-        })
+        });
     </script>
 <?php
 }
 ?>
-<div class="<?php echo esc_attr($class_link); ?> zo-fancyboxes-wraper zo-fancybox-default <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
+<div class="<?php echo esc_attr($class_link); ?> zo-fancyboxes-wraper zo-fancybox-default <?php echo esc_attr($atts['template']); ?>">
     <?php if ($atts['title'] != ''): ?>
         <div class="yeah-fancyboxes-head">
             <div class="yeah-fancyboxes-title">
@@ -40,7 +42,7 @@ if($yeah_carousel == 'yes'){
         </div>
     <?php endif; ?>
     <div class="yeah-fancyboxes-body">
-        <div class="<?php echo esc_attr($class_carousel);?>">
+        <div id="<?php echo esc_attr($atts['html_id']); ?>" class="<?php echo esc_attr($class_carousel);?>">
             <?php
 
             $zo_title_size = isset($atts['zo_title_size']) ? $atts['zo_title_size'] : 'h2';
