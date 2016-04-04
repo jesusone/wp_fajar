@@ -48,7 +48,7 @@
 									<?php
 									$class_btn = ($atts['button_type']== 1)?'btn btn-large':'';
 									?>
-									<a href="<?php echo esc_url($button_link);?>" class="<?php echo esc_attr($class_btn);?>"><?php echo esc_attr($atts['button_text']);?></a>
+									<a href="<?php echo esc_url($button_link);?>" class="btn btn-default btn-white <?php echo esc_attr($class_btn);?>"><?php echo esc_attr($atts['button_text']);?></a>
 								</div>
 							<?php endif;?>
 						</div>
