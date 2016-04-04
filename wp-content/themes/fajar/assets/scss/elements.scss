@@ -535,6 +535,11 @@ $message-red-light : #fff0ec;
 		top: 0;
 		text-align: center;
 		@include transform(translateY(30%));
+		.yeah-right & {
+			color: #fff;
+			right: auto;
+			left: 10%;
+		}
 		padding: 20px;
 		i {
 			font-size: 22px;
