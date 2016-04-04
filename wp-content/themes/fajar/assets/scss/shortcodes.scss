@@ -95,7 +95,7 @@
    [Start] 3. Grid And Carousel
 ========================================================================== */
 .template-zo_grid--feature-product, .template-zo_carousel--new-product{
-	.yeah-grid-item ,.yeah-carousel-item{
+	.yeah-grid-item, .yeah-carousel-item {
 		text-align: center;
 		.yeah-grid-media.has-thumbnail {
 			margin-bottom: 29px;
@@ -162,6 +162,36 @@
 			padding-bottom: 7px;
 			@extend .museo_slab_300;
 		}
+	}
+}
+.template-zo_carousel--new-product {
+	position: relative;
+	.owl-stage-outer {
+		padding-top: 28px;
+	}
+	div.owl-nav {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		@include transform(translateY(-100%));
+		@include breakpoint-max(480px){
+			left: 0;
+			top: 160px;
+			width: 100%;
+			[class*='owl-'] {
+				position: absolute;
+			}
+			.owl-prev {
+				left: 0;
+			}
+			.owl-next {
+				right: 0;
+			}
+		}
+	}
+	.yeah-carousel-item .yeah-grid-title{
+		padding: 0;
+		margin: 0;
 	}
 }
 /* ==========================================================================
@@ -1034,35 +1064,7 @@
 		padding: 10px 0 22px;
 	}
 }
-/* =================================*
-* [Start] 12. Carousel New Product  *
-*==================================*/
-.template-zo_carousel--new-product {
-  .owl-stage-outer {
-    padding-top: 28px;
-  }
-  position: relative;
-  div.owl-nav {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    @include transform(translateY(-100%));
-    @include breakpoint-max(480px){
-      left: 0;
-      top: 160px;
-      width: 100%;
-      [class*='owl-'] {
-        position: absolute;
-      }
-      .owl-prev {
-        left: 0;
-      }
-      .owl-next {
-        right: 0;
-      }
-    }
-  }
-}
+
 /*==========================================*
 * 13. Carousel Fancy Box                    *
 *===========================================*/
