@@ -996,7 +996,7 @@ $this->sections[] = array(
             'validate' => 'no_html',
             'default' => '.museo_slab_500',
             'required' => array(
-                0 => 'local-fonts-2',
+                0 => 'local-fonts-3',
                 1 => '!=',
                 2 => ''
             )
