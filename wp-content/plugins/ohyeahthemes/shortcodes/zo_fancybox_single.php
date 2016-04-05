@@ -48,6 +48,7 @@ vc_map(
 					__( 'Pixel', 'ohyeahthemes' ) => 'pixelicons',
 					__( 'P7 Stroke', 'ohyeahthemes' ) => 'pe7stroke',
                     __( 'Et Line', 'ohyeahthemes' ) => 'etline',
+                    __( 'Fajar', 'ohyeahthemes' ) => 'fajar',
                     __( 'Linear Icons', 'ohyeahthemes' ) => 'linearicons'
 				),
                 'std' => 'fontawesome',
