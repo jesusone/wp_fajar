@@ -1137,6 +1137,7 @@
   .yeah-fancyboxes-body {
     padding: 65px 30px 70px;
     .yeah-fancybox-item {
+      color: #ffffff;
       .fancybox-icon {
         i{ font-size: 55px;
           display: inline-block;}
@@ -1146,6 +1147,12 @@
         font-size: 28px;
         margin-bottom: 13px;
         color: #ffffff;
+      }
+      .yeah-fancybox-content {
+        p{
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
     }
 
