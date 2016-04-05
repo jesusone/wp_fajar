@@ -48,6 +48,7 @@ vc_map(
 					__( 'Pixel', 'ohyeahthemes' ) => 'pixelicons',
 					__( 'P7 Stroke', 'ohyeahthemes' ) => 'pe7stroke',
                     __( 'Et Line', 'ohyeahthemes' ) => 'etline',
+                    __( 'Fajar', 'ohyeahthemes' ) => 'fajar',
                     __( 'Linear Icons', 'ohyeahthemes' ) => 'linearicons'
 				),
                 'std' => 'fontawesome',
@@ -191,6 +192,23 @@ vc_map(
                 'description' => __( 'Select icon from library.', 'ohyeahthemes' ),
                 "group" => __("Fancy Icon Settings", 'ohyeahthemes')
             ),
+			array(
+                'type' => 'iconpicker',
+                'heading' => __( 'Icon Item', 'ohyeahthemes' ),
+                'param_name' => 'icon_fajar',
+                'value' => '',
+                'settings' => array(
+                    'emptyIcon' => true, // default true, display an "EMPTY" icon?
+                    'type' => 'fajar',
+                    'iconsPerPage' => 200, // default 100, how many icons per/page to display
+                ),
+                'dependency' => array(
+                    'element' => 'icon_type',
+                    'value' => 'fajar',
+                ),
+                'description' => __( 'Select icon from library.', 'ohyeahthemes' ),
+                "group" => __("Fancy Icon Settings", 'ohyeahthemes')
+            ),
             array(
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon Item', 'ohyeahthemes' ),
@@ -293,6 +311,7 @@ class WPBakeryShortCode_zo_fancybox_single extends ZoShortcode{
 			'icon_entypo' => '',
 			'icon_pe7stroke' => '',
             'icon_etline' => '',
+            'icon_fajar' => '',
             'icon_linearicons' => '',
 			'description_item' => '',
 			'class' => '',
@@ -306,7 +325,10 @@ class WPBakeryShortCode_zo_fancybox_single extends ZoShortcode{
 	        wp_enqueue_style('zo-icon-pe7stroke', ZO_CSS. 'Pe-icon-7-stroke.css');
 	    }elseif($atts['icon_type']=='etline'){
             wp_enqueue_style('zo-icon-etline', ZO_CSS. 'et-line.css');
-        }elseif($atts['icon_type']=='linearicons'){
+        }elseif($atts['icon_type']=='fajar'){
+            wp_enqueue_style('zo-icon-fajar', ZO_CSS. 'fajar-icon.css');
+        }
+		elseif($atts['icon_type']=='linearicons'){
             wp_enqueue_style('zo-icon-linearicons', ZO_CSS. 'linearicons.css');
         }else{
 	        vc_icon_element_fonts_enqueue( $atts['icon_type'] );
