@@ -884,6 +884,7 @@
 	.yeah-loop-product {
 		position: relative;
 		overflow: hidden;
+        border: 1px solid #dadada;
 		@include breakpoint-min(992px){
 			width: 100%;
 		}
