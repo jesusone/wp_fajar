@@ -985,6 +985,16 @@
 				font-size: 20px;
 				padding-bottom: 7px;
               	@extend .museo_slab_300;
+                del {
+                   .amount {
+                       text-decoration: line-through;
+                       font-size: 14px;
+                       color: #7d7d7d;
+                       font-weight: 100;
+                       display: inline-block;
+                       padding-right: 5px;
+                   }
+                }
 			}
 		}
 	}
