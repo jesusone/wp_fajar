@@ -48,10 +48,4 @@ function zo_custom_shipping_free_label( $label ) {
 }
 add_filter( 'woocommerce_cart_shipping_method_full_label' , 'zo_custom_shipping_free_label' );
 
-//Add Ajax sort
-add_action( 'woocommerce_before_main_content', 'yeah_feauter_products', 20 );
-function yeah_feauter_products(){
-    ?>
-    <h1>Add Feauter</h1>
-<?php
-}
+
