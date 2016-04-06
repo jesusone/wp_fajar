@@ -48,7 +48,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
             </div>
         </div>
-        <div class="yeah-product-meta">
+        <div class="yeah-product-meta clearfix">
             <h3 class="yeah-product-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 	        <?php
             /**
