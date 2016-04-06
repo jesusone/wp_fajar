@@ -45,14 +45,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
                     do_action( 'woocommerce_before_shop_loop_item_title' );
                     ?>
                 </a>
-				<?php
-                /**
-                 * woocommerce_after_shop_loop_item hook
-                 *
-                 * @hooked woocommerce_template_loop_add_to_cart - 10
-                 */
-					woocommerce_template_loop_add_to_cart();
-                ?>
+
             </div>
         </div>
         <div class="yeah-product-meta">
@@ -68,6 +61,15 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
             do_action( 'woocommerce_after_shop_loop_item_title' );
             ?>
             <span class="yeah-double-border"></span>
-        </div>
+            <?php
+            /**
+             * woocommerce_after_shop_loop_item hook
+             *
+             * @hooked woocommerce_template_loop_add_to_cart - 10
+             */
+            woocommerce_template_loop_add_to_cart();
+            ?>
+
+          </div>
     </div>
 </li>
