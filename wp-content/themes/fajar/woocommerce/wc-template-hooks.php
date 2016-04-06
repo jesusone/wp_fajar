@@ -51,3 +51,4 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_e
 * @hooked woocommerce_breadcrumb - 20
 */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+

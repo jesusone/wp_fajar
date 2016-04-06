@@ -326,7 +326,7 @@ class WPBakeryShortCode_zo_fancybox_single extends ZoShortcode{
 	    }elseif($atts['icon_type']=='etline'){
             wp_enqueue_style('zo-icon-etline', ZO_CSS. 'et-line.css');
         }elseif($atts['icon_type']=='fajar'){
-            wp_enqueue_style('zo-icon-fajar', ZO_CSS. 'fajar-icon.css');
+            wp_enqueue_style('zo-icon-fajar', ZO_CSS. 'fajar-icons.css');
         }
 		elseif($atts['icon_type']=='linearicons'){
             wp_enqueue_style('zo-icon-linearicons', ZO_CSS. 'linearicons.css');
