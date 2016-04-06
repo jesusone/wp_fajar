@@ -122,6 +122,7 @@
         list-style: none inside;
         li.product {
             width: 22.05%;
+            margin: 0 0 27px;
 			@include breakpoint-max(768px){
 				width: 100%;
 			}
