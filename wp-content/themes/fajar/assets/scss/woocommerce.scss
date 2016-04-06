@@ -892,12 +892,14 @@
 		@include breakpoint-in(480px, 992px){
 			width: inherit;
 		}
+        .yeah-product-header {
+            margin-bottom: 0;
+        }
 		&:hover {
 			.yeah-product-header {
 				.yeah-product-overlay {
 					bottom: 0;
 				}
-                margin-bottom: 0;
 			}
 		}
 		.yeah-product-header {
