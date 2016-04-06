@@ -1010,6 +1010,11 @@
                 font-size: 16px;
                 line-height: 33px;
             }
+            a {
+                &:hover {
+                    color: $primary_color;
+                }
+            }
 		}
 	}
 }
