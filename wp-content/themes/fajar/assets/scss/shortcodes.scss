@@ -181,7 +181,11 @@ div.owl-theme .owl-nav {
                 text-indent: 3px;
             }
         }
+        &:hover {
+            background: transparent;
+        }
     }
+
 }
 .zo-carousel.owl-carousel .owl-item img {
     width: auto;
