@@ -29,7 +29,7 @@ class ZOMetaOptions
 		$this->add_meta_box('template_page_options', __('Setting', 'fajar'), 'page');
 		$this->add_meta_box('testimonial_options', __('Testimonial about', 'fajar'), 'testimonial');
 		$this->add_meta_box('pricing_options', __('Pricing Option', 'fajar'), 'pricing');
-		$this->add_meta_box('team_options', __('Team About', 'fajar'), 'team');
+		$this->add_meta_box('team_options', __('Team About', 'fajar'), 'ourteam');
 		$this->add_meta_box('portfolio_options', __('Portfolio About', 'fajar'), 'portfolio');
 	}
 
