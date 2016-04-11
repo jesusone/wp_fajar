@@ -165,6 +165,9 @@
 }
 .yeah-carousel {
 	position: relative;
+	.owl-stage-outer {
+		padding-top: 28px;
+	}
 	div.owl-nav {
 		position: absolute;
 		top: 0px;
@@ -186,10 +189,8 @@
 		}
 	}
 }
+
 .template-zo_carousel--new-product {
-	.owl-stage-outer {
-		padding-top: 28px;
-	}
 	.yeah-carousel-item .yeah-grid-title{
 		padding: 0;
 		margin: 0;
@@ -198,6 +199,7 @@
 		margin: 0;
 	}
 }
+
 .template-zo_carousel--latest-blog {
 	.yeah-carousel-item {
 		.yeah-carousel-thumb {
