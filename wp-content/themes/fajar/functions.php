@@ -107,8 +107,10 @@ if ( ! isset( $content_width ) )
  */
 if (!function_exists('yeah_limit_words')) {
     function yeah_limit_words($string, $word_limit) {
+		var_dump($string);
         $words = explode(' ', strip_tags($string), ($word_limit + 1));
         if (count($words) > $word_limit) {
+			var_dump($words);
             array_pop($words);
         }
         return $words;
