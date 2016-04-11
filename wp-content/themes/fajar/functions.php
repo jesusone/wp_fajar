@@ -111,7 +111,7 @@ if (!function_exists('yeah_limit_words')) {
         if (count($words) > $word_limit) {
             array_pop($words);
         }
-        return $words;
+        return implode(' ', $words);
     }
 }
 
