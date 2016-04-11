@@ -105,8 +105,8 @@ if ( ! isset( $content_width ) )
 /*
  * Limit Words
  */
-if (!function_exists('zo_limit_words')) {
-    function zo_limit_words($string, $word_limit) {
+if (!function_exists('yeah_limit_words')) {
+    function yeah_limit_words($string, $word_limit) {
         $words = explode(' ', strip_tags($string), ($word_limit + 1));
         if (count($words) > $word_limit) {
             array_pop($words);
