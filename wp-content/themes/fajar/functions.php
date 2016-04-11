@@ -111,7 +111,7 @@ if (!function_exists('yeah_limit_words')) {
         if (count($words) > $word_limit) {
             array_pop($words);
         }
-        return apply_filters('the_excerpt', implode(' ', $words));
+        return $words;
     }
 }
 
