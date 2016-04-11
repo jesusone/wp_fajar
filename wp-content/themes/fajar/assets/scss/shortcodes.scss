@@ -163,6 +163,29 @@
 		}
 	}
 }
+div.owl-theme .owl-nav {
+    [class*='owl-'] {
+        background: transparent;
+        width: 46px;
+        height: 46px;
+        border: 1px solid #a1a1a1;
+        @include border-radius(50%);
+        i {
+            font-size: 36px;
+            line-height: 36px;
+            color: #a1a1a1;
+            &.owl-prev & {
+                text-indent: -3px;
+            }
+            &.owl-next & {
+                text-indent: 3px;
+            }
+        }
+    }
+}
+.zo-carousel.owl-carousel .owl-item img {
+    width: auto;
+}
 .yeah-carousel {
 	position: relative;
 	.owl-stage-outer {

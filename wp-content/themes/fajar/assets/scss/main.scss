@@ -363,37 +363,7 @@ body .wpb_button {
 }
 /* [End] Eror Page
 ==============================================================*/
-.zo-carousel.owl-carousel .owl-item img {
-    width: auto;
-}
-/*[Sample Carousel]*/
-div.owl-theme .owl-nav {
-    [class*='owl-'] {
-        background: transparent;
-        width: 46px;
-        height: 46px;
-        border: 1px solid #A1A1A1;
-        @include border-radius(50%);
-        i {
-            font-size: 36px;
-            line-height: 36px;
-            color: #A1A1A1;
-            &.owl-prev & {
-                text-indent: -3px;
-            }
-            &.owl-next & {
-                text-indent: 3px;
-            }
-        }
-        &:hover {
-            background: transparent;
-            i{
-                @include animation(0.5s ease 0s normal forwards 1 running spinAround);
-            }
-        }
-    }
 
-}
 /*Set Primary Color*/
 .yeah-primary-bg {
     background: $primary_color;
