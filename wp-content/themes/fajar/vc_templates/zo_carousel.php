@@ -12,46 +12,44 @@ if(!isset($atts['cat']) || $atts['cat']=='' && taxonomy_exists($taxonomy)){
 }
 $atts['categories'] = $_category;
 ?>
-<div class="zo-carousel-wrap">
+<div class="yeah-carousel-wrap">
 
-	<!-- Get Filter Query -->
-	<?php if ( $atts['filter'] == "true" && !$atts['loop'] ):?>
-        <div class="zo-carousel-filter">
+    <?php if ( $atts['filter'] == "true" && !$atts['loop'] ): ?>
+        <div class="yeah-carousel-filter">
             <ul>
-                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'fajar');?></a></li>
-				<?php
-					$posts = $atts['posts'];
-					$query = $posts->query;
-					$taxs  = array();
-					if(isset($query['tax_query'])){
-						$tax_query=$query['tax_query'];
-						foreach($tax_query as $tax){
-							if(is_array($tax)){
-								$taxs[] = $tax['terms'];
-							}
-						}
-					}
-					foreach ($atts['categories'] as $category):
-						if(!empty($taxs)){
-							if(in_array($category,$taxs)) {
-								$term = get_term($category, $taxonomy); 
-					?>
-								<li><a href="#" data-group="<?php echo esc_attr('category-' . $term->slug); ?>"><?php echo esc_attr($term->name); ?></a></li>
-				<?php 		}
-						}else{
-							$term = get_term($category, $taxonomy); 
-				?>
-							<li><a href="#" data-group="<?php echo esc_attr('category-' . $term->slug); ?>"><?php echo esc_attr($term->name); ?></a></li>
-				<?php
-						} 
-					endforeach; 
-				?>
+                <li><a class="active" href="#" data-group="all"><?php esc_html_e("All", 'ohyeahthemes');?></a></li>
+                <?php
+                $posts = $atts['posts'];
+                $query = $posts->query;
+                $taxs  = array();
+                if(isset($query['tax_query'])){
+                    $tax_query=$query['tax_query'];
+                    foreach($tax_query as $tax){
+                        if(is_array($tax)){
+                            $taxs[] = $tax['terms'];
+                        }
+                    }
+                }
+                foreach ($atts['categories'] as $category):
+                    if(!empty($taxs)){
+                        if(in_array($category,$taxs)) {
+                            $term = get_term($category, $taxonomy);
+                            ?>
+                            <li><a href="#" data-group="<?php echo esc_attr('category-' . $term->slug); ?>"><?php echo esc_attr($term->name); ?></a></li>
+                        <?php 		}
+                    }else{
+                        $term = get_term($category, $taxonomy);
+                        ?>
+                        <li><a href="#" data-group="<?php echo esc_attr('category-' . $term->slug); ?>"><?php echo esc_attr($term->name); ?></a></li>
+                        <?php
+                    }
+                endforeach;
+                ?>
             </ul>
         </div>
-		<div class="zo-carousel-filter-hidden" style="display: none"></div>
     <?php endif; ?>
-	
-    <div class="zo-carousel <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
+
+    <div class="yeah-carousel <?php echo esc_attr($atts['template']); ?>" id="<?php echo esc_attr($atts['html_id']); ?>">
         <?php
         $posts = $atts['posts'];
         while ($posts->have_posts()) :
@@ -62,7 +60,7 @@ $atts['categories'] = $_category;
                 $groups[] = 'category-' . $category->slug;
             }
             ?>
-            <div class="zo-carousel-item <?php echo implode(' ', $groups);?>">
+            <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
                 <?php
                 if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                     $class = ' has-thumbnail';
@@ -71,7 +69,7 @@ $atts['categories'] = $_category;
                     $class = ' no-image';
                     $thumbnail = '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" />';
                 endif;
-                echo '<div class="zo-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
+                echo '<div class="yeah-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
                 ?>
                 <div class="zo-carousel-title">
                     <?php the_title();?>
@@ -83,7 +81,7 @@ $atts['categories'] = $_category;
                     <?php echo get_the_term_list(get_the_ID(), 'category', 'Category: ', ', ', ''); ?>
                 </div>
             </div>
-        <?php
+            <?php
         endwhile;
         wp_reset_postdata();
         ?>
