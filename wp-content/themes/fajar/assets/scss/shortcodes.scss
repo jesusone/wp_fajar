@@ -11,10 +11,8 @@
   8. Progress
   9. Pricing
   10. Blog
-  11. Images Carousel
-  12. Carousel New Product
-  13. Carousel Fancy Box
-  14. Single Fancy Box
+  11. Carousel Fancy Box
+  12. Single Fancy Box
 
 -------------------------------------------------------------------*/
 /* ==========================================================================
@@ -198,8 +196,44 @@
 		margin: 0;
 	}
 }
+
+.template-zo_carousel--latest-blog {
+	.yeah-carousel-item {
+		.yeah-carousel-thumb {
+			position: relative;
+			text-align: center;
+			.yeah-carousel-date {
+				position: absolute;
+				right: 8px;
+				bottom: 8px;
+				background: #222222;
+				padding: 10px 25px;
+				color: #fff;
+				line-height: 25px;
+				text-align: center;
+				font-size: 26px;
+				span {
+					@extend .museo_slab_300;
+					display: block;
+					font-size: 18px;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.btn-readmore {
+			@extend .museo_slab_300;
+			font-size: 18px;
+			line-height: 1.42857143;
+			color: #ee3b24;
+			font-weight: 500;
+			&:hover {
+				color: #222;
+			}
+		}
+	}
+}
 /* ==========================================================================
-   [End] 3. Grid
+   [End] 3. Grid & Carousel
 ========================================================================== */
 
 /* ==========================================================================
@@ -580,116 +614,11 @@
 ========================================================================== */
 
 /* ==========================================================================
-   [Start] 11. Images Carousel
+   [Start] 11. Carousel
 ========================================================================== */
-.wpb_images_carousel {
-    .vc_item {
-        text-align: center;
-    }
-    &.no-padding {
-
-    }
-    .vc_images_carousel.vc_per-view-more .vc_carousel-slideline .vc_carousel-slideline-inner > .vc_item > .vc_inner {
-        padding: 0;
-        margin: 0;
-    }
-    &.overlay {
-        .vc_item, .slick-slide  {
-            img {
-                opacity: 0.6;
-            }
-            &:hover {
-                img {
-                    opacity: 1;
-                }
-            }
-        }
-
-    }
-    &.green {
-        .slick-dots li.slick-active button::before {
-            color: $primary-color ;
-        }
-    }
-    .slick-dots li.slick-active button::before {
-        color: $primary_color;
-    }
-    .vc_slide {
-        .vc_carousel-control {
-            border-radius: 100%;
-            border: 2px solid #FFF;
-            display: block;
-            height: 50px;
-            opacity: 1;
-            width: 50px;
-            line-height: 47px;
-            margin: 0;
-            top: 50%;
-            color: #fff;
-            text-shadow: none;
-            @include transform(translate(0px, -50%));
-            @include text-shadow(none);
-            font-size: 22px;
-            &:hover {
-                background-color: rgba(255,255,255, 0.5);
-            }
-            span {
-                display: none;
-            }
-            &.vc_left {
-                left: 15px;
-                &:before {
-                    content: "\f053";
-                    font-family: FontAwesome;
-                }
-            }
-            &.vc_right {
-                right: 15px;
-                &:before {
-                    content: "\f054";
-                    font-family: FontAwesome;
-                }
-            }
-        }
-    }
-}
-@include breakpoint-max(768px){
-	.wpb_images_carousel{
-		.vc_images_carousel{
-			.vc_carousel-inner{
-				.vc_carousel-slideline{
-					width: 100% !important;
-					.vc_carousel-slideline-inner{
-						.vc_item{
-							width: 100% !important;
-							height: auto !important;
-							+ .vc_item{
-								margin-top: 50px;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	.wpb_images_carousel.about-us-carousel-2{
-		.vc_images_carousel .vc_carousel-inner .vc_carousel-slideline .vc_carousel-slideline-inner .vc_item + .vc_item{
-			margin-top: 0px;
-		}
-	}
-}
-@include breakpoint-max(992px){
-	.wpb_images_carousel{
-		.zo_images_carousel-wrap{
-			text-align: center;
-			.zo_images_carousel > div + div{
-				margin-top: 50px;
-			}
-		}
-	}
-}	
+.template-zo_carousel--latest-blog
 /* ==========================================================================
-   [End] 11. Images Carousel
+   [End] 11. Carousel
 ========================================================================== */
 
 
@@ -855,6 +784,8 @@
 		text-align: right;
 	}
 }
+
+
 /** Carousel Wrap
 ================================================*/
 .zo-carousel-purchase {
@@ -970,87 +901,6 @@
 	}
 }
 
-
-/**
-* VC Images Carousel
-* Slick Slider
-**/
-.zo_images_carousel-wrap {
-    .zo_images_carousel {
-        .slick-list {
-            .slick-slide {
-                text-align: center;
-                outline: none;
-                img {
-                    display: inline-block;
-                }
-            }
-        }
-    }
-    .slick-slider {
-        .slick-arrow {
-            width: 35px;
-            height: 35px;
-            text-align: center;
-            line-height: 35px;
-            z-index: 99;
-            background-color: #FFF;
-            &:before {
-                color: #141414;
-                line-height: inherit;
-            }
-            &.slick-prev {
-                left: 25px;
-            }
-            &.slick-next {
-                right: 25px;
-            }
-        }
-    }
-    .zo_images_carousel_nav {
-        &.slick-slider {
-            .slick-arrow {
-                text-align: center;
-                z-index: 99;
-                top: 0;
-                width: 30px;
-                background-color: $primary_color;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                &:before {
-                    color: #FFF;
-                    line-height: inherit;
-                }
-                &.slick-prev {
-                    left: 0;
-                }
-                &.slick-next {
-                    right: 0;
-                }
-            }
-            .slick-slide {
-                padding: 0 5px;
-                &.slick-current {
-                    span {
-                        position: relative;
-                        display: block;
-                        &:before {
-                            content: '';
-                            @include background-opacity($primary_color, 0.8);
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 .main-category-content {
 	text-align: center;
 	background: #eeeeee;
@@ -1071,7 +921,7 @@
 }
 
 /*==========================================*
-* 13. Carousel Fancy Box                    *
+* 11. Carousel Fancy Box                    *
 *===========================================*/
 .yeah-carousel-fancyboxes-wraper {
 	.yeah-carousel-fancyboxes-body {
@@ -1127,8 +977,10 @@
 		}
 	}
 }
+
+
 /* ==========================================================================
-   [Start] 14. Single Fancy Box
+   [Start] 12. Single Fancy Box
 ========================================================================== */
 .yeah-fancyboxes-wraper {
   &.content-align-center {

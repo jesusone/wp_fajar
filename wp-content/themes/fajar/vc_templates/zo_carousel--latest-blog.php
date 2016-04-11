@@ -75,11 +75,11 @@ $atts['categories'] = $_category;
 				<div class="yeah-carousel-thumb <?php echo esc_attr($class);?>">
 					<a href="<?php the_permalink();?>"><?php echo $thumbnail;?></a>
 					<div class="yeah-carousel-date">
-						<span><?php echo get_the_date("d"); ?></span><?php echo get_the_date("M"); ?>
+						<?php echo get_the_date("d"); ?><span><?php echo get_the_date("M"); ?></span>
 					</div>
 				</div>
 				<div class="yeah-carousel-title">
-					<a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a>
+					<h3><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 				</div>
 				<div class="yeah-carousel-content">
 					<?php echo yeah_limit_words(get_the_excerpt(), 25);?>
