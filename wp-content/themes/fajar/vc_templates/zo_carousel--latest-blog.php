@@ -82,7 +82,7 @@ $atts['categories'] = $_category;
 					<a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a>
 				</div>
 				<div class="yeah-carousel-content">
-					<?php zo_limit_words(the_excerpt(), 15);?>
+					<?php zo_limit_words(the_content(), 25);?>
 				</div>
 				<a href="<?php the_permalink();?>" class="btn-readmore"><?php esc_html_e('Read More', 'fajar');?></a>
             </div>
