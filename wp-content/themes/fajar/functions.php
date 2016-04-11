@@ -114,6 +114,7 @@ if (!function_exists('zo_limit_words')) {
         return apply_filters('the_excerpt', implode(' ', $words));
     }
 }
+
 /**
  * Fajar - Ohyeahthemes setup.
  *
