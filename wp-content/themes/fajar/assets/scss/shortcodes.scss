@@ -232,6 +232,10 @@
 				@extend .museo_slab_300;
 			}
 		}
+		.yeah-carousel-content {
+			margin-bottom: 20px;
+			p{ margin: 0; }
+		}
 		.btn-readmore {
 			@extend .museo_slab_300;
 			font-size: 18px;
