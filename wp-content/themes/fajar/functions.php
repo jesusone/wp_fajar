@@ -39,26 +39,21 @@ require( get_template_directory() . '/inc/options/functions.php' );
 
 /* Add custom vc params. */
 if(class_exists('Vc_Manager')){
-
     /* Add theme elements */
     add_action('init', 'zo_vc_params');
     function zo_vc_params() {
         require( get_template_directory() . '/vc_params/vc_rows.php' );
         require( get_template_directory() . '/vc_params/vc_column.php' );
-        require( get_template_directory() . '/vc_params/vc_btn.php' );
-        require( get_template_directory() . '/vc_params/vc_separator.php' );
-        require( get_template_directory() . '/vc_params/vc_tabs.php' );
-        require( get_template_directory() . '/vc_params/vc_pie.php' );
-        require( get_template_directory() . '/vc_params/vc_images_carousel.php' );
-	    require( get_template_directory() . '/vc_params/vc_custom_heading.php' );
     }
 }
+
 /* Remove Element VC */
 if(class_exists('Vc_Manager')){
 	vc_remove_element( "vc_button" );
 	vc_remove_element( "vc_cta_button" );
 	vc_remove_element( "vc_cta_button2" );
 }
+
 /* Add SCSS */
 if(!class_exists('scssc')){
     require( get_template_directory() . '/inc/ReduxCore/inc/scssphp/scss.inc.php' );
@@ -557,6 +552,14 @@ function zo_widgets_init() {
 add_action( 'widgets_init', 'zo_widgets_init' );
 
 /**
+ * Load ajax url.
+ */
+function zo_ajax_url_head() {
+    echo '<script type="text/javascript"> var ajaxurl = "'.admin_url('admin-ajax.php').'"; </script>';
+}
+add_action( 'wp_head', 'zo_ajax_url_head');
+
+/**
  * Filter the page menu arguments.
  *
  * Makes our wp_nav_menu() fallback -- wp_page_menu() -- show a home link.
@@ -792,14 +795,6 @@ function zo_post_like_callback(){
 
 add_action('wp_ajax_zo_post_like', 'zo_post_like_callback');
 add_action('wp_ajax_nopriv_zo_post_like', 'zo_post_like_callback');
-
-/**
- * Load ajax url.
- */
-function zo_ajax_url_head() {
-    echo '<script type="text/javascript"> var ajaxurl = "'.admin_url('admin-ajax.php').'"; </script>';
-}
-add_action( 'wp_head', 'zo_ajax_url_head');
 
 /**
  * Count post view.
