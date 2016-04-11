@@ -63,9 +63,28 @@ $atts['categories'] = $_category;
             }
             ?>
             <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
-                <?php 
-					get_template_part( 'single-templates/content/content', get_post_format() );
-				?>
+				<?php
+					if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
+						$class = ' has-thumbnail';
+						$thumbnail = zo_post_thumbnail(358,301,true,true,true);
+					else:
+						$class = ' no-image';
+						$thumbnail = '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" />';
+					endif;
+                ?>
+				<div class="yeah-carousel-thumb <?php echo esc_attr($class);?>">
+					<a href="<?php the_permalink();?>"><?php echo $thumbnail;?></a>
+					<div class="yeah-carousel-date">
+						<span><?php echo get_the_date("d"); ?></span><?php echo get_the_date("M"); ?>
+					</div>
+				</div>
+				<div class="yeah-carousel-title">
+					<a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a>
+				</div>
+				<div class="yeah-carousel-content">
+					<?php yeah_limit_words(get_the_excerpt(), 25);?>
+				</div>
+				<a href="<?php the_permalink();?>" class="btn-readmore"><?php esc_html_e('Read More', 'fajar');?></a>
             </div>
         <?php
         endwhile;
