@@ -70,14 +70,12 @@ $atts['categories'] = $_category;
                     $class = ' no-image';
                     $thumbnail = '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" />';
                 endif;
-                echo '<div class="yeah-grid-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
+                echo '<div class="yeah-carousel-media ' . esc_attr($class) . '">' . $thumbnail . '</div>';
                 ?>
-                <div class="yeah-carousel-title">
+                <h3 class="yeah-carousel-title">
                     <?php the_title();?>
-                </div>
-                <?php  $team_meta = zo_post_meta_data();
-                var_dump($team_meta->_zo_team_position);
-                ?>
+                </h3>
+                <?php  $team_meta = zo_post_meta_data(); ?>
                 <div class="yeah-team-position">
                     <span><?php echo esc_attr($team_meta->_zo_team_position); ?></span>
                 </div>
