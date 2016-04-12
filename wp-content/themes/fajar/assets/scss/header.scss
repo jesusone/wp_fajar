@@ -1,6 +1,10 @@
 /* ==========================================================================
    All Style Header
 ========================================================================== */
+#header-two {
+	position: absolute;
+	top: 0;
+}
 #yeah-header-top {
 	border-bottom: 1px solid #e0e0e0;
 	p.contact-number {
@@ -120,8 +124,6 @@
 	}
 	&.header-two {
 		background: transparent;
-		position: absolute;
-		top: 0;
 	}
 	> .container {
 		position: relative;
