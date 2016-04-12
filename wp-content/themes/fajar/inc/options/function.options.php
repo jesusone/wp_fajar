@@ -116,19 +116,6 @@ $this->sections[] = array(
     'subsection' => true,
     'fields' => array(
         array(
-            'subtitle' => 'Menu position.',
-            'id' => 'menu_position',
-            'options' => array(
-                '' => 'Initial',
-                'left' => 'Menu Left',
-                'right' => 'Menu Right',
-                'center' => 'Menu Center',
-            ),
-            'type' => 'select',
-            'title' => __('Menu Position', 'fajar'),
-            'default' => 'left'
-        ),
-        array(
             'id' => 'menu_fontsize_first_level',
             'type' => 'typography',
             'title' => __('Menu Font Size - First Level', 'fajar'),

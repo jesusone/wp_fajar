@@ -99,6 +99,7 @@ Menu Default
 	#yeah-header-menu.header-default {
 		.menu-main-menu {
 			margin-top: -5px;
+			text-align: left;
 			> li {
                 vertical-align: top;
 				border-right: 1px solid #c2c2c2;
@@ -116,10 +117,11 @@ Menu Default
 	
 	#yeah-header-menu.header-two {
 		.menu-main-menu {
+			text-align: right;
 			> li {
 				display: inline-block;
 				> a{
-					padding: 15px 24px 16px 24px;
+					padding: 15px 20px 16px 20px;
 				}
 			}
 		}
