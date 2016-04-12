@@ -684,7 +684,9 @@ $this->sections[] = array(
             'type' => 'color_rgba',
             'title' => __('Sticky Background Color', 'fajar'),
             'default'   => array(
-                'alpha'     => 0
+                'alpha'     => 0.5,
+				'color'		=> '#000',
+				'rgba'		=> 'rgba(0,0,0,0.5)'
             ),
             'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
         )
