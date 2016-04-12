@@ -1,7 +1,7 @@
 /* ==========================================================================
     Style Main Menu
 ========================================================================== */
-#yeah-header-navigation {
+#yeah-header-menu.header-default {
     position: static;
     .main-navigation {
         ul.ping-right {
@@ -94,6 +94,39 @@ Menu Default
     #yeah-header-navigation.collapse {
         display: block;
     }
+	
+	/* Header Default */
+	#yeah-header-menu.header-default {
+		.menu-main-menu {
+			margin-top: -5px;
+			text-align: left;
+			> li {
+                vertical-align: top;
+				border-right: 1px solid #c2c2c2;
+				display: block;
+				float: left;
+				> a{
+					padding: 15px 28px 16px 28px;
+				}
+                &:first-child {
+					border-left: 1px solid #c2c2c2;
+                }
+			}
+		}
+	}
+	
+	#yeah-header-menu.header-two {
+		.menu-main-menu {
+			text-align: right;
+			> li {
+				display: inline-block;
+				> a{
+					padding: 15px 20px 16px 20px;
+				}
+			}
+		}
+	}
+	
     #yeah-header-navigation .main-navigation {
         div.nav-menu > ul {
             display: inline-block !important;
@@ -116,10 +149,7 @@ Menu Default
             }
         }
         .menu-main-menu {
-			margin-top: -5px;
             > li {
-                vertical-align: top;
-				border-right: 1px solid #c2c2c2;
                 > a {
                     position: relative;
                     text-align: center;
@@ -135,9 +165,6 @@ Menu Default
                             display: block;
                         }
                     }
-                }
-                &:first-child {
-					border-left: 1px solid #c2c2c2;
                 }
                 &.menu-item-has-children {
                     position: relative;
@@ -189,9 +216,7 @@ Menu Default
                 }
             }
             > li, > li a, > ul > li, > ul > li > a {
-                display: block;
                 text-decoration: none;
-				float: left;
             }
             > li ul li, > li ul li a, > ul > li ul li, > ul > li ul li a {
                 display: block;

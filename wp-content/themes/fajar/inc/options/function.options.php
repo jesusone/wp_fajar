@@ -35,6 +35,7 @@ $this->sections[] = array(
             'type' => 'image_select',
             'options' => array(
                 '' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
+                '2' => get_template_directory_uri().'/inc/options/images/header/header-2.png',
             )
         ),
         array(
@@ -114,51 +115,6 @@ $this->sections[] = array(
     'icon' => 'el-icon-tasks',
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => 'Menu position.',
-            'id' => 'menu_position',
-            'options' => array(
-                '' => 'Initial',
-                'left' => 'Menu Left',
-                'right' => 'Menu Right',
-                'center' => 'Menu Center',
-            ),
-            'type' => 'select',
-            'title' => __('Menu Position', 'fajar'),
-            'default' => 'left'
-        ),
-        array(
-            'id' => 'menu_margin_first_level',
-            'title' => __('Menu Margin - First Level', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
-        array(
-            'id' => 'menu_padding_first_level',
-            'title' => __('Menu Padding - First Level', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
-            'default' => array(
-                'padding-top'     => '15px',
-                'padding-right'   => '28px',
-                'padding-bottom'  => '16px',
-                'padding-left'    => '28px',
-                'units'          => 'px',
-            )
-        ),
         array(
             'id' => 'menu_fontsize_first_level',
             'type' => 'typography',

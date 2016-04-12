@@ -124,12 +124,6 @@ class ZoTheme_StaticCss
         /* End Sticky Header */
         /* Main Menu */
         echo '@media(min-width: 992px) {';
-			if( isset($smof_data['menu_position']) && $smof_data['menu_position'] != '' ) {
-				echo "#yeah-header-navigation .main-navigation .menu-main-menu,
-				#yeah-header-navigation .main-navigation div.nav-menu > ul {
-					text-align: ".esc_attr($smof_data['menu_position']).";
-				}";
-			}
 			if($smof_data['menu_color_first_level']){
 				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children > .zo-menu-toggle {
 				color:".esc_attr($smof_data['menu_color_first_level']).";

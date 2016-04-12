@@ -93,12 +93,12 @@
 	top: 0;
 	&.no-sticky {
 		position: relative;
-		&.header-fixed, &.header-fixed-page {
+		&.header-fixed {
 			@include transition(all 420ms linear 0ms);
 			position: fixed;
 		}
 	}
-	&.header-fixed, &.header-fixed-page {
+	&.header-fixed {
 		position: fixed;
 		.widget_cart_search_wrap {
 			.widget_cart_search_wrap_item {
@@ -110,9 +110,14 @@
 		position: static;
 		border-top : 5px solid #6dced7;
 		border-bottom: 1px solid #b2b2b2;
-		&.header-fixed, &.header-fixed-page {
+		&.header-fixed {
 			position: fixed;
 		}
+	}
+	&.header-two {
+		background: transparent;
+		position: absolute;
+		top: 0;
 	}
 	> .container {
 		position: relative;
@@ -125,9 +130,6 @@
         top: 32px;
         &.no-sticky {
             top: 0;
-            &.header-fixed-page {
-                top: 32px;
-            }
         }
     }
 }

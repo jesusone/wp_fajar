@@ -75,6 +75,7 @@ class ZOMetaOptions
 							'type' => 'imegesselect',
 							'options' => array(
 								'' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
+								'2' => get_template_directory_uri().'/inc/options/images/header/header-2.png',
 							)
 						));
 						zo_options(array(
