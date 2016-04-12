@@ -351,9 +351,9 @@ function zo_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Header Top Left', 'fajar' ),
+		'name' => __( 'Header Top 1 Left', 'fajar' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Header with a page set as Header top left', 'fajar' ),
+		'description' => __( 'Appears when using the optional Header with a page set as Header top 1 left', 'fajar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title">',
@@ -361,9 +361,29 @@ function zo_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Header Top Right', 'fajar' ),
+		'name' => __( 'Header Top 1 Right', 'fajar' ),
 		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Header with a page set as Header top right', 'fajar' ),
+		'description' => __( 'Appears when using the optional Header with a page set as Header top 1 right', 'fajar' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="wg-title">',
+		'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Header Top 2 Left', 'fajar' ),
+		'id' => 'header-top-2-left',
+		'description' => __( 'Appears when using the optional Header with a page set as Header top 2 left', 'fajar' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="wg-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Header Top 2 Right', 'fajar' ),
+		'id' => 'header-top-2-right',
+		'description' => __( 'Appears when using the optional Header with a page set as Header top 2 right', 'fajar' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="wg-title">',

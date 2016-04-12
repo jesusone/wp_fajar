@@ -35,6 +35,7 @@ $this->sections[] = array(
             'type' => 'image_select',
             'options' => array(
                 '' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
+                '2' => get_template_directory_uri().'/inc/options/images/header/header-2.png',
             )
         ),
         array(
