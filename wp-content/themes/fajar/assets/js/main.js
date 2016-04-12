@@ -141,15 +141,21 @@ jQuery(document).ready(function($) {
 			switch (true) {
 				case (window_width > 992):
 					header.addClass('header-fixed');
-					$('body').css('margin-top', header_height + 'px');
+					if(header.hasClass('header-default')){
+						$('body').css('margin-top', header_height + 'px');
+					}
 					break;
 				case ((window_width <= 992 && window_width >= 768) && (ZOOptions.menu_sticky_tablets == '1')):
 					header.addClass('header-fixed');
-					$('body').css('margin-top', header_height + 'px');
+					if(header.hasClass('header-default')){
+						$('body').css('margin-top', header_height + 'px');
+					}
 					break;
 				case ((window_width <= 768) && (ZOOptions.menu_sticky_mobile == '1')):
 					header.addClass('header-fixed');
-					$('body').css('margin-top', header_height + 'px');
+					if(header.hasClass('header-default')){
+						$('body').css('margin-top', header_height + 'px');
+					}
 					break;
 			}
 		} else {
