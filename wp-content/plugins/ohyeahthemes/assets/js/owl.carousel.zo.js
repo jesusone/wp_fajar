@@ -8,7 +8,7 @@
         });
     });
     $(window).load(function(){
-        $('.zo-carousel-filter a').click(function(e){
+        $('.yeah-carousel-filter a').click(function(e){
             e.preventDefault();
             var parent = $(this).closest('.yeah-carousel-wrap');
             $('.yeah-carousel-filter a').removeClass('active');
