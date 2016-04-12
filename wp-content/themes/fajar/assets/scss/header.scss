@@ -70,6 +70,27 @@
 				outline: none;
 			}
 		}
+		ul li {
+			border-color: #474747;
+			a {
+				font-size: 14px;
+				text-transform: uppercase;
+				color: #fff;
+			}
+			&.login-btn a {
+				background: none;
+			}
+			i{
+				color: #acacac;
+				float: left;
+				font-size: 20px;
+				margin-right: 8px;
+				&.icon-heart2 {
+					font-size: 16px;
+					margin-top: 6px;
+				}
+			}
+		}
 	}
 }
 #yeah-header-brand{
