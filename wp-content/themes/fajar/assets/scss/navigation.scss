@@ -125,6 +125,7 @@ Menu Default
 	#yeah-header-menu.header-two {
 		.menu-main-menu {
 			text-align: right;
+			justify-content: flex-end;
 			> li {
 				display: inline-block;
 				a {
