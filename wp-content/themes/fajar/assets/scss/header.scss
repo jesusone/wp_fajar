@@ -5,6 +5,12 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+	.admin-bar & {
+		top: 32px;
+		@include breakpoint-max(800px) {
+			top: 46px;
+		}
+	}
 }
 #yeah-header-top {
 	border-bottom: 1px solid #e0e0e0;
