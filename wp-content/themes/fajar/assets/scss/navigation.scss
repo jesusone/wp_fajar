@@ -102,6 +102,8 @@ Menu Default
 			> li {
                 vertical-align: top;
 				border-right: 1px solid #c2c2c2;
+				display: block;
+				float: left;
 				> a{
 					padding: 15px 28px 16px 28px;
 				}
@@ -211,9 +213,7 @@ Menu Default
                 }
             }
             > li, > li a, > ul > li, > ul > li > a {
-                display: block;
                 text-decoration: none;
-				float: left;
             }
             > li ul li, > li ul li a, > ul > li ul li, > ul > li ul li a {
                 display: block;
