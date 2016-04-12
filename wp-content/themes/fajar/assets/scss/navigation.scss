@@ -127,12 +127,15 @@ Menu Default
 			text-align: right;
 			> li {
 				display: inline-block;
+				a {
+					color: #333;
+					&:hover {
+						color: $primary_color;
+					}
+				}
 				> a{
 					padding: 15px 20px 16px 20px;
 					color: #fff;
-				}
-				li a {
-					color: #333;
 				}
 			}
 		}
