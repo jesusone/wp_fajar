@@ -59,8 +59,7 @@ $atts['categories'] = $_category;
             foreach (zoGetCategoriesByPostID(get_the_ID(), $taxonomy) as $category) {
                 $groups[] = 'category-' . $category->slug;
             }
-            $terms_meta =  zo_post_meta_data();
-            var_dump($terms_meta);
+
             ?>
             <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
                 <?php
@@ -76,13 +75,16 @@ $atts['categories'] = $_category;
                 <div class="yeah-carousel-title">
                     <?php the_title();?>
                 </div>
+                <?php  $team_meta = zo_post_meta_data();
+                var_dump($team_meta->_zo_team_position);
+                ?>
                 <div class="yeah-team-position">
-                    <span><?php echo $team_meta->_zo_team_position; ?></span>
+                    <span><?php echo esc_attr($team_meta->_zo_team_position); ?></span>
                 </div>
                 <div class="yeah-carousel-content">
                     <?php  the_excerpt(); ?>
                 </div>
-            </div>
+            </div> <!--End Item-->
             <?php
         endwhile;
         wp_reset_postdata();
