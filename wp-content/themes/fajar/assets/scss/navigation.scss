@@ -88,8 +88,8 @@ Menu Default
 ======================================================
 */
 @media screen and (min-width: 992px) {
-    #menu-mobile {
-        display: none;
+	#zo-menu-mobile.collapse {
+        display: none !important;
     }
     #yeah-header-navigation.collapse {
         display: block;
@@ -123,8 +123,13 @@ Menu Default
 	
 	/* Header Two */
 	#yeah-header-menu.header-two {
+		.yeah-header-navigation{
+			text-align: right;
+			justify-content: flex-end;
+		}
 		.menu-main-menu {
 			text-align: right;
+			justify-content: flex-end;
 			> li {
 				display: inline-block;
 				a {
