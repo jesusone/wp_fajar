@@ -32,8 +32,8 @@ add_filter( 'woocommerce_product_tabs', 'zo_woo_remove_product_tabs', 98 );
 /**
  * Add Cart Clear Cart Function
  */
-add_action('init', 'zo_woo_clear_cart_url');
-function zo_woo_clear_cart_url() {
+add_action('init', 'yeah_woo_clear_cart_url');
+function yeah_woo_clear_cart_url() {
     global $woocommerce;
     if( isset($_REQUEST['clear_cart']) ) {
         $woocommerce->cart->empty_cart();
@@ -41,11 +41,17 @@ function zo_woo_clear_cart_url() {
 }
 
 //add wrap for '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling
-function zo_custom_shipping_free_label( $label ) {
+function yeah_custom_shipping_free_label( $label ) {
     $label =  str_replace( "(Free)", '<span class="amount">Free</span>', $label );
     $label =  str_replace( "(FREE!)", '<span class="amount">FREE!</span>', $label );
     return $label;
 }
-add_filter( 'woocommerce_cart_shipping_method_full_label' , 'zo_custom_shipping_free_label' );
+add_filter( 'woocommerce_cart_shipping_method_full_label' , 'yeah_custom_shipping_free_label' );
+
+/*Product Lists Get Form sort*/
+add_action( 'woocommerce_before_shop_loop', 'yeah_archive_product_form_search', 20 );
+function yeah_archive_product_form_search(){
+
+}
 
 
