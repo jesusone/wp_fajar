@@ -4,6 +4,7 @@
 #header-two {
 	position: absolute;
 	top: 0;
+	width: 100%;
 }
 #yeah-header-top {
 	border-bottom: 1px solid #e0e0e0;
@@ -53,8 +54,10 @@
 		position: relative;
 		z-index: 99;
 		.language-switcher {
-			select {
+			form {
 				display: inline-block;
+			}
+			select {
 				color: #fff;
 				background: transparent;
 			}
