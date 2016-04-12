@@ -95,6 +95,12 @@
 			outline: 0;
 			height: initial;
 			width: initial;
+			padding: 12px 17px 13px;
+			i {
+				font-size: 20px;
+				color: #fff;
+				margin: 0;
+			}
 			.cart_total {
 				top: 50%;
 				@include transform(translateY(-50%));
