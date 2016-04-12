@@ -60,6 +60,7 @@ $atts['categories'] = $_category;
                 $groups[] = 'category-' . $category->slug;
             }
             $terms_meta =  zo_post_meta_data();
+            var_dump($terms_meta);
             ?>
             <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
                 <?php
