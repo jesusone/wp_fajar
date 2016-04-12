@@ -59,6 +59,7 @@ $atts['categories'] = $_category;
             foreach (zoGetCategoriesByPostID(get_the_ID(), $taxonomy) as $category) {
                 $groups[] = 'category-' . $category->slug;
             }
+            $terms_meta =  zo_post_meta_data();
             ?>
             <div class="yeah-carousel-item <?php echo implode(' ', $groups);?>">
                 <?php
