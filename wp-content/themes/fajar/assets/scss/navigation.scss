@@ -102,9 +102,22 @@ Menu Default
 			> li {
                 vertical-align: top;
 				border-right: 1px solid #c2c2c2;
+				> a{
+					padding: 15px 28px 16px 28px;
+				}
                 &:first-child {
 					border-left: 1px solid #c2c2c2;
                 }
+			}
+		}
+	}
+	
+	#yeah-header-navigation.header-two {
+		.menu-main-menu {
+			> li {
+				> a{
+					padding: 15px 24px 16px 24px;
+				}
 			}
 		}
 	}
