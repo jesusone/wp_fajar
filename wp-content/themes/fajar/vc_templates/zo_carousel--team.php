@@ -75,7 +75,7 @@ $atts['categories'] = $_category;
                 <div class="yeah-carousel-title">
                     <?php the_title();?>
                 </div>
-                <?php $terms_meta =  zo_post_meta_data();
+                <?php  $team_meta = zo_post_meta_data();
                 var_dump($team_meta->_zo_team_position);
                 ?>
                 <div class="yeah-team-position">
