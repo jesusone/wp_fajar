@@ -27,7 +27,7 @@
 		echo 'header-menu-custom';
 	} ?>">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center-stretch">
 				<div id="yeah-header-logo" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="" src="<?php echo esc_url(zo_page_header_logo()); ?>"></a>
 				</div>

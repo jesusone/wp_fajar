@@ -1,6 +1,23 @@
 /* ==========================================================================
    All Style Header
 ========================================================================== */
+/* Align items center & stretch for header navigation */
+@include breakpoint-min(992px){	
+	.align-items-center-stretch, .align-items-center-stretch > div {
+		display: flex !important;
+		align-items: center;
+		align-self: stretch;
+		flex-flow: row wrap;
+	}
+	.align-items-center-stretch .main-navigation, .align-items-center-stretch .main-navigation > nav > div, .align-items-center-stretch .main-navigation > div, .align-items-center-stretch .main-navigation .menu-main-menu, .align-items-center-stretch .main-navigation .menu-main-menu > li, .align-items-center-stretch .main-navigation .menu-main-menu > ul, .align-items-center-stretch .main-navigation .menu-main-menu > ul > li {
+		display: flex !important;
+		align-items: center;
+		align-self: stretch;
+	}
+	.align-items-center-stretch .show-on-mobi {
+		display: none !important;
+	}
+}
 #header-two {
 	position: absolute;
 	top: 0;
