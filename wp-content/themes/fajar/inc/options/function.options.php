@@ -129,38 +129,6 @@ $this->sections[] = array(
             'default' => 'left'
         ),
         array(
-            'id' => 'menu_margin_first_level',
-            'title' => __('Menu Margin - First Level', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
-        array(
-            'id' => 'menu_padding_first_level',
-            'title' => __('Menu Padding - First Level', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
-            'default' => array(
-                'padding-top'     => '15px',
-                'padding-right'   => '28px',
-                'padding-bottom'  => '16px',
-                'padding-left'    => '28px',
-                'units'          => 'px',
-            )
-        ),
-        array(
             'id' => 'menu_fontsize_first_level',
             'type' => 'typography',
             'title' => __('Menu Font Size - First Level', 'fajar'),
