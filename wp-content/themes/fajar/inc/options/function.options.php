@@ -672,27 +672,6 @@ $this->sections[] = array(
     )
 );
 
-/** Sticky Header Color **/
-$this->sections[] = array(
-    'title' => __('Sticky Header', 'fajar'),
-    'icon' => 'el-icon-minus',
-    'subsection' => true,
-    'fields' => array(
-        array(
-            'subtitle' => __('set color for sticky header.', 'fajar'),
-            'id' => 'bg_sticky_header',
-            'type' => 'color_rgba',
-            'title' => __('Sticky Background Color', 'fajar'),
-            'default'   => array(
-                'alpha'     => 0.5,
-				'color'		=> '#000',
-				'rgba'		=> 'rgba(0,0,0,0.5)'
-            ),
-            'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
-        )
-    )
-);
-
 /** Footer Top Color **/
 $this->sections[] = array(
     'title' => __('Footer Top Color', 'fajar'),
