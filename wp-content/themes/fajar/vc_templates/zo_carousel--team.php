@@ -75,16 +75,14 @@ $atts['categories'] = $_category;
                 <div class="yeah-carousel-title">
                     <?php the_title();?>
                 </div>
-                <?php $terms_meta =  zo_post_meta_data();
-                var_dump($terms_meta);
-                ?>
+                <?php $terms_meta =  zo_post_meta_data(); ?>
                 <div class="yeah-team-position">
-                    <span><?php echo $team_meta->_zo_team_position; ?></span>
+                    <span><?php echo esc_attr($team_meta->_zo_team_position); ?></span>
                 </div>
                 <div class="yeah-carousel-content">
                     <?php  the_excerpt(); ?>
                 </div>
-            </div>
+            </div> <!--End Item-->
             <?php
         endwhile;
         wp_reset_postdata();
