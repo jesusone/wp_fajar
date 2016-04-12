@@ -50,6 +50,15 @@
 	&.header-two {
 		background: #212121;
 		border: 0;
+		position: relative;
+		z-index: 99;
+		.language-switcher {
+			select {
+				display: inline-block;
+				color: #fff;
+				background: transparent;
+			}
+		}
 	}
 }
 #yeah-header-brand{
