@@ -87,10 +87,18 @@
 				float: left;
 				font-size: 20px;
 				margin-right: 8px;
-				&.icon-heart2 {
-					font-size: 16px;
-					margin-top: 6px;
-				}
+			}
+		}
+		.widget_cart_search_wrap .widget_cart_search_wrap_item > a.icon {
+			background: transparent;
+			border: none;
+			outline: 0;
+			height: initial;
+			width: initial;
+			.cart_total {
+				top: 50%;
+				@include transform(translateY(-50%));
+				@include border-radius(0);
 			}
 		}
 	}
