@@ -1067,10 +1067,20 @@ div.owl-theme .owl-nav {
 .template-zo_carousel--team {
 	.yeah-carousel-item {
 		.yeah-carousel-media {
+			&:hover {
+				opacity: 0.7;
+			}
 			margin-bottom: 35px;
 		}
 		.yeah-carousel-title {
 			color: $primary_color;
+			font-size: 24px;
+			@extend .museo_slab_100;
+			margin: 0px;
+		}
+		.yeah-team-position {
+			padding-bottom: 10px;
+			@extend .museo_slab_100;
 		}
 
 	}
