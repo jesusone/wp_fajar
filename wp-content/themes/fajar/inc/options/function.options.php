@@ -691,51 +691,6 @@ $this->sections[] = array(
     )
 );
 
-/** Menu Color **/
-
-$this->sections[] = array(
-    'title' => __('Menu Color', 'fajar'),
-    'icon' => 'el-icon-minus',
-    'subsection' => true,
-    'fields' => array(
-        array(
-            'subtitle' => __('Controls the text color of first level menu items.', 'fajar'),
-            'id' => 'menu_color_first_level',
-            'type' => 'color',
-            'title' => __('Menu Font Color - First Level', 'fajar'),
-            'default' => '#333'
-        ),
-        array(
-            'subtitle' => __('Controls the text hover color of first level menu items.', 'fajar'),
-            'id' => 'menu_color_hover_first_level',
-            'type' => 'color',
-            'title' => __('Menu Font Color Hover - First Level', 'fajar'),
-            'default' => '#333'
-        ),
-        array(
-            'subtitle' => __('Controls the text hover color of first level menu items.', 'fajar'),
-            'id' => 'menu_color_active_first_level',
-            'type' => 'color',
-            'title' => __('Menu Font Color Active - First Level', 'fajar'),
-            'default' => '#333'
-        ),
-        array(
-            'subtitle' => __('Controls the text color of sub level menu items.', 'fajar'),
-            'id' => 'menu_color_sub_level',
-            'type' => 'color',
-            'title' => __('Menu Font Color - Sub Level', 'fajar'),
-            'default' => '#333'
-        ),
-        array(
-            'subtitle' => __('Controls the text hover color of sub level menu items.', 'fajar'),
-            'id' => 'menu_color_hover_sub_level',
-            'type' => 'color',
-            'title' => __('Menu Font Color Hover - Sub Level', 'fajar'),
-            'default' => '#333'
-        )
-    )
-);
-
 /** Footer Top Color **/
 $this->sections[] = array(
     'title' => __('Footer Top Color', 'fajar'),

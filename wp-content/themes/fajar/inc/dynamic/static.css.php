@@ -124,29 +124,6 @@ class ZoTheme_StaticCss
         /* End Sticky Header */
         /* Main Menu */
         echo '@media(min-width: 992px) {';
-			if($smof_data['menu_color_first_level']){
-				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children > .zo-menu-toggle {
-				color:".esc_attr($smof_data['menu_color_first_level']).";
-				}";
-			}
-			if($smof_data['menu_color_hover_first_level']){
-				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li > a:hover,
-				#yeah-header-navigation .main-navigation .menu-main-menu >ul > li > a:hover {
-					color:".esc_attr($smof_data['menu_color_hover_first_level']).";
-				}";
-			}
-			if($smof_data['menu_color_active_first_level']){
-				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li.current-menu-item > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li.current-menu-ancestor > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li.current_page_item > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li.current_page_ancestor > a {
-					color:".esc_attr($smof_data['menu_color_active_first_level']).";
-				}";
-			}
 			if($smof_data['menu_first_level_uppercase']){
 				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li > a,
 				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a {
@@ -160,50 +137,6 @@ class ZoTheme_StaticCss
 			}
         echo '}';
         /* End Main Menu */
-
-        /* Main Menu Header Fixed Only Page */
-        if($smof_data['menu_color_first_level']){
-            echo "#yeah-header-menu.yeah-main-header.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li > a {
-				color:".esc_attr($smof_data['menu_color_first_level']).";
-			}";
-        }
-        if($smof_data['menu_color_hover_first_level']){
-            echo "#yeah-header-menu.yeah-main-header.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li > a:hover {
-				color:".esc_attr($smof_data['menu_color_hover_first_level']).";
-			}";
-        }
-        if($smof_data['menu_color_active_first_level']){
-            echo "#yeah-header-menu.yeah-main-header.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-item > a,
-			#yeah-header-menu.yeah-main-header.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li.current-menu-ancestor > a,
-			#yeah-header-menu.yeah-main-header.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_item > a,
-			#yeah-header-menu.yeah-main-header.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li.current_page_ancestor > a {
-				color:".esc_attr($smof_data['menu_color_active_first_level']).";
-			}";
-        }
-        /* End  Main Menu Header Fixed Only Page */
-        /* Sub Menu */
-        if(!empty($smof_data['menu_color_sub_level'])){
-            echo "#yeah-header-navigation .main-navigation .menu-main-menu > li ul li > a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul li .zo-menu-toggle {
-				color:".esc_attr($smof_data['menu_color_sub_level']).";
-			}";
-        }
-        if(!empty($smof_data['menu_color_hover_sub_level'])){
-            echo "#yeah-header-navigation .main-navigation .menu-main-menu > li ul li:hover > a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul li:hover .zo-menu-toggle,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul a:focus,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-item > a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul li:hover a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul a:focus,
-			#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul li.current-menu-item > a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-parent > a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-parent > .zo-menu-toggle,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-ancestor > a,
-			#yeah-header-navigation .main-navigation .menu-main-menu > li ul li.current-menu-ancestor > .zo-menu-toggle {
-				color:".esc_attr($smof_data['menu_color_hover_sub_level']).";
-			}";
-        }
-        /* End Sub Menu */
 
         /* ==========================================================================
            End Header

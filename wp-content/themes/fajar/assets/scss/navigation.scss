@@ -108,6 +108,12 @@ Menu Default
 				> a{
 					padding: 15px 28px 16px 28px;
 				}
+				a {
+					color: #333;
+					&:hover {
+						color: $primary_color;
+					}
+				}
                 &:first-child {
 					border-left: 1px solid #c2c2c2;
                 }
@@ -115,6 +121,7 @@ Menu Default
 		}
 	}
 	
+	/* Header Two */
 	#yeah-header-menu.header-two {
 		.menu-main-menu {
 			text-align: right;
@@ -122,6 +129,10 @@ Menu Default
 				display: inline-block;
 				> a{
 					padding: 15px 20px 16px 20px;
+					color: #fff;
+				}
+				li a {
+					color: #333;
 				}
 			}
 		}
@@ -166,6 +177,11 @@ Menu Default
                         }
                     }
                 }
+				&.current-menu-item, &.current-menu-ancestor, &.current_page_item, &.current_page_ancestor {
+					> a {
+						color: $primary_color;
+					}
+				}
                 &.menu-item-has-children {
                     position: relative;
                     > ul.sub-menu {
