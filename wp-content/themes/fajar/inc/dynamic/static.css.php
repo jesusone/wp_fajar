@@ -117,11 +117,6 @@ class ZoTheme_StaticCss
         }
         /* End Header Main */
 
-        /* Sticky Header */
-        if(!empty($smof_data['bg_sticky_header']['rgba'])){
-            echo "#yeah-header-menu.yeah-main-header.header-fixed { background-color:".esc_attr($smof_data['bg_sticky_header']['rgba'])."; }";
-        }
-        /* End Sticky Header */
         /* Main Menu */
         echo '@media(min-width: 992px) {';
 			if($smof_data['menu_first_level_uppercase']){
