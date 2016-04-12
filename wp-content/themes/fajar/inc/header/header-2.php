@@ -10,8 +10,8 @@
 	<?php if(zo_get_data_theme_options('header_top')){ ?>
 		<div id="yeah-header-top" class="header-two">
 			<div class="container-fluid">
-				<?php if(is_active_sidebar('header-top-2-left')){ dynamic_sidebar('header-top-2-left'); } ?>
-				<?php if(is_active_sidebar('header-top-2-right')){ dynamic_sidebar('header-top-2-right'); } ?>
+				<div class="left"><?php if(is_active_sidebar('header-top-2-left')){ dynamic_sidebar('header-top-2-left'); } ?></div>
+				<div class="right"><?php if(is_active_sidebar('header-top-2-right')){ dynamic_sidebar('header-top-2-right'); } ?></div>
 			</div>
 		</div>
 	<?php }?>

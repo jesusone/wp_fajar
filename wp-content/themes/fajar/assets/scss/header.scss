@@ -59,14 +59,15 @@
 		border: 0;
 		position: relative;
 		z-index: 99;
+		aside, form {
+			display: inline-block;
+		}
 		#language-switcher {
-			form {
-				display: inline-block;
-			}
 			select {
 				color: #fff;
 				background: #212121;
 				border: 0;
+				outline: none;
 			}
 		}
 	}
