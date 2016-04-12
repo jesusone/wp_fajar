@@ -97,6 +97,9 @@ Menu Default
 	
 	/* Header Default */
 	#yeah-header-menu.header-default {
+		&.header-fixed {
+			background-color: #fff;
+		}
 		.menu-main-menu {
 			margin-top: -5px;
 			text-align: left;
@@ -123,6 +126,9 @@ Menu Default
 	
 	/* Header Two */
 	#yeah-header-menu.header-two {
+		&.header-fixed {
+			background-color: rgba(0,0,0,0.5);
+		}
 		#yeah-header-logo {
 			padding: 32px 0 26px;
 		}
