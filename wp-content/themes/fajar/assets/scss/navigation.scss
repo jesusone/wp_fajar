@@ -94,6 +94,21 @@ Menu Default
     #yeah-header-navigation.collapse {
         display: block;
     }
+	
+	/* Header Default */
+	#yeah-header-navigation.header-default {
+		.menu-main-menu {
+			margin-top: -5px;
+			> li {
+                vertical-align: top;
+				border-right: 1px solid #c2c2c2;
+                &:first-child {
+					border-left: 1px solid #c2c2c2;
+                }
+			}
+		}
+	}
+	
     #yeah-header-navigation .main-navigation {
         div.nav-menu > ul {
             display: inline-block !important;
@@ -116,10 +131,7 @@ Menu Default
             }
         }
         .menu-main-menu {
-			margin-top: -5px;
             > li {
-                vertical-align: top;
-				border-right: 1px solid #c2c2c2;
                 > a {
                     position: relative;
                     text-align: center;
@@ -135,9 +147,6 @@ Menu Default
                             display: block;
                         }
                     }
-                }
-                &:first-child {
-					border-left: 1px solid #c2c2c2;
                 }
                 &.menu-item-has-children {
                     position: relative;
