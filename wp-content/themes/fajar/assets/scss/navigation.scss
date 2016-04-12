@@ -123,6 +123,9 @@ Menu Default
 	
 	/* Header Two */
 	#yeah-header-menu.header-two {
+		#yeah-header-logo {
+			padding: 32px 0 26px;
+		}
 		#yeah-header-navigation{
 			text-align: right;
 			justify-content: flex-end;
