@@ -135,6 +135,11 @@ Menu Default
 		#yeah-header-navigation{
 			text-align: right;
 			justify-content: flex-end;
+			position: static;
+		}
+		#yeah-header-navigation .main-navigation .menu-main-menu li:not(.group) > ul.drop_full_width.sub-menu {
+			left: 0; 
+			right: 0;
 		}
 		.main-navigation .menu-main-menu {
 			text-align: right;
