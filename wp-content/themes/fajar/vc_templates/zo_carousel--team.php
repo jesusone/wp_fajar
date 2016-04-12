@@ -77,7 +77,7 @@ $atts['categories'] = $_category;
                 </h3>
                 <?php  $team_meta = zo_post_meta_data(); ?>
                 <div class="yeah-team-position">
-                    <span><?php echo esc_attr($team_meta->_zo_team_position); ?></span>
+                   <?php echo esc_attr($team_meta->_zo_team_position); ?>
                 </div>
                 <div class="yeah-carousel-content">
                     <?php  the_excerpt(); ?>
