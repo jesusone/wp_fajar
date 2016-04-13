@@ -240,11 +240,14 @@ $options_profile = get_option('newsletter_profile');
             </div>
             <div id="tabs-newsletters">
                 <p>Newsletter sent to this subscriber.</p>
-                <?php if (!has_action('newsletter_user_newsletters_tab')) { ?>
+                <?php if (!has_action('newsletter_user_newsletters_tab') && has_action('newsletter_users_edit_newsletters')) { ?>
                 <div class="tnp-tab-notice">
                     This panel requires the <a href="http://www.thenewsletterplugin.com/plugins/newsletter/reports-module" target="_blank">Reports Extension 4+</a>.
                 </div>
-                <?php } else do_action('newsletter_user_newsletters_tab', $id) ?>
+                <?php } else {
+                    do_action('newsletter_user_newsletters_tab', $id);
+                    do_action('newsletter_users_edit_newsletters', $id);
+                }?>
             </div>
         </div>
 

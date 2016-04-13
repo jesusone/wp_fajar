@@ -4,7 +4,7 @@
   Plugin Name: Newsletter
   Plugin URI: http://www.thenewsletterplugin.com/plugins/newsletter
   Description: Newsletter is a cool plugin to create your own subscriber list, to send newsletters, to build your business. <strong>Before update give a look to <a href="http://www.thenewsletterplugin.com/category/release">this page</a> to know what's changed.</strong>
-  Version: 4.1.2
+  Version: 4.1.3
   Author: Stefano Lissa, The Newsletter Team
   Author URI: http://www.thenewsletterplugin.com
   Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -14,7 +14,7 @@
  */
 
 // Used as dummy parameter on css and js links
-define('NEWSLETTER_VERSION', '4.1.2');
+define('NEWSLETTER_VERSION', '4.1.3');
 
 global $wpdb, $newsletter;
 
@@ -129,7 +129,7 @@ class Newsletter extends NewsletterModule {
         // Here because the upgrade is called by the parent constructor and uses the scheduler
         add_filter('cron_schedules', array($this, 'hook_cron_schedules'), 1000);
 
-        parent::__construct('main', '1.2.7');
+        parent::__construct('main', '1.2.8');
 
         $max = $this->options['scheduler_max'];
         if (!is_numeric($max)) {
@@ -329,7 +329,7 @@ class Newsletter extends NewsletterModule {
 
     function admin_menu() {
         // This adds the main menu page
-        add_object_page('Newsletter', 'Newsletter', ($this->options['editor'] == 1) ? 'manage_categories' : 'manage_options', 'newsletter_main_index', '', plugins_url('newsletter') . '/images/menu-icon.png');
+        add_menu_page('Newsletter', 'Newsletter', ($this->options['editor'] == 1) ? 'manage_categories' : 'manage_options', 'newsletter_main_index', '', plugins_url('newsletter') . '/images/menu-icon.png', 30);
 
         $this->add_menu_page('index', 'Dashboard');
         $this->add_menu_page('main', 'Settings and More');
@@ -369,6 +369,15 @@ class Newsletter extends NewsletterModule {
                 wp_enqueue_script('thickbox');
                 wp_enqueue_style('thickbox');
                 wp_enqueue_media();
+
+                $dismissed = get_option('newsletter_dismissed', array());
+
+                if (isset($_GET['dismiss'])) {
+                    $dismissed[$_GET['dismiss']] = 1;
+                    update_option('newsletter_dismissed', $dismissed);
+                    wp_redirect($_SERVER['HTTP_REFERER']);
+                    exit();
+                }
             }
         }
 
@@ -796,6 +805,16 @@ class Newsletter extends NewsletterModule {
             $this->mailer->SMTPKeepAlive = true;
             $this->mailer->SMTPSecure = $smtp_options['secure'];
             $this->mailer->SMTPAutoTLS = false;
+
+            if ($smtp_options['ssl_insecure'] == 1) {
+                $this->mailer->SMTPOptions = array(
+                    'ssl' => array(
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                        'allow_self_signed' => true
+                    )
+                );
+            }
         } else {
             if ($this->options['phpmailer'] == 1) {
                 $this->mailer = new PHPMailer();

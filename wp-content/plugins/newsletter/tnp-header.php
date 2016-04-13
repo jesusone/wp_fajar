@@ -3,13 +3,6 @@ global $current_user, $wpdb, $newsletter;
 
 $dismissed = get_option('newsletter_dismissed', array());
 
-if (isset($_REQUEST['dismiss'])) {
-    $dismissed[$_REQUEST['dismiss']] = 1;
-    update_option('newsletter_dismissed', $dismissed);
-    wp_redirect($_SERVER['HTTP_REFERER']);
-    die();
-}
-
 $user_count = $wpdb->get_var("select count(*) from " . NEWSLETTER_USERS_TABLE . " where status='C'");
 
 function newsletter_print_entries($group) {
