@@ -158,6 +158,13 @@
     .sort-widget-options {
         .mobile-heading {
            padding: 8px 8px 8px 25px !important;
+            span {
+                font-size: 16px;
+                text-transform: uppercase;
+                border-left: 1px dotted #222;
+                padding: 3px 0 3px 25px;
+                display: block;
+            }
         }
         .col-md-3:first-child span {
             border: 0;
