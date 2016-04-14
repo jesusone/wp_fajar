@@ -22,7 +22,16 @@
 .primary-color{
 	color: $primary_color;
 }
-
+/*Set BG Primary Color*/
+.yeah-primary-bg {
+    background: $primary_color;
+}
+.yeah-primary-bg-09{
+	@include background-opacity($primary_color, 0.9);
+}
+.yeah-primary-bg-08{
+	@include background-opacity($primary_color, 0.8);
+}
 /*[Start] Zo Grid
 =============================================*/
 
@@ -238,13 +247,13 @@ img.aligncenter {
 			.vc_tta-panel-heading{
 				.vc_tta-panel-title{
 					.vc_tta-title-text{
-						color: $primary-color;
+						color: $primary_color;
 						font-size: 14px;
 						font-weight: bold;
 					}
 					i{
-						border: 2px solid $primary-color ;
-						background: $primary-color ;
+						border: 2px solid $primary_color ;
+						background: $primary_color ;
 						&:before{
 							border-color: #fff !important;
 						}
