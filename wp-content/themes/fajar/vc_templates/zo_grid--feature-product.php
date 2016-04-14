@@ -53,7 +53,6 @@
     <div class="row yeah-grid <?php echo esc_attr($atts['grid_class']);?>">
         <?php
         $posts = $atts['posts'];
-        $size = ( isset($atts['layout']) && $atts['layout']=='basic')?'thumbnail':'medium';
         while($posts->have_posts()){
             $posts->the_post();
             $groups = array();
@@ -64,9 +63,9 @@
             ?>
             <div class="yeah-grid-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
                 <?php 
-                    if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)):
+                    if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                         $class = ' has-thumbnail';
-                        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)[0];
+                        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)[0];
                     else:
                         $class = ' no-image';
                         $thumbnail = ZO_IMAGES.'no-image.jpg';
