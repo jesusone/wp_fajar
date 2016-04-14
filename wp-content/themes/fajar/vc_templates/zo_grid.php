@@ -73,6 +73,9 @@
                     endif;
                     echo '<div class="zo-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
                 ?>
+				<div>
+					<?php echo do_shortcode( "[yith_wcwl_add_to_wishlist]" ); ?>
+				</div>
                 <div class="zo-grid-title">
                     <?php the_title();?>
                 </div>
