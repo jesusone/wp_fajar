@@ -293,6 +293,8 @@ div.owl-theme .owl-nav {
 	.yeah-grid-item  {
 		padding-left: 0;
 		padding-right: 0;
+		display: flex;
+		align-items: center;
 	}
 	.yeah-grid-media, .yeah-grid-detail {
 		display: inline-block;
@@ -301,6 +303,9 @@ div.owl-theme .owl-nav {
 	}
 	.yeah-grid-media.right {
 		float: right;
+		display: flex;
+		flex-grow: 1;
+		order: 2;
 	}
 }
 /* ==========================================================================
