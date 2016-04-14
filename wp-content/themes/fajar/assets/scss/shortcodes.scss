@@ -307,6 +307,29 @@ div.owl-theme .owl-nav {
 		flex-grow: 1;
 		order: 2;
 	}
+	.yeah-grid-detail {
+		text-align: center;
+		.yeah-grid-title {
+			font-size: 26px;
+			padding: 5px 0;
+		}
+		.yeah-grid-rate {
+			display: inline-block;
+			margin-top: 10px;
+			margin-bottom: 6px;
+			&.woocommerce-product-rating .star-rating {
+				color: #e6ae48;
+				&:before {
+					color: #cecece;
+				}
+			}
+		}
+		.yeah-grid-price {
+			@extend .museo_slab_500;
+			color: #222222;
+			font-size: 20px;
+		}
+	}
 }
 /* ==========================================================================
    [End] 3. Grid & Carousel
