@@ -316,9 +316,10 @@ div.owl-theme .owl-nav {
 		.yeah-grid-rate {
 			display: inline-block;
 			margin-top: 10px;
-			margin-bottom: 6px;
+			margin-bottom: 6px !important;
 			&.woocommerce-product-rating .star-rating {
 				color: #e6ae48;
+				margin: 0;
 				&:before {
 					color: #cecece;
 				}
