@@ -66,7 +66,7 @@
                 <?php 
                     if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)):
                         $class = ' has-thumbnail';
-                        $thumbnail = get_the_post_thumbnail(get_the_ID(),$size);
+						$thumbnail = zo_post_thumbnail(get_the_ID(),480,392,true,true,true);
                     else:
                         $class = ' no-image';
                         $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
