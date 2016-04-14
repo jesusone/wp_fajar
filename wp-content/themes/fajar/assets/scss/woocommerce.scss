@@ -123,15 +123,14 @@
             position: relative;
         }
         .sort-widget-options {
+            border-top: 3px solid #a7a7a7;
+            @extend .google-font-1;
+            padding: 25px 0;
+            margin: 6px 0 0 0 !important;
+            display: none;
             .mobile-heading {
                 padding: 8px 8px 8px 25px !important;
-                span {
-                    font-size: 16px;
-                    text-transform: uppercase;
-                    border-left: 1px dotted #222;
-                    padding: 3px 0 3px 25px;
-                    display: block;
-                }
+
             }
             .col-md-3:first-child span {
                 border: 0;
@@ -142,6 +141,13 @@
         }
         .sort-widget-headings, .sort-widget-options {
             padding: 7px 0;
+            span {
+                font-size: 16px;
+                text-transform: uppercase;
+                border-left: 1px dotted #222;
+                padding: 3px 0 3px 25px;
+                display: block;
+            }
         }
     }
 }
