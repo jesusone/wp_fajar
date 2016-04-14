@@ -121,6 +121,11 @@
             margin-bottom: 70px;
             border: 3px solid #a7a7a7;
             position: relative;
+            .sort-devices-heading {
+                @include breakpoint-min(992px){
+                    display: none;
+                }
+            }
         }
         .sort-widget-options {
             border-top: 3px solid #a7a7a7;
@@ -138,6 +143,18 @@
             span {
                 font-size: 16px;
             }
+        }
+        .sort-widget-toggle-btn {
+            display: block;
+            width: 31px;
+            height: 31px;
+            background: #a7a7a7;
+            position: absolute;
+            left: 50%;
+            bottom: -34px;
+            text-align: center;
+            color: #fff;
+            line-height: 29px;
         }
         .sort-widget-headings, .sort-widget-options {
             padding: 7px 0;
