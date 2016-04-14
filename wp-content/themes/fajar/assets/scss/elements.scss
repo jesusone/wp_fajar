@@ -523,8 +523,10 @@ $message-red-light : #fff0ec;
 	&.yeah-right  {
 		.yeah-product-classic-large-inner {
 			color: #fff;
+			padding-left: 0;
 			padding-right: 15%;
 			padding-bottom: 20%;
+			text-align: right;
 			a {
 				color: #fff;
 				border-color: #fff;
