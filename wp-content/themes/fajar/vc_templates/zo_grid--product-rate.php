@@ -53,6 +53,7 @@
     <div class="<?php echo esc_attr($atts['grid_class']);?>">
         <?php
         $posts = $atts['posts'];
+		$i = 0;
         while($posts->have_posts()){
             $posts->the_post();
             $groups = array();
@@ -71,23 +72,24 @@
                         $class = ' no-image';
                         $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
                     endif;
-                    echo '<div class="zo-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
+                    echo '<div class="yeah-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
                 ?>
-				
-				<div class="yeah-grid-wishlist">
-					<?php echo do_shortcode( "[yith_wcwl_add_to_wishlist]" ); ?>
-				</div>
-                <div class="yeah-grid-title">
-                    <a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detials');?>"><?php the_title();?></a>
-                </div>
-                <div class="yeah-grid-content">
-                    <?php echo yeah_limit_words(get_the_content(), 9);?>
-                </div>
-				<div class="yeah-grid-rate woocommerce-product-rating">
-					<?php woocommerce_template_loop_rating();?>
-				</div>
-				<div class="yeah-grid-price">
-					<?php woocommerce_template_loop_price();?>
+				<div class="yeah-grid-detail">
+					<div class="yeah-grid-wishlist">
+						<?php echo do_shortcode( "[yith_wcwl_add_to_wishlist]" ); ?>
+					</div>
+					<div class="yeah-grid-title">
+						<a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detials');?>"><?php the_title();?></a>
+					</div>
+					<div class="yeah-grid-content">
+						<?php echo yeah_limit_words(get_the_content(), 9);?>
+					</div>
+					<div class="yeah-grid-rate woocommerce-product-rating">
+						<?php woocommerce_template_loop_rating();?>
+					</div>
+					<div class="yeah-grid-price">
+						<?php woocommerce_template_loop_price();?>
+					</div>
 				</div>
             </div>
             <?php
