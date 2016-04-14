@@ -12,7 +12,7 @@
         }
         $atts['categories'] = $_category;
 ?>
-<div class="yeah-grid-wrapper <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
+<div class="yeah-grid-wrapper woocommerce <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
 
 	<!-- Get Filter Query -->
 	<?php if (isset($atts['filter']) && $atts['filter'] == 1 && $atts['layout'] == 'masonry'): ?>
@@ -62,7 +62,7 @@
                 $groups[] = '"category-'.$category->slug.'"';
             }
             ?>
-            <div class="zo-grid-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
+            <div class="zo-grid-item product <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
                 <?php 
                     if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $size, false)):
                         $class = ' has-thumbnail';
@@ -82,22 +82,12 @@
                 <div class="zo-grid-content">
                     <?php echo yeah_limit_words(get_the_content(), 9);?>
                 </div>
-				<div class="zo-grid-rate">
+				<div class="zo-grid-rate woocommerce-product-rating">
 					<?php woocommerce_template_loop_rating();?>
 				</div>
 				<div class="zo-grid-price">
 					<?php woocommerce_template_loop_price();?>
 				</div>
-				
-				<?php
-				/**
-				 * woocommerce_after_shop_loop_item_title hook
-				 *
-				 * @hooked woocommerce_template_loop_rating - 5
-				 * @hooked woocommerce_template_loop_price - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop_item_title' );
-				?>
             </div>
             <?php
         }
