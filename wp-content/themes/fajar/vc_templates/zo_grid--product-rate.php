@@ -88,6 +88,16 @@
 				<div class="zo-grid-price">
 					<?php woocommerce_template_loop_price();?>
 				</div>
+				
+				<?php
+				/**
+				 * woocommerce_after_shop_loop_item_title hook
+				 *
+				 * @hooked woocommerce_template_loop_rating - 5
+				 * @hooked woocommerce_template_loop_price - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop_item_title' );
+				?>
             </div>
             <?php
         }
