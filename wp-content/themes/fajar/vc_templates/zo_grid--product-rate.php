@@ -74,7 +74,7 @@
                     endif;
                 ?>
 				<div class="yeah-grid-media <?php echo esc_attr($class);?> <?php if($i % 2 == 0){ echo "right"; }?>">
-					<?php print_r($thumbnail); ?>
+					<div class="yeah-grid-thumb"><?php print_r($thumbnail); ?></div>
 				</div>
 				<div class="yeah-grid-detail">
 					<div class="yeah-grid-wishlist">
