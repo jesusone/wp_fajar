@@ -534,9 +534,8 @@ $message-red-light : #fff0ec;
 			}
 		}
 	}
-	.yeah-product-classic-large-inner p {
+	.yeah-product-classic-large-inner > div {
 		font-size: 66px;
-		@extend .museo_slab100;
 		line-height: 60px;
 	}
 }
