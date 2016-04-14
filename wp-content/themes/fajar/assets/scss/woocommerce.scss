@@ -135,6 +135,15 @@
             display: none;
             .mobile-heading {
                 padding: 8px 8px 8px 25px !important;
+                background: #f1f1f1;
+                margin: 17px 0;
+                padding: 5px;
+                display: none ;
+                @extend .museo_slab500;
+                text-transform: uppercase;
+                @include breakpoint-max(767px){
+                    display: block;
+                }
 
             }
             .col-md-3:first-child span {
