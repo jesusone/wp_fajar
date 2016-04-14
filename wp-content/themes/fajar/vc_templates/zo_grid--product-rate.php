@@ -50,7 +50,7 @@
         </div>
     <?php endif; ?>
 	
-    <div class="row zo-grid <?php echo esc_attr($atts['grid_class']);?>">
+    <div class="<?php echo esc_attr($atts['grid_class']);?>">
         <?php
         $posts = $atts['posts'];
         $size = ( isset($atts['layout']) && $atts['layout']=='basic')?'thumbnail':'medium';
@@ -77,7 +77,7 @@
 					<?php echo do_shortcode( "[yith_wcwl_add_to_wishlist]" ); ?>
 				</div>
                 <div class="zo-grid-title">
-                    <?php the_title();?>
+                    <a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detials');?>"><?php the_title();?></a>
                 </div>
                 <div class="zo-grid-time">
                     <?php the_time('l, F jS, Y');?>
