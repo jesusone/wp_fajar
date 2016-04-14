@@ -123,8 +123,8 @@ class WPBakeryShortCode_zo_grid extends ZoShortcode{
         $col_md = $grid['col_md'] == 5 ? '2-zo' : 12 / $grid['col_md'];
         $col_sm = $grid['col_sm'] == 5 ? '2-zo' : 12 / $grid['col_sm'];
         $col_xs = $grid['col_xs'] == 5 ? '2-zo' : 12 / $grid['col_xs'];
-        $atts['item_class'] = "zo-grid-item col-lg-{$col_lg} col-md-{$col_md} col-sm-{$col_sm} col-xs-{$col_xs}";
-        $atts['grid_class'] = "zo-grid";
+        $atts['item_class'] = "yeah-grid-item col-lg-{$col_lg} col-md-{$col_md} col-sm-{$col_sm} col-xs-{$col_xs}";
+        $atts['grid_class'] = "yeah-grid";
         $class = isset($atts['class'])?$atts['class']:'';
         $atts['template'] = 'template-'.str_replace('.php','',$atts['zo_template']). ' '. $class;
         if ($grid['layout'] == 'masonry') {

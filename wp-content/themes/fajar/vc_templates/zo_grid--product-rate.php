@@ -61,7 +61,7 @@
                 $groups[] = '"category-'.$category->slug.'"';
             }
             ?>
-            <div class="zo-grid-item product <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
+            <div class="product <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
                 <?php 
                     if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                         $class = ' has-thumbnail';
@@ -73,19 +73,20 @@
                     endif;
                     echo '<div class="zo-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
                 ?>
-				<div>
+				
+				<div class="yeah-grid-wishlist">
 					<?php echo do_shortcode( "[yith_wcwl_add_to_wishlist]" ); ?>
 				</div>
-                <div class="zo-grid-title">
+                <div class="yeah-grid-title">
                     <a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detials');?>"><?php the_title();?></a>
                 </div>
-                <div class="zo-grid-content">
+                <div class="yeah-grid-content">
                     <?php echo yeah_limit_words(get_the_content(), 9);?>
                 </div>
-				<div class="zo-grid-rate woocommerce-product-rating">
+				<div class="yeah-grid-rate woocommerce-product-rating">
 					<?php woocommerce_template_loop_rating();?>
 				</div>
-				<div class="zo-grid-price">
+				<div class="yeah-grid-price">
 					<?php woocommerce_template_loop_price();?>
 				</div>
             </div>
