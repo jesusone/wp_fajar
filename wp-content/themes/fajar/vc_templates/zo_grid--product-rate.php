@@ -79,12 +79,15 @@
                 <div class="zo-grid-title">
                     <a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detials');?>"><?php the_title();?></a>
                 </div>
-                <div class="zo-grid-time">
-                    <?php the_time('l, F jS, Y');?>
+                <div class="zo-grid-content">
+                    <?php echo yeah_limit_words(get_the_content(), 9);?>
                 </div>
-                <div class="zo-grid-categories">
-                    <?php echo get_the_term_list( get_the_ID(), $taxo, 'Category: ', ', ', '' ); ?>
-                </div>
+				<div class="zo-grid-rate">
+					<?php woocommerce_template_loop_rating();?>
+				</div>
+				<div class="zo-grid-price">
+					<?php woocommerce_template_loop_price();?>
+				</div>
             </div>
             <?php
         }
