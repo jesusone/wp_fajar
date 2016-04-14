@@ -797,6 +797,11 @@ $this->sections[] = array(
             'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-1" to using this font', 'fajar'),
             'validate' => 'no_html',
             'default' => '.google-font-1',
+            'required' => array(
+                0 => 'google-font-1',
+                1 => '!=',
+                2 => ''
+            )
         ),
         array(
             'id' => 'google-font-2',
@@ -823,6 +828,11 @@ $this->sections[] = array(
             'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-2" to using this font', 'fajar'),
             'validate' => 'no_html',
             'default' => '.google-font-2',
+            'required' => array(
+                0 => 'google-font-2',
+                1 => '!=',
+                2 => ''
+            )
         ),
     )
 );
