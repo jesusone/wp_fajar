@@ -951,8 +951,8 @@ if( function_exists('zo_image_resize')) {
 	 * @param bool $upscale
 	 * @return null|string
 	 */
-	function zo_post_thumbnail($width = null, $height = null, $crop = null, $single = true, $upscale = false) {
-		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+	function zo_post_thumbnail($id = null, $width = null, $height = null, $crop = null, $single = true, $upscale = false) {
+		$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
 		$url = zo_image_resize($image_url[0], $width, $height, $crop, $single, $upscale);
 		return do_shortcode('<img src="'.esc_url($url).'" alt="' . get_the_title() . '" />');
 	}
