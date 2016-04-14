@@ -72,8 +72,10 @@
                         $class = ' no-image';
                         $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
                     endif;
-                    echo '<div class="yeah-grid-media '.esc_attr($class).'">'.$thumbnail.'</div>';
                 ?>
+				<div class="yeah-grid-media <?php echo esc_attr($class);?> <?php if($i % 2 == 0){ echo "right"; }?>">
+					<?php print_r($thumbnail); ?>
+				</div>
 				<div class="yeah-grid-detail">
 					<div class="yeah-grid-wishlist">
 						<?php echo do_shortcode( "[yith_wcwl_add_to_wishlist]" ); ?>
@@ -93,6 +95,7 @@
 				</div>
             </div>
             <?php
+			$i++;
         }
         ?>
     </div>
