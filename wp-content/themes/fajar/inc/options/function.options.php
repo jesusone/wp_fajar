@@ -468,13 +468,13 @@ $this->sections[] = array(
     'icon' => 'el-icon-compass',
     'subsection' => true,
     'fields' => array(
-        array(
-            'id'       => 'container_background',
-            'type'     => 'background',
-            'title'    => __( 'Background', 'fajar' ),
-            'subtitle' => __( 'Container background with image, color, etc.', 'fajar' ),
-            'output'   => array('#main'),
-        ),
+        // array(
+            // 'id'       => 'container_background',
+            // 'type'     => 'background',
+            // 'title'    => __( 'Background', 'fajar' ),
+            // 'subtitle' => __( 'Container background with image, color, etc.', 'fajar' ),
+            // 'output'   => array('#main'),
+        // ),
         array(
             'id' => 'container_margin',
             'title' => __('Margin', 'fajar'),
