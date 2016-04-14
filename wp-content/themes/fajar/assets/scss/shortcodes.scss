@@ -306,6 +306,9 @@ div.owl-theme .owl-nav {
 		display: flex;
 		flex-grow: 1;
 		order: 2;
+		img {
+			width: 100%;
+		}
 	}
 	.yeah-grid-detail {
 		text-align: center;
