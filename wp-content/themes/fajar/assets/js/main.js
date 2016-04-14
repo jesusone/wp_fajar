@@ -551,4 +551,13 @@ jQuery(document).ready(function($) {
                 }, 20);
         });
     };
+
+	/* ------------------------------------------------------------------------
+	 CHECK OUT CUSTOM FUNCTION
+	 ------------------------------------------------------------------------ */
+	$("#sort-widget-toggle-btn").on("click", function(){
+		$("#sort-widget-options").slideToggle();
+		$(this).find("i").toggleClass("fa-caret-down fa-caret-up");
+		return false;
+	});
 });

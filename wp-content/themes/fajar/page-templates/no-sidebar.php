@@ -23,26 +23,26 @@ get_header(); ?>
                     <div id="content" role="main">
                         <div class="product-filter">
                             <div class="sort-widget">
-
+                                <form action="" class="form-sort" method="GET">
                                 <div class="row sort-widget-headings">
 
                                     <div class="sort-devices-heading">
-                                        Sort Product
+                                        <?php echo esc_html__('Sort Product','fajar')?>
                                     </div>
 
                                     <div class="show-desktop">
 
                                         <div class="col-md-3">
-                                            <span>categories</span>
+                                            <span> <?php echo esc_html__('categories','fajar')?></span>
                                         </div>
                                         <div class="col-md-3">
-                                            <span>size</span>
+                                            <span><?php echo esc_html__('size','fajar')?></span>
                                         </div>
                                         <div class="col-md-3">
-                                            <span>colour</span>
+                                            <span><?php echo esc_html__('colour','fajar')?></span>
                                         </div>
                                         <div class="col-md-3">
-                                            <span>BY PRICE</span>
+                                            <span><?php echo esc_html__('BY PRICE','fajar')?></span>
                                         </div>
 
                                     </div>
@@ -52,7 +52,7 @@ get_header(); ?>
                                     <div class="row sort-widget-options" id="sort-widget-options">
 
                                         <div class="col-md-3">
-                                            <span class="mobile-heading">categories</span>
+                                            <span class="mobile-heading"><?php echo esc_html__('categories','fajar')?></span>
                                             <span class="clearfix"><input type="checkbox" id="option1"> <label for="option1">Suits &amp; Blazer</label></span>
                                             <span class="clearfix"><input type="checkbox" id="option2"> <label for="option2">Tuxedo</label></span>
                                             <span class="clearfix"><input type="checkbox" id="option3"> <label for="option3">Suits &amp; Bowler Hat</label></span>
@@ -87,14 +87,16 @@ get_header(); ?>
                                             <span class="clearfix"><input type="checkbox" id="option20"> <label for="option20">$50.00 - $100.00</label></span>
                                             <span class="clearfix"><input type="checkbox" id="option21"> <label for="option21">$600.00 - $3.000.00</label></span>
                                         </div>
-
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn btn default btn-fill" value="<?php echo esc_html__('Filter','fajar') ?>">
+                                        </div>
 
                                     </div>
 
                                     <a href="" class="sort-widget-toggle-btn" id="sort-widget-toggle-btn"><i class="fa fa-caret-down"></i></a>
 
                                 </div>
-
+                                </form>
                             </div>
                         </div>
                         <?php
