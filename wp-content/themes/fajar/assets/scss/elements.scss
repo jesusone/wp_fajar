@@ -523,14 +523,11 @@ $message-red-light : #fff0ec;
 	&.yeah-right  {
 		.yeah-product-classic-large-inner {
 			color: #fff;
-			right: auto;
-			left: 10%;
-			p a {
+			padding-right: 15%;
+			padding-bottom: 20%;
+			a {
 				color: #fff;
 				border-color: #fff;
-				&:hover {
-					color: $primary_color;
-				}
 			}
 		}
 	}
