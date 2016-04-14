@@ -23,7 +23,7 @@ get_header(); ?>
                     <div id="content" role="main">
                         <div class="product-filter">
                             <div class="sort-widget">
-                                <form action="" class="form-sort">
+                                <form action="" class="form-sort" method="GET">
                                 <div class="row sort-widget-headings">
 
                                     <div class="sort-devices-heading">
