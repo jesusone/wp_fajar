@@ -1,4 +1,4 @@
-// <?php
+<?php
 // global $zo_base;
 // /* get local fonts. */
 // $local_fonts = is_admin() ? $zo_base->getListLocalFontsName() : array() ;
