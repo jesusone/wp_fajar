@@ -534,9 +534,13 @@ $message-red-light : #fff0ec;
 			}
 		}
 	}
-	.yeah-product-classic-large-inner > div {
-		font-size: 66px;
-		line-height: 60px;
+	.yeah-product-classic-large-inner {
+		padding-left: 15%;
+		padding-bottom: 20%;
+		> div {
+			font-size: 66px;
+			line-height: 60px;
+		}
 	}
 }
 .yeah-product-classic-content {
