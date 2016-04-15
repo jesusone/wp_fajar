@@ -735,34 +735,34 @@ $this->sections[] = array(
     'title' => __('Typography', 'fajar'),
     'icon' => 'el-icon-text-width',
     'fields' => array(
-        array(
-            'id' => 'font_body',
-            'type' => 'typography',
-            'title' => __('Body Font', 'fajar'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-			'line-height' => false,
-			'subsets' => false,
-            'units' => 'px',
-            'default' => array(
-                'color' => '#404040',
-                'font-weight' => '400',
-                'font-family' => 'Source Sans Pro',
-				'font-backup' => 'Arial, Helvetica, sans-serif',
-                'google' => true,
-                'font-size' => '18px',
-            ),
-            'subtitle' => __('Typography option with each property can be called individually.', 'fajar'),
-        ),
-        array(
-            'id' => 'font-body-selector',
-            'type' => 'textarea',
-            'title' => __('Selector of Body Font', 'fajar'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".body_font" to using this font', 'fajar'),
-            'validate' => 'no_html',
-            'default' => 'body, .body_font',
-        ),
+        // array(
+            // 'id' => 'font_body',
+            // 'type' => 'typography',
+            // 'title' => __('Body Font', 'fajar'),
+            // 'google' => true,
+            // 'font-backup' => true,
+            // 'all_styles' => true,
+			// 'line-height' => false,
+			// 'subsets' => false,
+            // 'units' => 'px',
+            // 'default' => array(
+                // 'color' => '#404040',
+                // 'font-weight' => '400',
+                // 'font-family' => 'Source Sans Pro',
+				// 'font-backup' => 'Arial, Helvetica, sans-serif',
+                // 'google' => true,
+                // 'font-size' => '18px',
+            // ),
+            // 'subtitle' => __('Typography option with each property can be called individually.', 'fajar'),
+        // ),
+        // array(
+            // 'id' => 'font-body-selector',
+            // 'type' => 'textarea',
+            // 'title' => __('Selector of Body Font', 'fajar'),
+            // 'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".body_font" to using this font', 'fajar'),
+            // 'validate' => 'no_html',
+            // 'default' => 'body, .body_font',
+        // ),
     )
 );
 
@@ -772,58 +772,58 @@ $this->sections[] = array(
     'icon' => 'el el-fontsize',
     'subsection' => true,
     'fields' => array(
-        array(
-            'id' => 'google-font-1',
-            'type' => 'typography',
-            'title' => __('Font 1', 'fajar'),
-            'google' => true,
-            'font-backup' => true,
-            'font-style' => false,
-            'color' => false,
-            'text-align'=> false,
-            'line-height'=>false,
-            'font-size'=> false,
-            'subsets'=> false,
-            'default' => array(
-                'font-weight' => '400',
-                'font-family' => 'Source Sans Pro',
-				'font-backup' => 'Arial, Helvetica, sans-serif',
-            )
-        ),
-        array(
-            'id' => 'google-font-selector-1',
-            'type' => 'textarea',
-            'title' => __('Selector of Body Font', 'fajar'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-1" to using this font', 'fajar'),
-            'validate' => 'no_html',
-            'default' => '.google-font-1',
-        ),
-        array(
-            'id' => 'google-font-2',
-            'type' => 'typography',
-            'title' => __('Font 2', 'fajar'),
-            'google' => true,
-            'font-backup' => false,
-            'font-style' => false,
-            'color' => false,
-            'text-align'=> false,
-            'line-height'=>false,
-            'font-size'=> false,
-            'subsets'=> false,
-            'default' => array(
-                'font-weight' => '700',
-                'font-family' => 'Source Sans Pro',
-				'font-backup' => 'Arial, Helvetica, sans-serif',
-            )
-        ),
-        array(
-            'id' => 'google-font-selector-2',
-            'type' => 'textarea',
-            'title' => __('Selector of Body Font', 'fajar'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-2" to using this font', 'fajar'),
-            'validate' => 'no_html',
-            'default' => '.google-font-2',
-        ),
+        // array(
+            // 'id' => 'google-font-1',
+            // 'type' => 'typography',
+            // 'title' => __('Font 1', 'fajar'),
+            // 'google' => true,
+            // 'font-backup' => true,
+            // 'font-style' => false,
+            // 'color' => false,
+            // 'text-align'=> false,
+            // 'line-height'=>false,
+            // 'font-size'=> false,
+            // 'subsets'=> false,
+            // 'default' => array(
+                // 'font-weight' => '400',
+                // 'font-family' => 'Source Sans Pro',
+				// 'font-backup' => 'Arial, Helvetica, sans-serif',
+            // )
+        // ),
+        // array(
+            // 'id' => 'google-font-selector-1',
+            // 'type' => 'textarea',
+            // 'title' => __('Selector of Body Font', 'fajar'),
+            // 'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-1" to using this font', 'fajar'),
+            // 'validate' => 'no_html',
+            // 'default' => '.google-font-1',
+        // ),
+        // array(
+            // 'id' => 'google-font-2',
+            // 'type' => 'typography',
+            // 'title' => __('Font 2', 'fajar'),
+            // 'google' => true,
+            // 'font-backup' => false,
+            // 'font-style' => false,
+            // 'color' => false,
+            // 'text-align'=> false,
+            // 'line-height'=>false,
+            // 'font-size'=> false,
+            // 'subsets'=> false,
+            // 'default' => array(
+                // 'font-weight' => '700',
+                // 'font-family' => 'Source Sans Pro',
+				// 'font-backup' => 'Arial, Helvetica, sans-serif',
+            // )
+        // ),
+        // array(
+            // 'id' => 'google-font-selector-2',
+            // 'type' => 'textarea',
+            // 'title' => __('Selector of Body Font', 'fajar'),
+            // 'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-2" to using this font', 'fajar'),
+            // 'validate' => 'no_html',
+            // 'default' => '.google-font-2',
+        // ),
     )
 );
 
@@ -833,66 +833,66 @@ $this->sections[] = array(
     'icon' => 'el-icon-bookmark',
     'subsection' => true,
     'fields' => array(
-        array(
-            'id'       => 'local-fonts-1',
-            'type'     => 'select',
-            'title'    => __( 'Fonts 1', 'fajar' ),
-            'options'  => $local_fonts,
-            'default'  => 'museo_slab_100',
-        ),
-        array(
-            'id' => 'local-fonts-selector-1',
-            'type' => 'textarea',
-            'title' => __('Selector 1', 'fajar'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_100" to use font', 'fajar'),
-            'validate' => 'no_html',
-            'default' => '.museo_slab_100, h1, h2, h3, h4, h5, h6',
-            'required' => array(
-                0 => 'local-fonts-1',
-                1 => '!=',
-                2 => ''
-            )
-        ),
-        array(
-            'id'       => 'local-fonts-2',
-            'type'     => 'select',
-            'title'    => __( 'Fonts 2', 'fajar' ),
-            'options'  => $local_fonts,
-            'default'  => 'museo_slab_300',
-        ),
-        array(
-            'id' => 'local-fonts-selector-2',
-            'type' => 'textarea',
-            'title' => __('Selector 2', 'fajar'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_300" to use font', 'fajar'),
-            'validate' => 'no_html',
-            'default' => '.museo_slab_300, #yeah-header-menu',
-            'required' => array(
-                0 => 'local-fonts-2',
-                1 => '!=',
-                2 => ''
-            )
-        ),
-        array(
-            'id'       => 'local-fonts-3',
-            'type'     => 'select',
-            'title'    => __( 'Fonts 3', 'fajar' ),
-            'options'  => $local_fonts,
-            'default'  => 'museo_slab_500',
-        ),
-        array(
-            'id' => 'local-fonts-selector-3',
-            'type' => 'textarea',
-            'title' => __('Selector 3', 'fajar'),
-            'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_500" to use font', 'fajar'),
-            'validate' => 'no_html',
-            'default' => '.museo_slab_500',
-            'required' => array(
-                0 => 'local-fonts-3',
-                1 => '!=',
-                2 => ''
-            )
-        )
+        // array(
+            // 'id'       => 'local-fonts-1',
+            // 'type'     => 'select',
+            // 'title'    => __( 'Fonts 1', 'fajar' ),
+            // 'options'  => $local_fonts,
+            // 'default'  => 'museo_slab_100',
+        // ),
+        // array(
+            // 'id' => 'local-fonts-selector-1',
+            // 'type' => 'textarea',
+            // 'title' => __('Selector 1', 'fajar'),
+            // 'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_100" to use font', 'fajar'),
+            // 'validate' => 'no_html',
+            // 'default' => '.museo_slab_100, h1, h2, h3, h4, h5, h6',
+            // 'required' => array(
+                // 0 => 'local-fonts-1',
+                // 1 => '!=',
+                // 2 => ''
+            // )
+        // ),
+        // array(
+            // 'id'       => 'local-fonts-2',
+            // 'type'     => 'select',
+            // 'title'    => __( 'Fonts 2', 'fajar' ),
+            // 'options'  => $local_fonts,
+            // 'default'  => 'museo_slab_300',
+        // ),
+        // array(
+            // 'id' => 'local-fonts-selector-2',
+            // 'type' => 'textarea',
+            // 'title' => __('Selector 2', 'fajar'),
+            // 'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_300" to use font', 'fajar'),
+            // 'validate' => 'no_html',
+            // 'default' => '.museo_slab_300, #yeah-header-menu',
+            // 'required' => array(
+                // 0 => 'local-fonts-2',
+                // 1 => '!=',
+                // 2 => ''
+            // )
+        // ),
+        // array(
+            // 'id'       => 'local-fonts-3',
+            // 'type'     => 'select',
+            // 'title'    => __( 'Fonts 3', 'fajar' ),
+            // 'options'  => $local_fonts,
+            // 'default'  => 'museo_slab_500',
+        // ),
+        // array(
+            // 'id' => 'local-fonts-selector-3',
+            // 'type' => 'textarea',
+            // 'title' => __('Selector 3', 'fajar'),
+            // 'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), or extend ".museo_slab_500" to use font', 'fajar'),
+            // 'validate' => 'no_html',
+            // 'default' => '.museo_slab_500',
+            // 'required' => array(
+                // 0 => 'local-fonts-3',
+                // 1 => '!=',
+                // 2 => ''
+            // )
+        // )
     )
 );
 
