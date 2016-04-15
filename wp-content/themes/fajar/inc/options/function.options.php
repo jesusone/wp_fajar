@@ -286,25 +286,25 @@ $page_title = array(
 /**
  * add custom background for post type
  */
-//$post_types = zo_list_post_types();
-// foreach( $post_types as $type => $name) {
-    // $page_title[] = array(
-        // 'id'       => 'page_title_custom_post_' . $type,
-        // 'type'     => 'background',
-        // 'title'    => sprintf( __( 'Background For %s' , 'fajar'), $name),
-        // 'subtitle' => sprintf( __( 'Custom background image for post type %s', 'fajar' ), $name),
-        // 'output'   => array('.single-'.$type.' #zo-page-element-wrap'),
-        // 'background-color' => false,
-        // 'background-repeat' => false,
-        // 'background-size' => false,
-        // 'background-attachment' => false,
-        // 'background-position' => false,
-        // 'default'   => array(
-            // 'background-image'=> '',
-        // ),
-        // 'required' => array( 'page_title_custom_post', '=', 1 )
-    // );
-// }
+$post_types = zo_list_post_types();
+foreach( $post_types as $type => $name) {
+    $page_title[] = array(
+        'id'       => 'page_title_custom_post_' . $type,
+        'type'     => 'background',
+        'title'    => sprintf( __( 'Background For %s' , 'fajar'), $name),
+        'subtitle' => sprintf( __( 'Custom background image for post type %s', 'fajar' ), $name),
+        'output'   => array('.single-'.$type.' #zo-page-element-wrap'),
+        'background-color' => false,
+        'background-repeat' => false,
+        'background-size' => false,
+        'background-attachment' => false,
+        'background-position' => false,
+        'default'   => array(
+            'background-image'=> '',
+        ),
+        'required' => array( 'page_title_custom_post', '=', 1 )
+    );
+}
 /**
  * Section settings
  */
@@ -796,7 +796,7 @@ $this->sections[] = array(
             'title' => __('Selector of Body Font', 'fajar'),
             'subtitle' => __('add html tags ID or class (body,a,.class,#id, Note: no use characters: > * + & ^ @ ...), extend class ".google-font-1" to using this font', 'fajar'),
             'validate' => 'no_html',
-            'default' => '.google-font-1',)
+            'default' => '.google-font-1',
         ),
         array(
             'id' => 'google-font-2',
