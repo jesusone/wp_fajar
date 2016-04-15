@@ -21,7 +21,7 @@ class ZoTheme_StaticCss
         $this->scss->setImportPaths(get_template_directory() . '/assets/scss/');
 
         /* generate css over time */
-        if (!empty($smof_data['dev_mode'])) {
+        if (isset($smof_data['dev_mode']) && $smof_data['dev_mode']) {
             $this->generate_file();
         } else {
             /* save option generate css */
@@ -52,7 +52,7 @@ class ZoTheme_StaticCss
 			}
 
             /* minimize CSS styles */
-            if (!empty($smof_data['dev_mode'])) {
+            if (!$smof_data['dev_mode']) {
                 $this->scss->setFormatter('scss_formatter_compressed');
             }
 
@@ -93,44 +93,44 @@ class ZoTheme_StaticCss
     {
         global $smof_data, $zo_base;
         ob_start();
-        // /* local fonts */
-        // $zo_base->setTypographyLocal($smof_data['local-fonts-1'], $smof_data['local-fonts-selector-1']);
-        // $zo_base->setTypographyLocal($smof_data['local-fonts-2'], $smof_data['local-fonts-selector-2']);
-        // $zo_base->setTypographyLocal($smof_data['local-fonts-3'], $smof_data['local-fonts-selector-3']);
-		// /* Google Font Selecter */
-		// $zo_base->setGoogleFont($smof_data['font_body'], wp_filter_nohtml_kses($smof_data['font-body-selector']));
-		// $zo_base->setGoogleFont($smof_data['google-font-1'], wp_filter_nohtml_kses($smof_data['google-font-selector-1']));
-		// zo_setvariablescss($smof_data['primary_color'],'$primary_color','#ee3b24');
-		// zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
-		// zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
-		// zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
+        /* local fonts */
+        $zo_base->setTypographyLocal($smof_data['local-fonts-1'], $smof_data['local-fonts-selector-1']);
+        $zo_base->setTypographyLocal($smof_data['local-fonts-2'], $smof_data['local-fonts-selector-2']);
+        $zo_base->setTypographyLocal($smof_data['local-fonts-3'], $smof_data['local-fonts-selector-3']);
+		/* Google Font Selecter */
+		$zo_base->setGoogleFont($smof_data['font_body'], wp_filter_nohtml_kses($smof_data['font-body-selector']));
+		$zo_base->setGoogleFont($smof_data['google-font-1'], wp_filter_nohtml_kses($smof_data['google-font-selector-1']));
+		zo_setvariablescss($smof_data['primary_color'],'$primary_color','#ee3b24');
+		zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
+		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
+		zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
         /* ==========================================================================
            Start Header
         ========================================================================== */      
 
-        // /* Header Main */
-        // if($smof_data['main_logo_height']){
-            // echo "#yeah-header-logo a img { max-height: \$main_logo_height; }";
-        // }
-        // if(!empty($smof_data['bg_header']['rgba'])) {
-            // echo "#yeah-header-menu { background-color:".esc_attr($smof_data['bg_header']['rgba'])."; }";
-        // }
-        // /* End Header Main */
+        /* Header Main */
+        if($smof_data['main_logo_height']){
+            echo "#yeah-header-logo a img { max-height: \$main_logo_height; }";
+        }
+        if(!empty($smof_data['bg_header']['rgba'])) {
+            echo "#yeah-header-menu { background-color:".esc_attr($smof_data['bg_header']['rgba'])."; }";
+        }
+        /* End Header Main */
 
-        // /* Main Menu */
-        // echo '@media(min-width: 992px) {';
-			// if($smof_data['menu_first_level_uppercase']){
-				// echo "#yeah-header-navigation .main-navigation .menu-main-menu > li > a,
-				// #yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a {
-					// text-transform: uppercase;
-				// }";
-			// }
-			// if(!empty($smof_data['sub_menu_uppercase'])){
-				// echo "#yeah-header-navigation .main-navigation .menu-main-menu li ul a {
-					// text-transform: uppercase;
-				// }";
-			// }
-        // echo '}';
+        /* Main Menu */
+        echo '@media(min-width: 992px) {';
+			if($smof_data['menu_first_level_uppercase']){
+				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li > a,
+				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a {
+					text-transform: uppercase;
+				}";
+			}
+			if(!empty($smof_data['sub_menu_uppercase'])){
+				echo "#yeah-header-navigation .main-navigation .menu-main-menu li ul a {
+					text-transform: uppercase;
+				}";
+			}
+        echo '}';
         /* End Main Menu */
 
         /* ==========================================================================
