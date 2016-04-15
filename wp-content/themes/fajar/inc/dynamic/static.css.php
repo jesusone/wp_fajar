@@ -100,10 +100,10 @@ class ZoTheme_StaticCss
 		// /* Google Font Selecter */
 		// $zo_base->setGoogleFont($smof_data['font_body'], wp_filter_nohtml_kses($smof_data['font-body-selector']));
 		// $zo_base->setGoogleFont($smof_data['google-font-1'], wp_filter_nohtml_kses($smof_data['google-font-selector-1']));
-		zo_setvariablescss($smof_data['primary_color'],'$primary_color','#ee3b24');
-		zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
-		zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
-		zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
+		// zo_setvariablescss($smof_data['primary_color'],'$primary_color','#ee3b24');
+		// zo_setvariablescss($smof_data['link_color']['regular'],'$link_color','#333333');
+		// zo_setvariablescss($smof_data['link_color']['hover'],'$link_color_hover','#ee3b24');
+		// zo_setvariablescss($smof_data['main_logo_height']['height'],'$main_logo_height','');
         /* ==========================================================================
            Start Header
         ========================================================================== */      
