@@ -27,40 +27,40 @@ $this->sections[] = array(
     'title' => __('Header', 'fajar'),
     'icon' => 'el-icon-credit-card',
     'fields' => array(
-        array(
-            'id' => 'header_layout',
-            'title' => __('Layouts', 'fajar'),
-            'subtitle' => __('select a layout for header', 'fajar'),
-            'default' => '',
-            'type' => 'image_select',
-            'options' => array(
-                '' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
-                '2' => get_template_directory_uri().'/inc/options/images/header/header-2.png',
-            )
-        ),
-        array(
-            'subtitle' => __('enable sticky mode for menu.', 'fajar'),
-            'id' => 'menu_sticky',
-            'type' => 'switch',
-            'title' => __('Sticky Header', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'subtitle' => __('enable sticky mode for menu Tablets.', 'fajar'),
-            'id' => 'menu_sticky_tablets',
-            'type' => 'switch',
-            'title' => __('Sticky Tablets', 'fajar'),
-            'default' => false,
-            'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
-        ),
-        array(
-            'subtitle' => __('enable sticky mode for menu Mobile.', 'fajar'),
-            'id' => 'menu_sticky_mobile',
-            'type' => 'switch',
-            'title' => __('Sticky Mobile', 'fajar'),
-            'default' => false,
-            'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
-        )
+        // array(
+            // 'id' => 'header_layout',
+            // 'title' => __('Layouts', 'fajar'),
+            // 'subtitle' => __('select a layout for header', 'fajar'),
+            // 'default' => '',
+            // 'type' => 'image_select',
+            // 'options' => array(
+                // '' => get_template_directory_uri().'/inc/options/images/header/header-1.png',
+                // '2' => get_template_directory_uri().'/inc/options/images/header/header-2.png',
+            // )
+        // ),
+        // array(
+            // 'subtitle' => __('enable sticky mode for menu.', 'fajar'),
+            // 'id' => 'menu_sticky',
+            // 'type' => 'switch',
+            // 'title' => __('Sticky Header', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'subtitle' => __('enable sticky mode for menu Tablets.', 'fajar'),
+            // 'id' => 'menu_sticky_tablets',
+            // 'type' => 'switch',
+            // 'title' => __('Sticky Tablets', 'fajar'),
+            // 'default' => false,
+            // 'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
+        // ),
+        // array(
+            // 'subtitle' => __('enable sticky mode for menu Mobile.', 'fajar'),
+            // 'id' => 'menu_sticky_mobile',
+            // 'type' => 'switch',
+            // 'title' => __('Sticky Mobile', 'fajar'),
+            // 'default' => false,
+            // 'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
+        // )
     )
 );
 
@@ -70,13 +70,13 @@ $this->sections[] = array(
     'icon' => 'el-icon-minus',
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => __('Enable header top.', 'fajar'),
-            'id' => 'header_top',
-            'type' => 'switch',
-            'title' => __('Enable Header Top', 'fajar'),
-            'default' => true
-        ),
+        // array(
+            // 'subtitle' => __('Enable header top.', 'fajar'),
+            // 'id' => 'header_top',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Header Top', 'fajar'),
+            // 'default' => true
+        // ),
     )
 );
 
@@ -86,26 +86,26 @@ $this->sections[] = array(
     'icon' => 'el-icon-picture',
     'subsection' => true,
     'fields' => array(
-        array(
-            'title' => __('Select Logo', 'fajar'),
-            'subtitle' => __('Select an image file for your logo.', 'fajar'),
-            'id' => 'main_logo',
-            'type' => 'media',
-            'url' => true,
-            'default' => array(
-                'url'=>get_template_directory_uri().'/logo.png'
-            )
-        ),
-        array(
-            'id'       => 'main_logo_height',
-            'type'     => 'dimensions',
-            'units'    => array('px'),
-            'title'    => __('Logo Height', 'fajar'),
-            'width' => false,
-            'default'  => array(
-                'height'  => '60px'
-            ),
-        ),
+        // array(
+            // 'title' => __('Select Logo', 'fajar'),
+            // 'subtitle' => __('Select an image file for your logo.', 'fajar'),
+            // 'id' => 'main_logo',
+            // 'type' => 'media',
+            // 'url' => true,
+            // 'default' => array(
+                // 'url'=>get_template_directory_uri().'/logo.png'
+            // )
+        // ),
+        // array(
+            // 'id'       => 'main_logo_height',
+            // 'type'     => 'dimensions',
+            // 'units'    => array('px'),
+            // 'title'    => __('Logo Height', 'fajar'),
+            // 'width' => false,
+            // 'default'  => array(
+                // 'height'  => '60px'
+            // ),
+        // ),
     )
 );
 
@@ -115,86 +115,86 @@ $this->sections[] = array(
     'icon' => 'el-icon-tasks',
     'subsection' => true,
     'fields' => array(
-        array(
-            'id' => 'menu_fontsize_first_level',
-            'type' => 'typography',
-            'title' => __('Menu Font Size - First Level', 'fajar'),
-            'google' => false,
-            'font-backup' => false,
-            'all_styles' => false,
-            'color' => false,
-            'font-style' => false,
-            'font-weight' => false,
-            'font-family' => false,
-            'line-height' => false,
-            'text-align' => false,
-            'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
-                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
-            'units' => 'px',
-            'default' => array(
-                'font-size' => '15px',
-            )
-        ),
-        array(
-            'id' => 'menu_fontsize_sub_level',
-            'type' => 'typography',
-            'title' => __('Menu Font Size - Sub Level', 'fajar'),
-            'google' => false,
-            'font-backup' => false,
-            'all_styles' => false,
-            'color' => false,
-            'font-style' => false,
-            'font-weight' => false,
-            'font-family' => false,
-            'line-height' => false,
-            'text-align' => false,
-            'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li ul a',
-                '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul a'),
-            'units' => 'px',
-            'default' => array(
-                'font-size' => '16px',
-            )
-        ),
-        array(
-            'subtitle' => __('Enable mega menu.', 'fajar'),
-            'id' => 'menu_mega',
-            'type' => 'switch',
-            'title' => __('Mega Menu', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'subtitle' => __('Enable menu first level uppercase.', 'fajar'),
-            'id' => 'menu_first_level_uppercase',
-            'type' => 'switch',
-            'title' => __('Menu First Level Uppercase', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'subtitle' => __('Enable sub menu uppercase.', 'fajar'),
-            'id' => 'sub_menu_uppercase',
-            'type' => 'switch',
-            'title' => __('Sub menu Uppercase', 'fajar'),
-            'default' => false,
-        ),
-        array(
-            'id' => 'menu_icon_font_size',
-            'type' => 'typography',
-            'title' => __('Menu Icon Font Size', 'fajar'),
-            'google' => false,
-            'font-backup' => false,
-            'all_styles' => false,
-            'color' => false,
-            'font-style' => false,
-            'font-weight' => false,
-            'font-family' => false,
-            'line-height' => false,
-            'text-align' => false,
-            'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children .zo-menu-toggle'),
-            'units' => 'px',
-            'default' => array(
-                'font-size' => '14px',
-            )
-        ),
+        // array(
+            // 'id' => 'menu_fontsize_first_level',
+            // 'type' => 'typography',
+            // 'title' => __('Menu Font Size - First Level', 'fajar'),
+            // 'google' => false,
+            // 'font-backup' => false,
+            // 'all_styles' => false,
+            // 'color' => false,
+            // 'font-style' => false,
+            // 'font-weight' => false,
+            // 'font-family' => false,
+            // 'line-height' => false,
+            // 'text-align' => false,
+            // 'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li > a',
+                // '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a'),
+            // 'units' => 'px',
+            // 'default' => array(
+                // 'font-size' => '15px',
+            // )
+        // ),
+        // array(
+            // 'id' => 'menu_fontsize_sub_level',
+            // 'type' => 'typography',
+            // 'title' => __('Menu Font Size - Sub Level', 'fajar'),
+            // 'google' => false,
+            // 'font-backup' => false,
+            // 'all_styles' => false,
+            // 'color' => false,
+            // 'font-style' => false,
+            // 'font-weight' => false,
+            // 'font-family' => false,
+            // 'line-height' => false,
+            // 'text-align' => false,
+            // 'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li ul a',
+                // '#yeah-header-navigation .main-navigation .menu-main-menu > ul > li ul a'),
+            // 'units' => 'px',
+            // 'default' => array(
+                // 'font-size' => '16px',
+            // )
+        // ),
+        // array(
+            // 'subtitle' => __('Enable mega menu.', 'fajar'),
+            // 'id' => 'menu_mega',
+            // 'type' => 'switch',
+            // 'title' => __('Mega Menu', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'subtitle' => __('Enable menu first level uppercase.', 'fajar'),
+            // 'id' => 'menu_first_level_uppercase',
+            // 'type' => 'switch',
+            // 'title' => __('Menu First Level Uppercase', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'subtitle' => __('Enable sub menu uppercase.', 'fajar'),
+            // 'id' => 'sub_menu_uppercase',
+            // 'type' => 'switch',
+            // 'title' => __('Sub menu Uppercase', 'fajar'),
+            // 'default' => false,
+        // ),
+        // array(
+            // 'id' => 'menu_icon_font_size',
+            // 'type' => 'typography',
+            // 'title' => __('Menu Icon Font Size', 'fajar'),
+            // 'google' => false,
+            // 'font-backup' => false,
+            // 'all_styles' => false,
+            // 'color' => false,
+            // 'font-style' => false,
+            // 'font-weight' => false,
+            // 'font-family' => false,
+            // 'line-height' => false,
+            // 'text-align' => false,
+            // 'output'  => array('#yeah-header-navigation .main-navigation .menu-main-menu > li.menu-item-has-children .zo-menu-toggle'),
+            // 'units' => 'px',
+            // 'default' => array(
+                // 'font-size' => '14px',
+            // )
+        // ),
     )
 );
 
