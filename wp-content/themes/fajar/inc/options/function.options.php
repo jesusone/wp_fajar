@@ -815,10 +815,10 @@ $this->sections[] = array(
             'line-height'=>false,
             'font-size'=> false,
             'subsets'=> false,
-            'output' => array('.extra_font2'),
             'default' => array(
-                'font-weight' => '',
-                'font-family' => ''
+                'font-weight' => '700',
+                'font-family' => 'Source Sans Pro',
+				'font-backup' => 'Arial, Helvetica, sans-serif',
             )
         ),
         array(
