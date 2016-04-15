@@ -52,7 +52,7 @@ class ZoTheme_StaticCss
 			}
 
             /* minimize CSS styles */
-            if (!$smof_data['dev_mode']) {
+            if (!empty($smof_data['dev_mode'])) {
                 $this->scss->setFormatter('scss_formatter_compressed');
             }
 
