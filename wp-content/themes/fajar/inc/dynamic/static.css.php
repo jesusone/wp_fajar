@@ -21,15 +21,15 @@ class ZoTheme_StaticCss
         $this->scss->setImportPaths(get_template_directory() . '/assets/scss/');
 
         /* generate css over time */
-        //if (isset($smof_data['dev_mode']) && $smof_data['dev_mode']) {
+        if (isset($smof_data['dev_mode']) && $smof_data['dev_mode']) {
             $this->generate_file();
-        // } else {
-            // /* save option generate css */
-            // add_action("redux/options/smof_data/saved", array(
-                // $this,
-                // 'generate_file'
-            // ));
-        // }
+        } else {
+            /* save option generate css */
+            add_action("redux/options/smof_data/saved", array(
+                $this,
+                'generate_file'
+            ));
+        }
     }
 
     /**
@@ -52,9 +52,9 @@ class ZoTheme_StaticCss
 			}
 
             /* minimize CSS styles */
-            //if (!$smof_data['dev_mode']) {
+            if (!$smof_data['dev_mode']) {
                 $this->scss->setFormatter('scss_formatter_compressed');
-            //}
+            }
 
             /* compile scss to css */
             $css = $this->scss_render();
