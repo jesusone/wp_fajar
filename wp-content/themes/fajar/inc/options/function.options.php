@@ -952,12 +952,12 @@ $this->sections[] = array(
     'title' => __('Optimal Core', 'fajar'),
     'icon' => 'el-icon-idea',
     'fields' => array(
-        array(
-            'subtitle' => __('no minimize , generate css over time...', 'fajar'),
-            'id' => 'dev_mode',
-            'type' => 'switch',
-            'title' => __('Dev Mode (not recommended)', 'fajar'),
-            'default' => true
-        )
+        // array(
+            // 'subtitle' => __('no minimize , generate css over time...', 'fajar'),
+            // 'id' => 'dev_mode',
+            // 'type' => 'switch',
+            // 'title' => __('Dev Mode (not recommended)', 'fajar'),
+            // 'default' => true
+        // )
     )
 );
