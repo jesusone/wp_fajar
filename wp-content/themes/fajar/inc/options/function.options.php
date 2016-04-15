@@ -942,6 +942,7 @@ $this->sections[] = array(
         ),
     )
 );
+
 /**
  * Optimal Core
  *
@@ -949,7 +950,7 @@ $this->sections[] = array(
  * @author ZoTheme
  */
 $this->sections[] = array(
-    'title' => __('Optimal Core', 'fajar'),
+    'title' => __('Optimal Core', 'ori'),
     'icon' => 'el-icon-idea',
     'fields' => array(
         array(
@@ -957,7 +958,7 @@ $this->sections[] = array(
             'id' => 'dev_mode',
             'type' => 'switch',
             'title' => __('Dev Mode (not recommended)', 'fajar'),
-            'default' => false
+            'default' => true
         )
     )
 );
