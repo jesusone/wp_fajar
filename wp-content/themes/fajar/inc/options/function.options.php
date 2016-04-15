@@ -906,14 +906,14 @@ $this->sections[] = array(
     'title' => __('Custom CSS', 'fajar'),
     'icon' => 'el-icon-bulb',
     'fields' => array(
-        array(
-            'id' => 'custom_css',
-            'type' => 'ace_editor',
-            'title' => __('CSS Code', 'fajar'),
-            'subtitle' => __('create your css code here.', 'fajar'),
-            'mode' => 'css',
-            'theme' => 'monokai',
-        )
+        // array(
+            // 'id' => 'custom_css',
+            // 'type' => 'ace_editor',
+            // 'title' => __('CSS Code', 'fajar'),
+            // 'subtitle' => __('create your css code here.', 'fajar'),
+            // 'mode' => 'css',
+            // 'theme' => 'monokai',
+        // )
     )
 );
 /**
@@ -926,20 +926,20 @@ $this->sections[] = array(
     'title' => __('Animations', 'fajar'),
     'icon' => 'el-icon-magic',
     'fields' => array(
-        array(
-            'subtitle' => __('Enable animation mouse scroll...', 'fajar'),
-            'id' => 'smoothscroll',
-            'type' => 'switch',
-            'title' => __('Smooth Scroll', 'fajar'),
-            'default' => false
-        ),
-        array(
-            'subtitle' => __('Enable animation parallax for images...', 'fajar'),
-            'id' => 'paralax',
-            'type' => 'switch',
-            'title' => __('Images Paralax', 'fajar'),
-            'default' => true
-        ),
+        // array(
+            // 'subtitle' => __('Enable animation mouse scroll...', 'fajar'),
+            // 'id' => 'smoothscroll',
+            // 'type' => 'switch',
+            // 'title' => __('Smooth Scroll', 'fajar'),
+            // 'default' => false
+        // ),
+        // array(
+            // 'subtitle' => __('Enable animation parallax for images...', 'fajar'),
+            // 'id' => 'paralax',
+            // 'type' => 'switch',
+            // 'title' => __('Images Paralax', 'fajar'),
+            // 'default' => true
+        // ),
     )
 );
 /**
@@ -952,12 +952,12 @@ $this->sections[] = array(
     'title' => __('Optimal Core', 'fajar'),
     'icon' => 'el-icon-idea',
     'fields' => array(
-        array(
-            'subtitle' => __('no minimize , generate css over time...', 'fajar'),
-            'id' => 'dev_mode',
-            'type' => 'switch',
-            'title' => __('Dev Mode (not recommended)', 'fajar'),
-            'default' => true
-        )
+        // array(
+            // 'subtitle' => __('no minimize , generate css over time...', 'fajar'),
+            // 'id' => 'dev_mode',
+            // 'type' => 'switch',
+            // 'title' => __('Dev Mode (not recommended)', 'fajar'),
+            // 'default' => true
+        // )
     )
 );
