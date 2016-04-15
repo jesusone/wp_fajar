@@ -468,43 +468,43 @@ $this->sections[] = array(
     'icon' => 'el-icon-compass',
     'subsection' => true,
     'fields' => array(
-        array(
-            'id'       => 'container_background',
-            'type'     => 'background',
-            'title'    => __( 'Background', 'fajar' ),
-            'subtitle' => __( 'Container background with image, color, etc.', 'fajar' ),
-            'output'   => array('#main'),
-        ),
-        array(
-            'id' => 'container_margin',
-            'title' => __('Margin', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('body #page #main'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
-        array(
-            'id' => 'container_padding',
-            'title' => __('Padding', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('body #page #main'),
-            'default' => array(
-                'padding-top'     => '0',
-                'padding-right'   => '0',
-                'padding-bottom'  => '0',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            )
-        )
+        // array(
+            // 'id'       => 'container_background',
+            // 'type'     => 'background',
+            // 'title'    => __( 'Background', 'fajar' ),
+            // 'subtitle' => __( 'Container background with image, color, etc.', 'fajar' ),
+            // 'output'   => array('#main'),
+        // ),
+        // array(
+            // 'id' => 'container_margin',
+            // 'title' => __('Margin', 'fajar'),
+            // 'type' => 'spacing',
+            // 'units' => 'px',
+            // 'mode' => 'margin',
+            // 'output' => array('body #page #main'),
+            // 'default' => array(
+                // 'margin-top'     => '0',
+                // 'margin-right'   => '0',
+                // 'margin-bottom'  => '0',
+                // 'margin-left'    => '0',
+                // 'units'          => 'px',
+            // )
+        // ),
+        // array(
+            // 'id' => 'container_padding',
+            // 'title' => __('Padding', 'fajar'),
+            // 'type' => 'spacing',
+            // 'units' => 'px',
+            // 'mode' => 'padding',
+            // 'output' => array('body #page #main'),
+            // 'default' => array(
+                // 'padding-top'     => '0',
+                // 'padding-right'   => '0',
+                // 'padding-bottom'  => '0',
+                // 'padding-left'    => '0',
+                // 'units'          => 'px',
+            // )
+        // )
     )
 );
 
@@ -519,25 +519,25 @@ $this->sections[] = array(
     'icon' => 'el-icon-compass',
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => __('Enable page loadding.', 'fajar'),
-            'id' => 'enable_page_loadding',
-            'type' => 'switch',
-            'title' => __('Enable Page Loadding', 'fajar'),
-            'default' => false,
-        ),
-        array(
-            'subtitle' => __('Select Style Page Loadding.', 'fajar'),
-            'id' => 'page_loadding_style',
-            'type' => 'select',
-            'options' => array(
-                '1' => 'Style 1',
-                '2' => 'Style 2'
-            ),
-            'title' => __('Page Loadding Style', 'fajar'),
-            'default' => 'style-1',
-            'required' => array( 0 => 'enable_page_loadding', 1 => '=', 2 => 1 )
-        )
+        // array(
+            // 'subtitle' => __('Enable page loadding.', 'fajar'),
+            // 'id' => 'enable_page_loadding',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Page Loadding', 'fajar'),
+            // 'default' => false,
+        // ),
+        // array(
+            // 'subtitle' => __('Select Style Page Loadding.', 'fajar'),
+            // 'id' => 'page_loadding_style',
+            // 'type' => 'select',
+            // 'options' => array(
+                // '1' => 'Style 1',
+                // '2' => 'Style 2'
+            // ),
+            // 'title' => __('Page Loadding Style', 'fajar'),
+            // 'default' => 'style-1',
+            // 'required' => array( 0 => 'enable_page_loadding', 1 => '=', 2 => 1 )
+        // )
     )
 );
 
@@ -550,26 +550,26 @@ $this->sections[] = array(
     'title' => __('Footer', 'fajar'),
     'icon' => 'el-icon-credit-card',
 	'fields' => array(
-		array(
-            'id' => 'footer_layout',
-            'title' => __('Layouts', 'fajar'),
-            'subtitle' => __('select a layout for footer', 'fajar'),
-            'default' => '',
-            'type' => 'image_select',
-            'options' => array(
-                '' => get_template_directory_uri().'/inc/options/images/footer/footer-layout.png',
-            )
-        ),
-		array(
-            'title' => __('Select Logo', 'fajar'),
-            'subtitle' => __('Select an image file for your logo.', 'fajar'),
-            'id' => 'footer_logo',
-            'type' => 'media',
-            'url' => true,
-            'default' => array(
-                'url'=>get_template_directory_uri().'/footer-logo.png'
-            )
-        )
+		// array(
+            // 'id' => 'footer_layout',
+            // 'title' => __('Layouts', 'fajar'),
+            // 'subtitle' => __('select a layout for footer', 'fajar'),
+            // 'default' => '',
+            // 'type' => 'image_select',
+            // 'options' => array(
+                // '' => get_template_directory_uri().'/inc/options/images/footer/footer-layout.png',
+            // )
+        // ),
+		// array(
+            // 'title' => __('Select Logo', 'fajar'),
+            // 'subtitle' => __('Select an image file for your logo.', 'fajar'),
+            // 'id' => 'footer_logo',
+            // 'type' => 'media',
+            // 'url' => true,
+            // 'default' => array(
+                // 'url'=>get_template_directory_uri().'/footer-logo.png'
+            // )
+        // )
 	)
 );
 
@@ -579,44 +579,44 @@ $this->sections[] = array(
     'icon' => 'el-icon-fork',
     'subsection' => true,
     'fields' => array(
-        array(
-            'id' => 'footer_row_1',
-            'type' => 'switch',
-            'title' => __('Enable Footer Row 1', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'id' => 'footer_row_2',
-            'type' => 'switch',
-            'title' => __('Enable Footer Row 2', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'id' => 'footer_row_3',
-            'type' => 'switch',
-            'title' => __('Enable Footer Row 3', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'id' => 'footer_banners',
-            'type' => 'switch',
-            'title' => __('Enable Footer Banners', 'fajar'),
-            'default' => true,
-        ),
-		array(
-            'subtitle' => __('Enable footer bottom.', 'fajar'),
-            'id' => 'footer_bottom',
-            'type' => 'switch',
-            'title' => __('Enable Footer Bottom', 'fajar'),
-            'default' => true,
-        ),
-        array(
-            'subtitle' => __('enable button back to top.', 'fajar'),
-            'id' => 'footer_botton_back_to_top',
-            'type' => 'switch',
-            'title' => __('Back To Top', 'fajar'),
-            'default' => true,
-        )
+        // array(
+            // 'id' => 'footer_row_1',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Footer Row 1', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'id' => 'footer_row_2',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Footer Row 2', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'id' => 'footer_row_3',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Footer Row 3', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'id' => 'footer_banners',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Footer Banners', 'fajar'),
+            // 'default' => true,
+        // ),
+		// array(
+            // 'subtitle' => __('Enable footer bottom.', 'fajar'),
+            // 'id' => 'footer_bottom',
+            // 'type' => 'switch',
+            // 'title' => __('Enable Footer Bottom', 'fajar'),
+            // 'default' => true,
+        // ),
+        // array(
+            // 'subtitle' => __('enable button back to top.', 'fajar'),
+            // 'id' => 'footer_botton_back_to_top',
+            // 'type' => 'switch',
+            // 'title' => __('Back To Top', 'fajar'),
+            // 'default' => true,
+        // )
     )
 );
 
