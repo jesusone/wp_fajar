@@ -49,8 +49,12 @@ get_header(); ?>
 
                                     <div class="clearfix"></div>
 
-                                    <div class="row sort-widget-options" id="sort-widget-options">
-
+                                    <div class="sort-widget-options" id="sort-widget-options">
+                                        <?php
+                                         $product_cat = get_terms( 'product_cat', array( 'hide_empty' => 0, 'orderby' => 'ASC' ) );
+                                        var_dump($product_cat); 
+                                         $cart_slug = isset($_GET["product_cat"]) ? $_GET["product_cat"] : '';
+                                        ?>
                                         <div class="col-md-3">
                                             <span class="mobile-heading"><?php echo esc_html__('categories','fajar')?></span>
                                             <span class="clearfix"><input type="checkbox" id="option1"> <label for="option1">Suits &amp; Blazer</label></span>
