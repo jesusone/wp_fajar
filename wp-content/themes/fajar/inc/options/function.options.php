@@ -209,79 +209,79 @@ $this->sections[] = array(
  *
  */
 $page_title = array(
-    array(
-        'id' => 'page_title_layout',
-        'title' => __('Layouts', 'fajar'),
-        'subtitle' => __('select a layout for page title', 'fajar'),
-        'default' => '5',
-        'type' => 'image_select',
-        'options' => array(
-            '' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-0.png',
-            '1' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-1.png',
-            '2' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-2.png',
-            '3' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-3.png',
-            '4' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-4.png',
-            '5' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-5.png',
-            '6' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-6.png',
-        )
-    ),
-    array(
-        'id'       => 'page_title_background',
-        'type'     => 'background',
-        'title'    => __( 'Background', 'fajar' ),
-        'subtitle' => __( 'page title background with image, color, etc.', 'fajar' ),
-        'output'   => array('#zo-page-element-wrap'),
-        'default'   => array(
-            'background-color'=>'#ffffff',
-            'background-image'=> get_template_directory_uri().'/assets/images/pagetitle.jpg',
-            'background-repeat'=>'',
-            'background-size'=>'cover',
-            'background-attachment'=>'',
-            'background-position'=>'center center'
-        )
-    ),
-    array(
-        'id' => 'page_title_margin',
-        'title' => __('Margin', 'fajar'),
-        'type' => 'spacing',
-        'units' => 'px',
-        'mode' => 'margin',
-        'output' => array('#zo-page-element-wrap'),
-        'default' => array(
-            'margin-top'     => '0',
-            'margin-right'   => '0',
-            'margin-bottom'  => '80px',
-            'margin-left'    => '0',
-            'units'          => 'px',
-        )
-    ),
-    array(
-        'id' => 'page_title_padding',
-        'title' => __('Padding', 'fajar'),
-        'type' => 'spacing',
-        'units' => 'px',
-        'mode' => 'padding',
-        'output' => array('#zo-page-element-wrap'),
-        'default' => array(
-            'padding-top'     => '340px',
-            'padding-right'   => '0',
-            'padding-bottom'  => '260px',
-            'padding-left'    => '0',
-            'units'          => 'px',
-        )
-    ),
-    array(
-        'id' => 'page_title_parallax',
-        'title' => __('Enable Header Parallax', 'fajar'),
-        'type' => 'switch',
-        'default' => false
-    ),
-    array(
-        'id' => 'page_title_custom_post',
-        'title' => __('Custom Background For Post Type', 'fajar'),
-        'type' => 'switch',
-        'default' => false
-    ),
+    // array(
+        // 'id' => 'page_title_layout',
+        // 'title' => __('Layouts', 'fajar'),
+        // 'subtitle' => __('select a layout for page title', 'fajar'),
+        // 'default' => '5',
+        // 'type' => 'image_select',
+        // 'options' => array(
+            // '' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-0.png',
+            // '1' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-1.png',
+            // '2' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-2.png',
+            // '3' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-3.png',
+            // '4' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-4.png',
+            // '5' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-5.png',
+            // '6' => get_template_directory_uri().'/inc/options/images/pagetitle/pt-s-6.png',
+        // )
+    // ),
+    // array(
+        // 'id'       => 'page_title_background',
+        // 'type'     => 'background',
+        // 'title'    => __( 'Background', 'fajar' ),
+        // 'subtitle' => __( 'page title background with image, color, etc.', 'fajar' ),
+        // 'output'   => array('#zo-page-element-wrap'),
+        // 'default'   => array(
+            // 'background-color'=>'#ffffff',
+            // 'background-image'=> get_template_directory_uri().'/assets/images/pagetitle.jpg',
+            // 'background-repeat'=>'',
+            // 'background-size'=>'cover',
+            // 'background-attachment'=>'',
+            // 'background-position'=>'center center'
+        // )
+    // ),
+    // array(
+        // 'id' => 'page_title_margin',
+        // 'title' => __('Margin', 'fajar'),
+        // 'type' => 'spacing',
+        // 'units' => 'px',
+        // 'mode' => 'margin',
+        // 'output' => array('#zo-page-element-wrap'),
+        // 'default' => array(
+            // 'margin-top'     => '0',
+            // 'margin-right'   => '0',
+            // 'margin-bottom'  => '80px',
+            // 'margin-left'    => '0',
+            // 'units'          => 'px',
+        // )
+    // ),
+    // array(
+        // 'id' => 'page_title_padding',
+        // 'title' => __('Padding', 'fajar'),
+        // 'type' => 'spacing',
+        // 'units' => 'px',
+        // 'mode' => 'padding',
+        // 'output' => array('#zo-page-element-wrap'),
+        // 'default' => array(
+            // 'padding-top'     => '340px',
+            // 'padding-right'   => '0',
+            // 'padding-bottom'  => '260px',
+            // 'padding-left'    => '0',
+            // 'units'          => 'px',
+        // )
+    // ),
+    // array(
+        // 'id' => 'page_title_parallax',
+        // 'title' => __('Enable Header Parallax', 'fajar'),
+        // 'type' => 'switch',
+        // 'default' => false
+    // ),
+    // array(
+        // 'id' => 'page_title_custom_post',
+        // 'title' => __('Custom Background For Post Type', 'fajar'),
+        // 'type' => 'switch',
+        // 'default' => false
+    // ),
 );
 /**
  * add custom background for post type
@@ -320,48 +320,48 @@ $this->sections[] = array(
     'title' => __('Page Title', 'fajar'),
     'subsection' => true,
     'fields' => array(
-        array(
-            'id' => 'page_title_typography',
-            'type' => 'typography',
-            'title' => __('Typography', 'fajar'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('.page-title #page-title-text h1'),
-            'units' => 'px',
-            'subtitle' => __('Typography option with title text.', 'fajar'),
-            'default' => array(
-                'color' => '#fff',
-                'font-style' => 'normal',
-                'font-weight' => '700',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '48px',
-                'line-height' => '60px',
-                'text-align' => 'center'
-            )
-        ),
-        array(
-            'id' => 'page_sub_title_typography',
-            'type' => 'typography',
-            'title' => __('Sub Title', 'fajar'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('.page-title #page-title-text .page-sub-title'),
-            'units' => 'px',
-            'subtitle' => __('Typography option with sub title text.', 'fajar'),
-            'default' => array(
-                'color' => '#fff',
-                'font-style' => 'normal',
-                'font-weight' => '700',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '24px',
-                'line-height' => '36px',
-                'text-align' => 'center'
-            )
-        ),
+        // array(
+            // 'id' => 'page_title_typography',
+            // 'type' => 'typography',
+            // 'title' => __('Typography', 'fajar'),
+            // 'google' => true,
+            // 'font-backup' => true,
+            // 'all_styles' => true,
+            // 'output'  => array('.page-title #page-title-text h1'),
+            // 'units' => 'px',
+            // 'subtitle' => __('Typography option with title text.', 'fajar'),
+            // 'default' => array(
+                // 'color' => '#fff',
+                // 'font-style' => 'normal',
+                // 'font-weight' => '700',
+                // 'font-family' => 'Montserrat',
+                // 'google' => true,
+                // 'font-size' => '48px',
+                // 'line-height' => '60px',
+                // 'text-align' => 'center'
+            // )
+        // ),
+        // array(
+            // 'id' => 'page_sub_title_typography',
+            // 'type' => 'typography',
+            // 'title' => __('Sub Title', 'fajar'),
+            // 'google' => true,
+            // 'font-backup' => true,
+            // 'all_styles' => true,
+            // 'output'  => array('.page-title #page-title-text .page-sub-title'),
+            // 'units' => 'px',
+            // 'subtitle' => __('Typography option with sub title text.', 'fajar'),
+            // 'default' => array(
+                // 'color' => '#fff',
+                // 'font-style' => 'normal',
+                // 'font-weight' => '700',
+                // 'font-family' => 'Montserrat',
+                // 'google' => true,
+                // 'font-size' => '24px',
+                // 'line-height' => '36px',
+                // 'text-align' => 'center'
+            // )
+        // ),
     )
 );
 /* Breadcrumb */
