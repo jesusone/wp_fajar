@@ -21,7 +21,7 @@ class ZoTheme_StaticCss
         $this->scss->setImportPaths(get_template_directory() . '/assets/scss/');
 
         /* generate css over time */
-        if (!empty($smof_data['dev_mode']) && $smof_data['dev_mode']) {
+        if (!empty($smof_data['dev_mode'])) {
             $this->generate_file();
         } else {
             /* save option generate css */
