@@ -370,34 +370,34 @@ $this->sections[] = array(
     'title' => __('Breadcrumb', 'fajar'),
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => __('The text before the breadcrumb home.', 'fajar'),
-            'id' => 'breacrumb_home_prefix',
-            'type' => 'text',
-            'title' => __('Breadcrumb Home Prefix', 'fajar'),
-            'default' => 'Home'
-        ),
-        array(
-            'id' => 'breacrumb_typography',
-            'type' => 'typography',
-            'title' => __('Typography', 'fajar'),
-            'google' => true,
-            'font-backup' => true,
-            'all_styles' => true,
-            'output'  => array('#breadcrumb #breadcrumb-text .breadcrumbs','#breadcrumb #breadcrumb-text ul li a'),
-            'units' => 'px',
-            'subtitle' => __('Typography option with title text.', 'fajar'),
-            'default' => array(
-                'color' => '',
-                'font-style' => 'normal',
-                'font-weight' => '400',
-                'font-family' => 'Montserrat',
-                'google' => true,
-                'font-size' => '12px',
-                'line-height' => '12px',
-                'text-align' => 'center'
-            )
-        ),
+        // array(
+            // 'subtitle' => __('The text before the breadcrumb home.', 'fajar'),
+            // 'id' => 'breacrumb_home_prefix',
+            // 'type' => 'text',
+            // 'title' => __('Breadcrumb Home Prefix', 'fajar'),
+            // 'default' => 'Home'
+        // ),
+        // array(
+            // 'id' => 'breacrumb_typography',
+            // 'type' => 'typography',
+            // 'title' => __('Typography', 'fajar'),
+            // 'google' => true,
+            // 'font-backup' => true,
+            // 'all_styles' => true,
+            // 'output'  => array('#breadcrumb #breadcrumb-text .breadcrumbs','#breadcrumb #breadcrumb-text ul li a'),
+            // 'units' => 'px',
+            // 'subtitle' => __('Typography option with title text.', 'fajar'),
+            // 'default' => array(
+                // 'color' => '',
+                // 'font-style' => 'normal',
+                // 'font-weight' => '400',
+                // 'font-family' => 'Montserrat',
+                // 'google' => true,
+                // 'font-size' => '12px',
+                // 'line-height' => '12px',
+                // 'text-align' => 'center'
+            // )
+        // ),
     )
 );
 
@@ -410,50 +410,50 @@ $this->sections[] = array(
     'title' => __('Body', 'fajar'),
     'icon' => 'el-icon-website',
     'fields' => array(
-        array(
-            'subtitle' => __('Set layout boxed default(Wide).', 'fajar'),
-            'id' => 'body_layout',
-            'type' => 'switch',
-            'title' => __('Boxed Layout', 'fajar'),
-            'default' => false,
-        ),
-        array(
-            'id'       => 'body_background',
-            'type'     => 'background',
-            'title'    => __( 'Background', 'fajar' ),
-            'subtitle' => __( 'body background with image, color, etc.', 'fajar' ),
-            'output'   => array('body'),
-        ),
-        array(
-            'id' => 'body_margin',
-            'title' => __('Margin', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'margin',
-            'output' => array('body #page'),
-            'default' => array(
-                'margin-top'     => '0',
-                'margin-right'   => '0',
-                'margin-bottom'  => '0',
-                'margin-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
-        array(
-            'id' => 'body_padding',
-            'title' => __('Padding', 'fajar'),
-            'type' => 'spacing',
-            'units' => 'px',
-            'mode' => 'padding',
-            'output' => array('body #page'),
-            'default' => array(
-                'padding-top'     => '0',
-                'padding-right'   => '0',
-                'padding-bottom'  => '0',
-                'padding-left'    => '0',
-                'units'          => 'px',
-            )
-        ),
+        // array(
+            // 'subtitle' => __('Set layout boxed default(Wide).', 'fajar'),
+            // 'id' => 'body_layout',
+            // 'type' => 'switch',
+            // 'title' => __('Boxed Layout', 'fajar'),
+            // 'default' => false,
+        // ),
+        // array(
+            // 'id'       => 'body_background',
+            // 'type'     => 'background',
+            // 'title'    => __( 'Background', 'fajar' ),
+            // 'subtitle' => __( 'body background with image, color, etc.', 'fajar' ),
+            // 'output'   => array('body'),
+        // ),
+        // array(
+            // 'id' => 'body_margin',
+            // 'title' => __('Margin', 'fajar'),
+            // 'type' => 'spacing',
+            // 'units' => 'px',
+            // 'mode' => 'margin',
+            // 'output' => array('body #page'),
+            // 'default' => array(
+                // 'margin-top'     => '0',
+                // 'margin-right'   => '0',
+                // 'margin-bottom'  => '0',
+                // 'margin-left'    => '0',
+                // 'units'          => 'px',
+            // )
+        // ),
+        // array(
+            // 'id' => 'body_padding',
+            // 'title' => __('Padding', 'fajar'),
+            // 'type' => 'spacing',
+            // 'units' => 'px',
+            // 'mode' => 'padding',
+            // 'output' => array('body #page'),
+            // 'default' => array(
+                // 'padding-top'     => '0',
+                // 'padding-right'   => '0',
+                // 'padding-bottom'  => '0',
+                // 'padding-left'    => '0',
+                // 'units'          => 'px',
+            // )
+        // ),
     )
 );
 
