@@ -630,25 +630,25 @@ $this->sections[] = array(
     'title' => __('Styling', 'fajar'),
     'icon' => 'el-icon-adjust',
     'fields' => array(
-        array(
-            'subtitle' => __('set color main color.', 'fajar'),
-            'id' => 'primary_color',
-            'type' => 'color',
-            'title' => __('Primary Color', 'fajar'),
-            'default' => '#ee3b24'
-        ),
-        array(
-            'subtitle' => __('set color for tags <a></a>.', 'fajar'),
-            'id' => 'link_color',
-            'type' => 'link_color',
-            'title' => __('Link Color', 'fajar'),
-            'output'  => array('a'),
-            'default' => array(
-				'regular'  => '#333',
-				'hover'    => '#ee3b24',
-				'active'    => '#ee3b24',
-			)
-        ),
+        // array(
+            // 'subtitle' => __('set color main color.', 'fajar'),
+            // 'id' => 'primary_color',
+            // 'type' => 'color',
+            // 'title' => __('Primary Color', 'fajar'),
+            // 'default' => '#ee3b24'
+        // ),
+        // array(
+            // 'subtitle' => __('set color for tags <a></a>.', 'fajar'),
+            // 'id' => 'link_color',
+            // 'type' => 'link_color',
+            // 'title' => __('Link Color', 'fajar'),
+            // 'output'  => array('a'),
+            // 'default' => array(
+				// 'regular'  => '#333',
+				// 'hover'    => '#ee3b24',
+				// 'active'    => '#ee3b24',
+			// )
+        // ),
     )
 );
 
@@ -658,17 +658,17 @@ $this->sections[] = array(
     'icon' => 'el-icon-minus',
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => __('set color for header background color.', 'fajar'),
-            'id' => 'bg_header',
-            'type' => 'color_rgba',
-            'title' => __('Header Background Color', 'fajar'),
-            'default'   => array(
-                'alpha'     => 1,
-				'color'		=> '#fff',
-				'rgba'		=> 'rgba(255,255,255,1)'
-            )
-        )
+        // array(
+            // 'subtitle' => __('set color for header background color.', 'fajar'),
+            // 'id' => 'bg_header',
+            // 'type' => 'color_rgba',
+            // 'title' => __('Header Background Color', 'fajar'),
+            // 'default'   => array(
+                // 'alpha'     => 1,
+				// 'color'		=> '#fff',
+				// 'rgba'		=> 'rgba(255,255,255,1)'
+            // )
+        // )
     )
 );
 
@@ -678,34 +678,34 @@ $this->sections[] = array(
     'icon' => 'el-icon-chevron-up',
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => __('Set color footer top.', 'fajar'),
-            'id' => 'footer_top_color',
-            'type' => 'color',
-            'output' => array('#zo-footer-top'),
-            'title' => __('Footer Top Color', 'fajar'),
-            'default' => '#636363'
-        ),
-        array(
-            'subtitle' => __('Set title color footer top.', 'fajar'),
-            'id' => 'footer_heading_color',
-            'type' => 'color',
-            'output' => array('#zo-footer-top h1,#zo-footer-top h2,#zo-footer-top h3,#zo-footer-top h4,#zo-footer-top h5,#zo-footer-top h6'),
-            'title' => __('Footer Heading Color', 'fajar'),
-            'default' => '#ffffff'
-        ),
-        array(
-            'subtitle' => __('Set title link color footer top.', 'fajar'),
-            'id' => 'footer_top_link_color',
-            'type' => 'link_color',
-            'output' => array('#zo-footer-top a'),
-            'title' => __('Footer Link Color', 'fajar'),
-            'default' => '#636363',
-            'default' => array(
-				'regular'  => '#636363',
-				'hover'    => '#ee3b24',
-			)
-        ),
+        // array(
+            // 'subtitle' => __('Set color footer top.', 'fajar'),
+            // 'id' => 'footer_top_color',
+            // 'type' => 'color',
+            // 'output' => array('#zo-footer-top'),
+            // 'title' => __('Footer Top Color', 'fajar'),
+            // 'default' => '#636363'
+        // ),
+        // array(
+            // 'subtitle' => __('Set title color footer top.', 'fajar'),
+            // 'id' => 'footer_heading_color',
+            // 'type' => 'color',
+            // 'output' => array('#zo-footer-top h1,#zo-footer-top h2,#zo-footer-top h3,#zo-footer-top h4,#zo-footer-top h5,#zo-footer-top h6'),
+            // 'title' => __('Footer Heading Color', 'fajar'),
+            // 'default' => '#ffffff'
+        // ),
+        // array(
+            // 'subtitle' => __('Set title link color footer top.', 'fajar'),
+            // 'id' => 'footer_top_link_color',
+            // 'type' => 'link_color',
+            // 'output' => array('#zo-footer-top a'),
+            // 'title' => __('Footer Link Color', 'fajar'),
+            // 'default' => '#636363',
+            // 'default' => array(
+				// 'regular'  => '#636363',
+				// 'hover'    => '#ee3b24',
+			// )
+        // ),
     )
 );
 
@@ -715,14 +715,14 @@ $this->sections[] = array(
     'icon' => 'el-icon-chevron-down',
     'subsection' => true,
     'fields' => array(
-        array(
-            'subtitle' => __('Set color footer top.', 'fajar'),
-            'id' => 'footer_bottom_color',
-            'type' => 'color',
-            'output' => array('#yeah-footer-bottom'),
-            'title' => __('Footer Bottom Color', 'fajar'),
-            'default' => '#3a3a3a'
-        )
+        // array(
+            // 'subtitle' => __('Set color footer top.', 'fajar'),
+            // 'id' => 'footer_bottom_color',
+            // 'type' => 'color',
+            // 'output' => array('#yeah-footer-bottom'),
+            // 'title' => __('Footer Bottom Color', 'fajar'),
+            // 'default' => '#3a3a3a'
+        // )
     )
 );
 
