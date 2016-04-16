@@ -24,7 +24,7 @@ get_header(); ?>
                         <div class="product-filter">
                             <div class="sort-widget">
                                 <form action="#" class="form-sort" method="GET">
-                                <div class="row sort-widget-headings">
+                                     <div class="row sort-widget-headings">
 
                                     <div class="sort-devices-heading">
                                         <?php echo esc_html__('Sort Product','fajar')?>
@@ -99,6 +99,8 @@ get_header(); ?>
                                             <span class="clearfix"><input type="checkbox" id="option21"> <label for="option21">$600.00 - $3.000.00</label></span>
                                         </div>
                                         <div class="col-md-12">
+                                            <input type="submit" class="btn btn default btn-fill" value="<?php echo esc_html__('Filter','fajar') ?>">
+                                            <input type="hidden"  value="<?php echo $_GET['page_id'];?>">
                                             <input type="submit" class="btn btn default btn-fill" value="<?php echo esc_html__('Filter','fajar') ?>">
                                         </div>
 
