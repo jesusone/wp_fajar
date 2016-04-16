@@ -52,15 +52,15 @@ get_header(); ?>
                                     <div class="sort-widget-options" id="sort-widget-options">
                                         <?php
                                          $product_cat = get_terms( 'product_cat', array( 'hide_empty' => 0, 'orderby' => 'ASC' ) );
-                                        var_dump($product_cat); 
                                          $cart_slug = isset($_GET["product_cat"]) ? $_GET["product_cat"] : '';
                                         ?>
                                         <div class="col-md-3">
                                             <span class="mobile-heading"><?php echo esc_html__('categories','fajar')?></span>
-                                            <span class="clearfix"><input type="checkbox" id="option1"> <label for="option1">Suits &amp; Blazer</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option2"> <label for="option2">Tuxedo</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option3"> <label for="option3">Suits &amp; Bowler Hat</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option4"> <label for="option4">Dress Pants</label></span>
+                                            <?php  if(!empty($product_cat)):?>
+                                            <?php  foreach($product_cat as $cat):?>
+                                                  <span class="clearfix"><input type="checkbox" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
+                                            <?php  endforeach;?>
+                                            <?php  endif;?>
                                         </div>
 
                                         <div class="col-md-3">
