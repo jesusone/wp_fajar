@@ -58,7 +58,7 @@ get_header(); ?>
                                             <span class="mobile-heading"><?php echo esc_html__('categories','fajar')?></span>
                                             <?php  if(!empty($product_cat)):?>
                                             <?php  foreach($product_cat as $cat):?>
-                                                  <span class="clearfix"><input type="checkbox" name="product_cat" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
+                                                  <span class="clearfix"><input <?php echo $cart_slug == $cat->term_id ? "checked" : "" ?> type="checkbox" name="product_cat" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
                                             <?php  endforeach;?>
                                             <?php  endif;?>
                                         </div>
