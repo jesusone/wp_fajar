@@ -58,7 +58,7 @@ get_header(); ?>
                                             <span class="mobile-heading"><?php echo esc_html__('categories','fajar')?></span>
                                             <?php  if(!empty($product_cat)):?>
                                             <?php  foreach($product_cat as $cat):?>
-                                                  <span class="clearfix"><input type="checkbox" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
+                                                  <span class="clearfix"><input type="checkbox" name="product_cat" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
                                             <?php  endforeach;?>
                                             <?php  endif;?>
                                         </div>
@@ -71,7 +71,7 @@ get_header(); ?>
                                             <span class="mobile-heading"><?php echo esc_html__('size','fajar')?></span>
                                             <?php  if(!empty($pa_size)):?>
                                                 <?php  foreach($pa_size as $size):?>
-                                                     <span class="clearfix"><input type="checkbox" id="option5"> <label for="option5"><?php echo esc_html($size->name);?></label></span>
+                                                     <span class="clearfix"><input name="pa_size" type="checkbox" id="option5"> <label for="option5"><?php echo esc_html($size->name);?></label></span>
                                                 <?php  endforeach;?>
                                             <?php  endif;?>
                                         </div>
@@ -84,7 +84,7 @@ get_header(); ?>
                                             <span class="mobile-heading"><?php echo esc_html__('colour','fajar')?></span>
                                             <?php  if(!empty($pa_colour)):?>
                                                 <?php  foreach($pa_colour as $colour):?>
-                                                    <span class="clearfix"><input type="checkbox" id="option5"> <label for="option5"><?php echo esc_html($colour->name);?></label></span>
+                                                    <span class="clearfix"><input name="pa_colour" type="checkbox" id="option5"> <label for="option5"><?php echo esc_html($colour->name);?></label></span>
                                                 <?php  endforeach;?>
                                             <?php  endif;?>
                                         </div>
