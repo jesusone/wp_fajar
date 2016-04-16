@@ -64,22 +64,29 @@ get_header(); ?>
                                         </div>
 
                                         <div class="col-md-3">
-                                            <span class="mobile-heading">size</span>
-                                            <span class="clearfix"><input type="checkbox" id="option5"> <label for="option5">S</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option6"> <label for="option6">M</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option7"> <label for="option7">L</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option8"> <label for="option8">XL</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option9"> <label for="option9">XXL</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option10"> <label for="option10">XXXL</label></span>
+                                            <?php
+                                            $pa_size = get_terms( 'pa_size', array( 'hide_empty' => 0, 'orderby' => 'ASC' ) );
+                                            $pa_slug = isset($_GET["pa_size"]) ? $_GET["pa_size"] : '';
+                                            ?>
+                                            <span class="mobile-heading"><?php echo esc_html__('size','fajar')?></span>
+                                            <?php  if(!empty($pa_size)):?>
+                                                <?php  foreach($pa_size as $size):?>
+                                                     <span class="clearfix"><input type="checkbox" id="option5"> <label for="option5"><?php echo esc_html($size->name);?></label></span>
+                                                <?php  endforeach;?>
+                                            <?php  endif;?>
                                         </div>
 
                                         <div class="col-md-3">
-                                            <span class="mobile-heading">colour</span>
-                                            <span class="clearfix"><input type="checkbox" id="option11"> <label for="option11">Black</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option12"> <label for="option12">Blue</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option13"> <label for="option13">Grey</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option14"> <label for="option14">Yellow</label></span>
-                                            <span class="clearfix"><input type="checkbox" id="option15"> <label for="option15">Red</label></span>
+                                            <?php
+                                            $pa_colour = get_terms( 'pa_colour', array( 'hide_empty' => 0, 'orderby' => 'ASC' ) );
+                                            $pa_slug = isset($_GET["pa_colour"]) ? $_GET["pa_colour"] : '';
+                                            ?>
+                                            <span class="mobile-heading"><?php echo esc_html__('colour','fajar')?></span>
+                                            <?php  if(!empty($pa_colour)):?>
+                                                <?php  foreach($pa_colour as $colour):?>
+                                                    <span class="clearfix"><input type="checkbox" id="option5"> <label for="option5"><?php echo esc_html($colour->name);?></label></span>
+                                                <?php  endforeach;?>
+                                            <?php  endif;?>
                                         </div>
 
                                         <div class="col-md-3">
