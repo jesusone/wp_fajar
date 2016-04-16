@@ -100,8 +100,21 @@ get_header(); ?>
                                         </div>
                                         <div class="col-md-12">
                                             <input type="submit" class="btn btn default btn-fill" value="<?php echo esc_html__('Filter','fajar') ?>">
-                                            <input type="hidden"  value="<?php echo $_GET['page_id'];?>">
-                                            <input type="submit" class="btn btn default btn-fill" value="<?php echo esc_html__('Filter','fajar') ?>">
+                                           <?php
+                                           // Keep query string vars intact
+                                           foreach ( $_GET as $key => $val ) {
+                                               if ( 'pa_brand' === $key || 'submit' === $key ) {
+                                                   continue;
+                                               }
+                                               if ( is_array( $val ) ) {
+                                                   foreach( $val as $innerVal ) {
+                                                       echo '<input type="hidden" name="' . esc_attr( $key ) . '[]" value="' . esc_attr( $innerVal ) . '" />';
+                                                   }
+                                               } else {
+                                                   echo '<input type="hidden" name="' . esc_attr( $key ) . '" value="' . esc_attr( $val ) . '" />';
+                                               }
+                                           }
+                                           ?>
                                         </div>
 
                                     </div>
