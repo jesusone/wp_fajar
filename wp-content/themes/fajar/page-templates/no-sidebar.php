@@ -90,7 +90,7 @@ get_header(); ?>
                                         </div>
 
                                         <div class="col-md-3">
-                                            <span class="mobile-heading">BY PRICE</span>
+                                            <span class="mobile-heading"><?php echo esc_html__('BY PRICE','fajar')?></span>
                                             <span class="clearfix"><input type="checkbox" id="option16"> <label for="option16">$0.00 - $50.00</label></span>
                                             <span class="clearfix"><input type="checkbox" id="option17"> <label for="option17">$100.00 - $200.00</label></span>
                                             <span class="clearfix"><input type="checkbox" id="option18"> <label for="option18">$200.00 - $400.00</label></span>
@@ -128,45 +128,22 @@ get_header(); ?>
                         <?php
                         ob_start();
                         global $wp_query, $paged;
-
-
                         $num = isset($_GET['numberShow']) ? $_GET['numberShow'] : 8;
                         $order = isset( $_GET['selectOrder'] ) ? $_GET['selectOrder'] : 'bestsellers';
-
 
                         $query_args = array(
                             'post_type'      => 'product',
                             'posts_per_page' => $num,
                             'paged'         => $paged,
                             'order'          => 'asc',
-                            'meta_query'     => array()
                         );
+
+
 
                         $query_args['meta_query'] = array();
                         $query_args['meta_query'][] = WC()->query->stock_status_meta_query();
                         $query_args['meta_query']   = array_filter( $query_args['meta_query'] );
 
-
-                        switch ( $order ) {
-                            case 'onsale' :
-                                $product_ids_on_sale    = wc_get_product_ids_on_sale();
-                                $product_ids_on_sale[]  = 0;
-                                $query_args['post__in'] = $product_ids_on_sale;
-                                break;
-                            case 'bestsellers':
-                                $query_args['meta_query'][] = array(
-                                    'meta_key'      => 'total_sales',
-                                    'orderby'       => 'meta_value_num',
-                                    'no_found_rows' => 1,
-                                );
-                                break;
-                            default :
-                                $query_args['meta_query'][] = array(
-                                    'key'   => '_featured',
-                                    'value' => 'yes'
-                                );
-                                break;
-                        }
                         ?>
 
                         <?php $wp_query->query($query_args); ?>
