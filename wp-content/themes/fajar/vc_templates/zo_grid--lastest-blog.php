@@ -77,11 +77,11 @@
 						<div class="zo-grid-time">
 							<?php the_time('d, M Y');?>
 						</div>
-						<div class="zo-grid-title">
-							<?php the_title();?>
+						<div class="zo-grid-title text-ellipsis">
+							<h3><a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detail', 'fajar');?>"><?php the_title();?></a></h3>
 						</div>
-						<div class="author"><?php esc_html_e('By', 'fajar');?><?php the_author_posts_link(); ?></div>
-						<a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','%'); ?> <?php esc_html_e('Comments','fajar');?></a>
+						<div class="author"><?php esc_html_e('By ', 'fajar');?><?php the_author_posts_link(); ?></div>
+						<div class="comment"><a href="<?php the_permalink(); ?>"><?php echo comments_number('0','1','%'); ?> <?php esc_html_e('Comments','fajar');?></a></div>
 					</div>
 				</div>
             </div>

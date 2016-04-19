@@ -18,6 +18,14 @@
 		margin-right: 0;
 	}
 }
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 div.vc_row.vc_row-o-full-height {
 	min-height: 0;
 }

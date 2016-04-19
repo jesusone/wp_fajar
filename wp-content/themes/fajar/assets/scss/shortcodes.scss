@@ -3,7 +3,7 @@
 
   1. Shortcode Fancy Box
   2. Heading
-  3. Shortcode Gird
+  3. Shortcode Gird, Carousel
   4. Shortcode Testimonial
   5. Tab
   6. Counter
@@ -332,6 +332,47 @@ div.owl-theme .owl-nav {
 			@extend .museo_slab_500;
 			color: #222222;
 			font-size: 20px;
+		}
+	}
+}
+.template-zo_grid--lastest-blog {
+	.zo-grid-media {
+		position: relative;
+		.zo-grid-detail {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			color: #fff;
+			.zo-grid-detail {
+				display: block;
+				font-size: 16px;
+				font-style: italic;
+				padding-bottom: 10px;
+				.zo-grid-title {
+					display: block;
+					text-transform: uppercase;
+					h3 {
+						@extend .museo_slab_300;
+						font-size: 24px;
+					}
+				}
+				.author, .comment {
+					display: inline-block;
+				}
+				.comment a {
+					color: $primary_color;
+					margin-left: 3px;
+					&:hover {
+						color: #222;
+					}
+				}
+			}
+			a {
+				color: #fff;
+				&:hover {
+					color: $primary_color;
+				}
+			}
 		}
 	}
 }
