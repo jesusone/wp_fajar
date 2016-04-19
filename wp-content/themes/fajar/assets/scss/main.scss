@@ -9,6 +9,9 @@
 /* ==========================================================================
    [Start] 1. Reset HTML/CSS, Unitest, Body, @Extend
 ========================================================================== */
+body {
+	overflow-x: hidden;
+}
 /* !important for theme */
 .page #content > article > .entry-content > .vc_row {
 	margin: 0;
