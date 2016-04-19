@@ -42,9 +42,9 @@
             left: 0;
             height: 100%;
             width: 100%;
-            /* @include background-opacity($primary_color, 0.2); */
+            @include background-opacity($primary_color, 0.2);
             @include opacity(0);
-            @include transition(opacity 200ms);
+            @include transition(opacity 200ms ease);
         }
         &:hover:after {
             @include opacity(1);
@@ -279,7 +279,7 @@ div.owl-theme .owl-nav {
 		}
 	}
 }
-/* .template-zo_grid--product-rate {
+.template-zo_grid--product-rate {
 	a.add_to_wishlist {
 		font-size: 0;
 		position: relative;
@@ -334,7 +334,7 @@ div.owl-theme .owl-nav {
 			font-size: 20px;
 		}
 	}
-} */
+}
 /* ==========================================================================
    [End] 3. Grid & Carousel
 ========================================================================== */
@@ -538,6 +538,7 @@ div.owl-theme .owl-nav {
             position: relative;
             margin: 0 0 10px;
             @include box-shadow(none);
+            @include border-radius(3px);
             .zo-progress-title {
                 position: absolute;
                 top: 50%;
@@ -548,7 +549,6 @@ div.owl-theme .owl-nav {
                 z-index: 1;
                 @include transform(translate(0px, -50%));
             }
-            @include border-radius(3px);
             .progress-bar {
                 width: 20%;
                 overflow: visible;
@@ -623,7 +623,6 @@ div.owl-theme .owl-nav {
                 sub {
                     font-size: 14px;
                     font-style: italic;
-                    @extend .font-second;
                     text-transform: lowercase;
                 }
             }
@@ -748,7 +747,7 @@ div.owl-theme .owl-nav {
             content: "\f067";
             height: 1px;
             color: $primary_color;
-            font: normal normal normal 14px/1 FontAwesome;
+            font: FontAwesome;
         }
     }
 }
@@ -764,7 +763,7 @@ div.owl-theme .owl-nav {
             height: 1px;
             color: $primary_color;
             font-size: 10px ! important;
-            font: normal normal normal 14px/1 FontAwesome;
+            font: FontAwesome;
         }
     }
 }
@@ -1125,7 +1124,7 @@ div.owl-theme .owl-nav {
 		.yeah-carousel-media {
 			&:hover {
 				opacity: 0.7;
-				@include keyframes(0.9s ease fadeIn);
+				/* @include keyframes(0.9s ease fadeIn); */
 			}
 			margin-bottom: 35px;
 		}
