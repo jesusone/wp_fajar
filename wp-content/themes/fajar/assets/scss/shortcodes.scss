@@ -343,28 +343,28 @@ div.owl-theme .owl-nav {
 			bottom: 20px;
 			left: 20px;
 			color: #fff;
-			.zo-grid-detail {
+			.zo-grid-time {
 				display: block;
 				font-size: 16px;
 				font-style: italic;
 				padding-bottom: 10px;
-				.zo-grid-title {
-					display: block;
-					text-transform: uppercase;
-					h3 {
-						@extend .museo_slab_300;
-						font-size: 24px;
-					}
+			}
+			.zo-grid-title {
+				display: block;
+				text-transform: uppercase;
+				h3 {
+					@extend .museo_slab_300;
+					font-size: 24px;
 				}
-				.author, .comment {
-					display: inline-block;
-				}
-				.comment a {
-					color: $primary_color;
-					margin-left: 3px;
-					&:hover {
-						color: #222;
-					}
+			}
+			.author, .comment {
+				display: inline-block;
+			}
+			.comment a {
+				color: $primary_color;
+				margin-left: 3px;
+				&:hover {
+					color: #222;
 				}
 			}
 			a {
