@@ -339,8 +339,15 @@ div.owl-theme .owl-nav {
 .template-zo_grid--lastest-blog {
 	.yeah-grid-item:hover {
 		.yeah-grid-media {
-			background: #000;
-			opacity: 0.4;
+			&:before {
+				@include transition(all 500ms ease);
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: #000;
+				opacity: 0.4;
+			}
 			img{
 				@include transform( scale(1.12) );
 			}
@@ -350,7 +357,7 @@ div.owl-theme .owl-nav {
 		position: relative;
 		overflow: hidden;		
 		img {
-			@include transition(all 500ms ease)
+			@include transition(all 500ms ease);
 		}
 		.yeah-grid-detail {
 			position: absolute;
