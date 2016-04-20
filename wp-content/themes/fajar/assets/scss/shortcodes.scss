@@ -340,12 +340,6 @@ div.owl-theme .owl-nav {
 	.yeah-grid-item:hover {
 		.yeah-grid-media {
 			&:before {
-				@include transition(all 500ms ease);
-				position: absolute;
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: #000;
 				opacity: 0.4;
 			}
 			img{
@@ -355,7 +349,16 @@ div.owl-theme .owl-nav {
 	}
 	.yeah-grid-media {
 		position: relative;
-		overflow: hidden;		
+		overflow: hidden;
+		&:before {
+			@include transition(all 500ms ease);
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: #000;
+			opacity: 0;
+		}
 		img {
 			@include transition(all 500ms ease);
 		}
