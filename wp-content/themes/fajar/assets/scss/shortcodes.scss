@@ -337,24 +337,24 @@ div.owl-theme .owl-nav {
 }
 
 .template-zo_grid--lastest-blog {
-	.yeah-grid-media {
-		position: relative;
-		&:hover {
-			.yeah-grid-detail {
-				img{
-					opacity: 0.4;
-					@include transform( scale(1.12) );
-				}
+	.yeah-grid-item:hover {
+		.yeah-grid-media {
+			img{
+				opacity: 0.4;
+				@include transform( scale(1.12) );
 			}
+		}
+	}
+	.yeah-grid-media {
+		position: relative;		
+		img {
+			@include transition(all 500ms ease)
 		}
 		.yeah-grid-detail {
 			position: absolute;
 			bottom: 20px;
 			left: 20px;
 			color: #fff;
-			img {
-				@include transition(all 500ms ease)
-			}
 			.yeah-grid-time {
 				display: block;
 				font-size: 16px;
