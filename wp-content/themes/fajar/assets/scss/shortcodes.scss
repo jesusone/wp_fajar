@@ -355,6 +355,8 @@ div.owl-theme .owl-nav {
 				h3 {
 					@extend .museo_slab_300;
 					font-size: 24px;
+					line-height: 1.1;
+					margin-bottom: 0;
 				}
 			}
 			.author, .comment {
@@ -363,6 +365,8 @@ div.owl-theme .owl-nav {
 			.comment a {
 				color: $primary_color;
 				margin-left: 3px;
+				font-style: italic;
+				font-size: 16px;
 				&:hover {
 					color: #222;
 				}
