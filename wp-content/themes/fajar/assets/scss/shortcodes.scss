@@ -335,18 +335,19 @@ div.owl-theme .owl-nav {
 		}
 	}
 }
+
 .template-zo_grid--lastest-blog {
-	.zo-grid-media {
+	.yeah-grid-media {
 		position: relative;
 		&:hover {
-			.zo-grid-detail {
+			.yeah-grid-detail {
 				img{
 					opacity: 0.4;
 					@include transform( scale(1.12) );
 				}
 			}
 		}
-		.zo-grid-detail {
+		.yeah-grid-detail {
 			position: absolute;
 			bottom: 20px;
 			left: 20px;
@@ -354,13 +355,13 @@ div.owl-theme .owl-nav {
 			img {
 				@include transition(all 500ms ease)
 			}
-			.zo-grid-time {
+			.yeah-grid-time {
 				display: block;
 				font-size: 16px;
 				font-style: italic;
 				padding-bottom: 10px;
 			}
-			.zo-grid-title {
+			.yeah-grid-title {
 				display: block;
 				text-transform: uppercase;
 				h3 {

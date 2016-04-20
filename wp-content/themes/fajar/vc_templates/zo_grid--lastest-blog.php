@@ -50,7 +50,7 @@
         </div>
     <?php endif; ?>
 	
-    <div class="row zo-grid <?php echo esc_attr($atts['grid_class']);?>">
+    <div class="row <?php echo esc_attr($atts['grid_class']);?>">
         <?php
         $posts = $atts['posts'];
         while($posts->have_posts()){
@@ -61,7 +61,7 @@
                 $groups[] = '"category-'.$category->slug.'"';
             }
             ?>
-            <div class="zo-grid-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
+            <div class="<?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
                 <?php 
                     if(has_post_thumbnail() && !post_password_required() && !is_attachment() &&  wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
                         $class = ' has-thumbnail';
@@ -71,13 +71,13 @@
                         $thumbnail = '<img src="'.ZO_IMAGES.'no-image.jpg" alt="'.get_the_title().'" />';
                     endif;
                 ?>
-				<div class="zo-grid-media <?php echo esc_attr($class);?>">
+				<div class="yeah-grid-media <?php echo esc_attr($class);?>">
 					<?php print_r($thumbnail);?>
-					<div class="zo-grid-detail">
-						<div class="zo-grid-time">
+					<div class="yeah-grid-detail">
+						<div class="yeah-grid-time">
 							<?php the_time('d, M Y');?>
 						</div>
-						<div class="zo-grid-title text-ellipsis">
+						<div class="yeah-grid-title text-ellipsis">
 							<h3><a href="<?php the_permalink();?>" title="<?php echo esc_html__('View Detail', 'fajar');?>"><?php the_title();?></a></h3>
 						</div>
 						<div class="author"><?php esc_html_e('By ', 'fajar');?><?php the_author_posts_link(); ?></div>
