@@ -338,11 +338,22 @@ div.owl-theme .owl-nav {
 .template-zo_grid--lastest-blog {
 	.zo-grid-media {
 		position: relative;
+		&:hover {
+			.zo-grid-detail {
+				img{
+					opacity: 0.4;
+					@include transform( scale(1.12) );
+				}
+			}
+		}
 		.zo-grid-detail {
 			position: absolute;
 			bottom: 20px;
 			left: 20px;
 			color: #fff;
+			img {
+				@include transition(all 500ms ease)
+			}
 			.zo-grid-time {
 				display: block;
 				font-size: 16px;
