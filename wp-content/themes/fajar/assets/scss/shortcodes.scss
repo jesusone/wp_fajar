@@ -351,6 +351,7 @@ div.owl-theme .owl-nav {
 			@include transition(all 500ms ease)
 		}
 		.yeah-grid-detail {
+			overflow: hidden;
 			position: absolute;
 			bottom: 20px;
 			left: 20px;
