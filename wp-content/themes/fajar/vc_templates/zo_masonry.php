@@ -49,7 +49,7 @@
         </div>
     <?php endif; ?>
 	
-    <div class="yeah-masonry">
+    <div class="zo-masonry">
         <?php
         $posts = $atts['posts'];
         $i = 0;
