@@ -16,7 +16,7 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
         $icon = isset($instance['icon']) ? $instance['icon'] : '';
         ?>
 			<div class="widget_wishlist_count_product">
-				<?php if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {?>
+				<?php if( function_exists( 'YITH_WCWL' ) ) {?>
 					<a href="<?php echo esc_url(YITH_WCWL()->get_wishlist_url());?>">
 						<?php 
 							if(!empty($icon)){
