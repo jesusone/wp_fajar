@@ -442,7 +442,6 @@ div.owl-theme .owl-nav {
 		padding-top: 30px;
 		padding-left: 30px;
 		position: relative;
-		@include transition(all 500ms ease);
 		&:before {
 			content: "";
 			position: absolute;
@@ -452,17 +451,29 @@ div.owl-theme .owl-nav {
 			opacity: 0;
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 2;
 			@include transition(all 500ms ease);
 		}
 		&:hover {
-			width: 110%;
 			&:before {
 				opacity: 0.4;
+			}
+			.yeah-masonry-background {
+				@include transform(scale(1.12));
 			}
 			.yeah-masonry-title, .yeah-masonry-content {
 				opacity: 1;
 			}
+		}
+		.yeah-masonry-background {
+			background-size: cover;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			@include transition(all 500ms ease);
 		}
 		.yeah-masonry-title a {
 			display: block;
@@ -489,13 +500,13 @@ div.owl-theme .owl-nav {
 				padding: 15px 14px 13px;
 				position: absolute;
 				@extend .museo_slab_500;
-				z-index: 2;
+				z-index: 3;
 			}
 		}
 		.yeah-masonry-title, .yeah-masonry-content {
 			position: relative;
 			opacity: 0;
-			z-index: 2;
+			z-index: 3;
 		}
 	}
 }

@@ -78,7 +78,8 @@
                     endif;
 
                 ?>
-                <div class="zo-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
+                <div class="zo-masonry-inner">
+					<div class="yeah-masonry-background" style="background-image: url('<?php echo esc_url($thumbnail); ?>')"></div>
                     <div class="yeah-masonry-title">
                         <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a>
                     </div>
