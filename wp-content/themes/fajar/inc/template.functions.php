@@ -547,3 +547,11 @@ if( !function_exists('zo_get_data_theme_options') ) {
 		return isset($smof_data[$key]) && !empty($smof_data[$key]) ? $smof_data[$key] : NULL;
 	}
 }
+
+function update_wishlist_count(){
+    if( function_exists( 'YITH_WCWL' ) ){
+        wp_send_json( YITH_WCWL()->count_products() );
+    }
+}
+add_action( 'wp_ajax_update_wishlist_count', 'update_wishlist_count' );
+add_action( 'wp_ajax_nopriv_update_wishlist_count', 'update_wishlist_count' );

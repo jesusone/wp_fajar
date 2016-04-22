@@ -448,6 +448,20 @@ jQuery(document).ready(function($) {
         } else {
             $('.zo-animation:not(.animated)').addClass('animated').addClass($(this).data('zo-animation'));
         }
+		
+		var update_wishlist_count = function() {
+			$.ajax({
+				data      : {
+					action: 'update_wishlist_count'
+				},
+				success   : function (data) {
+					console.log( data );
+					//do something
+				},
+				url: yith_wcwl_l10n.ajax_url
+			});
+		};
+		$('body').on( 'added_to_wishlist removed_from_wishlist', update_wishlist_count );
 
     });
 	
