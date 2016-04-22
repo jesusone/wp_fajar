@@ -439,6 +439,7 @@ div.owl-theme .owl-nav {
 		padding-top: 30px;
 		padding-left: 30px;
 		position: relative;
+		@include transition(all 500ms ease);
 		&:before {
 			content: "";
 			position: absolute;
@@ -452,18 +453,14 @@ div.owl-theme .owl-nav {
 			@include transition(all 500ms ease);
 		}
 		&:hover {
+			background-position: center center;
+			background-size: 110%;
 			&:before {
 				opacity: 0.4;
-			}
-			img { 
-				@include transform(scale(1.12);
 			}
 			.yeah-masonry-title, .yeah-masonry-content {
 				opacity: 1;
 			}
-		}
-		img {
-			@include transition(all 500ms ease);
 		}
 		.yeah-masonry-title a {
 			display: block;
