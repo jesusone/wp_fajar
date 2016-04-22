@@ -21,8 +21,9 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
 						echo "<i class='" . esc_attr($icon) . "'></i>";
 					} 
 					if(!empty($title)){
-						echo "<div class='wishlist-page'>" . do_shortcode('[yith_wcwl_wishlist]') . "</div>";
+						echo "<div class='wishlist-page'>" . esc_attr($title) . "</div>";
 					}
+					echo "<div class='wishlist-count'>" . yith_wcwl_count_products() . "</div>";
 				?>
 			</div>
 		<?php
@@ -40,10 +41,10 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
 	/* BACKEND - FORM */
     function form( $instance ) {
         $title = isset($instance['title']) ? esc_attr($instance['title']) : '';
-        $icon = isset($instance['icon']) ? $instance['icon'] : 0;
+        $icon = isset($instance['icon']) ? $instance['icon'] : '';
         ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e( 'Title:', 'fajar' ); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e( 'Enter Title:', 'fajar' ); ?></label>
             <input id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
 		<p>
@@ -59,5 +60,3 @@ function register_wishlist_count_product_widget() {
     register_widget('WC_Widget_Wishlist_Count_Product');
 }
 add_action('widgets_init', 'register_wishlist_count_product_widget');
-?>
-?>
