@@ -434,13 +434,14 @@ div.owl-theme .owl-nav {
    [Start] 4. Zo Masonry
 ========================================================================== */
 .template-zo_masonry {
+	.zo-masonry-item{
+		overflow: hidden;
+	}
 	.zo-masonry-inner {
 		color: #fff;
 		padding-top: 30px;
 		padding-left: 30px;
 		position: relative;
-		background-size: 100%;
-		background-position: center center;
 		@include transition(all 500ms ease);
 		&:before {
 			content: "";
@@ -455,8 +456,7 @@ div.owl-theme .owl-nav {
 			@include transition(all 500ms ease);
 		}
 		&:hover {
-			background-size: 120%;
-			background-position: center center;
+			width: 110%;
 			&:before {
 				opacity: 0.4;
 			}
