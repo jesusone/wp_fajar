@@ -446,6 +446,9 @@ div.owl-theme .owl-nav {
 			height: 100%;
 			background: #000;
 			opacity: 0;
+			top: 0;
+			left: 0;
+			z-index: 1;
 			@include transition(all 500ms ease);
 		}
 		&:hover {
@@ -455,7 +458,7 @@ div.owl-theme .owl-nav {
 			img { 
 				@include transform(scale(1.12);
 			}
-			.yeah-masonry-title {
+			.yeah-masonry-title, .yeah-masonry-content {
 				opacity: 1;
 			}
 		}
@@ -466,16 +469,18 @@ div.owl-theme .owl-nav {
 			display: block;
 			font-size: 24px;
 			font-weight: bold;
-			opacity: 0;
 			@extend .museo_slab_300;
 			@include transition(all 500ms ease);
 		}
 		.yeah-grid-price {
+			position: relative;
+			z-index: 2;
 			del {
 				display: none;
 			}
 			.amount {
 				background: #fff;
+				color: #222222;
 				bottom: 30px;
 				box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.14);
 				font-size: 16px;
@@ -484,6 +489,11 @@ div.owl-theme .owl-nav {
 				position: absolute;
 				@extend .museo_slab_500;
 			}
+		}
+		.yeah-masonry-title, .yeah-masonry-content {
+			position: relative;
+			opacity: 0;
+			z-index: 2;
 		}
 	}
 }
