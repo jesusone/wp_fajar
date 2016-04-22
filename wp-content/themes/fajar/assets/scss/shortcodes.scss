@@ -465,7 +465,7 @@ div.owl-theme .owl-nav {
 		img {
 			@include transition(all 500ms ease);
 		}
-		.yeah-masonry-title {
+		.yeah-masonry-title a {
 			display: block;
 			font-size: 24px;
 			font-weight: bold;
