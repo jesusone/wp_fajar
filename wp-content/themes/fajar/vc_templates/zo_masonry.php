@@ -67,7 +67,7 @@
              */
             $size = zo_masonry_size($atts['post_id'] , $atts['html_id'], $i);
             ?>
-            <div class="yeah-masonry-item item-w<?php echo esc_attr($size['width']); ?> item-h<?php echo esc_attr($size['height']); ?>"
+            <div class="zo-masonry-item item-w<?php echo esc_attr($size['width']); ?> item-h<?php echo esc_attr($size['height']); ?>"
                      data-groups='[<?php echo implode(',', $groups);?>]' data-index="<?php echo esc_attr($i); ?>" data-id="<?php echo esc_attr($atts['post_id']); ?>">
                 <?php 
                     if(has_post_thumbnail()):
@@ -78,17 +78,17 @@
                     endif;
 
                 ?>
-                <div class="yeah-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
-                    <div class="yeah-masonry-title">
+                <div class="zo-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
+                    <div class="zo-masonry-title">
                         <?php the_title();?>
                     </div>
-                    <div class="yeah-masonry-content">
+                    <div class="zo-masonry-content">
                         <?php the_content();?>
                     </div>
-					<div class="yeah-grid-price">
+					<div class="zo-grid-price">
 						<?php
-							/* Get Price Product */
-							woocommerce_template_single_price();
+						/* Get Price Product */
+						woocommerce_template_single_price();
 						?>
 					</div>
                 </div>
