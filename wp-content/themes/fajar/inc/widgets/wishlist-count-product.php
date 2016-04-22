@@ -16,7 +16,7 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
         $icon = isset($instance['icon']) ? $instance['icon'] : '';
         ?>
 			<div class="widget_wishlist_count_product">
-				<a href="<?php echo esc_url(get_wishlist_url());?>">
+				<a href="<?php //echo esc_url(get_wishlist_url());?>">
 				<?php 
 					if(!empty($icon)){
 						echo "<i class='" . esc_attr($icon) . "'></i>";
