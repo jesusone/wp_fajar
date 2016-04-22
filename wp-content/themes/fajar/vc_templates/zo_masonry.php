@@ -86,10 +86,12 @@
                         <?php the_content();?>
                     </div>
 					<div class="yeah-grid-price">
-						<?php
-						/* Get Price Product */
-						woocommerce_template_single_price();
-						?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+							<?php
+							/* Get Price Product */
+							woocommerce_template_single_price();
+							?>
+						</a>
 					</div>
                 </div>
             </div>
