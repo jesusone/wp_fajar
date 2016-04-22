@@ -456,7 +456,7 @@ div.owl-theme .owl-nav {
 			@include transition(all 500ms ease);
 		}
 		&:hover {
-			width: 110%;
+			@include transform(scale(1.12));
 			&:before {
 				opacity: 0.4;
 			}
