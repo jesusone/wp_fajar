@@ -16,17 +16,19 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
         $icon = isset($instance['icon']) ? $instance['icon'] : '';
         ?>
 			<div class="widget_wishlist_count_product">
-				<a href="<?php //echo esc_url(get_wishlist_url());?>">
-				<?php 
-					if(!empty($icon)){
-						echo "<i class='" . esc_attr($icon) . "'></i>";
-					} 
-					if(!empty($title)){
-						echo "<div class='wishlist-page'>" . esc_attr($title) . "</div>";
-					}
-					echo "<div class='wishlist-count'>" . yith_wcwl_count_products() . "</div>";
-				?>
-				</a>
+				<?php if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {?>
+					<a href="<?php echo esc_url(YITH_WCWL()->get_wishlist_url());?>">
+						<?php 
+							if(!empty($icon)){
+								echo "<i class='" . esc_attr($icon) . "'></i>";
+							} 
+							if(!empty($title)){
+								echo "<div class='wishlist-page'>" . esc_attr($title) . "</div>";
+							}
+							echo "<div class='wishlist-count'>" . yith_wcwl_count_products() . "</div>";
+						?>
+					</a>
+				<?php }?>
 			</div>
 		<?php
         echo ob_get_clean();
