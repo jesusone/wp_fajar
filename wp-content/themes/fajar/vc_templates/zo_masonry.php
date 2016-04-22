@@ -78,7 +78,7 @@
                     endif;
 
                 ?>
-                <div class="yeah-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
+                <div class="zo-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
                     <div class="yeah-masonry-title">
                         <?php the_title();?>
                     </div>
