@@ -473,8 +473,6 @@ div.owl-theme .owl-nav {
 			@include transition(all 500ms ease);
 		}
 		.yeah-grid-price {
-			position: relative;
-			z-index: 2;
 			del {
 				display: none;
 			}
@@ -488,6 +486,7 @@ div.owl-theme .owl-nav {
 				padding: 15px 14px 13px;
 				position: absolute;
 				@extend .museo_slab_500;
+				z-index: 2;
 			}
 		}
 		.yeah-masonry-title, .yeah-masonry-content {

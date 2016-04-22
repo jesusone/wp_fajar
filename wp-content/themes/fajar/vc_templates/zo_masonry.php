@@ -80,7 +80,7 @@
                 ?>
                 <div class="zo-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
                     <div class="yeah-masonry-title">
-                        <?php the_title();?>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a>
                     </div>
                     <div class="yeah-masonry-content">
                         <?php the_content();?>
