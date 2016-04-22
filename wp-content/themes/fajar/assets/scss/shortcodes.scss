@@ -469,8 +469,12 @@ div.owl-theme .owl-nav {
 			display: block;
 			font-size: 24px;
 			font-weight: bold;
+			color: #fff;
 			@extend .museo_slab_300;
 			@include transition(all 500ms ease);
+			&:hover {
+				color: $primary_color;
+			}
 		}
 		.yeah-grid-price {
 			del {
