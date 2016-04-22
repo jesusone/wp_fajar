@@ -439,6 +439,7 @@ div.owl-theme .owl-nav {
 		padding-top: 30px;
 		padding-left: 30px;
 		position: relative;
+		background-size: 100%;
 		background-position: center center;
 		@include transition(all 500ms ease);
 		&:before {
@@ -454,7 +455,7 @@ div.owl-theme .owl-nav {
 			@include transition(all 500ms ease);
 		}
 		&:hover {
-			background-size: 110%;
+			background-size: 120%;
 			&:before {
 				opacity: 0.4;
 			}
