@@ -448,6 +448,7 @@ jQuery(document).ready(function($) {
         } else {
             $('.zo-animation:not(.animated)').addClass('animated').addClass($(this).data('zo-animation'));
         }
+		
 		var update_wishlist_count = function() {
 			$.ajax({
 				data      : {
