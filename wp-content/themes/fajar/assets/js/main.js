@@ -448,15 +448,13 @@ jQuery(document).ready(function($) {
         } else {
             $('.zo-animation:not(.animated)').addClass('animated').addClass($(this).data('zo-animation'));
         }
-		
 		var update_wishlist_count = function() {
 			$.ajax({
 				data      : {
 					action: 'update_wishlist_count'
 				},
 				success   : function (data) {
-					console.log( data );
-					//do something
+					$('.widget_wishlist_count_product .wishlist-count').html(data);
 				},
 				url: yith_wcwl_l10n.ajax_url
 			});
