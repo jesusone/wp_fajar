@@ -78,14 +78,14 @@
                     endif;
 
                 ?>
-                <div class="zo-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
-                    <div class="zo-masonry-title">
+                <div class="yeah-masonry-inner" style="background-image: url('<?php echo esc_url($thumbnail); ?>')">
+                    <div class="yeah-masonry-title">
                         <?php the_title();?>
                     </div>
-                    <div class="zo-masonry-content">
+                    <div class="yeah-masonry-content">
                         <?php the_content();?>
                     </div>
-					<div class="zo-grid-price">
+					<div class="yeah-grid-price">
 						<?php
 						/* Get Price Product */
 						woocommerce_template_single_price();
