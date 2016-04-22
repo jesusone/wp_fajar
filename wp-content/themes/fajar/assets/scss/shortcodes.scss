@@ -4,7 +4,7 @@
   1. Shortcode Fancy Box
   2. Heading
   3. Shortcode Gird, Carousel
-  4. Shortcode Testimonial
+  4. Shortcode Zo Masonry
   5. Tab
   6. Counter
   7. Accordion
@@ -13,7 +13,6 @@
   10. Blog
   11. Carousel Fancy Box
   12. Single Fancy Box
-  13. Yeah Team Carousel
 
 -------------------------------------------------------------------*/
 /* ==========================================================================
@@ -406,16 +405,90 @@ div.owl-theme .owl-nav {
 		}
 	}
 }
+.template-zo_carousel--team {
+	.yeah-carousel-item {
+		.yeah-carousel-media {
+			&:hover {
+				opacity: 0.7;
+			}
+			margin-bottom: 35px;
+		}
+		.yeah-carousel-title {
+			color: $primary_color;
+			font-size: 24px;
+			@extend .museo_slab_100;
+			margin: 0px;
+		}
+		.yeah-team-position {
+			padding-bottom: 10px;
+			@extend .museo_slab_100;
+		}
+
+	}
+}
 /* ==========================================================================
    [End] 3. Grid & Carousel
 ========================================================================== */
 
 /* ==========================================================================
-   [Start] 4. Testimonial
+   [Start] 4. Zo Masonry
 ========================================================================== */
-
+.template-zo_masonry {
+	.zo-masonry-inner {
+		color: #fff;
+		padding-top: 30px;
+		padding-left: 30px;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			opacity: 0;
+			@include transition(all 500ms ease);
+		}
+		&:hover {
+			&:before {
+				opacity: 0.4;
+			}
+			img { 
+				@include transform(scale(1.12);
+			}
+			.yeah-masonry-title {
+				opacity: 1;
+			}
+		}
+		img {
+			@include transition(all 500ms ease);
+		}
+		.yeah-masonry-title {
+			display: block;
+			font-size: 24px;
+			font-weight: bold;
+			opacity: 0;
+			@extend .museo_slab_300;
+			@include transition(all 500ms ease);
+		}
+		.yeah-grid-price {
+			del {
+				display: none;
+			}
+			.amount {
+				background: #fff;
+				bottom: 30px;
+				box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.14);
+				font-size: 16px;
+				left: 30px;
+				padding: 15px 14px 13px;
+				position: absolute;
+				@extend .museo_slab_500;
+			}
+		}
+	}
+}
 /* ==========================================================================
-   [End] 4. Testimonial
+   [End] 4. Zo Masonry
 ========================================================================== */
 
 /* ==========================================================================
@@ -1150,6 +1223,9 @@ div.owl-theme .owl-nav {
 		}
 	}
 }
+/*==========================================*
+* 11. End Carousel Fancy Box                    *
+*===========================================*/
 
 
 /* ==========================================================================
@@ -1186,32 +1262,4 @@ div.owl-theme .owl-nav {
 }
 /* ==========================================================================
    [End] 12. Single Fancy Box
-========================================================================== */
-/* ==========================================================================
-   [Start] 13. Yeah Team Carousel
-========================================================================== */
-.template-zo_carousel--team {
-	.yeah-carousel-item {
-		.yeah-carousel-media {
-			&:hover {
-				opacity: 0.7;
-				/* @include keyframes(0.9s ease fadeIn); */
-			}
-			margin-bottom: 35px;
-		}
-		.yeah-carousel-title {
-			color: $primary_color;
-			font-size: 24px;
-			@extend .museo_slab_100;
-			margin: 0px;
-		}
-		.yeah-team-position {
-			padding-bottom: 10px;
-			@extend .museo_slab_100;
-		}
-
-	}
-}
-/* ==========================================================================
-   [End] 13. Single Fancy Box
 ========================================================================== */
