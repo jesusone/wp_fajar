@@ -85,6 +85,7 @@
                     </div>
                     <div class="yeah-masonry-content">
                         <?php the_content();?>
+						<?php echo yith_wcwl_count_products(); ?>
                     </div>
 					<div class="yeah-grid-price">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
