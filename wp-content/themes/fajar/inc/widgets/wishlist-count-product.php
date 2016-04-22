@@ -4,8 +4,8 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
     public function __construct() {
         parent::__construct(
             'widget_wishlist_count_product', // Base ID
-            __('Wishlist Count Product', 'fajar'), // Name
-            array('description' => __("Display link wishlist & count product in your wishlist.", 'fajar'),) // Args
+            esc_html__('Wishlist Count Product', 'fajar'), // Name
+            array('description' => esc_html__("Display link wishlist & count product in your wishlist.", 'fajar'),) // Args
         );
     }
 	
@@ -43,11 +43,11 @@ class WC_Widget_Wishlist_Count_Product extends WP_Widget {
         $icon = isset($instance['icon']) ? $instance['icon'] : 0;
         ?>
         <p>
-            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e( 'Title:', 'fajar' ); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e(( 'Title:', 'fajar' ); ?></label>
             <input id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
 		<p>
-            <label for="<?php echo esc_url($this->get_field_id('icon')); ?>"><?php _e( 'Enter class icon:', 'fajar' ); ?></label>
+            <label for="<?php echo esc_url($this->get_field_id('icon')); ?>"><?php esc_html_e(( 'Enter class icon:', 'fajar' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id('icon') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon') ); ?>" type="text" value="<?php echo esc_attr( $icon ); ?>" />
         </p>
     <?php
