@@ -1106,6 +1106,9 @@
            margin: 0 0 27px;
            padding: 0 10px;
            width: 24.6%;
+           @include breakpoint-in(992px,1200px) {
+               width: 32.9%;
+           }
        }
    }
 }
