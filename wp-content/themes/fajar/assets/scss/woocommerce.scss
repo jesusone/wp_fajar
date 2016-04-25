@@ -970,25 +970,18 @@
 			overflow: hidden;
 			margin-bottom: 29px;
 			.onsale {
-				top: 7px!important;
-				left: 10px!important;
-				right: initial !important;
-				margin: 0 !important;
-				height: initial;
-				min-height: initial;
-				width: initial;
-				min-width: initial;
-				color: #404040;
-				line-height: 1.1;
-				text-align: center;
-				position: absolute;
-				background-color: transparent;
-				text-transform: uppercase;
-				z-index: 10;
-				border: 0;
-				font-size: 13px;
-				font-weight: 700;
-				@include border-radius(0);
+                width: 50px;
+                background: $primary_color;
+                color: #fff;
+                display: block;
+                height: 59px;
+                left: 16px;
+                line-height: 61px;
+                position: absolute;
+                text-align: center;
+                top: 16px;
+                width: 59px;
+                @include border-radius(100%);
 				@extend .museo_slab_100;
 			}
 			img {
