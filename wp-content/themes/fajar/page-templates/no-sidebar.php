@@ -19,7 +19,7 @@ get_header(); ?>
     <div id="page-front-page">
         <div class="container">
             <div class="row">
-                <div id="primary" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-content none-sidebar">
+                <div id="primary" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-content none-sidebar woocommerce">
                     <div id="content" role="main">
                         <div class="product-filter">
                             <div class="sort-widget">
