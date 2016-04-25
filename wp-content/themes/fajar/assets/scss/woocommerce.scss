@@ -218,20 +218,17 @@
 .woocommerce  {
     span.onsale {
         width: 50px;
-        height: 40px;
-        border: 2px solid #000;
-        color: #333;
-        line-height: 40px;
-        text-align: center;
+        background: $primary_color;
+        color: #fff;
+        display: block;
+        height: 59px;
+        left: 16px;
+        line-height: 61px;
         position: absolute;
-        top: 20px;
-        left: 20px;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        text-transform: uppercase;
-        z-index: 10;
-        @include border-radius(0);
+        text-align: center;
+        top: 16px;
+        width: 59px;
+        @include border-radius(100%);
     }
     .star-rating {
         float: none;
