@@ -1109,6 +1109,12 @@
            @include breakpoint-in(992px,1200px) {
                width: 32.9%;
            }
+           @include breakpoint-in(768px,992px) {
+               width:  49.5%;
+           }
+           @include breakpoint-max(590px) {
+               width: 100%;
+           }
        }
    }
 }
