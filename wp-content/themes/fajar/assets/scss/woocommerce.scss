@@ -1096,4 +1096,17 @@
         text-align: center;
     }
 }
+/*Full Width*/
+.page-template-no-sidebar {
+   .products {
+       padding-left: 0;
+       list-style: none;
+       li {
+           display: inline-block;
+           margin: 0 0 27px;
+           padding: 0 10px;
+           width: 24.6%;
+       }
+   }
+}
 

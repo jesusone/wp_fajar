@@ -138,8 +138,6 @@ get_header(); ?>
                             'order'          => 'asc',
                         );
 
-
-
                         $query_args['meta_query'] = array();
                         $query_args['meta_query'][] = WC()->query->stock_status_meta_query();
                         $query_args['meta_query']   = array_filter( $query_args['meta_query'] );
@@ -152,7 +150,7 @@ get_header(); ?>
                             <div class="nav-top">
                                 <?php zo_paging_nav(); ?>
                             </div>
-                            <div class="content-detail">
+                            <div class="products">
                                 <?php
                                 while ( have_posts() ) : the_post();
                                     ob_start();
