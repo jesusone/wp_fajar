@@ -118,19 +118,17 @@ class ZoTheme_StaticCss
         /* End Header Main */
 
         /* Main Menu */
-        echo '@media(min-width: 992px) {';
-			if($smof_data['menu_first_level_uppercase']){
-				echo "#yeah-header-navigation .main-navigation .menu-main-menu > li > a,
-				#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a {
-					text-transform: uppercase;
-				}";
-			}
-			if(!empty($smof_data['sub_menu_uppercase'])){
-				echo "#yeah-header-navigation .main-navigation .menu-main-menu li ul a {
-					text-transform: uppercase;
-				}";
-			}
-        echo '}';
+		if($smof_data['menu_first_level_uppercase']){
+			echo "#yeah-header-navigation .main-navigation .menu-main-menu > li > a,
+			#yeah-header-navigation .main-navigation .menu-main-menu > ul > li > a {
+				text-transform: uppercase;
+			}";
+		}
+		if(!empty($smof_data['sub_menu_uppercase'])){
+			echo "#yeah-header-navigation .main-navigation .menu-main-menu li ul a {
+				text-transform: uppercase;
+			}";
+		}
         /* End Main Menu */
 
         /* ==========================================================================
