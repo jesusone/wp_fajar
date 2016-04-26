@@ -29,7 +29,7 @@
 			<div id="yeah-header-logo" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="" src="<?php echo esc_url(zo_page_header_logo()); ?>"></a>
 			</div>
-			<div id="yeah-header-banners" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+			<div id="yeah-header-banners" class="col-xs-12 col-sm-8 col-md-8 col-lg-8 hidden-xs">
 				<?php if(is_active_sidebar('header-baners')){ dynamic_sidebar('header-baners'); } ?>
 			</div>
 			<div id="yeah-header-cart" class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
