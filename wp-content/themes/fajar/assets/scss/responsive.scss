@@ -73,25 +73,9 @@
 	body .container {
 		width: 100%;
 	}
-	.vc_row.wpb_row {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
 	/* ==========================================================================
 			Header Mobile
 	========================================================================== */
-	#yeah-header-menu, #yeah-header-menu.header-fixed {
-		height: 80px;
-		> .container {
-			position: relative;
-			z-index: 99;
-		}
-	}
-	#zo-menu-mobile {
-		position: absolute;
-		right: 15px;
-		bottom: 0;
-	}
 	body.fixed-margin-top #yeah-header-menu.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li {
 		line-height: normal;
 	}
@@ -102,16 +86,6 @@
 	/* ==========================================================================
 	   Shortcode
 	========================================================================== */
-	/* Tab */
-	.wpb_tour .ui-tabs.wpb_tour_tabs_wrapper {
-		.wpb_tabs_nav {
-			width: 31.667%;
-		}
-		.wpb_tab.ui-tabs-panel {
-			width: 68.333%;
-		}
-	}
-	/* End Tab */
 	/* Shortcode Priccing */
 	.zo-grid-pricing .zo-grid-item {
 		margin-bottom: 80px;
