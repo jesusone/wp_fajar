@@ -194,6 +194,9 @@
 			}
 		}
 	}
+	@include breakpoint-max(768px){
+		text-align: right;
+	}
 }
 #yeah-header-menu {
 	width: 100%;
@@ -320,7 +323,7 @@
 			z-index: 999;
             @media screen and (max-width: 768px) {
                 right: 0;
-                width: 100%;
+                width: 280px;
             }
             .shopping_cart_dropdown_inner {
                 padding: 20px;

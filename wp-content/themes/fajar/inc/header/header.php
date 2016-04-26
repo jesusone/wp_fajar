@@ -8,7 +8,7 @@
 
 <!-- Header Top -->
 <?php if(zo_get_data_theme_options('header_top')){ ?>
-	<div id="yeah-header-top">
+	<div id="yeah-header-top" class="hidden-xs">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
