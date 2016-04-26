@@ -1,4 +1,4 @@
-/* ==========================================================================
+#yeah-header-top/* ==========================================================================
     Style Main Menu
 ========================================================================== */
 #yeah-header-menu.header-default {
@@ -83,11 +83,7 @@
 /*
 -----> Minimum width of 992 pixels.
 */
-/**
-Menu Default
-======================================================
-*/
-@media screen and (min-width: 992px) {
+@include breakpoint-min(992px) {
 	#zo-menu-mobile.collapse {
         display: none !important;
     }
@@ -451,7 +447,7 @@ Menu Default
 /*
 -----> Max width of 992 pixels.
 */
-@media screen and (max-width: 992px) {
+@include breakpoint-max(992px){
     #yeah-header-navigation.collapse {
         background: #222;
         position: absolute;
