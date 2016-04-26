@@ -513,43 +513,6 @@
 		}
     }
 }
-
-/*=================================================================
- [End] Client
-*==================================================================*/
-
-
-/* ==========================================================================
-   [Start] FAQ
-========================================================================== */
-.vc_tta-panel-body {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-	padding-top: 55px !important;
-	.vc_toggle_default {
-		border: 1px solid #ececec;
-		padding: 15px 35px 15px 25px;
-		.vc_toggle_title {
-			padding-left: 0 !important;
-			h4 {
-				font-size: 14px;
-				font-weight: normal;
-				letter-spacing: 0;
-			}
-			.vc_toggle_icon {
-				left: auto !important;
-				right: -10px;
-			}
-		}
-		.vc_toggle_content {
-			padding-left: 0 !important;
-			font-size: 13px;
-		}
-		&.vc_toggle_active {
-			border-color: #909090;
-		}
-	}
-}
 /* ==========================================================================
    [End] Blog Classic
 ========================================================================== */
