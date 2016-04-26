@@ -181,14 +181,17 @@
 .woocommerce-page{
     ul.products {
         padding: 0;
-        margin: 0;
+		margin: 0 -15px;
+		@include breakpoint-max(768px){
+			margin: 0;
+		}
         list-style: none inside;
         li.product {
-            width: 24.6%;
-            padding: 0 10px;
+            width: 25%;
+            padding: 0 15px;
             margin: 0 0 27px;
 			@include breakpoint-max(768px){
-				width: 100%;
+				width: 100% !important;
 			}
             h3 {
                 padding: 0;
@@ -196,19 +199,40 @@
             }
         }
     }
+	&.columns-5 {
+		ul.products {
+            li.product {
+                width: 20%;
+				@include breakpoint-in(768px, 992px){
+					width: 50%;
+				}
+            }
+        }
+	}
     &.columns-4 {
         ul.products {
             li.product {
-                width: 22.05%;
-				@include breakpoint-in(768px, 800px){
-					width: 48%;
-				}
-				@include breakpoint-max(768px){
-					width: 100%;
+                width: 25%;
+				@include breakpoint-in(768px, 992px){
+					width: 50%;
 				}
             }
         }
     }
+	&.columns-3 {
+		ul.products {
+            li.product {
+                width: 33.33%;
+            }
+        }
+	}
+	&.columns-2 {
+		ul.products {
+            li.product {
+                width: 50%;
+            }
+        }
+	}
     /*Form Sort*/
 
 
