@@ -560,6 +560,9 @@ Menu Default
             overflow: hidden;
             padding-left: 10px;
             @include transition(max-height 600ms linear 0ms);
+			&.submenu-open{
+				max-height: initial;
+			}
         }
     }
 }
