@@ -8,30 +8,10 @@
  * @since 1.0.0
  */
 ?>
-<?php
-global $template;
-if( basename($template) === 'blog-classic.php') {
-    $zo_image_size = 'full';
-} else {
-    $zo_image_size = 'zo-blog-medium';
-}
-?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
 	<!-- Audio -->
     <div class="yeah-blog-audio">
-        <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail( $zo_image_size ); ?>
-            <div class="overlay">
-                <div class="overlay-inner">
-                    <a class="play-button" title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel="">
-                        <i class="ion-ios-play-outline"></i>
-                    </a>
-                    <?php echo zo_archive_audio(); ?>
-                </div>
-            </div>
-        <?php else : ?>
             <?php echo zo_archive_audio(); ?>
-        <?php endif; ?>
     </div>
 	
 	<!-- Title -->
