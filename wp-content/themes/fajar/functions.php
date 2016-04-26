@@ -99,6 +99,7 @@ require( get_template_directory() . '/inc/widgets/social.php' );
 require( get_template_directory() . '/inc/widgets/recent-posts-widget-with-thumbnails.php' );
 require( get_template_directory() . '/inc/widgets/flickr-badges-widget.php' );
 require( get_template_directory() . '/inc/widgets/wishlist-count-product.php' );
+require( get_template_directory() . '/inc/widgets/woo-filter-products.php' );
 
 // Set up the content width value based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
