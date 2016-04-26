@@ -271,6 +271,7 @@
 			}
 			@include breakpoint-in(768px, 992px) {
 				width: 100%;
+				border: 0;
 			}
 			i {
 				color: #393939;
