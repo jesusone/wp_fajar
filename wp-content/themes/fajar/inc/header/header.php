@@ -76,7 +76,7 @@
 					?>
 				</nav>
 			</div>
-			<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="pe-7s-menu"></i></div>
+			<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="icon-menu"></i></div>
 		</div>
 	</div>
 	<!-- #site-navigation -->
