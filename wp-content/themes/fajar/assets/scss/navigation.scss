@@ -501,16 +501,10 @@ Menu Default
             list-style: none;
             a {
                 display: block;
-                color: #5e5e5e;
-                &:hover, &:focus {
-                    color: #21759b;
-                }
-            }
         }
     }
     .collapse .main-navigation div.nav-menu > ul {
         display: block;
-        max-height: 2000px;
     }
     #yeah-header-menu #yeah-header-navigation .main-navigation {
         padding: 15px 0;
