@@ -17,10 +17,15 @@ footer {
 }
 .yeah-footer-row-1{
 	margin-bottom: 50px;
-	.available-widget{
+	.available-widget, .place-order-widget {
 		border: 1px solid #e0e0e0;
 		padding: 26px 36px;
-		min-height: 146px;
+		min-height: 146px;			
+		@include breakpoint-in(768px, 992px) {
+			padding: 15px;
+		}
+	}
+	.available-widget{
 		@include breakpoint-max(768px) {
 			padding-left: 0;
 			padding-right: 0;
@@ -29,16 +34,19 @@ footer {
 			float: left;
 			font-size: 80px;
 			margin: 2px 6px 0 0;
+			@include breakpoint-in(768px, 992px) {
+				font-size: 60px;
+			}
 		}
 	}
 	.place-order-widget{
-		border: 1px solid #e0e0e0;
-		padding: 26px 36px;
-		min-height: 146px;
 		i {
 			float: left;
 			font-size: 70px;
 			margin: 14px 9px 0 0;
+			@include breakpoint-in(768px, 992px) {
+				font-size: 60px;
+			}
 		}
 		p span {
 			display: inline-block;
@@ -61,6 +69,12 @@ footer {
 				width: 36px;
 				height: 45px;
 			}
+			@include breakpoint-in(768px, 992px) {
+				padding: 3px 10px;
+				&:after {
+					top: -1px;
+				}
+			}
 		}
 		@include breakpoint-max(768px) {
 			padding-left: 0;
@@ -82,6 +96,10 @@ footer {
 			font-size: 22px;
 			display: block;
 			@extend .google-font-1;
+		}
+		@include breakpoint-in(768px, 992px) {
+			padding-left: 60px;
+			font-size: 25px;
 		}
 		@include breakpoint-max(768px) {
 			padding-left: 80px;
