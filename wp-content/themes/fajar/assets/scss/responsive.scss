@@ -92,19 +92,6 @@
 		right: 15px;
 		bottom: 0;
 	}
-	#yeah-header-navigation {
-		display: none;
-	}
-	#yeah-header-navigation.collapse {
-		display: block;
-	}
-	#yeah-header-navigation .main-navigation .menu-main-menu, #yeah-header-navigation .main-navigation div.nav-menu > ul {
-		text-align: left;
-	}
-	#yeah-header-navigation .main-navigation .menu-main-menu > li a {
-		text-transform: none;
-		line-height: 50px;
-	}
 	body.fixed-margin-top #yeah-header-menu.header-fixed #yeah-header-navigation .main-navigation .menu-main-menu > li {
 		line-height: normal;
 	}
