@@ -197,19 +197,14 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 	function update( $new_widget_settings, $old_widget_settings ) {
 		$instance = $old_widget_settings;
 		// sanitize user input before update
-		$instance[ 'number_posts' ]	= absint( $new_widget_settings[ 'number_posts' ] );
-		$instance[ 'thumb_width' ] 	= absint( $new_widget_settings[ 'thumb_width' ] );
-		$instance[ 'thumb_height' ] = absint( $new_widget_settings[ 'thumb_height' ] );
-		$instance[ 'title' ] 		= strip_tags( $new_widget_settings[ 'title' ]);
-		$instance[ 'default_url' ] 	= strip_tags( $new_widget_settings[ 'default_url' ]);
-		$instance[ 'keep_aspect_ratio' ] = isset( $new_widget_settings[ 'keep_aspect_ratio' ] ) ? (bool) $new_widget_settings[ 'keep_aspect_ratio' ] : false;
-		$instance[ 'hide_title' ] 	= isset( $new_widget_settings[ 'hide_title' ] ) ? (bool) $new_widget_settings[ 'hide_title' ] : false;
-		$instance[ 'show_date' ] 	= isset( $new_widget_settings[ 'show_date' ] ) ? (bool) $new_widget_settings[ 'show_date' ] : false;
-		$instance[ 'show_thumb' ] 	= isset( $new_widget_settings[ 'show_thumb' ] ) ? (bool) $new_widget_settings[ 'show_thumb' ] : false;
-		$instance[ 'use_default' ] 	= isset( $new_widget_settings[ 'use_default' ] ) ? (bool) $new_widget_settings[ 'use_default' ] : false;
-		$instance[ 'try_1st_img' ] 	= isset( $new_widget_settings[ 'try_1st_img' ] ) ? (bool) $new_widget_settings[ 'try_1st_img' ] : false;
-		$instance[ 'only_1st_img' ] = isset( $new_widget_settings[ 'only_1st_img' ] ) ? (bool) $new_widget_settings[ 'only_1st_img' ] : false;
+		$instance[ 'categories' ]	= strip_tags( $new_widget_settings[ 'categories' ] );
 
+		$instance[ 'show_cat' ] 	= isset( $new_widget_settings[ 'show_cat' ] ) ? (bool) $new_widget_settings[ 'show_cat' ] : false;
+		$instance[ 'show_date' ] 	= isset( $new_widget_settings[ 'show_date' ] ) ? (bool) $new_widget_settings[ 'show_date' ] : false;
+		$instance[ 'show_size' ] 	= isset( $new_widget_settings[ 'show_size' ] ) ? (bool) $new_widget_settings[ 'show_size' ] : false;
+		$instance[ 'show_price' ] 	= isset( $new_widget_settings[ 'show_price' ] ) ? (bool) $new_widget_settings[ 'show_price' ] : false;
+		$instance[ 'show_colour' ] 	= isset( $new_widget_settings[ 'show_colour' ] ) ? (bool) $new_widget_settings[ 'show_colour' ] : false;
+		
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
 		if ( isset( $alloptions[ $this->plugin_slug ]) )
 			delete_option( $this->plugin_slug );
@@ -239,7 +234,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		<p><label for="<?php echo esc_attr($this->get_field_id( 'categories' )); ?>"><?php _e( 'Categories:', 'fajar' ); ?></label>
 		<?php  $cats = get_terms( 'product_cat', array('order'=>'asc') );?>
 		<?php if(!empty($cats)): ?>
-		<select name="categories" >
+		<select name="categories"  multiple>
 			<?php foreach($cats as $cat): ?>
 				<option value="<?php echo esc_attr($cat->team_id);?>"><?php echo esc_html($cat->name);?></option>
 			<?php endforeach; ?>
@@ -256,9 +251,6 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_colour ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_colour' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'hide_title' )); ?>" />
 		<label for="<?php echo esc_attr($this->get_field_id( 'show_colour' )); ?>"><?php _e( 'Display Colour?', 'fajar' ); ?> </label> </p>
 
-
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'default_url' )); ?>"><?php _e( 'URL of default thumbnail (start with http://)', 'fajar' ); ?>:</label>
-		<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'default_url' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'default_url' )); ?>" type="text" value="<?php echo esc_attr($default_url); ?>" /></p>
 	<?php
 	}
 
