@@ -520,14 +520,6 @@ div.owl-theme .owl-nav {
 .yeah-feature-product {
 	position: relative;
 	.vc_tta.vc_general{		
-		@include breakpoint-max(768px) {
-			padding-top: 20px;
-			.vc_tta-panels-container{
-				.vc_tta-panel-title {
-					display: none;
-				}
-			}
-		}
 		.vc_tta-tabs-container {
 			display: inline-block;
 			margin: 0;
@@ -575,6 +567,20 @@ div.owl-theme .owl-nav {
 				}
 				.vc_tta-panel {
 					margin: 0;
+				}
+			}
+		}
+		@include breakpoint-max(768px) {
+			padding-top: 20px;
+			.vc_tta-panels-container{
+				.vc_tta-panel-title {
+					display: none;
+				}
+			}
+			.vc_tta-tabs-container {
+				position: static;
+				ul li.vc_tta-tab a {
+					padding: 8px 10px;
 				}
 			}
 		}
