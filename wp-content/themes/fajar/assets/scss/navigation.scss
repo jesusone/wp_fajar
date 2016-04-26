@@ -458,12 +458,16 @@ Menu Default
 -----> Max width of 992 pixels.
 */
 @include breakpoint-max(992px){
+	#yeah-header-navigation {
+		display: none;
+	}
     #yeah-header-navigation.collapse {
         background: #fff;
         position: absolute;
         top: 100%;
         width: 100%;
 		padding: 0;
+		display: block;
 		.main-navigation {
 			padding: 0;
 		}
