@@ -11,18 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
 	<!-- Video -->
     <div class="yeah-blog-video">
-        <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail( 'full' ); ?>
-            <div class="overlay">
-                <div class="overlay-inner">
-                    <a class="play-button" title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel="">
-                        <i class="ion-ios-play-outline"></i>
-                    </a>
-                </div>
-            </div>
-        <?php else : ?>
-            <?php echo zo_archive_video(); ?>
-        <?php endif; ?>
+		<?php echo zo_archive_video(); ?>
     </div>
 	
 	<!-- Title -->
