@@ -168,6 +168,9 @@
 			@include breakpoint-in(992px, 1200px) {
 				padding: 0 45px 0 0;
 			}
+			@include breakpoint-in(768px, 992px) {
+				padding: 0 5px 0 0;
+			}
 			i {
 				float: left;
 				font-size: 30px;
@@ -178,7 +181,10 @@
 				font-size: 16px;
 				padding-left: 45px;
 				text-transform: uppercase;
-				margin: 0;
+				margin: 0;				
+				@include breakpoint-in(768px, 992px) {
+					padding-left: 35px;
+				}
 				span {
 					display: block;
 					font-size: 14px;
@@ -263,11 +269,17 @@
 					margin-top: 8px;
 				}
 			}
+			@include breakpoint-in(768px, 992px) {
+				width: 100%;
+			}
 			i {
 				color: #393939;
 				display: block;
 				font-size: 30px;
 				margin: 14px 0 0;
+				@include breakpoint-in(768px, 992px) {
+					margin-top: 25px;
+				}
 			}
             &.icon_cart_wrap {
                 position: relative;
