@@ -448,7 +448,6 @@ Menu Default
     }
     /* End Start Mega Menu */
 }
-
 /*
 -----> Minimum width of 992 pixels.
 */
@@ -516,14 +515,12 @@ Menu Default
     #yeah-header-menu #yeah-header-navigation .main-navigation {
         padding: 15px 0;
         .menu-main-menu {
-            > li > a i {
-                display: none;
-            }
             li {
-                line-height: 31px;
+                line-height: 35px;
+				padding-right: 15px;
+				padding-left: 15px;
                 a {
                     background: transparent;
-                    color: #fff;
                 }
             }
         }
@@ -542,12 +539,6 @@ Menu Default
         }
         a {
             display: block;
-            color: #999 !important;
-            margin: 0 0 4px!important;
-            padding: 0!important;
-            &:hover {
-                color: #fff !important;
-            }
         }
         ul li a {
             font-size: 16px;
@@ -556,7 +547,7 @@ Menu Default
             color: #999;
             cursor: pointer;
             position: absolute;
-            right: -5px;
+            right: 0px;
             text-align: center;
             top: 0;
             width: 30px;
