@@ -71,6 +71,7 @@ footer {
 			}
 			@include breakpoint-in(768px, 992px) {
 				padding: 3px 10px;
+				font-size: 26px;
 				&:after {
 					top: -1px;
 				}
