@@ -4,7 +4,7 @@
   Plugin Name: Newsletter
   Plugin URI: http://www.thenewsletterplugin.com/plugins/newsletter
   Description: Newsletter is a cool plugin to create your own subscriber list, to send newsletters, to build your business. <strong>Before update give a look to <a href="http://www.thenewsletterplugin.com/category/release">this page</a> to know what's changed.</strong>
-  Version: 4.1.3
+  Version: 4.2.2
   Author: Stefano Lissa, The Newsletter Team
   Author URI: http://www.thenewsletterplugin.com
   Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -14,7 +14,7 @@
  */
 
 // Used as dummy parameter on css and js links
-define('NEWSLETTER_VERSION', '4.1.3');
+define('NEWSLETTER_VERSION', '4.2.2');
 
 global $wpdb, $newsletter;
 
@@ -28,6 +28,9 @@ if (!defined('NEWSLETTER_USERS_TABLE'))
 
 if (!defined('NEWSLETTER_STATS_TABLE'))
     define('NEWSLETTER_STATS_TABLE', $wpdb->prefix . 'newsletter_stats');
+
+if (!defined('NEWSLETTER_SENT_TABLE'))
+    define('NEWSLETTER_SENT_TABLE', $wpdb->prefix . 'newsletter_sent');
 
 // Do not use basename(dirname()) since on activation the plugin is sandboxed inside a function
 define('NEWSLETTER_SLUG', 'newsletter');
@@ -129,7 +132,7 @@ class Newsletter extends NewsletterModule {
         // Here because the upgrade is called by the parent constructor and uses the scheduler
         add_filter('cron_schedules', array($this, 'hook_cron_schedules'), 1000);
 
-        parent::__construct('main', '1.2.8');
+        parent::__construct('main', '1.2.9');
 
         $max = $this->options['scheduler_max'];
         if (!is_numeric($max)) {
@@ -239,8 +242,10 @@ class Newsletter extends NewsletterModule {
             email_id int(10) unsigned NOT NULL DEFAULT '0',
             user_id int(10) unsigned NOT NULL DEFAULT '0',
             status tinyint(1) unsigned NOT NULL DEFAULT '0',
+            open tinyint(1) unsigned NOT NULL DEFAULT '0',
             time int(10) unsigned NOT NULL DEFAULT '0',
             error varchar(100) NOT NULL DEFAULT '',
+	    ip varchar(100) NOT NULL DEFAULT '',
             PRIMARY KEY (email_id,user_id),
             KEY user_id (user_id),
             KEY email_id (email_id)
@@ -1344,7 +1349,18 @@ class Newsletter extends NewsletterModule {
             load_plugin_textdomain('newsletter', false, plugin_basename(dirname(__FILE__)) . '/languages');
         }
     }
-
+    
+    var $panels = array();
+    function add_panel($key, $panel) {
+        if (!isset($this->panels[$key])) $this->panels[$key] = array();
+        if (!isset($panel['id'])) $panel['id'] = sanitize_key($panel['label']);
+        $this->panels[$key][] = $panel;
+    }
+    
+    function has_license() {
+        return !empty($this->options['contract_key']);
+    }
+    
 }
 
 $newsletter = Newsletter::instance();
