@@ -51,6 +51,9 @@
 	.menu-sreach{
 		float: right !important;
 		min-width: 210px;
+		@include breakpoint-in(992px, 1200px) {
+			min-width: 180px;
+		}
 		form {
 			margin: 0;
 			&:before {
@@ -109,7 +112,10 @@ Menu Default
 				display: block;
 				float: left;
 				> a{
-					padding: 15px 28px 16px 28px;
+					padding: 15px 28px 16px;
+					@include breakpoint-in(992px, 1200px) {
+						padding: 15px 20px 16px;
+					}
 				}
 				a {
 					color: #333;
