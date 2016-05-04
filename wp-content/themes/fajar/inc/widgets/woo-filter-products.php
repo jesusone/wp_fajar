@@ -189,7 +189,14 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 			<?php wp_enqueue_script('uniform', get_template_directory_uri() . '/inc/widgets/js/jquery.uniform.js', array( 'jquery' ), '3.3.2'); ?>
 			<script type="text/javascript">
 				jQuery(document).ready(function(){
-
+					jQuery('.sort-widget-options input').each(function(){
+						jQuery(this).wrap('<div class="sorting-checkbox">');
+					});
+					jQuery('.sorting-checkbox').on("click", function() {
+						jQuery(this).toggleClass('active');
+						jQuery(this).parent('span').siblings('span').find('.sorting-checkbox').removeClass('active');
+						return false;
+					});
 				})
 			</script>
 		</div>
