@@ -60,7 +60,8 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		if ( ! $size )	$size = $this->size;
 		if ( ! $colour )	$colour = $this->colour;
 		if ( ! $price )	$price = $this->price;
-		var_dump($categories);
+		$cate = get_term_by('id', $categories, 'category');
+		var_dump($cate);
 
 		/**
 		 * Filter the arguments for the Recent Posts widget.
