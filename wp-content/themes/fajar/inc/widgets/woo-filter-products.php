@@ -120,7 +120,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 							<?php  if(!empty($product_cat)):?>
 								<?php  foreach($product_cat as $cat):?>
 									<?php if(in_array( $cat->term_id, $instance['categories'])):  ?>
-									<span class="clearfix"><input <?php echo $cart_slug == $cat->term_id ? "checked" : "" ?> type="checkbox" name="product_cat" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
+									<span class="clearfix"><input <?php echo $cart_slug == $cat->term_id ? "checked" : "" ?> type="checkbox" name="product_cat[]" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
 									<?php endif; ?>
 									<?php  endforeach;?>
 							<?php  endif;?>
@@ -189,7 +189,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 			<?php wp_enqueue_script('uniform', get_template_directory_uri() . '/inc/widgets/js/jquery.uniform.js', array( 'jquery' ), '3.3.2'); ?>
 			<script type="text/javascript">
 				jQuery(document).ready(function(){
-				
+
 				})
 			</script>
 		</div>
