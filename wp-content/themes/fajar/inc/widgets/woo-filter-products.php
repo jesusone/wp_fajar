@@ -45,7 +45,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		/** This filter is documented in wp-includes/default-widgets.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
-		$categories		= ( ! empty( $instance[ 'categories' ] ) ) ? absint( $instance[ 'categories' ] ) : $this->categories;
+		$categories		= ( ! empty( $instance[ 'categories' ] ) ) ?  $instance[ 'categories' ]  : $this->categories;
 		$size 		= ( ! empty( $instance[ 'size' ] ) ) ? absint( $instance[ 'size' ] ) : $this->size;
 		$colour 		= ( ! empty( $instance[ 'colour' ] ) ) ? absint( $instance[ 'colour' ] ) : $this->colour;
 		$price 		= ( ! empty( $instance[ 'price' ] ) ) ? $instance[ 'price' ] : $this->price;
