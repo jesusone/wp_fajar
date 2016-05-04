@@ -186,7 +186,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 
 				</div>
 			</form>
-			<?php wp_enqueue_script('uniform', get_template_directory_uri() . '/inc/widgets/js/uniform.js', array( 'jquery' ), '3.3.2'); ?>
+			<?php wp_enqueue_script('uniform', get_template_directory_uri() . '/inc/widgets/js/jquery.uniform.js', array( 'jquery' ), '3.3.2'); ?>
 			<script type="text/javascript">
 				jQuery("input[type='radio']").uniform();
 
