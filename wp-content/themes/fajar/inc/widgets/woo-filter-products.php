@@ -233,9 +233,9 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 
 		<p><label for="<?php echo esc_attr($this->get_field_id( 'categories' )); ?>"><?php _e( 'Categories:', 'fajar' ); ?></label>
 		<?php  $cats = get_terms( 'product_cat', array('order'=>'asc') );?>
-		<?php if(!empty($cats)): ?>
+		<?php if(!empty($cats)):?>
 		<select name="categories"  multiple>
-			<?php foreach($cats as $cat): ?>
+			<?php foreach($cats as $cat): var_dump($cat);?>
 				<option value="<?php echo esc_attr($cat->team_id);?>"><?php echo esc_html($cat->name);?></option>
 			<?php endforeach; ?>
 		</select>
