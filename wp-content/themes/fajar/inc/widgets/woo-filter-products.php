@@ -197,7 +197,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 	function update( $new_widget_settings, $old_widget_settings ) {
 		$instance = $old_widget_settings;
 		// sanitize user input before update
-		$instance[ 'categories' ]	= strip_tags( $new_widget_settings[ 'categories' ] );
+		$instance[ 'categories' ]	=  esc_sql( $new_widget_settings[ 'categories' ]  ) ;
 
 		$instance[ 'show_cat' ] 	= isset( $new_widget_settings[ 'show_cat' ] ) ? (bool) $new_widget_settings[ 'show_cat' ] : false;
 		$instance[ 'show_date' ] 	= isset( $new_widget_settings[ 'show_date' ] ) ? (bool) $new_widget_settings[ 'show_date' ] : false;
@@ -234,6 +234,26 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		<p><label for="<?php echo esc_attr($this->get_field_id( 'categories' )); ?>"><?php _e( 'Categories:', 'fajar' ); ?></label>
 		<?php  $cats = get_terms( 'product_cat', array('order'=>'asc') );?>
 		<?php if(!empty($cats)):?>
+
+			<?php
+			printf (
+                '<select multiple="multiple" name="%s[]" id="%s" class="widefat" size="15" style="margin-bottom:10px">',
+                $this->get_field_name('categories'),
+                $this->get_field_id('categories')
+            );
+
+            // Each individual option
+            foreach( $instance['categories'] as $id )
+            {
+                printf(
+                    '<option value="%s" %s style="margin-bottom:3px;">%s</option>',
+                    $id,
+                    in_array( $id, $instance['categories']) ? 'selected="selected"' : '',
+                    $id
+                );
+            }
+
+            echo '</select>'; ?>
 		<select name="categories"  multiple>
 			<?php foreach($cats as $cat):?>
 				<option value="<?php echo esc_attr($cat->term_id);?>"><?php echo esc_html($cat->name);?></option>
@@ -246,9 +266,9 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_size ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_size' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_size' )); ?>" />
 		<label for="<?php echo esc_attr($this->get_field_id( 'show_size' )); ?>"><?php _e( 'Display Size?', 'fajar' ); ?></label></p>
 
-		<p><input class="checkbox" type="checkbox" <?php checked( $show_price ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_price' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'hide_title' )); ?>" />
+		<p><input class="checkbox" type="checkbox" <?php checked( $show_price ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_price' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_price' )); ?>" />
 		<label for="<?php echo esc_attr($this->get_field_id( 'show_price' )); ?>"><?php _e( 'Display Price?', 'fajar' ); ?> </label> </p>
-		<p><input class="checkbox" type="checkbox" <?php checked( $show_colour ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_colour' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'hide_title' )); ?>" />
+		<p><input class="checkbox" type="checkbox" <?php checked( $show_colour ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_colour' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_colour' )); ?>" />
 		<label for="<?php echo esc_attr($this->get_field_id( 'show_colour' )); ?>"><?php _e( 'Display Colour?', 'fajar' ); ?> </label> </p>
 
 	<?php
