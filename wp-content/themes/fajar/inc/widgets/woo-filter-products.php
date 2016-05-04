@@ -243,13 +243,13 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
             );
 
             // Each individual option
-            foreach( $instance['categories'] as $id )
+            foreach( $cats as $cat )
             {
                 printf(
                     '<option value="%s" %s style="margin-bottom:3px;">%s</option>',
-                    $id,
-                    in_array( $id, $instance['categories']) ? 'selected="selected"' : '',
-                    $id
+					$cat->term_id,
+                    in_array( $cat->term_id, $instance['categories']) ? 'selected="selected"' : '',
+					$cat->term_id
                 );
             }
 
