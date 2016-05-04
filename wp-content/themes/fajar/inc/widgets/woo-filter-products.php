@@ -60,7 +60,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		if ( ! $size )	$size = $this->size;
 		if ( ! $colour )	$colour = $this->colour;
 		if ( ! $price )	$price = $this->price;
-		$cate = get_term_by('id', $categories, 'category');
+		$cate = get_the_category($categories);
 		var_dump($cate);
 
 		/**
