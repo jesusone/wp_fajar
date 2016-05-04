@@ -249,16 +249,11 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
                     '<option value="%s" %s style="margin-bottom:3px;">%s</option>',
 					$cat->term_id,
                     in_array( $cat->term_id, $instance['categories']) ? 'selected="selected"' : '',
-					$cat->term_id
+					$cat->name
                 );
             }
 
             echo '</select>'; ?>
-		<select name="categories"  multiple>
-			<?php foreach($cats as $cat):?>
-				<option value="<?php echo esc_attr($cat->term_id);?>"><?php echo esc_html($cat->name);?></option>
-			<?php endforeach; ?>
-		</select>
 		<?php endif; ?>
 		<h4><?php _e( 'Show Options', 'fajar' ); ?>:</h4>
 		<p><input class="checkbox" type="checkbox" <?php checked( $show_cat ); ?> id="<?php echo esc_attr($this->get_field_id( 'show_cat' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_cat' )); ?>" />
