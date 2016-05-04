@@ -192,8 +192,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 					jQuery("input[type='radio']").uniform();
 
 					jQuery(".styled-checkbox").uniform();
-
-					jQuery(".currency-select select, .styled-select select").selectBoxIt();
+					
 					jQuery('.sort-widget-options input').each(function(){
 						jQuery(this).wrap('<div class="sorting-checkbox">');
 					});
