@@ -219,7 +219,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		$categories  = isset( $instance[ 'categories' ] ) ? esc_attr( $instance[ 'categories' ] ) : $this->categories;
 		$show_cat   = isset( $instance[ 'show_cat' ] ) ? (bool) $instance[ 'show_cat' ] : false;
 		$show_size   = isset( $instance[ 'show_size' ] ) ? (bool) $instance[ 'show_size' ] : false;
-		$show_price   = isset( $instance[ 'show_price' ] ) ? (bool) $instance[ 'show_price' ] : true;
+		$show_price   = isset( $instance[ 'show_price' ] ) ? (bool) $instance[ 'show_price' ] : false;
 		$show_colour  = isset( $instance[ 'show_colour' ] ) ? (bool) $instance[ 'show_colour' ] : false;
 
 		
@@ -235,8 +235,8 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		<?php  $cats = get_terms( 'product_cat', array('order'=>'asc') );?>
 		<?php if(!empty($cats)):?>
 		<select name="categories"  multiple>
-			<?php foreach($cats as $cat): var_dump($cat);?>
-				<option value="<?php echo esc_attr($cat->team_id);?>"><?php echo esc_html($cat->name);?></option>
+			<?php foreach($cats as $cat):?>
+				<option value="<?php echo esc_attr($cat->term_id);?>"><?php echo esc_html($cat->name);?></option>
 			<?php endforeach; ?>
 		</select>
 		<?php endif; ?>
