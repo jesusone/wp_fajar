@@ -60,8 +60,7 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 		if ( ! $size )	$size = $this->size;
 		if ( ! $colour )	$colour = $this->colour;
 		if ( ! $price )	$price = $this->price;
-		$cate = get_the_category($categories);
-		var_dump($cate);
+
 
 		/**
 		 * Filter the arguments for the Recent Posts widget.
@@ -116,10 +115,14 @@ class Yeah_Woo_Filter_Products extends WP_Widget {
 						?>
 						<div class="col-md-3">
 							<span class="mobile-heading"><?php echo esc_html__('categories','fajar')?></span>
+							<?php  $cats = get_terms( 'product_cat', array('order'=>'asc') );?>
+
 							<?php  if(!empty($product_cat)):?>
 								<?php  foreach($product_cat as $cat):?>
+									<?php if(in_array( $cat->term_id, $instance['categories'])):  ?>
 									<span class="clearfix"><input <?php echo $cart_slug == $cat->term_id ? "checked" : "" ?> type="checkbox" name="product_cat" value="<?php echo $cat->term_id; ?>" id="option1"> <label for="option1"><?php echo esc_html($cat->name);?></span>
-								<?php  endforeach;?>
+									<?php endif; ?>
+									<?php  endforeach;?>
 							<?php  endif;?>
 						</div>
 
